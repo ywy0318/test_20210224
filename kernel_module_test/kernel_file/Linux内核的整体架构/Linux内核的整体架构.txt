@@ -1,0 +1,275 @@
+1.前言
+
+本文是“Linux内核分析”系列文章的第一篇，会以内核的核心功能为出发点，描述Linux内核的整体架构，以及架构之下主要的软件子系统。之后，会介绍Linux内核源文件的目录结构，并和各个软件子系统对应。
+
+注：本文和其它的“Linux内核分析”文章都基于如下约定：
+1.内核版本为Linux 3.10.29（该版本是一个long term的版本，会被Linux社区持续维护至少2年），可以从下面的链接获取：https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.29.tar.xz
+2.鉴于嵌入式系统大多使用ARM处理器，因此涉及到体系结构部分的内容，都以ARM为分析对象
+
+2.Linux内核的核心功能
+如下图所示，Linux内核只是Linux操作系统一部分。对下，它管理系统的所有硬件设备；对上，它通过系统调用，向Library Routine（例如C库）或者其它应用程序提供接口。
+因此，其核心功能就是：管理硬件设备，供应用程序使用。而现代计算机（无论是PC还是嵌入式系统）的标准组成，就是CPU、Memory（内存和外存）、输入输出设备、网络设备和其它的外围设备。所以为了管理这些设备，Linux内核提出了如下的架构。
+上图说明了Linux内核的整体架构。根据内核的核心功能，Linux内核提出了5个子系统，分别负责如下的功能：
+•Process Scheduler，也称作进程管理、进程调度。负责管理CPU资源，以便让各个进程可以以尽量公平的方式访问CPU。
+•Memory Manager，内存管理。负责管理Memory（内存）资源，以便让各个进程可以安全地共享机器的内存资源。另外，内存管理会提供虚拟内存的机制，该机制可以让进程使用多于系统可用Memory的内存，不用的内存会通过文件系统保存在外部非易失存储器中，需要使用的时候，再取回到内存中。
+•VFS（Virtual File System），虚拟文件系统。Linux内核将不同功能的外部设备，例如Disk设备（硬盘、磁盘、NAND Flash、Nor Flash等）、输入输出设备、显示设备等等，抽象为可以通过统一的文件操作接口（open、close、read、write等）来访问。这就是Linux系统“一切皆是文件”的体现（其实Linux做的并不彻底，因为CPU、内存、网络等还不是文件，如果真的需要一切皆是文件，还得看贝尔实验室正在开发的"Plan 9”的）。
+•Network，网络子系统。负责管理系统的网络设备，并实现多种多样的网络标准。
+•IPC（Inter-Process Communication），进程间通信。IPC不管理任何的硬件，它主要负责Linux系统中进程之间的通信。
+3.2 进程调度（Process Scheduler)
+进程调度是Linux内核中最重要的子系统，它主要提供对CPU的访问控制。因为在计算机中，CPU资源是有限的，而众多的应用程序都要使用CPU资源，所以需要“进程调度子系统”对CPU进行调度管理。
+进程调度子系统包括4个子模块（见下图），它们的功能如下：
+
+
+•Scheduling Policy，实现进程调度的策略，它决定哪个（或哪几个）进程将拥有CPU。
+•Architecture-specific Schedulers，体系结构相关的部分，用于将对不同CPU的控制，抽象为统一的接口。这些控制主要在suspend和resume进程时使用，牵涉到CPU的寄存器访问、汇编指令操作等。
+•Architecture-independent Scheduler，体系结构无关的部分。它会和“Scheduling Policy模块”沟通，决定接下来要执行哪个进程，然后通过“Architecture-specific Schedulers模块”resume指定的进程。
+•System Call Interface，系统调用接口。进程调度子系统通过系统调用接口，将需要提供给用户空间的接口开放出去，同时屏蔽掉不需要用户空间程序关心的细节。
+
+
+3.3 内存管理（Memory Manager, MM)
+内存管理同样是Linux内核中最重要的子系统，它主要提供对内存资源的访问控制。Linux系统会在硬件物理内存和进程所使用的内存（称作虚拟内存）之间建立一种映射关系，这种映射是以进程为单位，因而不同的进程可以使用相同的虚拟内存，而这些相同的虚拟内存，可以映射到不同的物理内存上。
+内存管理子系统包括3个子模块（见下图），它们的功能如下：
+
+•Architecture Specific Managers，体系结构相关部分。提供用于访问硬件Memory的虚拟接口。
+•Architecture Independent Manager，体系结构无关部分。提供所有的内存管理机制，包括：以进程为单位的memory mapping；虚拟内存的Swapping。
+•System Call Interface，系统调用接口。通过该接口，向用户空间程序应用程序提供内存的分配、释放，文件的map等功能。
+
+3.4 虚拟文件系统（Virtual Filesystem, VFS）
+传统意义上的文件系统，是一种存储和组织计算机数据的方法。它用易懂、人性化的方法（文件和目录结构），抽象计算机磁盘、硬盘等设备上冰冷的数据块，从而使对它们的查找和访问变得容易。因而文件系统的实质，就是“存储和组织数据的方法”，文件系统的表现形式，就是“从某个设备中读取数据和向某个设备写入数据”。
+随着计算机技术的进步，存储和组织数据的方法也是在不断进步的，从而导致有多种类型的文件系统，例如FAT、FAT32、NTFS、EXT2、EXT3等等。而为了兼容，操作系统或者内核，要以相同的表现形式，同时支持多种类型的文件系统，这就延伸出了虚拟文件系统（VFS）的概念。VFS的功能就是管理各种各样的文件系统，屏蔽它们的差异，以统一的方式，为用户程序提供访问文件的接口。
+我们可以从磁盘、硬盘、NAND Flash等设备中读取或写入数据，因而最初的文件系统都是构建在这些设备之上的。这个概念也可以推广到其它的硬件设备，例如内存、显示器（LCD）、键盘、串口等等。我们对硬件设备的访问控制，也可以归纳为读取或者写入数据，因而可以用统一的文件操作接口访问。Linux内核就是这样做的，除了传统的磁盘文件系统之外，它还抽象出了设备文件系统、内存文件系统等等。这些逻辑，都是由VFS子系统实现。
+VFS子系统包括6个子模块（见下图），它们的功能如下：
+
+•Device Drivers，设备驱动，用于控制所有的外部设备及控制器。由于存在大量不能相互兼容的硬件设备（特别是嵌入式产品），所以也有非常多的设备驱动。因此，Linux内核中将近一半的Source Code都是设备驱动，大多数的Linux底层工程师（特别是国内的企业）都是在编写或者维护设备驱动，而无暇估计其它内容（它们恰恰是Linux内核的精髓所在）。
+•Device Independent Interface， 该模块定义了描述硬件设备的统一方式（统一设备模型），所有的设备驱动都遵守这个定义，可以降低开发的难度。同时可以用一致的形势向上提供接口。
+•Logical Systems，每一种文件系统，都会对应一个Logical System（逻辑文件系统），它会实现具体的文件系统逻辑。
+•System Independent Interface，该模块负责以统一的接口（快设备和字符设备）表示硬件设备和逻辑文件系统，这样上层软件就不再关心具体的硬件形态了。
+•System Call Interface，系统调用接口，向用户空间提供访问文件系统和硬件设备的统一的接口。
+
+3.5 网络子系统（Net）
+网络子系统在Linux内核中主要负责管理各种网络设备，并实现各种网络协议栈，最终实现通过网络连接其它系统的功能。在Linux内核中，网络子系统几乎是自成体系，它包括5个子模块（见下图），它们的功能如下：
+
+•Network Device Drivers，网络设备的驱动，和VFS子系统中的设备驱动是一样的。
+•Device Independent Interface，和VFS子系统中的是一样的。
+•Network Protocols，实现各种网络传输协议，例如IP, TCP, UDP等等。
+•Protocol Independent Interface，屏蔽不同的硬件设备和网络协议，以相同的格式提供接口（socket)。
+•System Call interface，系统调用接口，向用户空间提供访问网络设备的统一的接口。
+至于IPC子系统，由于功能比较单纯，这里就不再描述了。
+
+Linux内核源代码包括三个主要部分：
+1.内核核心代码，包括第3章所描述的各个子系统和子模块，以及其它的支撑子系统，例如电源管理、Linux初始化等
+2.其它非核心代码，例如库文件（因为Linux内核是一个自包含的内核，即内核不依赖其它的任何软件，自己就可以编译通过）、固件集合、KVM（虚拟机技术）等
+3.编译脚本、配置文件、帮助文档、版权说明等辅助性文件
+
+下图示使用ls命令看到的内核源代码的顶层目录结构，具体描述如下。
+
+
+include/ ---- 内核头文件，需要提供给外部模块（例如用户空间代码）使用。
+
+kernel/ ---- Linux内核的核心代码，包含了3.2小节所描述的进程调度子系统，以及和进程调度相关的模块。
+
+mm/ ---- 内存管理子系统（3.3小节）。
+
+fs/ ---- VFS子系统（3.4小节）。
+
+net/ ---- 不包括网络设备驱动的网络子系统（3.5小节）。
+
+ipc/ ---- IPC（进程间通信）子系统。
+
+arch// ---- 体系结构相关的代码，例如arm, x86等等。 
+    arch//mach- ---- 具体的machine/board相关的代码。 
+    arch//include/asm ---- 体系结构相关的头文件。 
+    arch//boot/dts ---- 设备树（Device Tree）文件。
+
+init/ ---- Linux系统启动初始化相关的代码。 
+block/ ---- 提供块设备的层次。 
+sound/ ---- 音频相关的驱动及子系统，可以看作“音频子系统”。 
+drivers/ ---- 设备驱动（在Linux kernel 3.10中，设备驱动占了49.4的代码量）。
+
+lib/ ---- 实现需要在内核中使用的库函数，例如CRC、FIFO、list、MD5等。 
+crypto/ ----- 加密、解密相关的库函数。 
+security/ ---- 提供安全特性（SELinux）。 
+virt/ ---- 提供虚拟机技术（KVM等）的支持。 
+usr/ ---- 用于生成initramfs的代码。 
+firmware/ ---- 保存用于驱动第三方设备的固件。
+
+samples/ ---- 一些示例代码。 
+tools/ ---- 一些常用工具，如性能剖析、自测试等。
+
+Kconfig, Kbuild, Makefile, scripts/ ---- 用于内核编译的配置文件、脚本等。
+
+COPYING ---- 版权声明。 
+MAINTAINERS ----维护者名单。 
+CREDITS ---- Linux主要的贡献者名单。 
+REPORTING-BUGS ---- Bug上报的指南。
+
+Documentation, README ---- 帮助、说明文档。
+
+
+我们主要对以下几个虚拟文件系统数据结构做详解：
+struct fs_struct 、struct files_struct、struct file、struct dentry 、struct inode、struct super_block
+2.struct fs_struct
+
+文件必须由进程打开，每个进程都有它自己当前的工作目录和它自己的根目录。task_struct的fs字段指向进程的fs_struct结构
+struct fs_struct {
+  atomic_t count;
+  rwlock_t lock;
+  int umask;
+  struct dentry * root, * pwd, * altroot;
+  struct vfsmount * rootmnt, * pwdmnt, * altrootmnt;
+ };
+  
+其中：
+count：共享这个表的进程个数
+lock：用于表中字段的读/写自旋锁
+umask：当打开文件设置文件权限时所使用的位掩码
+root：根目录的目录项
+pwd：当前工作目录的目录项
+altroot：模拟根目录的目录项（在80x86结构上始终为NULL）
+rootmnt：根目录所安装的文件系统对象
+pwdmnt：当前工作目录所安装的文件系统对象
+altrootmnt：模拟根目录所安装的文件系统对象（在80x86结构上始终为NULL）
+
+3.struct files_struct
+
+task_struct的files字段指向进程的files_struct结构
+
+
+struct files_struct {
+  atomic_t count;
+ struct fdtable *fdt;
+  struct fdtable fdtab;
+
+  spinlock_t file_lock ____cacheline_aligned_in_smp;
+  int next_fd;
+  struct embedded_fd_set close_on_exec_init;
+  struct embedded_fd_set open_fds_init;
+  struct file * fd_array[NR_OPEN_DEFAULT];
+ };
+ struct fdtable {
+ unsigned int max_fds;
+ int max_fdset;
+ struct file ** fd;      /* current fd array */
+  fd_set *close_on_exec;
+  fd_set *open_fds;
+  struct rcu_head rcu;
+  struct files_struct *free_files;
+  struct fdtable *next;
+ };
+ #define NR_OPEN_DEFAULT BITS_PER_LONG
+ #define BITS_PER_LONG 32  /* asm-i386 */
+
+fdtable结构嵌入在files_struct中，并且由它的fdt指向。
+fdtable结构的fd字段指向文件对象的指针数组。该数组的长度存放在max_fds字段中。通常，fd字段指向files_struct结构的fd_array字段，该字段包括32个文件对象指针。如果进程打开的文件数目多于32，内核就分配一个新的、更大的文件指针数组，并将其地址存放在fd字段中，内核同时也更新max_fds字段的值。
+对于在fd数组中所有元素的每个文件来说，数组的索引就是文件描述符(file descriptor)。通常，数组的第一个元素（索引为0）是进程的标准输入文件，数组的第二个元素（索引为1）是进程的标准输出文件，数组的第三个元素（索引为2）是进程的标准错误文件。请注意，借助于dup()、dup2()和fcntl()系统调用，两个文件描述符可以指向同一个打开的文件，也就是说，数组的两个元素可能指向同一个文件对象。当用户使用shell结构（如2>&1）将标准错误文件重定向到标准输出文件上时，用户也能看到这一点。
+ 进程不能使用多于NR_OPEN（通常为1 048 576)个文件描述符。内核也在进程描述符的signal->rlim[RLIMIT_NOFILE]结构上强制动态限制文件描述符的最大数；这个值通常为1024，但是如果进程具有超级用户特权，就可以增大这个值。
+
+3.struct file
+
+文件对象描述进程怎样与一个打开的文件进行交互。文件对象是在文件被打开时创建的，由一个file结构组成。
+
+
+
+
+类型 字段 说明 
+struct list_head
+ f_list
+ 用于通用文件对象链表的指针 
+struct dentry *
+ f_dentry
+ 与文件相关的目录项对象 
+struct vfsmount *
+ f_vfsmount 含有该文件的已安装文件系统 
+struct file_operations *
+ f_op
+ 指向文件操作表的指针 
+atomic_t
+ f_count 文件对象的引用计数器 
+unsigned int f_flags 当打开文件时所指定的标志 
+mode_t f_mode 进程的访问模式 
+int f_error 网络写操作的错误码 
+loff_t f_pos
+ 当前的文件偏移量 
+struct fown_struct f_owner 通过信号进行 I/O事件通知的数据 
+unsigned int f_uid 用户的UID 
+unsigned int f_gid 用户的GID 
+struct  file_ra_state f_ra 文件预读状态 
+size_t f_maxcount 一次单一的操作所能读或写的最大字节数（默认2的31次方-1） 
+unsigend long f_version 版本号 
+void * f_security 指向文件对象的安全结构的指针 
+void * private_data ... 
+struct list_head f_ep_links 文件的事件轮询等待者链表的头 
+spinlock_t f_ep_lock 保护f_ep_links链表的自旋锁 
+struct address_space* f_mapping 指向文件地址空间对象的指针 
+
+
+notes：
+
+1.文件指针存放在文件对象而不是索引节点对象
+
+2.分配的文件对象数目是有限的，由名为filp的slab高速缓存分配
+
+3.“在使用”文件对象包含在由具体文件系统的超级块所确立的几个链表中。每个超级块对象把文件对象链表的头存放在s_files字段中；因此，属于不同文件系统的文件对象就包含在不同的链表中。链表中分别指向前一个元素和后一个元素的指针都存放在文件对象的f_list字段中。
+
+4.文件对象的f_count字段是一个引用计数器：它记录使用文件对象的进程数（以CLONE_FILES标志创建的轻量级进程共享打开文件表，因此它们可以使用相同的文件对象）。当内核本身使用该文件对象时也要增加计数器的值-例如：把对象插入链表中或发出dup（）系统调用
+
+4.struct dentry
+
+ struct dentry {
+        atomic_t d_count;        /* 目录项引用计数器 */
+        unsigned int d_flags;    /* 目录项标志 */
+        struct inode  * d_inode;   /* 与文件名关联的索引节点 */
+        struct dentry * d_parent;       /* 父目录的目录项 */
+        struct list_head d_hash;        /* 目录项形成的哈希表 */
+        struct list_head d_lru;         /*未使用的 LRU 链表 */
+       struct list_head d_child;       /*父目录的子目录项所形成的链表 */
+      struct list_head d_subdirs;     /* 该目录项的子目录所形成的链表*/
+     struct list_head d_alias;       /* 索引节点别名的链表*/
+      int d_mounted;                  /* 目录项的安装点 */
+      struct qstr d_name;             /* 目录项名（可快速查找） */
+      unsigned long d_time;           /* 由 d_revalidate函数使用 */
+      struct dentry_operations  *d_op; /* 目录项的函数集*/
+      struct super_block * d_sb;      /* 目录项树的根 （即文件的超级块）*/
+      unsigned long d_vfs_flags;  
+      void * d_fsdata;                /* 具体文件系统的数据 */
+      unsigned char d_iname[DNAME_INLINE_LEN]; /* 短文件名 */
+ };
+
+下面对dentry结构给出进一步的解释。
+ 一个有效的dentry结构必定有一个inode结构，这是因为一个目录项要么代表着一个文件，要么代表着一个目录，而目录实际上也是文件。所以，只要dentry结构是有效的，则其指针d_inode必定指向一个inode结构。可是，反过来则不然，一个inode却可能对应着不止一个dentry结构；也就是说，一个文件可以有不止一个文件名或路径名。这是因为一个已经建立的文件可以被连接（link）到其他文件名。所以在inode结构中有一个队列i_dentry,凡是代表着同一个文件的所有目录项都通过其dentry结构中的d_alias域挂入相应inode结构中的i_dentry队列。
+    在内核中有一个哈希表dentry_hashtable ，是一个list_head的指针数组。一旦在内存中建立起一个目录节点的dentry 结构，该dentry结构就通过其d_hash域链入哈希表中的某个队列中。
+   内核中还有一个队列dentry_unused，凡是已经没有用户（count域为0）使用的dentry结构就通过其d_lru域挂入这个队列。
+   Dentry结构中除了d_alias 、d_hash、d_lru三个队列外，还有d_vfsmnt、d_child及d_subdir三个队列。其中d_vfsmnt仅在该dentry为一个安装点时才使用。另外，当该目录节点有父目录时，则其dentry结构就通过d_child挂入其父节点的d_subdirs队列中，同时又通过指针d_parent指向其父目录的dentry结构，而它自己各个子目录的dentry结构则挂在其d_subdirs域指向的队列中。
+     从上面的叙述可以看出，一个文件系统中所有目录项结构或组织为一个哈希表，或组织为一颗树，或按照某种需要组织为一个链表，这将为文件访问和文件路径搜索奠定下良好的基础。
+
+
+
+
+
+目录项高速缓存（内核中一种散列表的使用情况）
+
+由于从磁盘读入一个目录项并构造相应的目录项对象需要花费大量时间，所以，在完成对目录对象的操作后，需要把它仍然保留在内存中，为了最大限度提高处理这些目录项对象的效率，linux使用目录项高速缓存,主要由两种类型的数据结构组成：
+•目录项对象集合（包括正在使用的、未使用的或负状态的）
+•一个散列表（从中能够快速获取与给定的文件名和目录名对应的目录项对象）
+
+5.struct inode
+
+文件系统处理文件所需要的所有信息都放在一个名为索引节点的数据结构中。文件名可以随时修改，但索引节点对文件是唯一的，并且随文件的存在而存在。索引节点是指在许多类Unix文件系统中的一种数据结构。每个索引节点保存了文件系统中的一个文件系统对象的元信息数据，但不包括数据内容或者文件名。
+notes：
+
+1.每个索引节点对象都会复制磁盘索引节点包含的一些数据，比如分配给文件的磁盘块数。这个和超级块一样都有一个“脏”字段来处理一致性，比如i_state字段
+
+2.每个索引节点对象总是出现在下列双向循环链表的某个链表中（i_list）：
+1.有效未使用的索引节点链表
+2.正在使用的索引节点链表
+3.脏索引节点的链表
+
+3.此外，每个索引节点对象也包含在每个文件系统的双向循环链表中，链表的头存放在超级块对象的s_inodes字段中，索引节点对象的i_sb_list字段存放了指向相邻元素指针
+
+4.索引节点对象也存放在一个称为inode_hashtable的散列表中。散列表加快了对索引节点对象的搜索。索引节点对象包含一个i_hash字段包含向前和向后的两个指针。
+
+5.索引节点操作（inode_operations结构描述），存放在i_op字段中
+
+6.struct super_block
+ 
+ 

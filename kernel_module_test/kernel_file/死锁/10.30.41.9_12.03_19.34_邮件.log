@@ -1,0 +1,169 @@
+﻿
+(none) login: root
+Password: 
+Welcome to HiLinux.
+None of nfsroot found in cmdline.
+~ # 
+~ # 
+~ # 
+~ # 
+~ # cd /dvr
+/tdfs/dvr # ls str
+/tdfs/dvr # ls /nand/tools/
+getlog.sh      logman         oneKey.sh      strace.tar.gz
+inotify        logman.tar.gz  sdviewer.tgz
+/tdfs/dvr # echo 0 > /proc/sys/kernel/tdlsm/lsm_enable 
+/tdfs/dvr # tar -xzf /nand/tools/strace.tar.gz 
+/tdfs/dvr # chmod +x strace 
+/tdfs/dvr # ps | grep dvr
+  268 root       0:00 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+  428 root       0:00 /bin/sh -c /dvr/dvr1
+  429 root      63:39 /dvr/dvr1
+  432 root       0:18 /dvr/dvr1
+  442 root       0:07 /dvr/dvr1
+ 8594 root       0:00 grep dvr
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ./strace -tt -T -s 512 -p 442
+/tdfs/dvr # ping www.baidu.com
+PING www.baidu.com (61.135.169.125): 56 data bytes
+64 bytes from 61.135.169.125: seq=0 ttl=51 time=5.126 ms
+64 bytes from 61.135.169.125: seq=1 ttl=51 time=5.702 ms
+64 bytes from 61.135.169.125: seq=2 ttl=51 time=4.925 ms
+64 bytes from 61.135.169.125: seq=3 ttl=51 time=4.812 ms
+64 bytes from 61.135.169.125: seq=4 ttl=51 time=4.589 ms
+64 bytes from 61.135.169.125: seq=5 ttl=51 time=6.028 ms
+64 bytes from 61.135.169.125: seq=6 ttl=51 time=4.654 ms
+64 bytes from 61.135.169.125: seq=7 ttl=51 time=5.278 ms
+64 bytes from 61.135.169.125: seq=8 ttl=51 time=4.825 ms
+64 bytes from 61.135.169.125: seq=9 ttl=51 time=4.771 ms
+64 bytes from 61.135.169.125: seq=10 ttl=51 time=4.832 ms
+64 bytes from 61.135.169.125: seq=11 ttl=51 time=5.978 ms
+64 bytes from 61.135.169.125: seq=12 ttl=51 time=5.038 ms
+64 bytes from 61.135.169.125: seq=13 ttl=51 time=4.712 ms
+64 bytes from 61.135.169.125: seq=14 ttl=51 time=4.887 ms
+64 bytes from 61.135.169.125: seq=15 ttl=51 time=4.823 ms
+64 bytes from 61.135.169.125: seq=16 ttl=51 time=4.650 ms
+64 bytes from 61.135.169.125: seq=17 ttl=51 time=4.812 ms
+64 bytes from 61.135.169.125: seq=18 ttl=51 time=4.750 ms
+64 bytes from 61.135.169.125: seq=19 ttl=51 time=4.790 ms
+64 bytes from 61.135.169.125: seq=20 ttl=51 time=4.758 ms
+64 bytes from 61.135.169.125: seq=21 ttl=51 time=5.108 ms
+64 bytes from 61.135.169.125: seq=22 ttl=51 time=4.646 ms
+64 bytes from 61.135.169.125: seq=23 ttl=51 time=4.705 ms
+64 bytes from 61.135.169.125: seq=24 ttl=51 time=4.698 ms
+64 bytes from 61.135.169.125: seq=25 ttl=51 time=4.764 ms
+64 bytes from 61.135.169.125: seq=26 ttl=51 time=4.753 ms
+^C^C
+--- www.baidu.com ping statistics ---
+27 packets transmitted, 27 packets received, 0% packet loss
+round-trip min/avg/max = 4.589/4.941/6.028 ms
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ping smtp.163.com
+PING smtp.163.com (220.181.12.16): 56 data bytes
+64 bytes from 220.181.12.16: seq=0 ttl=55 time=6.192 ms
+64 bytes from 220.181.12.16: seq=1 ttl=55 time=5.216 ms
+^C
+--- smtp.163.com ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 5.216/5.704/6.192 ms
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ./strace -tt -T -s 512 -p 442
+./strace: Process 442 attached
+19:38:32.737779 nanosleep({0, 100000000}, NULL) = 0 <0.021188>
+19:38:32.759807 nanosleep({0, 100000000}, NULL) = 0 <0.118802>
+19:38:32.879265 nanosleep({0, 100000000}, NULL) = 0 <0.109785>
+19:38:32.989524 nanosleep({0, 100000000}, NULL) = 0 <0.108507>
+19:38:33.098400 nanosleep({0, 100000000}, NULL) = 0 <0.109185>
+19:38:33.208742 nanosleep({0, 100000000}, NULL) = 0 <0.108344>
+19:38:33.317817 nanosleep({0, 100000000}, NULL) = 0 <0.109443>
+19:38:33.427844 nanosleep({0, 100000000}, NULL) = 0 <0.110990>
+19:38:33.539199 nanosleep({0, 100000000}, NULL) = 0 <0.108306>
+19:38:33.648084 nanosleep({0, 100000000}, NULL) = 0 <0.109749>
+19:38:33.758404 nanosleep({0, 100000000}, NULL) = 0 <0.109156>
+19:38:33.869663 nanosleep({0, 100000000}, NULL) = 0 <0.108375>
+19:38:33.978403 nanosleep({0, 100000000}, NULL) = 0 <0.111422>
+19:38:34.090359 nanosleep({0, 100000000}, NULL) = 0 <0.118263>
+19:38:34.209561 nanosleep({0, 100000000}, NULL) = 0 <0.108002>
+19:38:34.317897 nanosleep({0, 100000000}, NULL) = 0 <0.109289>
+19:38:34.427672 nanosleep({0, 100000000}, NULL) = 0 <0.109432>
+19:38:34.537848 nanosleep({0, 100000000}, NULL) = 0 <0.109810>
+19:38:34.648327 nanosleep({0, 100000000}, NULL) = 0 <0.109357>
+19:38:34.760293 nanosleep({0, 100000000}, NULL) = 0 <0.117017>
+19:38:34.878306 nanosleep({0, 100000000}, NULL) = 0 <0.110057>
+19:38:34.989297 nanosleep({0, 100000000}, NULL) = 0 <0.111016>
+19:38:35.100964 nanosleep({0, 100000000}, NULL) = 0 <0.117961>
+19:38:35.219332 nanosleep({0, 100000000}, NULL) = 0 <0.109369>
+19:38:35.329447 nanosleep({0, 100000000}, NULL) = 0 <0.109586>
+19:38:35.439526 nanosleep({0, 100000000}, NULL) = 0 <0.109138>
+19:38:35.549054 nanosleep({0, 100000000}, NULL) = 0 <0.108108>
+19:38:35.657705 nanosleep({0, 100000000}, NULL) = 0 <0.110756>
+19:38:35.769086 nanosleep({0, 100000000}, NULL) = 0 <0.108858>
+19:38:35.879281 nanosleep({0, 100000000}, NULL) = 0 <0.108474>
+19:38:35.989610 nanosleep({0, 100000000}, NULL) = 0 <0.107962>
+19:38:36.098560 nanosleep({0, 100000000}, NULL) = 0 <0.109897>
+19:38:36.209570 clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb6fe2448) = 8822 <0.001421>
+19:38:36.211590 wait4(8822, NULL, 0, NULL) = 8822 <2.552225>
+19:38:38.764298 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8822, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+19:38:38.764764 nanosleep({0, 100000000}, NULL) = 0 <0.112617>
+19:38:38.879231 nanosleep({0, 100000000}, NULL) = 0 <0.108337>
+19:38:38.988117 nanosleep({0, 100000000}, NULL) = 0 <0.110843>
+19:38:39.099835 nanosleep({0, 100000000}, NULL) = 0 <0.119084>
+19:38:39.219267 nanosleep({0, 100000000}, NULL) = 0 <0.109423>
+19:38:39.329323 nanosleep({0, 100000000}, NULL) = 0 <0.109800>
+19:38:39.439637 nanosleep({0, 100000000}, NULL) = 0 <0.108061>
+19:38:39.548154 nanosleep({0, 100000000}, NULL) = 0 <0.109831>
+19:38:39.658708 nanosleep({0, 100000000}, NULL) = 0 <0.109088>
+19:38:39.768837 nanosleep({0, 100000000}, NULL) = 0 <0.109607>
+19:38:39.879452 nanosleep({0, 100000000}, NULL) = 0 <0.109304>
+19:38:39.989365 nanosleep({0, 100000000}, NULL) = 0 <0.109517>
+19:38:40.099278 nanosleep({0, 100000000}, NULL) = 0 <0.109500>
+19:38:40.209662 nanosleep({0, 100000000}, NULL) = 0 <0.109115>
+19:38:40.319436 nanosleep({0, 100000000}, NULL) = 0 <0.109614>
+19:38:40.429564 nanosleep({0, 100000000}, NULL) = 0 <0.109587>
+19:38:40.539708 nanosleep({0, 100000000}, NULL) = 0 <0.119261>
+19:38:40.659416 nanosleep({0, 100000000}, NULL) = 0 <0.109273>
+19:38:40.770764 nanosleep({0, 100000000}, NULL) = 0 <0.116921>
+19:38:40.888735 nanosleep({0, 100000000}, NULL) = 0 <0.108834>
+19:38:40.998213 nanosleep({0, 100000000}, NULL) = 0 <0.109947>
+19:38:41.109785 nanosleep({0, 100000000}, NULL) = 0 <0.118078>
+19:38:41.228479 nanosleep({0, 100000000}, NULL) = 0 <0.110023>
+19:38:41.339463 nanosleep({0, 100000000}, NULL) = 0 <0.109591>
+19:38:41.449574 nanosleep({0, 100000000}, NULL) = 0 <0.109197>
+19:38:41.559415 nanosleep({0, 100000000}, NULL) = 0 <0.109318>
+19:38:41.669591 nanosleep({0, 100000000}, NULL) = 0 <0.119360>
+19:38:41.789482 nanosleep({0, 100000000}, NULL) = 0 <0.109455>
+19:38:41.899474 nanosleep({0, 100000000}, NULL) = 0 <0.109155>
+19:38:42.009132 nanosleep({0, 100000000}, NULL) = 0 <0.109766>
+19:38:42.119387 nanosleep({0, 100000000}, NULL) = 0 <0.109956>
+19:38:42.230088 nanosleep({0, 100000000}, NULL) = 0 <0.117951>
+19:38:42.349769 nanosleep({0, 100000000}, NULL) = 0 <0.119652>
+19:38:42.469905 nanosleep({0, 100000000}, NULL) = 0 <0.117248>
+19:38:42.588426 nanosleep({0, 100000000}, NULL) = 0 <0.110736>
+19:38:42.699580 nanosleep({0, 100000000}, NULL) = 0 <0.109359>
+19:38:42.809417 nanosleep({0, 100000000}, NULL) = 0 <0.109687>
+19:38:42.919605 nanosleep({0, 100000000}, NULL) = 0 <0.110302>
+19:38:43.030309 nanosleep({0, 100000000}, NULL) = 0 <0.118545>
+19:38:43.149345 nanosleep({0, 100000000}, NULL) = 0 <0.108477>
+19:38:43.258490 nanosleep({0, 100000000}, NULL) = 0 <0.109186>
+19:38:43.368521 nanosleep({0, 100000000}, NULL) = 0 <0.109285>
+19:38:43.478335 nanosleep({0, 100000000}, NULL) = 0 <0.109011>
+19:38:43.589689 nanosleep({0, 100000000}, NULL) = 0 <0.119227>
+19:38:43.709356 nanosleep({0, 100000000}, NULL) = 0 <0.109517>
+19:38:43.819286 nanosleep({0, 100000000}, NULL) = 0 <0.109726>
+19:38:43.929376 nanosleep({0, 100000000}, NULL) = 0 <0.109693>
+19:38:44.039445 nanosleep({0, 100000000}, NULL) = 0 <0.107826>
+19:38:44.148511 nanosleep({0, 100000000}, NULL) = 0 <0.109468>
+19:38:44.258524 nanosleep({0, 100000000}, NULL) = 0 <0.109155>
+19:38:44.368805 nanosleep({0, 100000000}, NULL) = 0 <0.108771>
+19:38:44.478158 nanosleep({0, 100000000}, ^C./strace: Process 442 detached
+ <detached ...>
+/tdfs/dvr # 
+/tdfs/dvr # 

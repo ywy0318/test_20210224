@@ -1,0 +1,98 @@
+cat /mnt/rtmsg/threads_dvr
+cat /mnt/rtmsg/threads_dvr | grep UI
+/tdfs/dvr # ./strace -p 427 -tt -T
+./strace: Process 427 attached
+15:54:51.798566 futex(0x450de4, FUTEX_WAIT_PRIVATE, 2, NULL^C./strace: Process 427 detached
+ <detached ...>
+./closedog(关狗管两次)
+/tdfs/dvr # ps | grep dvr
+  262 root       0:00 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+  406 root       0:00 /bin/sh -c /dvr/dvr1
+  407 root     131606 /dvr/dvr1
+  410 root     200:08 /dvr/dvr1
+  419 root      60:57 /dvr/dvr1
+29028 root       0:00 grep dvr
+/nand/tools/gdb_v500 -p 407
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407
+(gdb) p *(pthread_mutex_t*)0x450de4
+No symbol "pthread_mutex_t" in current context.
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+
+(gdb) x/4xw 0x450de4
+0x450de4 <gtLock>:      0x00000002      0x00000000      0x00000281      0x00000000
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) 
+Please answer y or n.
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 641
+52      641     936     (nil)      Wed Jul 10 21:35:07 2019     preview_AutoSwitchTask(0x00000281==641)
+/tdfs/dvr # ./strace -tt -T -p 641
+./strace: Process 641 attached
+16:05:30.979459 futex(0x2b40cf0, FUTEX_WAIT_PRIVATE, 2, NULL^C./strace: Process 641 detached
+ <detached ...>
+ 
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407 
+ (gdb) x/4xw 0x2b40cf0
+0x2b40cf0:      0x00000002      0x00000000      0x00000227      0x00000000
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 551
+34      551     14348   (nil)      Wed Jul 10 21:34:35 2019     TskIpSerchTimer
+/tdfs/dvr # 
+/tdfs/dvr # ./strace -tt -T -p 551
+./strace: Process 551 attached
+16:07:36.283979 futex(0x2b430d0, FUTEX_WAIT_PRIVATE, 2, NULL^C./strace: Process 551 detached
+ <detached ...>
+
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407 
+ (gdb) x/4xw 0x2b430d0
+0x2b430d0:      0x00000002      0x00000000      0x00000217      0x00000000
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 535
+21      535     7996    0x3        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+/tdfs/dvr # ./strace -tt -T -p 535
+./strace: Process 535 attached
+^C./strace: Process 535 detached
+
+/tdfs/dvr # netstat -anpt
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 0.0.0.0:81              0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 0.0.0.0:8082            0.0.0.0:*               LISTEN      407/dvr1
+tcp        0      0 0.0.0.0:21              0.0.0.0:*               LISTEN      1001/pure-ftpd (SER
+tcp        0      0 0.0.0.0:3001            0.0.0.0:*               LISTEN      407/dvr1
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      470/stunnel
+tcp        0      0 0.0.0.0:554             0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 0.0.0.0:9100            0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 :::21                   :::*                    LISTEN      1001/pure-ftpd (SER
+tcp        0      0 :::23                   :::*                    LISTEN      267/telnetd
+tcp        0      0 ::ffff:192.168.25.142:23 ::ffff:192.168.25.150:51450 ESTABLISHED 267/telnetd
+tcp        0      0 ::ffff:192.168.25.142:23 ::ffff:192.168.25.151:62207 ESTABLISHED 267/telnetd
+tcp        0    913 ::ffff:192.168.25.142:23 ::ffff:192.168.25.151:61881 ESTABLISHED 267/telnetd
+tcp        0      0 ::ffff:192.168.25.142:23 ::ffff:192.168.17.31:62585 ESTABLISHED 267/telnetd

@@ -1,0 +1,111 @@
+  
+  linux内核装载elf过程简介
+  
+  首先再用户层面，bash进程会调用fork函数创建一个新的进程，然后新的进程调用execve系统调用执行指定的elf文件，原先bash进程继续返回等待刚才启动的新进程结束。然后等待用户输入命令。
+
+　　int execve（const char *filename，char *const argv[]，char *const envp[]）；
+
+　　分别是被执行的程序文件名，执行参数和环境变量。
+
+　　glibc对execvp进行了包装，提供了execl（），execlp（），execle（），execvp（）等不同形式的api.但是最总都会调用execve（）。
+
+　　1、进入系统调用后，linux内核看是真正的装载工作。在内核中，系统调用相应的入口是sys_execve（）。被定义在arch\i386\kernel\process.c.
+
+　　2、进行一些参数的检查赋值以后就调用do_execve（）。首先检查被执行的文件，找到文件就读取128个字节。来判断文件的格式（有。/a.out elf  脚本等）。就是比对魔数。
+
+　　3、do_execve（） 调用search_binary_handle（）搜索和匹配合适的可执行文件装载处理过程。比如elf的函数是load_elf_binary（）。
+
+　　load_elf_binary（）定义再fs/Binfmt_elf.c：
+
+　   　a、检查ELF可执行文件的有效性，比如魔数，段的数量。
+
+　   　b、寻找".interp"段，设置动态链接器的路径。
+
+　   　c、根据elf可执行文件的程序头表的描述，对elf文件进行映射。
+
+　　   d、初始化elf进程环境，比如启动时候EDX的地址是DT_FINI的地址。
+
+　   　e、将系统调用的返回地址修改为elf可执行文件的入口点，这个入口点取决于程序的链接方式，对于静态链接的elf可执行文件，就是e_entry所存的地址。对于动态链接的elf可执行文件就是动态链接器。
+
+　　4、执行完毕后，load_elf_binary（），返回到do_execve（）再返回到sys_execve（）。
+
+　　5、sys_execve（）从内核态返回到用户态，同时返回第五步已经更改的程序入口地址。eip存储器直接跳转到elf程序的入口地址，新进程执行
+===============================
+简单的例程
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main(){
+    
+
+    char buf[1024] = {0};
+    pid_t pid;
+    while(1){
+        printf("filename:");
+        scanf("%s",buf);
+        pid = fork();
+        if(pid == 0){
+            if(execlp(buf,0) < 0){
+                printf("exec error\n");
+            }
+        }else if(pid > 0){
+            int status;
+            waitpid(pid,&status,0);
+        }else{
+            printf("fork error %d\n",pid);
+        }
+    }
+
+    return 0;
+}
+
+装载的具体过程
+
+1. fork()函数
+
+      bash进程调用fork()系统调用创建一个新的进程；
+
+2. execlp()函数
+
+     execlp()函数是Glibc对execve()系统调用的封装。execve()系统调用被定义在unistd.h中，原型为：
+
+      int execve(const char* filename,char *const argv[],char *const envp[]);
+
+      注：Glibc对execve()有5种不同形式的封装，分别是execl(),execlp(),execle(),execv()和execvp()
+
+3. sys_execve()函数
+
+     execve()系统调用内核中的相应入口是sys_execve()函数，它被定义在arch\i386\kernel\Process.c中。该函数主要是进行一些参数的检查复制。
+
+4. do_execve()函数
+
+    sys_execve()函数调用do_execve()函数。该函数会首先查找被执行的文件，如果找到文件，则读取文件的前128个字节。
+
+5. search_binary_handle()函数
+
+    do_execve()函数调用search_binary_handle()函数，并根据读取的文件的头128个字节去搜索和匹配合适的可执行文件装载处理过程。
+
+6. load_elf_binary()函数
+
+    search_binary_handle()函数根据搜索的结果调用load_elf_binary()函数，该函数被定义在fs\Binfmt_elf.c文件中。
+
+    注：linux支持不同格式的可执行文件，本例是以ELF格式为例，故search_binary_handle()调用的是load_elf_binary()函数；如果是其它
+
+          格式的可执行文件，则调用其它的函数
+
+   load_elf_binary()函数的主要工作：
+
+       (1) 检查ELF可执行文件格式的有效性，比如魔数，程序头表中段的数量
+
+       (2) 寻找动态链接的“.interp”段，设置动态链接器路径
+
+       (3) 根据ELF可执行文件的程序表的描述，对ELF文件进行映射，比如代码、数据、只读数据。
+
+       (4) 初始化ELF进程环境，比如进程启动时EDX寄存器的地址应该是DT_FINI的地址
+
+       (5) 将系统调用的返回地址修改成ELF可执行文件的入口点，这个入口点取决于程序的链接方式，对于静态链接的ELF可执行文件，这
+
+           个程序入口就是ELF文件的文件头中e_entry所指的地址；对于动态链接的ELF可执行文件，程序入口点是动态链接器。(注：这步
+
+           决定了程序从内核态到用户态时转入何处)

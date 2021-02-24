@@ -1,0 +1,1 @@
+cmd_/mnt/hgfs/share/code/kernel_test/startstop/startstop.o := ld -m elf_x86_64  -z max-page-size=0x200000    -r -o /mnt/hgfs/share/code/kernel_test/startstop/startstop.o /mnt/hgfs/share/code/kernel_test/startstop/start.o /mnt/hgfs/share/code/kernel_test/startstop/stop.o 

@@ -1,0 +1,2826 @@
+﻿[2020-11-25 09:41:26]Jan  1 08:01:53 login[447]: root login on 'pts/1'
+[2020-11-25 09:42:48]==20180309==> hub_port_init 1 #0
+[2020-11-25 09:42:48]Plug in USB Port3
+[2020-11-25 09:42:49]sd 1:0:0:0: [sdb] No Caching mode page found
+[2020-11-25 09:42:49]sd 1:0:0:0: [sdb] Assuming drive cache: write through
+[2020-11-25 09:44:25]umount: tmpfs busy - remounted read-only
+[2020-11-25 09:44:25]umount: ubi0:tdfs busy - remounted read-only
+[2020-11-25 09:44:25]umount: devpts busy - remounted read-only
+[2020-11-25 09:44:25]umount: tmpfs busy - remounted read-only
+[2020-11-25 09:44:25]umount: can't unmount /: Invalid argument
+[2020-11-25 09:44:25]The system is going down NOW!
+[2020-11-25 09:44:25]Sent SIGTERM to all processes
+[2020-11-25 09:44:27]Sent SIGKILL toreboot: Restarting system
+[2020-11-25 09:44:27]1
+[2020-11-25 09:44:27]IPL g8e04b60
+[2020-11-25 09:44:27]D-1f
+[2020-11-25 09:44:27]HW Reset
+[2020-11-25 09:44:27]miupll_233MHz
+[2020-11-25 09:44:27]MIU0 zq=0x003d
+[2020-11-25 09:44:27]miu_bw_set
+[2020-11-25 09:44:27]utmi_1_init done
+[2020-11-25 09:44:27]utmi_2_init done
+[2020-11-25 09:44:27]utmi_3_init done
+[2020-11-25 09:44:27]usbpll init done......
+[2020-11-25 09:44:27]SPI 54M
+[2020-11-25 09:44:27]clk_init done 
+[2020-11-25 09:44:27]P1 USB_rterm trim=0x0000
+[2020-11-25 09:44:27]P1 USB_HS_TX_CURRENT trim=0x0001
+[2020-11-25 09:44:27]P2 USB_rterm trim=0x0001
+[2020-11-25 09:44:27]P2 USB_HS_TX_CURRENT trim=0x0000
+[2020-11-25 09:44:27]P3 USB_rterm trim=0x0001
+[2020-11-25 09:44:27]P3 USB_HS_TX_CURRENT trim=0x0000
+[2020-11-25 09:44:27]PM_vol_bgap trim=0x0003
+[2020-11-25 09:44:27]GCR_SAR_DATA trim=0x018e
+[2020-11-25 09:44:27]ETH 10T output swing trim=0x0001
+[2020-11-25 09:44:27]ETH 100T output swing trim=0x0000
+[2020-11-25 09:44:27]ETH RX input impedance trim=0x0000
+[2020-11-25 09:44:27]ETH TX output impedance trim=0x0001
+[2020-11-25 09:44:27]MIPI_HS_RTERM trim=0x0001
+[2020-11-25 09:44:27]MIPI_LP_RTERM trim=0x0000
+[2020-11-25 09:44:27]TX_current trimming trim[0x1A]=0x0045
+[2020-11-25 09:44:27]TX_current trimming trim[0x1B]=0x0047
+[2020-11-25 09:44:27]TX_current trimming trim[0x1C]=0x0044
+[2020-11-25 09:44:27]HDMI2TX Rterm trim=0x0001
+[2020-11-25 09:44:27]HDMI2TX_Ibias_CH0 trim=0x0018
+[2020-11-25 09:44:27]HDMI2TX_Ibias_CH1 trim=0x001a
+[2020-11-25 09:44:27]HDMI2TX_Ibias_CH2 trim=0x0018
+[2020-11-25 09:44:27]HDMI2TX_Ibias_CH3 trim=0x001b
+[2020-11-25 09:44:27]256MB
+[2020-11-25 09:44:27]BIST0_0001-OK
+[2020-11-25 09:44:27]Enable MMU and CACHE
+[2020-11-25 09:44:27]Load IPL_CUST from SPINAND
+[2020-11-25 09:44:27]crc OK
+[2020-11-25 09:44:27]
+[2020-11-25 09:44:27]IPL_CUST g8e04b60
+[2020-11-25 09:44:27]runUBOOT()
+[2020-11-25 09:44:27]          runUBOOT()
+[2020-11-25 09:44:27][SPINAND]
+[2020-11-25 09:44:27]SPI 54M
+[2020-11-25 09:44:27]Load UBOOT from SPINAND
+[2020-11-25 09:44:27] -Verify UBOOT CRC32 passed!
+[2020-11-25 09:44:27] -Decompress UBOOT XZ
+[2020-11-25 09:44:27]  decomp_size=0x000792e4
+[2020-11-25 09:44:27]Disable MMU and D-cache before jump to UBOOT
+
+[2020-11-25 09:44:27]U-Boot 2015.01-svn4866 (Nov 21 2020 - 21:01:21)
+[2020-11-25 09:44:27]
+[2020-11-25 09:44:27]Version: I2svn4866#
+[2020-11-25 09:44:27]       Watchdog enabled
+[2020-11-25 09:44:27]I2C:   ready
+[2020-11-25 09:44:27]DRAM:  
+[2020-11-25 09:44:27]WARNING: Caches not enabled
+[2020-11-25 09:44:27]SPINAND: _MDrv_SPINAND_GET_INFO: Found SPINAND INFO 
+[2020-11-25 09:44:27](0xEF) (0xAA) (0x21) 
+[2020-11-25 09:44:27]SPINAND: board_nand_init: CIS contains part info
+[2020-11-25 09:44:27]128 MiB
+[2020-11-25 09:44:27]MMC:   MStar SD/MMC: 0
+[2020-11-25 09:44:27]In:    serial
+[2020-11-25 09:44:27]Out:   serial
+[2020-11-25 09:44:27]Err:   serial
+[2020-11-25 09:44:27]Net:   sstar_emac
+[2020-11-25 09:44:27]magic: 0x48444946, product:0x10A002, pcb:0xD2029610, custom:0x0, phy0: 0x142, phy1: 0x0
+[2020-11-25 09:44:30]Hit Ctrl+C to stop autoboot:  0 
+[2020-11-25 09:44:30]
+[2020-11-25 09:44:30]NAND read: device 0 offset 0x300000, size 0x500000
+[2020-11-25 09:44:31]Time:976319 us, speed:5370 KB/s
+[2020-11-25 09:44:31] 5242880 bytes read: OK
+[2020-11-25 09:44:31][add_hardinfo_to_cmdline:155]: with hardinfo
+[2020-11-25 09:44:31][WDT] Enalbe WATCHDOG 240 s
+[2020-11-25 09:44:31]
+[2020-11-25 09:44:31]set wdt time:240
+[2020-11-25 09:44:31]##  Booting kernel from Legacy Image at 22000000 ...
+[2020-11-25 09:44:31]   Image Name:   MVX4##I2M#svn4850#KL_LX409##[BR:
+[2020-11-25 09:44:31]   Image Type:   ARM Linux Kernel Image (lzma compressed)
+[2020-11-25 09:44:31]   Data Size:    2378484 Bytes = 2.3 MiB
+[2020-11-25 09:44:31]   Load Address: 20008000
+[2020-11-25 09:44:31]   Entry Point:  20008000
+[2020-11-25 09:44:31]   Verifying Checksum ... OK
+[2020-11-25 09:44:31]-usb_stop(USB_PORT0)
+[2020-11-25 09:44:31]-usb_stop(USB_PORT1)
+[2020-11-25 09:44:31]-usb_stop(USB_PORT2)
+[2020-11-25 09:44:31]   Uncompressing Kernel Image ... 
+[2020-11-25 09:44:31][XZ] !!!reserved 0x21000000 length=0x 1000000 for xz!!
+[2020-11-25 09:44:32]   XZ: uncompressed size=0x4c1000, ret=7
+[2020-11-25 09:44:32]OK
+[2020-11-25 09:44:32]atags:0x20000000
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]Starting kernel ...
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]Booting Linux on physical CPU 0x0
+[2020-11-25 09:44:32]Linux version 4.9.84 (caijinzhong@tiandy) (gcc version 4.9.4 (Buildroot 2017.08-gc7bbae9-dirty) ) #1 SMP PREEMPT Fri Nov 20 16:20:31 CST 2020
+[2020-11-25 09:44:32]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=50c5387d
+[2020-11-25 09:44:32]CPU: div instructions available: patching division code
+[2020-11-25 09:44:32]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-11-25 09:44:32]early_atags_to_fdt() success
+[2020-11-25 09:44:32]OF: fdt:Machine model: INFINITY2M SSC010A-S01A-S
+[2020-11-25 09:44:32]LXmem is 0xff00000 PHYS_OFFSET is 0x20000000
+[2020-11-25 09:44:32]Add mem start 0x20000000 size 0xff00000!!!!
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]LX_MEM  = 0x20000000, 0xff00000
+[2020-11-25 09:44:32]LX_MEM2 = 0x0, 0x0
+[2020-11-25 09:44:32]LX_MEM3 = 0x0, 0x0
+[2020-11-25 09:44:32]EMAC_LEN= 0x0
+[2020-11-25 09:44:32]DRAM_LEN= 0x0
+[2020-11-25 09:44:32]no any mmap reserved
+[2020-11-25 09:44:32]deal_with_reserve_mma_heap memblock_reserve success mma_config[0].reserved_start=
+[2020-11-25 09:44:32]0x24800000
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]deal_with_reserve_mma_heap memblock_reserve success mma_config[1].reserved_start=
+[2020-11-25 09:44:32]0x2c500000
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]cma: Reserved 2 MiB at 0x2c200000
+[2020-11-25 09:44:32]Memory policy: Data cache writealloc
+[2020-11-25 09:44:32]percpu: Embedded 13 pages/cpu @cc4bf000 s24536 r8192 d20520 u53248
+[2020-11-25 09:44:32]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 35702
+[2020-11-25 09:44:32]Kernel command line: ubi.mtd=2 rootfstype=ramfs initrd=0x22280000,0x400000 mtdparts=nand0:0x300000(uboot),0x500000(kernel),-(ubi) LX_MEM=0xff00000 mma_heap=MMU_MMA,miu=0,sz=0x3800000 mma_heap=mma_heap_name0,miu=0,sz=0x3A00000 mma_memblock_remove=1 hardinfo=200a01000169202d0000000024100000
+[2020-11-25 09:44:32]PID hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 09:44:32]Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-11-25 09:44:32]Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[2020-11-25 09:44:32]Memory: 131580K/144384K available (2881K kernel code, 284K rwdata, 1356K rodata, 184K init, 191K bss, 10756K reserved, 2048K cma-reserved)
+[2020-11-25 09:44:32]Virtual kernel memory layout:
+[2020-11-25 09:44:32]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-11-25 09:44:32]    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[2020-11-25 09:44:32]    vmalloc : 0xcc800000 - 0xff800000   ( 816 MB)
+[2020-11-25 09:44:32]    lowmem  : 0xc0000000 - 0xcc500000   ( 197 MB)
+[2020-11-25 09:44:32]    modules : 0xbf800000 - 0xc0000000   (   8 MB)
+[2020-11-25 09:44:32]      .text : 0xc0008000 - 0xc02d8a00   (2883 kB)
+[2020-11-25 09:44:32]      .init : 0xc0452000 - 0xc0480000   ( 184 kB)
+[2020-11-25 09:44:32]      .data : 0xc0480000 - 0xc04c7098   ( 285 kB)
+[2020-11-25 09:44:32]       .bss : 0xc04c9000 - 0xc04f8f3c   ( 192 kB)
+[2020-11-25 09:44:32]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-11-25 09:44:32]Preemptible hierarchical RCU implementation.
+[2020-11-25 09:44:32]        Build-time adjustment of leaf fanout to 32.
+[2020-11-25 09:44:32]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-11-25 09:44:32]RCU: Adjusting geometry for rcu_fanout_leaf=32, nr_cpu_ids=2
+[2020-11-25 09:44:32]NR_IRQS:16 nr_irqs:16 16
+[2020-11-25 09:44:32]ms_init_main_intc: np->name=ms_main_intc, parent=gic
+[2020-11-25 09:44:32]ms_init_pm_intc: np->name=ms_pm_intc, parent=ms_main_intc
+[2020-11-25 09:44:32]ss_init_gpi_intc: np->name=ms_gpi_intc, parent=ms_main_intc
+[2020-11-25 09:44:32]Find CLK_cpupll_clk, hook ms_cpuclk_ops
+[2020-11-25 09:44:32]arm_arch_timer: Architected cp15 timer(s) running at 6.00MHz (virt).
+[2020-11-25 09:44:32]clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+[2020-11-25 09:44:32]sched_clock: 56 bits at 6MHz, resolution 166ns, wraps every 4398046511055ns
+[2020-11-25 09:44:32]Switching to timer-based delay loop, resolution 166ns
+[2020-11-25 09:44:32]Console: colour dummy device 80x30
+[2020-11-25 09:44:32]console [ttyS0] enabled
+[2020-11-25 09:44:32]Calibrating delay loop (skipped), value calculated using timer frequency.. 12.00 BogoMIPS (lpj=60000)
+[2020-11-25 09:44:32]pid_max: default: 4096 minimum: 301
+[2020-11-25 09:44:32]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 09:44:32]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 09:44:32]CPU: Testing write buffer coherency: ok
+[2020-11-25 09:44:32]CPU0: update cpu_capacity 1024
+[2020-11-25 09:44:32]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-11-25 09:44:32]Setting up static identity map for 0x20008240 - 0x20008270
+[2020-11-25 09:44:32]CPU1: update cpu_capacity 1024
+[2020-11-25 09:44:32]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-11-25 09:44:32]Brought up 2 CPUs
+[2020-11-25 09:44:32]SMP: Total of 2 processors activated (24.00 BogoMIPS).
+[2020-11-25 09:44:32]CPU: All CPU(s) started in SVC mode.
+[2020-11-25 09:44:32]devtmpfs: initialized
+[2020-11-25 09:44:32]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-11-25 09:44:32]clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[2020-11-25 09:44:32]futex hash table entries: 16 (order: -2, 1024 bytes)
+[2020-11-25 09:44:32]NET: Registered protocol family 16
+[2020-11-25 09:44:32]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]Version : MVX4##I2M#svn4850#KL_LX409##[BR:TD-NVR]#XVM
+[2020-11-25 09:44:32]
+[2020-11-25 09:44:32]GPIO: probe end[ss_gpi_intc_domain_alloc] hw:42 -> v:45
+[2020-11-25 09:44:32][MS_PM_INTC] hw:20 -> v:53
+[2020-11-25 09:44:32]td_modules init ok
+[2020-11-25 09:44:32]SCSI subsystem initialized
+[2020-11-25 09:44:32]usbcore: registered new interface driver usbfs
+[2020-11-25 09:44:32]usbcore: registered new interface driver hub
+[2020-11-25 09:44:32]usbcore: registered new device driver usb
+[2020-11-25 09:44:32]clocksource: Switched to clocksource arch_sys_counter
+[2020-11-25 09:44:32]NET: Registered protocol family 2
+[2020-11-25 09:44:32]TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-11-25 09:44:32]TCP bind hash table entries: 2048 (order: 3, 40960 bytes)
+[2020-11-25 09:44:32]TCP: Hash tables configured (established 2048 bind 2048)
+[2020-11-25 09:44:32]UDP hash table entries: 128 (order: 0, 6144 bytes)
+[2020-11-25 09:44:32]UDP-Lite hash table entries: 128 (order: 0, 6144 bytes)
+[2020-11-25 09:44:32]NET: Registered protocol family 1
+[2020-11-25 09:44:32]RPC: Registered named UNIX socket transport module.
+[2020-11-25 09:44:32]RPC: Registered udp transport module.
+[2020-11-25 09:44:32]RPC: Registered tcp transport module.
+[2020-11-25 09:44:32]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-11-25 09:44:32]Unpacking initramfs...
+[2020-11-25 09:44:33]Initramfs unpacking failed: junk in compressed archive
+[2020-11-25 09:44:33]Freeing initrd memory: 4096K
+[2020-11-25 09:44:33]workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[2020-11-25 09:44:33]fuse init (API version 7.26)
+[2020-11-25 09:44:33]io scheduler noop registered
+[2020-11-25 09:44:33]io scheduler deadline registered (default)
+[2020-11-25 09:44:33]libphy: Fixed MDIO Bus: probed
+[2020-11-25 09:44:33]PPP generic driver version 2.4.2
+[2020-11-25 09:44:33]PPP BSD Compression module registered
+[2020-11-25 09:44:33]PPP Deflate Compression module registered
+[2020-11-25 09:44:33]PPP MPPE Compression module registered
+[2020-11-25 09:44:33]NET: Registered protocol family 24
+[2020-11-25 09:44:33]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-11-25 09:44:33]Mstar_ehc_init version:20180309
+[2020-11-25 09:44:33]Sstar-ehci-2 H.W init
+[2020-11-25 09:44:33]CHIP_FUNCTION SET. ID=4, param=65537
+[2020-11-25 09:44:33]Titania3_series_start_ehc start
+[2020-11-25 09:44:33][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 09:44:33][USB] enable miu lower bound address subtraction
+[2020-11-25 09:44:33][USB] init squelch level 0x2
+[2020-11-25 09:44:33][USB] no platform_data, device tree coming
+[2020-11-25 09:44:33][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 09:44:33]BC disable 
+[2020-11-25 09:44:33][USB] soc:Sstar-ehci-2 irq --> 40
+[2020-11-25 09:44:33]Sstar-ehci-2 soc:Sstar-ehci-2: EHCI Host Controller
+[2020-11-25 09:44:33]Sstar-ehci-2 soc:Sstar-ehci-2: new USB bus registered, assigned bus number 1
+[2020-11-25 09:44:33]Sstar-ehci-2 soc:Sstar-ehci-2: irq 40, io mem 0xfd285000
+[2020-11-25 09:44:33]usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 09:44:33]usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 09:44:33]usb usb1: Product: EHCI Host Controller
+[2020-11-25 09:44:33]usb usb1: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 09:44:33]usb usb1: SerialNumber: mstar
+[2020-11-25 09:44:33]hub 1-0:1.0: USB hub found
+[2020-11-25 09:44:33]hub 1-0:1.0: 1 port detected
+[2020-11-25 09:44:33]Sstar-ehci-1 H.W init
+[2020-11-25 09:44:33]CHIP_FUNCTION SET. ID=4, param=1
+[2020-11-25 09:44:33]Titania3_series_start_ehc start
+[2020-11-25 09:44:33][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 09:44:33][USB] enable miu lower bound address subtraction
+[2020-11-25 09:44:33][USB] init squelch level 0x2
+[2020-11-25 09:44:33][USB] no platform_data, device tree coming
+[2020-11-25 09:44:33][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 09:44:33]BC disable 
+[2020-11-25 09:44:33][USB] soc:Sstar-ehci-1 irq --> 39
+[2020-11-25 09:44:33]Sstar-ehci-1 soc:Sstar-ehci-1: EHCI Host Controller
+[2020-11-25 09:44:33]Sstar-ehci-1 soc:Sstar-ehci-1: new USB bus registered, assigned bus number 2
+[2020-11-25 09:44:33]Sstar-ehci-1 soc:Sstar-ehci-1: irq 39, io mem 0xfd284800
+[2020-11-25 09:44:33]usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 09:44:33]usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 09:44:33]usb usb2: Product: EHCI Host Controller
+[2020-11-25 09:44:33]usb usb2: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 09:44:33]usb usb2: SerialNumber: mstar
+[2020-11-25 09:44:33]hub 2-0:1.0: USB hub found
+[2020-11-25 09:44:33]hub 2-0:1.0: 1 port detected
+[2020-11-25 09:44:33]Sstar-ehci-3 H.W init
+[2020-11-25 09:44:33]CHIP_FUNCTION SET. ID=4, param=131073
+[2020-11-25 09:44:33]Titania3_series_start_ehc start
+[2020-11-25 09:44:33][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 09:44:33][USB] enable miu lower bound address subtraction
+[2020-11-25 09:44:33][USB] init squelch level 0x2
+[2020-11-25 09:44:33][USB] no platform_data, device tree coming
+[2020-11-25 09:44:33][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 09:44:33]BC disable 
+[2020-11-25 09:44:33][USB] soc:Sstar-ehci-3 irq --> 57
+[2020-11-25 09:44:33]Sstar-ehci-3 soc:Sstar-ehci-3: EHCI Host Controller
+[2020-11-25 09:44:33]Sstar-ehci-3 soc:Sstar-ehci-3: new USB bus registered, assigned bus number 3
+[2020-11-25 09:44:33]Sstar-ehci-3 soc:Sstar-ehci-3: irq 57, io mem 0xfd286400
+[2020-11-25 09:44:33]usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 09:44:33]usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 09:44:33]usb usb3: Product: EHCI Host Controller
+[2020-11-25 09:44:33]usb usb3: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 09:44:33]usb usb3: SerialNumber: mstar
+[2020-11-25 09:44:33]hub 3-0:1.0: USB hub found
+[2020-11-25 09:44:33]hub 3-0:1.0: 1 port detected
+[2020-11-25 09:44:33]usbcore: registered new interface driver usb-storage
+[2020-11-25 09:44:33]mousedev: PS/2 mouse device common for all mice
+[2020-11-25 09:44:33]i2c /dev entries driver
+[2020-11-25 09:44:33]usbcore: registered new interface driver usbhid
+[2020-11-25 09:44:33]usbhid: USB HID core driver
+[2020-11-25 09:44:33]1f221000.uart0: ttyS0 at MMIO 0x0 (irq = 31, base_baud = 10800000) is a unknown
+[2020-11-25 09:44:33]1f221200.uart1: ttyS1 at MMIO 0x0 (irq = 32, base_baud = 10800000) is a unknown
+[2020-11-25 09:44:33]1f220400.uart2: ttyS2 at MMIO 0x0 (irq = 34, base_baud = 10800000) is a unknown
+[2020-11-25 09:44:33]1f221400.uart2: ttyS3 at MMIO 0x0 (irq = 35, base_baud = 10800000) is a unknown
+[2020-11-25 09:44:33][Core Voltage] check_voltage_valid: Not support 0mV, use 850mV
+[2020-11-25 09:44:33]MSYS: DMEM request: [emac0_buff]:0x00000812
+[2020-11-25 09:44:33]MSYS: DMEM request: [emac0_buff]:0x00000812 success, CPU phy:@0x2C24D000, virt:@0xCC24D000
+[2020-11-25 09:44:33]libphy: mdio: probed
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: /soc/emac0/mdio-bus@emac0/ethernet-phy@0 has invalid PHY address
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 0
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 1
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 2
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 3
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 4
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 5
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 6
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 7
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 8
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 9
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 10
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 11
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 12
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 13
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 14
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 15
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 16
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 17
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 18
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 19
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 20
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 21
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 22
+[2020-11-25 09:44:33]==20180309==> hub_port_init 1 #0
+[2020-11-25 09:44:33]Plug in USB Port3
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 23
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 24
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 25
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 26
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 27
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 28
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 29
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 30
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 31
+[2020-11-25 09:44:33][emac_phy_connect][3234] connected mac emac0 to PHY at mdio-bus@emac0:00 [uid=11112222, driver=SStar 10/100 Ethernet Phy]
+[2020-11-25 09:44:33]MSYS: DMEM request: [emac1_buff]:0x00060812
+[2020-11-25 09:44:33]MSYS: DMEM request: [emac1_buff]:0x00060812 success, CPU phy:@0x2C250000, virt:@0xCC250000
+[2020-11-25 09:44:33]libphy: mdio: probed
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac1: /soc/emac1/mdio-bus@emac1/ethernet-phy@1 has invalid PHY address
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 0
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 1
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 2
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 3
+[2020-11-25 09:44:33]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 4
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 5
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 6
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 7
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 8
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 9
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 10
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 11
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 12
+[2020-11-25 09:44:34]usb 3-1: new high-speed USB device number 2 using Sstar-ehci-3
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 13
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 14
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 15
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 16
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 17
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 18
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 19
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 20
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 21
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 22
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 23
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 24
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 25
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 26
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 27
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 28
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 29
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 30
+[2020-11-25 09:44:34]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 31
+[2020-11-25 09:44:34][emac_phy_connect][3234] connected mac emac1 to PHY at mdio-bus@emac1:00 [uid=001cc816, driver=Generic PHY]
+[2020-11-25 09:44:34]ms_rtcpwc 1f006800.rtcpwc: rtc core: registered 1f006800.rtcpwc as rtc0
+[2020-11-25 09:44:34][ms_cpufreq_init] Current clk=998244352
+[2020-11-25 09:44:34]mstar_spinand_probe: mstar_spinand enableClock
+[2020-11-25 09:44:34]MSYS: DMEM request: [BDMA]:0x00000840
+[2020-11-25 09:44:34]MSYS: DMEM request: [BDMA]:0x00000840 success, CPU phy:@0x2C24E000, virt:@0xCC24E000
+[2020-11-25 09:44:34]MDrv_SPINAND_Init: Detected ID: MID =ef, DID =aa
+[2020-11-25 09:44:34]_dumpNandInformation:warning, Bytes / Page :  2048
+[2020-11-25 09:44:34]_dumpNandInformation:warning, Pages / Block:  64
+[2020-11-25 09:44:34]_dumpNandInformation:warning, Sector/ Page :  512
+[2020-11-25 09:44:34]_dumpNandInformation:warning, Spare / Page :  64
+[2020-11-25 09:44:34]_dumpNandInformation:warning, Current config r:4 w:4 drv:1
+[2020-11-25 09:44:34]mstar_spinand_probe: Magic memcmp pass
+[2020-11-25 09:44:34]mstar_spinand_probe: Get partition (Block 0 : page 1)
+[2020-11-25 09:44:34]mstar_spinand_probe: CIS contains part info
+[2020-11-25 09:44:34]mstar_spinand_probe: Before nand_scan()...
+[2020-11-25 09:44:34]system_area_size = 0x00800000
+[2020-11-25 09:44:34]3 cmdlinepart partitions found on MTD device nand0
+[2020-11-25 09:44:34]mstar_spinand_probe: Mtd parts parse
+[2020-11-25 09:44:34]Creating 3 MTD partitions on "nand0":
+[2020-11-25 09:44:34]0x000000000000-0x000000300000 : "uboot"
+[2020-11-25 09:44:34]0x000000300000-0x000000800000 : "kernel"
+[2020-11-25 09:44:34]0x000000800000-0x000008000000 : "ubi"
+[2020-11-25 09:44:34][ahci_sstar_probe] , priv->res_ahci_port0 =0xfd345100 
+[2020-11-25 09:44:34][ahci_sstar_probe] , priv->res_ahci_misc =0xfd2a4a00 
+[2020-11-25 09:44:34][SATA] phy_mode =2
+[2020-11-25 09:44:34]SATA_TX_R50 trim=0x0015
+[2020-11-25 09:44:34]SATA_RX_R50 trim=0x0011
+[2020-11-25 09:44:34]SATA_TX_R50_IBIAS trim=0x001F
+[2020-11-25 09:44:34]SATA_RXPLL_ICTRL_CDR trim=0x0000
+[2020-11-25 09:44:34][SATA0] Clock : ON
+[2020-11-25 09:44:34]sstar sata HW settings done!!!
+[2020-11-25 09:44:34][SATA] phy_mode =2
+[2020-11-25 09:44:34]ahci_sstar 1f345000.sata: AHCI 0001.0300 32 slots 1 ports 6 Gbps 0x1 impl platform mode
+[2020-11-25 09:44:34]ahci_sstar 1f345000.sata: flags: ncq sntf pm led clo only pmp fbs pio slum part ccc apst 
+[2020-11-25 09:44:34]ahci_sstar 1f345000.sata: port 0 is not capable of FBS
+[2020-11-25 09:44:34]scsi host0: ahci_sstar
+[2020-11-25 09:44:34]ata1: SATA max UDMA/133 mmio [mem 0x1f345000-0x1f3450ff] port 0x100 irq 51
+[2020-11-25 09:44:34][ahci_sstar_probe] , SSTAR AHCI SATA registered 
+[2020-11-25 09:44:34]NET: Registered protocol family 10
+[2020-11-25 09:44:34]NET: Registered protocol family 17
+[2020-11-25 09:44:34]Key type dns_resolver registered
+[2020-11-25 09:44:34]ThumbEE CPU extension supported.
+[2020-11-25 09:44:34]Registering SWP/SWPB emulation handler
+[2020-11-25 09:44:34]ubi0: attaching mtd2
+[2020-11-25 09:44:34]usb 3-1: New USB device found, idVendor=23a9, idProduct=ef18
+[2020-11-25 09:44:34]usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[2020-11-25 09:44:34]usb 3-1: Product: MiniKing
+[2020-11-25 09:44:34]usb 3-1: Manufacturer: aigo
+[2020-11-25 09:44:34]usb 3-1: SerialNumber: 00b0000000001935
+[2020-11-25 09:44:34]usb-storage 3-1:1.0: USB Mass Storage device detected
+[2020-11-25 09:44:34]scsi host1: usb-storage 3-1:1.0
+[2020-11-25 09:44:34]Sstar-emac 1f2a2000.emac0 eth0: Link is Down
+[2020-11-25 09:44:34]ubi0: scanning is finished
+[2020-11-25 09:44:34]ubi0: attached mtd2 (name "ubi", size 120 MiB)
+[2020-11-25 09:44:34]ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[2020-11-25 09:44:34]ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[2020-11-25 09:44:34]ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[2020-11-25 09:44:34]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-11-25 09:44:34]ubi0: good PEBs: 960, bad PEBs: 0, corrupted PEBs: 0
+[2020-11-25 09:44:34]ata1.00: ATA-9: ST2000VX008-2E3164, CV12, max UDMA/133
+[2020-11-25 09:44:34]ata1.00: 3907029168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-11-25 09:44:35]ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+[2020-11-25 09:44:35]ubi0: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 758598555
+[2020-11-25 09:44:35]ubi0: available PEBs: 1, total reserved PEBs: 959, PEBs reserved for bad PEB handling: 20
+[2020-11-25 09:44:35]ubi0: background thread "ubi_bgt0d" started, PID 107
+[2020-11-25 09:44:35]OF: fdt:not creating '/sys/firmware/fdt': CRC check failed
+[2020-11-25 09:44:35]ata10: configured for UDMA/133
+[2020-11-25 09:44:35]scsi 0:0:0:0: Direct-Access     ATA      ST2000VX008-2E31 CV12 PQ: 0 ANSI: 5
+[2020-11-25 09:44:35]sd 0:0:0:0: [sda] 3907029168 512-byte logical blocks: (2.00 TB/1.82 TiB)
+[2020-11-25 09:44:35]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-11-25 09:44:35]sd 0:0:0:0: [sda] Write Protect is off
+[2020-11-25 09:44:35]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-11-25 09:44:35]Sstar-emac 1f2a2800.emac1 eth1: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-11-25 09:44:35] sda: sda1 sda2
+[2020-11-25 09:44:35]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-11-25 09:44:35]This architecture does not have kernel memory protection.
+[2020-11-25 09:44:35]random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]random: sysctl: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]sysctl: /etc/sysctl.conf: No sucrandom: S00devs: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]h file or directory
+[2020-11-25 09:44:35]
+[2020-11-25 09:44:35]         random: mknod: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35] _ _ __ _    _ _ _
+[2020-11-25 09:44:35]         /_ random: mknod: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]_  _ _/  / _ _  \ 
+[2020-11-25 09:44:35]            random: ln: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]/ /     / /   / /
+[2020-11-25 09:44:35]random: S01udev: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]
+[2020-11-25 09:44:35]          / /     / /   / /
+[2020-11-25 09:44:35]  random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]_ _ _ _/ /_ _ _/ /_ _/ /______
+[2020-11-25 09:44:35]random: mount: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]________________________________random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:44:35]___
+[2020-11-25 09:44:35]
+[2020-11-25 09:44:35]
+[2020-11-25 09:44:35][RCS]: /etc/init.d/S00devs
+[2020-11-25 09:44:35]mknod: /dev/console: File exists
+[2020-11-25 09:44:35]mknod: /dev/null: File exists
+[2020-11-25 09:44:35][RCS]: /etc/init.d/S01udev
+[2020-11-25 09:44:35]udevd[125]: starting eudev-3.2.7
+[2020-11-25 09:44:35][RCS]: /etc/init.d/S80network
+[2020-11-25 09:44:35]sh: rootfstype=ramfs: unknown operand
+[2020-11-25 09:44:35]UBIFS (ubi0:0): background thread "ubifs_bgt0_0" started, PID 146
+[2020-11-25 09:44:35]UBIFS (ubi0:0): UBIFS: mounted UBI device 0, volume 0, name "tdfs"
+[2020-11-25 09:44:35]UBIFS (ubi0:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[2020-11-25 09:44:35]UBIFS (ubi0:0): FS size: 105263104 bytes (100 MiB, 829 LEBs), journal size 9023488 bytes (8 MiB, 72 LEBs)
+[2020-11-25 09:44:35]UBIFS (ubi0:0): reserved for root: 0 bytes (0 KiB)
+[2020-11-25 09:44:35]UBIFS (ubi0:0): media format: w4/r0 (latest is w4/r0), UUID 93A9E73D-2EF3-4082-A66F-520E845B8118, small LPT model
+[2020-11-25 09:44:35]Auto login as root ...
+[2020-11-25 09:44:35]Jan  1 00:00:03 login[148]: root login on 'ttyS0'
+[2020-11-25 09:44:35]Welcome to TdLinux.
+[2020-11-25 09:44:35]-sh: nfsroot: Permission denied
+[2020-11-25 09:44:35]~ # mount config
+[2020-11-25 09:44:35]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-11-25 09:44:35]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-11-25 09:44:35]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-11-25 09:44:35]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-11-25 09:44:35]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-11-25 09:44:35]sd 1:0:0:0: [sdb] No Caching mode page found
+[2020-11-25 09:44:35]sd 1:0:0:0: [sdb] Assuming drive cache: write through
+[2020-11-25 09:44:35]ln: /tdfs/dvr/log/log.dat: File exists
+[2020-11-25 09:44:35]ln: /tdfs/dvr/log/logalarm.dat: File exists
+[2020-11-25 09:44:35]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-11-25 09:44:35]ln: /config/config_tool: File exists
+[2020-11-25 09:44:35]ln: /config/dump_config: File exists
+[2020-11-25 09:44:35]ln: /config/dump_mmap: File exists
+[2020-11-25 09:44:35]ln: /config/mmap.ini: File exists
+[2020-11-25 09:44:35]ln: /config/fbdev.ini: File exists
+[2020-11-25 09:44:35]ln: /config/pq.ini: File exists
+[2020-11-25 09:44:35]ln: /config/board.ini: File exists
+[2020-11-25 09:44:35]ln: /config/vdec_fw: File exists
+[2020-11-25 09:44:35]ln: /config/PQ_general: File exists
+[2020-11-25 09:44:35]ln: /config/pq: File exists
+[2020-11-25 09:44:35]ln: /config/panel: File exists
+[2020-11-25 09:44:35]ln: /config/model: File exists
+[2020-11-25 09:44:35]ln: /config/DLC: File exists
+[2020-11-25 09:44:35]ln: /config/ColorMatrix: File exists
+[2020-11-25 09:44:35]ln: /root/snmp/snmpd.log: File exists
+[2020-11-25 09:44:35]ln: /sbin/udhcpc6: File exists
+[2020-11-25 09:44:35]======mkconfig end====
+[2020-11-25 09:44:36]check successfully!!!
+[2020-11-25 09:44:36]/tdfs
+[2020-11-25 09:44:36]check successfully!!!
+[2020-11-25 09:44:36]/tdfs
+[2020-11-25 09:44:36]BANK:0x0030 16bit-offset 0x00
+[2020-11-25 09:44:36]0x0000
+[2020-11-25 09:44:36]BANK:0x0030 16bit-offset 0x04
+[2020-11-25 09:44:36]0x0000
+[2020-11-25 09:44:36]BANK:0x0030 16bit-offset 0x05
+[2020-11-25 09:44:36]0x0000
+[2020-11-25 09:44:36]ifconfig: SIOCSIFADDR: No such device
+[2020-11-25 09:44:37]mount: mounting 10.30.30.183:/home/guojinzhao/debug/ssr621_128/ on /dbg failed: Permission denied
+[2020-11-25 09:44:38]check successfully!!!
+[2020-11-25 09:44:38]/tdfs/dvr
+[2020-11-25 09:44:38]check successfully!!!
+[2020-11-25 09:44:38]/tdfs/dvr
+[2020-11-25 09:44:38]jpe driver probed
+[2020-11-25 09:44:38]module [sys] init
+[2020-11-25 09:44:38]MI_SYSCFG_SetupMmapLoader default_config_path:/config/config_tool, argv1:/config/load_mmap,argv2:/config/mmap.ini
+[2020-11-25 09:44:38]Function = init_glob_miu_kranges, Line = 604, Insert KProtect for LX @ MIU: 0
+[2020-11-25 09:44:38]Function = init_glob_miu_kranges, Line = 613, [INIT] for LX0 kprotect: from 0x20000000 to 0x2FF00000, using block 0
+[2020-11-25 09:44:38]config...... strPath:/config/config_tool, argv0:/config/load_config
+[2020-11-25 09:44:39]function:parese_Cmdline,pCmd_Section:0xff00000
+[2020-11-25 09:44:39]MM
+[2020-11-25 09:44:39]U_
+[2020-11-25 09:44:39]MM
+[2020-11-25 09:44:39]A    miu=0,sz=3800000  reserved_start=24800000
+[2020-11-25 09:44:39][MDrv_MMU_SetRegion] not support , chipId = 1 
+[2020-11-25 09:44:39]r_front->miuBlockIndex:0,r_front->start_cpu_bus_pa:0x20000000,r_front->start_cpu_bus_pa+r_front->length:0x24800000
+[2020-11-25 09:44:39]r_back->miuBlockIndex:1,r_back->start_cpu_bus_pa:0x28000000,r_back->start_cpu_bus_pa+r_back->length:0x2ff00000
+[2020-11-25 09:44:39]mi_sys_mma_allocator_create success, heap_base_addr=24800000 length=3800000 
+[2020-11-25 09:44:39]mm
+[2020-11-25 09:44:39]a_
+[2020-11-25 09:44:39]he
+[2020-11-25 09:44:39]ap
+[2020-11-25 09:44:39]_n
+[2020-11-25 09:44:39]am
+[2020-11-25 09:44:39]e0
+[2020-11-25 09:44:39]    miu=0,sz=3a00000  reserved_start=2c500000
+[2020-11-25 09:44:39]r_front->miuBlockIndex:1,r_front->start_cpu_bus_pa:0x28000000,r_front->start_cpu_bus_pa+r_front->length:0x2c500000
+[2020-11-25 09:44:39]mi_sys_mma_allocator_create success, heap_base_addr=2c500000 length=3a00000 
+[2020-11-25 09:44:39]Kernel CONFIG_HZ = 100
+[2020-11-25 09:44:39]Sigmastar Module version: project_commit.37dc458 sdk_commit.7af5ac4/home/aaron.guo/i2m/tiandy/sdk build_time.20201110212355
+[2020-11-25 09:44:39]module [ai] init
+[2020-11-25 09:44:39]module [ao] init
+[2020-11-25 09:44:39]module [gfx] init
+[2020-11-25 09:44:39]module [disp] init
+[2020-11-25 09:44:39]Jan  1 08:00:07 login[380]: root login on 'pts/0'
+[2020-11-25 09:44:39]module [divp] init
+[2020-11-25 09:44:39]module [hdmi] init
+[2020-11-25 09:44:39]module [panel] init
+[2020-11-25 09:44:39]insmod: can't insert 'mi_sed.ko': No such file or directory
+[2020-11-25 09:44:39]module [vdec] init
+[2020-11-25 09:44:39]module [vdisp] init
+[2020-11-25 09:44:39]module [venc] init Oct 15 2020 22:41:12
+[2020-11-25 09:44:39]tdsecurity_init lock and dir list
+[2020-11-25 09:44:39]BANK:0x0030 16bit-offset 0x00
+[2020-11-25 09:44:39]0x0000
+[2020-11-25 09:44:39]BANK:0x0030 16bit-offset 0x04
+[2020-11-25 09:44:39]0x0000
+[2020-11-25 09:44:39]BANK:0x0030 16bit-offset elevator: type cfq not found
+[2020-11-25 09:44:39]elevator: switch to cfq
+[2020-11-25 09:44:39] failed
+[2020-11-25 09:44:39]0x05
+[2020-11-25 09:44:39]0x0000
+[2020-11-25 09:44:39]sh: write error: Ielevator: type cfq not found
+[2020-11-25 09:44:39]elevator: switch to cfq
+[2020-11-25 09:44:39] failed
+[2020-11-25 09:44:39]nvalid argument
+[2020-11-25 09:44:39]sh: write error: Invalid argument
+[2020-11-25 09:44:39]load: line 57: can't create /sys/block/sdc/queue/scheduler: nonexistent directory
+[2020-11-25 09:44:39]load: line 58: can't create /sys/block/sdd/queue/scheduler: nonexistent directory
+[2020-11-25 09:44:39]load: line 59: can't create /sys/block/sde/queue/scheduler: nonexistent directory
+[2020-11-25 09:44:39]load: line 60: can't create /sys/block/sdf/queue/scheduler: nonexistent directory
+[2020-11-25 09:44:39]load: line 61: can't create /sys/block/sdg/queue/scheduler: nonexistent directory
+[2020-11-25 09:44:39]load: line 62: can't create /sys/block/sdh/queue/scheduler: nonexistent directory
+[2020-11-25 09:44:39]ln: /dev/mytty0: No such file or directory
+[2020-11-25 09:45:10]Jan  1 08:00:38 login[435]: root login on 'pts/1'
+[2020-11-25 09:46:33]root hub reinitial [usbdis]
+[2020-11-25 09:57:08]==20180309==> hub_port_init 1 #0
+[2020-11-25 09:57:08]Plug in USB Port3
+[2020-11-25 09:57:09]sd 1:0:0:0: [sdb] No Caching mode page found
+[2020-11-25 09:57:09]sd 1:0:0:0: [sdb] Assuming drive cache: write through
+[2020-11-25 09:57:27]Jan  1 08:12:55 login[713]: root login on 'pts/2'
+[2020-11-25 09:58:31]client [747] connected, module:sys
+[2020-11-25 09:58:31]_HDMITXOpen 113, HDMITx Alrad Open
+[2020-11-25 09:58:31]DrvHdmitxOsSetClkOn 1212 num_parents:3 
+[2020-11-25 09:58:31]DrvHdmitxOsSetClkOn 1215, CLK_0 = 0
+[2020-11-25 09:58:31]DrvHdmitxOsSetClkOn 1215, CLK_1 = 432000000
+[2020-11-25 09:58:31]DrvHdmitxOsSetClkOn 1215, CLK_2 = 216000000
+[2020-11-25 09:58:32]DrvHdmitxOsSetClkOn 1252, [Hdmitx] num_parents:3-1        CLK_hdmi 0
+[2020-11-25 09:58:32]DrvHdmitxOsSetClkOn 1252, [Hdmitx] num_parents:3-2    CLK_disp_432 432000000
+[2020-11-25 09:58:32]DrvHdmitxOsSetClkOn 1252, [Hdmitx] num_parents:3-3    CLK_disp_216 216000000
+[2020-11-25 09:58:32]client [747] connected, module:hdmi
+[2020-11-25 09:58:32]AnalogDrvCur: Tap1(0x14, 0x14, 0x14, 0x14) Tap1(0x00, 0x00, 0x00, 0x00), Pd(0x00, 0x00, 0x00)
+[2020-11-25 09:58:32]_HalHdmitxIfGetInfoSinkInfoConfig 786, Check Edid Data Fail
+[2020-11-25 09:58:32]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:32]
+[2020-11-25 09:58:32]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:32]_HalHdmitxIfGetInfoSinkInfoConfig 737, Check Edid Data Fail
+[2020-11-25 09:58:32]
+[2020-11-25 09:58:32]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:32]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:32]
+[2020-11-25 09:58:32][MI ERR ]: _MI_HDMI_ChkColorFormatForSpecTiming[1204]: Failed To Check Color Format
+[2020-11-25 09:58:32]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 09:58:32]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:32]B InColor = 0, OutColor = 0
+[2020-11-25 09:58:32]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:32]B InColor = 0, OutColor = 0
+[2020-11-25 09:58:32]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:32]MDrv_HDMITx_Exhibit: Create Check Rx timer success!
+[2020-11-25 09:58:32]E_HDMITX_FSM_CHECK_HPD:: pre= 0, cur = 2
+[2020-11-25 09:58:32]~~~~~~Mhal_HDMITx_SetSwI2cInputMode 1019
+[2020-11-25 09:58:33]
+[2020-11-25 09:58:33]MDrv_HDMITx_ClearAVMUTE 
+[2020-11-25 09:58:33]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 09:58:33]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:33]
+[2020-11-25 09:58:33]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:33][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 09:58:33]
+[2020-11-25 09:58:33]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 09:58:33]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:33]
+[2020-11-25 09:58:33]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:33][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 09:58:33]
+[2020-11-25 09:58:33]
+[2020-11-25 09:58:33]MDrv_HDMITx_SetAVMUTE 
+[2020-11-25 09:58:33]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 09:58:34]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 09:58:34]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:34][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 09:58:34]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:34][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34]_HalHdmitxIfGetInfoSinkInfoConfig 786, Check Edid Data Fail
+[2020-11-25 09:58:34]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:34]_HalHdmitxIfGetInfoSinkInfoConfig 737, Check Edid Data Fail
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:34]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:34]
+[2020-11-25 09:58:34][MI ERR ]: _MI_HDMI_ChkColorFormatForSpecTiming[1204]: Failed To Check Color Format
+[2020-11-25 09:58:34]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 09:58:34]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:34]B InColor = 0, OutColor = 0
+[2020-11-25 09:58:34]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:34]B InColor = 0, OutColor = 0
+[2020-11-25 09:58:34]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:34]E_HDMITX_FSM_CHECK_HPD:: pre= 0, cur = 2
+[2020-11-25 09:58:34]~~~~~~Mhal_HDMITx_SetSwI2cInputMode 1019
+[2020-11-25 09:58:35]
+[2020-11-25 09:58:35]MDrv_HDMITx_ClearAVMUTE 
+[2020-11-25 09:58:35]AnalogDrvCur: Tap1(0x14, 0x14, 0x14, 0x14) Tap1(0x00, 0x00, 0x00, 0x00), Pd(0x08, 0x00, 0x00)
+[2020-11-25 09:58:35]client [747] connected, module:disp
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 4, hdmiTx = 0 [DACOUT_576I_50]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 2, hdmiTx = 0 [DACOUT_480I_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 8, hdmiTx = 0 [DACOUT_1080P_24]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 9, hdmiTx = 0 [DACOUT_1080P_25]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 10, hdmiTx = 0 [DACOUT_1080P_30]
+[2020-11-25 09:58:35]E_HDMITX_FSM_CHECK_HPD:: pre= 2, cur = 0
+[2020-11-25 09:58:35]~~~~~~Mhal_HDMITx_SetSwI2cInputMode 1019
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 6, hdmiTx = 0 [DACOUT_720P_50]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 7, hdmiTx = 0 [DACOUT_720P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 11, hdmiTx = 0 [DACOUT_1080I_50]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 13, hdmiTx = 0 [DACOUT_1080I_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 12, hdmiTx = 0 [DACOUT_1080P_50]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 14, hdmiTx = 0 [DACOUT_1080P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 5, hdmiTx = 0 [DACOUT_576P_50]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 3, hdmiTx = 0 [DACOUT_480P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 50] eTiming = 38, hdmiTx = 1  Not Fund!!!
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 50] eTiming = 50, hdmiTx = 1  Not Fund!!!
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 40, hdmiTx = 0 [DACOUT_1024X768P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 43, hdmiTx = 0 [DACOUT_1280X1024P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 41, hdmiTx = 0 [DACOUT_1366X768P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 44, hdmiTx = 0 [DACOUT_1440X900P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 42, hdmiTx = 0 [DACOUT_1280X800P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 46, hdmiTx = 0 [DACOUT_1600X1050P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 50] eTiming = 50, hdmiTx = 1  Not Fund!!!
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 45, hdmiTx = 0 [DACOUT_1600X1200P_60]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 50] eTiming = 50, hdmiTx = 1  Not Fund!!!
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 22, hdmiTx = 0 [DACOUT_2560X1440P_30]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 50] eTiming = 23, hdmiTx = 1  Not Fund!!!
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 30, hdmiTx = 0 [DACOUT_4K2KP_30]
+[2020-11-25 09:58:35][MI_SYSCFG_GetPanelInfo 42] eTiming = 32, hdmiTx = 0 [DACOUT_4K2KP_60]
+[2020-11-25 09:58:36]_HalDispIfSetDeviceVgaParam 2347, Peaking is not set
+[2020-11-25 09:58:36]_HalDispIfSetDeviceHdmiParam 2425, Peaking is not set
+[2020-11-25 09:58:36]
+[2020-11-25 09:58:36]GE_EnableDynaClkGate
+[2020-11-25 09:58:36] MI_Moduledev_RegisterDev  
+[2020-11-25 09:58:36]client [742] connected, module:gfx
+[2020-11-25 09:58:36]
+[2020-11-25 09:58:36]sstar_FB_SetBlending 397 u8GOP=1,u8win=0 aType=1 u8constAlpha=255
+[2020-11-25 09:58:36]sstar_FB_SetBlending 397 u8GOP=1,u8win=0 aType=0 u8constAlpha=0
+[2020-11-25 09:58:36]
+[2020-11-25 09:58:36]sstar_FB_SetBlending 397 u8GOP=1,u8win=0 aType=1 u8constAlpha=255
+[2020-11-25 09:58:36]
+[2020-11-25 09:58:36]sstar_FB_SetBlending 397 u8GOP=0,u8win=0 aType=1 u8constAlpha=255
+[2020-11-25 09:58:36]client [747] connected, module:vdisp
+[2020-11-25 09:58:38]
+[2020-11-25 09:58:38]MDrv_HDMITx_SetAVMUTE 
+[2020-11-25 09:58:38]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 09:58:39]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 09:58:39]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:39][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 09:58:39]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:39][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39]_HalHdmitxIfGetInfoSinkInfoConfig 786, Check Edid Data Fail
+[2020-11-25 09:58:39]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:39]_HalHdmitxIfGetInfoSinkInfoConfig 737, Check Edid Data Fail
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 09:58:39]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 09:58:39]
+[2020-11-25 09:58:39][MI ERR ]: _MI_HDMI_ChkColorFormatForSpecTiming[1204]: Failed To Check Color Format
+[2020-11-25 09:58:39]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 09:58:39]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:39]B InColor = 0, OutColor = 0
+[2020-11-25 09:58:39]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:39]B InColor = 0, OutColor = 0
+[2020-11-25 09:58:39]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 09:58:40]
+[2020-11-25 09:58:40]MDrv_HDMITx_ClearAVMUTE 
+[2020-11-25 09:58:40]AnalogDrvCur: Tap1(0x14, 0x14, 0x14, 0x14) Tap1(0x00, 0x00, 0x00, 0x00), Pd(0x08, 0x00, 0x00)
+[2020-11-25 09:58:40]_HalDispIfSetDeviceHdmiParam 2425, Peaking is not set
+[2020-11-25 09:58:41]_HalDispIfSetDeviceVgaParam 2347, Peaking is not set
+[2020-11-25 09:58:41]
+[2020-11-25 09:58:43]client [747] connected, module:vdec
+[2020-11-25 09:59:00]umount: can't remount NULL read-only
+[2020-11-25 09:59:00]umount: can't remount NULL read-only
+[2020-11-25 09:59:00]umount: can't remount /dev/scsi/host00/part2 read-only
+[2020-11-25 09:59:00]umount: can't remount tmpfs read-only
+[2020-11-25 09:59:00]umount: can't remount ubi0:config read-only
+[2020-11-25 09:59:00]umount: can't remount tmpfs read-only
+[2020-11-25 09:59:00]umount: ubi0:tdfs busy - remounted read-only
+[2020-11-25 09:59:00]umount: can't remount devpts read-only
+[2020-11-25 09:59:00]umount: tmpfs busy - remounted read-only
+[2020-11-25 09:59:00]umount: can't unmount /: Invalid argument
+[2020-11-25 09:59:00]The system is going down NOW!
+[2020-11-25 09:59:00]Sent SIGTERM to all processes
+[2020-11-25 09:59:00]client [747] disconnected, module:vdec
+[2020-11-25 09:59:00]client [742] disconnected, module:gfx
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 0 not create.
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 1 not create.
+[2020-11-25 09:59:00]
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 2 not create.
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 3 not create.
+[2020-11-25 09:59:00]
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 4 not create.
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 6 not create.
+[2020-11-25 09:59:00]
+[2020-11-25 09:59:00][MI ERR ]: _MI_VDEC_OnUnBindOutputPort[5643]: Chn 7 not create.
+[2020-11-25 09:59:00]client [747] disconnected, module:vdisp
+[2020-11-25 09:59:00]client [747] disconnected, module:disp
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0xc8701000] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0xc8701800] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01]
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0xc8705000] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0xc8706800] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01]
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0xc8704800] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0xc8706000] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01]
+[2020-11-25 09:59:01][MI ERR ]: _MI_SYS_IMPL_OnAllocationFreeCB[466]: In _MI_SYS_IMPL_OnAllocationFreeCB, output magic number[0x00000000] incorrect, maybe you meet race condition between dev unregister & buf release!!!
+[2020-11-25 09:59:01]
+[2020-11-25 09:59:01]MDrv_HDMITx_SetAVMUTE 
+[2020-11-25 09:59:01]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 09:59:01]DrvHdmitxOsSetClkOff 1285 num_parents:3
+[2020-11-25 09:59:01]DrvHdmitxOsSetClkOff 1310, [Hdmitx] 3-1,        CLK_hdmi Off
+[2020-11-25 09:59:01]DrvHdmitxOsSetClkOff 1310, [Hdmitx] 3-2,    CLK_disp_432 Off
+[2020-11-25 09:59:01]DrvHdmitxOsSetClkOff 1310, [Hdmitx] 3-3,    CLK_disp_216 Off
+[2020-11-25 09:59:01]client [747] disconnected, module:hdmi
+[2020-11-25 09:59:01]watchdog: watchdog0: watchdog did not stop!
+[2020-11-25 09:59:01]client [747] disconnected, module:sys
+[2020-11-25 09:59:01]Requesting system reboot
+[2020-11-25 09:59:02]reboot: Restarting system
+[2020-11-25 09:59:02]1
+[2020-11-25 09:59:02]IPL g8e04b60
+[2020-11-25 09:59:02]D-1f
+[2020-11-25 09:59:02]HW Reset
+[2020-11-25 09:59:02]miupll_233MHz
+[2020-11-25 09:59:02]MIU0 zq=0x003d
+[2020-11-25 09:59:02]miu_bw_set
+[2020-11-25 09:59:02]utmi_1_init done
+[2020-11-25 09:59:02]utmi_2_init done
+[2020-11-25 09:59:02]utmi_3_init done
+[2020-11-25 09:59:02]usbpll init done......
+[2020-11-25 09:59:02]SPI 54M
+[2020-11-25 09:59:02]clk_init done 
+[2020-11-25 09:59:02]P1 USB_rterm trim=0x0000
+[2020-11-25 09:59:02]P1 USB_HS_TX_CURRENT trim=0x0001
+[2020-11-25 09:59:02]P2 USB_rterm trim=0x0001
+[2020-11-25 09:59:02]P2 USB_HS_TX_CURRENT trim=0x0000
+[2020-11-25 09:59:02]P3 USB_rterm trim=0x0001
+[2020-11-25 09:59:02]P3 USB_HS_TX_CURRENT trim=0x0000
+[2020-11-25 09:59:02]PM_vol_bgap trim=0x0003
+[2020-11-25 09:59:02]GCR_SAR_DATA trim=0x018e
+[2020-11-25 09:59:02]ETH 10T output swing trim=0x0001
+[2020-11-25 09:59:02]ETH 100T output swing trim=0x0000
+[2020-11-25 09:59:02]ETH RX input impedance trim=0x0000
+[2020-11-25 09:59:02]ETH TX output impedance trim=0x0001
+[2020-11-25 09:59:02]MIPI_HS_RTERM trim=0x0001
+[2020-11-25 09:59:02]MIPI_LP_RTERM trim=0x0000
+[2020-11-25 09:59:02]TX_current trimming trim[0x1A]=0x0045
+[2020-11-25 09:59:02]TX_current trimming trim[0x1B]=0x0047
+[2020-11-25 09:59:02]TX_current trimming trim[0x1C]=0x0044
+[2020-11-25 09:59:02]HDMI2TX Rterm trim=0x0001
+[2020-11-25 09:59:02]HDMI2TX_Ibias_CH0 trim=0x0018
+[2020-11-25 09:59:02]HDMI2TX_Ibias_CH1 trim=0x001a
+[2020-11-25 09:59:03]HDMI2TX_Ibias_CH2 trim=0x0018
+[2020-11-25 09:59:03]HDMI2TX_Ibias_CH3 trim=0x001b
+[2020-11-25 09:59:03]256MB
+[2020-11-25 09:59:03]BIST0_0001-OK
+[2020-11-25 09:59:03]Enable MMU and CACHE
+[2020-11-25 09:59:03]Load IPL_CUST from SPINAND
+[2020-11-25 09:59:03]crc OK
+[2020-11-25 09:59:03]
+[2020-11-25 09:59:03]IPL_CUST g8e04b60
+[2020-11-25 09:59:03]runUBOOT()
+[2020-11-25 09:59:03]          runUBOOT()
+[2020-11-25 09:59:03][SPINAND]
+[2020-11-25 09:59:03]SPI 54M
+[2020-11-25 09:59:03]Load UBOOT from SPINAND
+[2020-11-25 09:59:03] -Verify UBOOT CRC32 passed!
+[2020-11-25 09:59:03] -Decompress UBOOT XZ
+[2020-11-25 09:59:03]  decomp_size=0x000792e4
+[2020-11-25 09:59:03]Disable MMU and D-cache before jump to UBOOT
+
+[2020-11-25 09:59:03]U-Boot 2015.01-svn4866 (Nov 21 2020 - 21:01:21)
+[2020-11-25 09:59:03]
+[2020-11-25 09:59:03]Version: I2svn4866#
+[2020-11-25 09:59:03]       Watchdog enabled
+[2020-11-25 09:59:03]I2C:   ready
+[2020-11-25 09:59:03]DRAM:  
+[2020-11-25 09:59:03]WARNING: Caches not enabled
+[2020-11-25 09:59:03]SPINAND: _MDrv_SPINAND_GET_INFO: Found SPINAND INFO 
+[2020-11-25 09:59:03](0xEF) (0xAA) (0x21) 
+[2020-11-25 09:59:03]SPINAND: board_nand_init: CIS contains part info
+[2020-11-25 09:59:03]128 MiB
+[2020-11-25 09:59:03]MMC:   MStar SD/MMC: 0
+[2020-11-25 09:59:03]In:    serial
+[2020-11-25 09:59:03]Out:   serial
+[2020-11-25 09:59:03]Err:   serial
+[2020-11-25 09:59:03]Net:   sstar_emac
+[2020-11-25 09:59:03]magic: 0x48444946, product:0x10A002, pcb:0xD2029610, custom:0x0, phy0: 0x142, phy1: 0x0
+[2020-11-25 09:59:05]Hit Ctrl+C to stop autoboot:  0 
+[2020-11-25 09:59:05]
+[2020-11-25 09:59:05]NAND read: device 0 offset 0x300000, size 0x500000
+[2020-11-25 09:59:06]Time:976250 us, speed:5370 KB/s
+[2020-11-25 09:59:06] 5242880 bytes read: OK
+[2020-11-25 09:59:06][add_hardinfo_to_cmdline:155]: with hardinfo
+[2020-11-25 09:59:06][WDT] Enalbe WATCHDOG 240 s
+[2020-11-25 09:59:06]
+[2020-11-25 09:59:06]set wdt time:240
+[2020-11-25 09:59:06]##  Booting kernel from Legacy Image at 22000000 ...
+[2020-11-25 09:59:06]   Image Name:   MVX4##I2M#svn4850#KL_LX409##[BR:
+[2020-11-25 09:59:06]   Image Type:   ARM Linux Kernel Image (lzma compressed)
+[2020-11-25 09:59:06]   Data Size:    2378484 Bytes = 2.3 MiB
+[2020-11-25 09:59:06]   Load Address: 20008000
+[2020-11-25 09:59:06]   Entry Point:  20008000
+[2020-11-25 09:59:06]   Verifying Checksum ... OK
+[2020-11-25 09:59:06]-usb_stop(USB_PORT0)
+[2020-11-25 09:59:06]-usb_stop(USB_PORT1)
+[2020-11-25 09:59:06]-usb_stop(USB_PORT2)
+[2020-11-25 09:59:06]   Uncompressing Kernel Image ... 
+[2020-11-25 09:59:06][XZ] !!!reserved 0x21000000 length=0x 1000000 for xz!!
+[2020-11-25 09:59:07]   XZ: uncompressed size=0x4c1000, ret=7
+[2020-11-25 09:59:07]OK
+[2020-11-25 09:59:07]atags:0x20000000
+[2020-11-25 09:59:07]
+[2020-11-25 09:59:07]Starting kernel ...
+[2020-11-25 09:59:07]
+[2020-11-25 09:59:07]Booting Linux on physical CPU 0x0
+[2020-11-25 09:59:07]Linux version 4.9.84 (caijinzhong@tiandy) (gcc version 4.9.4 (Buildroot 2017.08-gc7bbae9-dirty) ) #1 SMP PREEMPT Fri Nov 20 16:20:31 CST 2020
+[2020-11-25 09:59:07]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=50c5387d
+[2020-11-25 09:59:07]CPU: div instructions available: patching division code
+[2020-11-25 09:59:07]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-11-25 09:59:07]early_atags_to_fdt() success
+[2020-11-25 09:59:07]OF: fdt:Machine model: INFINITY2M SSC010A-S01A-S
+[2020-11-25 09:59:07]LXmem is 0xff00000 PHYS_OFFSET is 0x20000000
+[2020-11-25 09:59:07]Add mem start 0x20000000 size 0xff00000!!!!
+[2020-11-25 09:59:07]
+[2020-11-25 09:59:07]LX_MEM  = 0x20000000, 0xff00000
+[2020-11-25 09:59:07]LX_MEM2 = 0x0, 0x0
+[2020-11-25 09:59:07]LX_MEM3 = 0x0, 0x0
+[2020-11-25 09:59:07]EMAC_LEN= 0x0
+[2020-11-25 09:59:07]DRAM_LEN= 0x0
+[2020-11-25 09:59:07]no any mmap reserved
+[2020-11-25 09:59:07]deal_with_reserve_mma_heap memblock_reserve success mma_config[0].reserved_start=
+[2020-11-25 09:59:07]0x24800000
+[2020-11-25 09:59:07]
+[2020-11-25 09:59:07]deal_with_reserve_mma_heap memblock_reserve success mma_config[1].reserved_start=
+[2020-11-25 09:59:07]0x2c500000
+[2020-11-25 09:59:07]
+[2020-11-25 09:59:07]cma: Reserved 2 MiB at 0x2c200000
+[2020-11-25 09:59:07]Memory policy: Data cache writealloc
+[2020-11-25 09:59:07]percpu: Embedded 13 pages/cpu @cc4bf000 s24536 r8192 d20520 u53248
+[2020-11-25 09:59:07]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 35702
+[2020-11-25 09:59:07]Kernel command line: ubi.mtd=2 rootfstype=ramfs initrd=0x22280000,0x400000 mtdparts=nand0:0x300000(uboot),0x500000(kernel),-(ubi) LX_MEM=0xff00000 mma_heap=MMU_MMA,miu=0,sz=0x3800000 mma_heap=mma_heap_name0,miu=0,sz=0x3A00000 mma_memblock_remove=1 hardinfo=200a01000169202d0000000024100000
+[2020-11-25 09:59:07]PID hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 09:59:07]Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-11-25 09:59:07]Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[2020-11-25 09:59:07]Memory: 131580K/144384K available (2881K kernel code, 284K rwdata, 1356K rodata, 184K init, 191K bss, 10756K reserved, 2048K cma-reserved)
+[2020-11-25 09:59:07]Virtual kernel memory layout:
+[2020-11-25 09:59:07]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-11-25 09:59:07]    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[2020-11-25 09:59:07]    vmalloc : 0xcc800000 - 0xff800000   ( 816 MB)
+[2020-11-25 09:59:07]    lowmem  : 0xc0000000 - 0xcc500000   ( 197 MB)
+[2020-11-25 09:59:07]    modules : 0xbf800000 - 0xc0000000   (   8 MB)
+[2020-11-25 09:59:07]      .text : 0xc0008000 - 0xc02d8a00   (2883 kB)
+[2020-11-25 09:59:07]      .init : 0xc0452000 - 0xc0480000   ( 184 kB)
+[2020-11-25 09:59:07]      .data : 0xc0480000 - 0xc04c7098   ( 285 kB)
+[2020-11-25 09:59:07]       .bss : 0xc04c9000 - 0xc04f8f3c   ( 192 kB)
+[2020-11-25 09:59:07]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-11-25 09:59:07]Preemptible hierarchical RCU implementation.
+[2020-11-25 09:59:07]        Build-time adjustment of leaf fanout to 32.
+[2020-11-25 09:59:07]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-11-25 09:59:07]RCU: Adjusting geometry for rcu_fanout_leaf=32, nr_cpu_ids=2
+[2020-11-25 09:59:07]NR_IRQS:16 nr_irqs:16 16
+[2020-11-25 09:59:07]ms_init_main_intc: np->name=ms_main_intc, parent=gic
+[2020-11-25 09:59:07]ms_init_pm_intc: np->name=ms_pm_intc, parent=ms_main_intc
+[2020-11-25 09:59:07]ss_init_gpi_intc: np->name=ms_gpi_intc, parent=ms_main_intc
+[2020-11-25 09:59:07]Find CLK_cpupll_clk, hook ms_cpuclk_ops
+[2020-11-25 09:59:07]arm_arch_timer: Architected cp15 timer(s) running at 6.00MHz (virt).
+[2020-11-25 09:59:07]clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+[2020-11-25 09:59:07]sched_clock: 56 bits at 6MHz, resolution 166ns, wraps every 4398046511055ns
+[2020-11-25 09:59:07]Switching to timer-based delay loop, resolution 166ns
+[2020-11-25 09:59:07]Console: colour dummy device 80x30
+[2020-11-25 09:59:07]console [ttyS0] enabled
+[2020-11-25 09:59:07]Calibrating delay loop (skipped), value calculated using timer frequency.. 12.00 BogoMIPS (lpj=60000)
+[2020-11-25 09:59:07]pid_max: default: 4096 minimum: 301
+[2020-11-25 09:59:07]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 09:59:07]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 09:59:07]CPU: Testing write buffer coherency: ok
+[2020-11-25 09:59:07]CPU0: update cpu_capacity 1024
+[2020-11-25 09:59:08]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-11-25 09:59:08]Setting up static identity map for 0x20008240 - 0x20008270
+[2020-11-25 09:59:08]CPU1: update cpu_capacity 1024
+[2020-11-25 09:59:08]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-11-25 09:59:08]Brought up 2 CPUs
+[2020-11-25 09:59:08]SMP: Total of 2 processors activated (24.00 BogoMIPS).
+[2020-11-25 09:59:08]CPU: All CPU(s) started in SVC mode.
+[2020-11-25 09:59:08]devtmpfs: initialized
+[2020-11-25 09:59:08]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-11-25 09:59:08]clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[2020-11-25 09:59:08]futex hash table entries: 16 (order: -2, 1024 bytes)
+[2020-11-25 09:59:08]NET: Registered protocol family 16
+[2020-11-25 09:59:08]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-11-25 09:59:08]
+[2020-11-25 09:59:08]
+[2020-11-25 09:59:08]Version : MVX4##I2M#svn4850#KL_LX409##[BR:TD-NVR]#XVM
+[2020-11-25 09:59:08]
+[2020-11-25 09:59:08]GPIO: probe end[ss_gpi_intc_domain_alloc] hw:42 -> v:45
+[2020-11-25 09:59:08][MS_PM_INTC] hw:20 -> v:53
+[2020-11-25 09:59:08]td_modules init ok
+[2020-11-25 09:59:08]SCSI subsystem initialized
+[2020-11-25 09:59:08]usbcore: registered new interface driver usbfs
+[2020-11-25 09:59:08]usbcore: registered new interface driver hub
+[2020-11-25 09:59:08]usbcore: registered new device driver usb
+[2020-11-25 09:59:08]clocksource: Switched to clocksource arch_sys_counter
+[2020-11-25 09:59:08]NET: Registered protocol family 2
+[2020-11-25 09:59:08]TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-11-25 09:59:08]TCP bind hash table entries: 2048 (order: 3, 40960 bytes)
+[2020-11-25 09:59:08]TCP: Hash tables configured (established 2048 bind 2048)
+[2020-11-25 09:59:08]UDP hash table entries: 128 (order: 0, 6144 bytes)
+[2020-11-25 09:59:08]UDP-Lite hash table entries: 128 (order: 0, 6144 bytes)
+[2020-11-25 09:59:08]NET: Registered protocol family 1
+[2020-11-25 09:59:08]RPC: Registered named UNIX socket transport module.
+[2020-11-25 09:59:08]RPC: Registered udp transport module.
+[2020-11-25 09:59:08]RPC: Registered tcp transport module.
+[2020-11-25 09:59:08]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-11-25 09:59:08]Unpacking initramfs...
+[2020-11-25 09:59:08]Initramfs unpacking failed: junk in compressed archive
+[2020-11-25 09:59:08]Freeing initrd memory: 4096K
+[2020-11-25 09:59:08]workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[2020-11-25 09:59:08]fuse init (API version 7.26)
+[2020-11-25 09:59:08]io scheduler noop registered
+[2020-11-25 09:59:08]io scheduler deadline registered (default)
+[2020-11-25 09:59:08]libphy: Fixed MDIO Bus: probed
+[2020-11-25 09:59:08]PPP generic driver version 2.4.2
+[2020-11-25 09:59:08]PPP BSD Compression module registered
+[2020-11-25 09:59:08]PPP Deflate Compression module registered
+[2020-11-25 09:59:08]PPP MPPE Compression module registered
+[2020-11-25 09:59:08]NET: Registered protocol family 24
+[2020-11-25 09:59:08]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-11-25 09:59:08]Mstar_ehc_init version:20180309
+[2020-11-25 09:59:08]Sstar-ehci-2 H.W init
+[2020-11-25 09:59:08]CHIP_FUNCTION SET. ID=4, param=65537
+[2020-11-25 09:59:08]Titania3_series_start_ehc start
+[2020-11-25 09:59:08][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 09:59:08][USB] enable miu lower bound address subtraction
+[2020-11-25 09:59:08][USB] init squelch level 0x2
+[2020-11-25 09:59:08][USB] no platform_data, device tree coming
+[2020-11-25 09:59:08][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 09:59:08]BC disable 
+[2020-11-25 09:59:08][USB] soc:Sstar-ehci-2 irq --> 40
+[2020-11-25 09:59:08]Sstar-ehci-2 soc:Sstar-ehci-2: EHCI Host Controller
+[2020-11-25 09:59:09]Sstar-ehci-2 soc:Sstar-ehci-2: new USB bus registered, assigned bus number 1
+[2020-11-25 09:59:09]Sstar-ehci-2 soc:Sstar-ehci-2: irq 40, io mem 0xfd285000
+[2020-11-25 09:59:09]usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 09:59:09]usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 09:59:09]usb usb1: Product: EHCI Host Controller
+[2020-11-25 09:59:09]usb usb1: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 09:59:09]usb usb1: SerialNumber: mstar
+[2020-11-25 09:59:09]hub 1-0:1.0: USB hub found
+[2020-11-25 09:59:09]hub 1-0:1.0: 1 port detected
+[2020-11-25 09:59:09]Sstar-ehci-1 H.W init
+[2020-11-25 09:59:09]CHIP_FUNCTION SET. ID=4, param=1
+[2020-11-25 09:59:09]Titania3_series_start_ehc start
+[2020-11-25 09:59:09][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 09:59:09][USB] enable miu lower bound address subtraction
+[2020-11-25 09:59:09][USB] init squelch level 0x2
+[2020-11-25 09:59:09][USB] no platform_data, device tree coming
+[2020-11-25 09:59:09][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 09:59:09]BC disable 
+[2020-11-25 09:59:09][USB] soc:Sstar-ehci-1 irq --> 39
+[2020-11-25 09:59:09]Sstar-ehci-1 soc:Sstar-ehci-1: EHCI Host Controller
+[2020-11-25 09:59:09]Sstar-ehci-1 soc:Sstar-ehci-1: new USB bus registered, assigned bus number 2
+[2020-11-25 09:59:09]Sstar-ehci-1 soc:Sstar-ehci-1: irq 39, io mem 0xfd284800
+[2020-11-25 09:59:09]usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 09:59:09]usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 09:59:09]usb usb2: Product: EHCI Host Controller
+[2020-11-25 09:59:09]usb usb2: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 09:59:09]usb usb2: SerialNumber: mstar
+[2020-11-25 09:59:09]hub 2-0:1.0: USB hub found
+[2020-11-25 09:59:09]hub 2-0:1.0: 1 port detected
+[2020-11-25 09:59:09]Sstar-ehci-3 H.W init
+[2020-11-25 09:59:09]CHIP_FUNCTION SET. ID=4, param=131073
+[2020-11-25 09:59:09]Titania3_series_start_ehc start
+[2020-11-25 09:59:09][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 09:59:09][USB] enable miu lower bound address subtraction
+[2020-11-25 09:59:09][USB] init squelch level 0x2
+[2020-11-25 09:59:09][USB] no platform_data, device tree coming
+[2020-11-25 09:59:09][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 09:59:09]BC disable 
+[2020-11-25 09:59:09][USB] soc:Sstar-ehci-3 irq --> 57
+[2020-11-25 09:59:09]Sstar-ehci-3 soc:Sstar-ehci-3: EHCI Host Controller
+[2020-11-25 09:59:09]Sstar-ehci-3 soc:Sstar-ehci-3: new USB bus registered, assigned bus number 3
+[2020-11-25 09:59:09]Sstar-ehci-3 soc:Sstar-ehci-3: irq 57, io mem 0xfd286400
+[2020-11-25 09:59:09]usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 09:59:09]usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 09:59:09]usb usb3: Product: EHCI Host Controller
+[2020-11-25 09:59:09]usb usb3: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 09:59:09]usb usb3: SerialNumber: mstar
+[2020-11-25 09:59:09]hub 3-0:1.0: USB hub found
+[2020-11-25 09:59:09]hub 3-0:1.0: 1 port detected
+[2020-11-25 09:59:09]usbcore: registered new interface driver usb-storage
+[2020-11-25 09:59:09]mousedev: PS/2 mouse device common for all mice
+[2020-11-25 09:59:09]i2c /dev entries driver
+[2020-11-25 09:59:09]usbcore: registered new interface driver usbhid
+[2020-11-25 09:59:09]usbhid: USB HID core driver
+[2020-11-25 09:59:09]1f221000.uart0: ttyS0 at MMIO 0x0 (irq = 31, base_baud = 10800000) is a unknown
+[2020-11-25 09:59:09]1f221200.uart1: ttyS1 at MMIO 0x0 (irq = 32, base_baud = 10800000) is a unknown
+[2020-11-25 09:59:09]1f220400.uart2: ttyS2 at MMIO 0x0 (irq = 34, base_baud = 10800000) is a unknown
+[2020-11-25 09:59:09]1f221400.uart2: ttyS3 at MMIO 0x0 (irq = 35, base_baud = 10800000) is a unknown
+[2020-11-25 09:59:09][Core Voltage] check_voltage_valid: Not support 0mV, use 850mV
+[2020-11-25 09:59:09]MSYS: DMEM request: [emac0_buff]:0x00000812
+[2020-11-25 09:59:09]MSYS: DMEM request: [emac0_buff]:0x00000812 success, CPU phy:@0x2C24D000, virt:@0xCC24D000
+[2020-11-25 09:59:09]libphy: mdio: probed
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: /soc/emac0/mdio-bus@emac0/ethernet-phy@0 has invalid PHY address
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 0
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 1
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 2
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 3
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 4
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 5
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 6
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 7
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 8
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 9
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 10
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 11
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 12
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 13
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 14
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 15
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 16
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 17
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 18
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 19
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 20
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 21
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 22
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 23
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 24
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 25
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 26
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 27
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 28
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 29
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 30
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 31
+[2020-11-25 09:59:09][emac_phy_connect][3234] connected mac emac0 to PHY at mdio-bus@emac0:00 [uid=11112222, driver=SStar 10/100 Ethernet Phy]
+[2020-11-25 09:59:09]MSYS: DMEM request: [emac1_buff]:0x00060812
+[2020-11-25 09:59:09]MSYS: DMEM request: [emac1_buff]:0x00060812 success, CPU phy:@0x2C250000, virt:@0xCC250000
+[2020-11-25 09:59:09]libphy: mdio: probed
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: /soc/emac1/mdio-bus@emac1/ethernet-phy@1 has invalid PHY address
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 0
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 1
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 2
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 3
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 4
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 5
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 6
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 7
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 8
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 9
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 10
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 11
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 12
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 13
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 14
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 15
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 16
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 17
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 18
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 19
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 20
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 21
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 22
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 23
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 24
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 25
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 26
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 27
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 28
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 29
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 30
+[2020-11-25 09:59:09]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 31
+[2020-11-25 09:59:09][emac_phy_connect][3234] connected mac emac1 to PHY at mdio-bus@emac1:00 [uid=001cc816, driver=Generic PHY]
+[2020-11-25 09:59:09]ms_rtcpwc 1f006800.rtcpwc: rtc core: registered 1f006800.rtcpwc as rtc0
+[2020-11-25 09:59:09][ms_cpufreq_init] Current clk=998244352
+[2020-11-25 09:59:09]mstar_spinand_probe: mstar_spinand enableClock
+[2020-11-25 09:59:09]MSYS: DMEM request: [BDMA]:0x00000840
+[2020-11-25 09:59:09]MSYS: DMEM request: [BDMA]:0x00000840 success, CPU phy:@0x2C24E000, virt:@0xCC24E000
+[2020-11-25 09:59:09]MDrv_SPINAND_Init: Detected ID: MID =ef, DID =aa
+[2020-11-25 09:59:09]_dumpNandInformation:warning, Bytes / Page :  2048
+[2020-11-25 09:59:09]_dumpNandInformation:warning, Pages / Block:  64
+[2020-11-25 09:59:09]_dumpNandInformation:warning, Sector/ Page :  512
+[2020-11-25 09:59:09]_dumpNandInformation:warning, Spare / Page :  64
+[2020-11-25 09:59:09]_dumpNandInformation:warning, Current config r:4 w:4 drv:1
+[2020-11-25 09:59:09]mstar_spinand_probe: Magic memcmp pass
+[2020-11-25 09:59:09]mstar_spinand_probe: Get partition (Block 0 : page 1)
+[2020-11-25 09:59:09]mstar_spinand_probe: CIS contains part info
+[2020-11-25 09:59:09]mstar_spinand_probe: Before nand_scan()...
+[2020-11-25 09:59:09]system_area_size = 0x00800000
+[2020-11-25 09:59:09]3 cmdlinepart partitions found on MTD device nand0
+[2020-11-25 09:59:09]mstar_spinand_probe: Mtd parts parse
+[2020-11-25 09:59:09]Creating 3 MTD partitions on "nand0":
+[2020-11-25 09:59:09]0x000000000000-0x000000300000 : "uboot"
+[2020-11-25 09:59:09]0x000000300000-0x000000800000 : "kernel"
+[2020-11-25 09:59:09]0x000000800000-0x000008000000 : "ubi"
+[2020-11-25 09:59:10][ahci_sstar_probe] , priv->res_ahci_port0 =0xfd345100 
+[2020-11-25 09:59:10][ahci_sstar_probe] , priv->res_ahci_misc =0xfd2a4a00 
+[2020-11-25 09:59:10][SATA] phy_mode =2
+[2020-11-25 09:59:10]SATA_TX_R50 trim=0x0015
+[2020-11-25 09:59:10]SATA_RX_R50 trim=0x0011
+[2020-11-25 09:59:10]SATA_TX_R50_IBIAS trim=0x001F
+[2020-11-25 09:59:10]SATA_RXPLL_ICTRL_CDR trim=0x0000
+[2020-11-25 09:59:10][SATA0] Clock : ON
+[2020-11-25 09:59:10]sstar sata HW settings done!!!
+[2020-11-25 09:59:10][SATA] phy_mode =2
+[2020-11-25 09:59:10]ahci_sstar 1f345000.sata: AHCI 0001.0300 32 slots 1 ports 6 Gbps 0x1 impl platform mode
+[2020-11-25 09:59:10]ahci_sstar 1f345000.sata: flags: ncq sntf pm led clo only pmp fbs pio slum part ccc apst 
+[2020-11-25 09:59:10]ahci_sstar 1f345000.sata: port 0 is not capable of FBS
+[2020-11-25 09:59:10]scsi host0: ahci_sstar
+[2020-11-25 09:59:10]ata1: SATA max UDMA/133 mmio [mem 0x1f345000-0x1f3450ff] port 0x100 irq 51
+[2020-11-25 09:59:10][ahci_sstar_probe] , SSTAR AHCI SATA registered 
+[2020-11-25 09:59:10]NET: Registered protocol family 10
+[2020-11-25 09:59:10]NET: Registered protocol family 17
+[2020-11-25 09:59:10]Key type dns_resolver registered
+[2020-11-25 09:59:10]ThumbEE CPU extension supported.
+[2020-11-25 09:59:10]Registering SWP/SWPB emulation handler
+[2020-11-25 09:59:10]ubi0: attaching mtd2
+[2020-11-25 09:59:10]Sstar-emac 1f2a2000.emac0 eth0: Link is Down
+[2020-11-25 09:59:10]ubi0: scanning is finished
+[2020-11-25 09:59:10]ubi0: attached mtd2 (name "ubi", size 120 MiB)
+[2020-11-25 09:59:10]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-11-25 09:59:10]ata1.00: ATA-9: ST2000VX008-2E3164, CV12, max UDMA/133
+[2020-11-25 09:59:10]ata1.00: 3907029168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-11-25 09:59:10]ata1.00: configured for UDMA/133
+[2020-11-25 09:59:10]scsi 0:0:0:0: Direct-Access     ATA      ST2000VX008-2E31 CV12 PQ: 0 ANSI: 5
+[2020-11-25 09:59:10]ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[2020-11-25 09:59:10]ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[2020-11-25 09:59:10]ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[2020-11-25 09:59:10]ubi0: good PEBs: 960, bad PEBs: 0, corrupted PEBs: 0
+[2020-11-25 09:59:10]ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+[2020-11-25 09:59:10]ubi0: max/mean erase counter: 3/1, WL threshold: 4096, image sequence number: 758598555
+[2020-11-25 09:59:10]ubi0: available PEBs: 1, total reserved PEBs: 959, PEBs reserved for bad PEB handling: 20
+[2020-11-25 09:59:10]ubi0: background thread "ubi_bgt0d" started, PID 103
+[2020-11-25 09:59:10]OF: fdt:not creating '/sys/firmware/fdt': CRC check failed
+[2020-11-25 09:59:10]sd 0:0:0:0: [sda] 3907029168 512-byte logical blocks: (2.00 TB/1.82 TiB)
+[2020-11-25 09:59:10]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-11-25 09:59:10]sd 0:0:0:0: [sda] Write Protect is off
+[2020-11-25 09:59:10]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-11-25 09:59:10] sda: sda1 sda2
+[2020-11-25 09:59:10]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-11-25 09:59:10]This architecture does not have kernel memory protection.
+[2020-11-25 09:59:10]Sstar-emac 1f2a2800.emac1 eth1: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-11-25 09:59:10]random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]random: sysctl: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]sysctl: /etc/sysctl.conf: No sucrandom: S00devs: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]h file or directory
+[2020-11-25 09:59:10]
+[2020-11-25 09:59:10]         random: mknod: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10] _ _ __ _    _ _ _
+[2020-11-25 09:59:10]         /_ random: mknod: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]_  _ _/  / _ _  \ 
+[2020-11-25 09:59:10]            random: ln: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]/ /     / /   / /
+[2020-11-25 09:59:10]random: S01udev: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]
+[2020-11-25 09:59:10]          / /     / /   / /
+[2020-11-25 09:59:10]  random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]_ _ _ _/ /_ _ _/ /_ _/ /______
+[2020-11-25 09:59:10]random: mount: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]________________________________random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 09:59:10]___
+[2020-11-25 09:59:10]
+[2020-11-25 09:59:10]
+[2020-11-25 09:59:10][RCS]: /etc/init.d/S00devs
+[2020-11-25 09:59:10]mknod: /dev/console: File exists
+[2020-11-25 09:59:10]mknod: /dev/null: File exists
+[2020-11-25 09:59:10][RCS]: /etc/init.d/S01udev
+[2020-11-25 09:59:10]udevd[121]: starting eudev-3.2.7
+[2020-11-25 09:59:11][RCS]: /etc/init.d/S80network
+[2020-11-25 09:59:11]sh: rootfstype=ramfs: unknown operand
+[2020-11-25 09:59:11]UBIFS (ubi0:0): background thread "ubifs_bgt0_0" started, PID 142
+[2020-11-25 09:59:11]UBIFS (ubi0:0): UBIFS: mounted UBI device 0, volume 0, name "tdfs"
+[2020-11-25 09:59:11]UBIFS (ubi0:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[2020-11-25 09:59:11]UBIFS (ubi0:0): FS size: 105263104 bytes (100 MiB, 829 LEBs), journal size 9023488 bytes (8 MiB, 72 LEBs)
+[2020-11-25 09:59:11]UBIFS (ubi0:0): reserved for root: 0 bytes (0 KiB)
+[2020-11-25 09:59:11]UBIFS (ubi0:0): media format: w4/r0 (latest is w4/r0), UUID 93A9E73D-2EF3-4082-A66F-520E845B8118, small LPT model
+[2020-11-25 09:59:11]Auto login as root ...
+[2020-11-25 09:59:11]Jan  1 00:00:03 login[144]: root login on 'ttyS0'
+[2020-11-25 09:59:11]mount config
+[2020-11-25 09:59:11]Welcome to TdLinux.
+[2020-11-25 09:59:11]-sh: nfsroot: Permission denied
+[2020-11-25 09:59:11]~ # rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-11-25 09:59:11]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-11-25 09:59:11]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-11-25 09:59:11]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-11-25 09:59:11]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-11-25 09:59:11]ln: /tdfs/dvr/log/log.dat: File exists
+[2020-11-25 09:59:11]ln: /tdfs/dvr/log/logalarm.dat: File exists
+[2020-11-25 09:59:11]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-11-25 09:59:11]ln: /config/config_tool: File exists
+[2020-11-25 09:59:11]ln: /config/dump_config: File exists
+[2020-11-25 09:59:11]ln: /config/dump_mmap: File exists
+[2020-11-25 09:59:11]ln: /config/mmap.ini: File exists
+[2020-11-25 09:59:11]ln: /config/fbdev.ini: File exists
+[2020-11-25 09:59:11]ln: /config/pq.ini: File exists
+[2020-11-25 09:59:11]ln: /config/board.ini: File exists
+[2020-11-25 09:59:11]ln: /config/vdec_fw: File exists
+[2020-11-25 09:59:11]ln: /config/PQ_general: File exists
+[2020-11-25 09:59:11]ln: /config/pq: File exists
+[2020-11-25 09:59:11]ln: /config/panel: File exists
+[2020-11-25 09:59:11]ln: /config/model: File exists
+[2020-11-25 09:59:11]ln: /config/DLC: File exists
+[2020-11-25 09:59:11]ln: /config/ColorMatrix: File exists
+[2020-11-25 09:59:11]ln: /root/snmp/snmpd.log: File exists
+[2020-11-25 09:59:11]ln: /sbin/udhcpc6: File exists
+[2020-11-25 09:59:11]======mkconfig end====
+[2020-11-25 09:59:12]check successfully!!!
+[2020-11-25 09:59:12]/tdfs
+[2020-11-25 09:59:12]check successfully!!!
+[2020-11-25 09:59:12]/tdfs
+[2020-11-25 09:59:12]BANK:0x0030 16bit-offset 0x00
+[2020-11-25 09:59:12]0x0000
+[2020-11-25 09:59:12]BANK:0x0030 16bit-offset 0x04
+[2020-11-25 09:59:12]0x0000
+[2020-11-25 09:59:12]BANK:0x0030 16bit-offset 0x05
+[2020-11-25 09:59:12]0x0000
+[2020-11-25 09:59:12]ifconfig: SIOCSIFADDR: No such device
+[2020-11-25 09:59:13]mount: mounting 10.30.30.183:/home/guojinzhao/debug/ssr621_128/ on /dbg failed: Permission denied
+[2020-11-25 09:59:14]check successfully!!!
+[2020-11-25 09:59:14]/tdfs/dvr
+[2020-11-25 09:59:14]check successfully!!!
+[2020-11-25 09:59:14]/tdfs/dvr
+[2020-11-25 09:59:14]jpe driver probed
+[2020-11-25 09:59:14]module [sys] init
+[2020-11-25 09:59:14]MI_SYSCFG_SetupMmapLoader default_config_path:/config/config_tool, argv1:/config/load_mmap,argv2:/config/mmap.ini
+[2020-11-25 09:59:14]Function = init_glob_miu_kranges, Line = 604, Insert KProtect for LX @ MIU: 0
+[2020-11-25 09:59:14]Function = init_glob_miu_kranges, Line = 613, [INIT] for LX0 kprotect: from 0x20000000 to 0x2FF00000, using block 0
+[2020-11-25 09:59:14]config...... strPath:/config/config_tool, argv0:/config/load_config
+[2020-11-25 09:59:14]function:parese_Cmdline,pCmd_Section:0xff00000
+[2020-11-25 09:59:14]MM
+[2020-11-25 09:59:14]U_
+[2020-11-25 09:59:14]MM
+[2020-11-25 09:59:14]A    miu=0,sz=3800000  reserved_start=24800000
+[2020-11-25 09:59:14][MDrv_MMU_SetRegion] not support , chipId = 1 
+[2020-11-25 09:59:14]r_front->miuBlockIndex:0,r_front->start_cpu_bus_pa:0x20000000,r_front->start_cpu_bus_pa+r_front->length:0x24800000
+[2020-11-25 09:59:14]r_back->miuBlockIndex:1,r_back->start_cpu_bus_pa:0x28000000,r_back->start_cpu_bus_pa+r_back->length:0x2ff00000
+[2020-11-25 09:59:14]mi_sys_mma_allocator_create success, heap_base_addr=24800000 length=3800000 
+[2020-11-25 09:59:14]mm
+[2020-11-25 09:59:14]a_
+[2020-11-25 09:59:14]he
+[2020-11-25 09:59:14]ap
+[2020-11-25 09:59:14]_n
+[2020-11-25 09:59:14]am
+[2020-11-25 09:59:14]e0
+[2020-11-25 09:59:14]    miu=0,sz=3a00000  reserved_start=2c500000
+[2020-11-25 09:59:14]r_front->miuBlockIndex:1,r_front->start_cpu_bus_pa:0x28000000,r_front->start_cpu_bus_pa+r_front->length:0x2c500000
+[2020-11-25 09:59:14]mi_sys_mma_allocator_create success, heap_base_addr=2c500000 length=3a00000 
+[2020-11-25 09:59:14]Kernel CONFIG_HZ = 100
+[2020-11-25 09:59:14]Sigmastar Module version: project_commit.37dc458 sdk_commit.7af5ac4/home/aaron.guo/i2m/tiandy/sdk build_time.20201110212355
+[2020-11-25 09:59:14]module [ai] init
+[2020-11-25 09:59:15]module [ao] init
+[2020-11-25 09:59:15]module [gfx] init
+[2020-11-25 09:59:15]module [disp] init
+[2020-11-25 09:59:15]module [divp] init
+[2020-11-25 09:59:15]module [hdmi] init
+[2020-11-25 09:59:15]module [panel] init
+[2020-11-25 09:59:15]insmod: can't insert 'mi_sed.ko': No such file or directory
+[2020-11-25 09:59:15]module [vdec] init
+[2020-11-25 09:59:15]module [vdisp] init
+[2020-11-25 09:59:15]module [venc] init Oct 15 2020 22:41:12
+[2020-11-25 09:59:15]tdsecurity_init lock and dir list
+[2020-11-25 09:59:15]BANK:0x0030 16bit-offset 0x00
+[2020-11-25 09:59:15]0x0000
+[2020-11-25 09:59:15]BANK:0x0030 16bit-offset 0x04
+[2020-11-25 09:59:15]0x0000
+[2020-11-25 09:59:15]BANK:0x0030 16bit-elevator: type cfq not found
+[2020-11-25 09:59:15]elevator: switch to cfq
+[2020-11-25 09:59:15] failed
+[2020-11-25 09:59:15]offset 0x05
+[2020-11-25 09:59:15]0x0000
+[2020-11-25 09:59:15]sh: write error: Invalid argument
+[2020-11-25 09:59:15]load: line 56: can't create /sys/block/sdb/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]load: line 57: can't create /sys/block/sdc/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]load: line 58: can't create /sys/block/sdd/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]load: line 59: can't create /sys/block/sde/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]load: line 60: can't create /sys/block/sdf/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]load: line 61: can't create /sys/block/sdg/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]load: line 62: can't create /sys/block/sdh/queue/scheduler: nonexistent directory
+[2020-11-25 09:59:15]ln: /dev/mytty0: No such file or directory
+[2020-11-25 09:59:37]Jan  1 08:00:30 login[409]: root login on 'pts/0'
+[2020-11-25 10:00:58]Jan  1 08:01:50 login[440]: root login on 'pts/1'
+[2020-11-25 10:01:07]client [448] connected, module:sys
+[2020-11-25 10:01:07]_HDMITXOpen 113, HDMITx Alrad Open
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1212 num_parents:3 
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1215, CLK_0 = 0
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1215, CLK_1 = 432000000
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1215, CLK_2 = 216000000
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1252, [Hdmitx] num_parents:3-1        CLK_hdmi 0
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1252, [Hdmitx] num_parents:3-2    CLK_disp_432 432000000
+[2020-11-25 10:01:07]DrvHdmitxOsSetClkOn 1252, [Hdmitx] num_parents:3-3    CLK_disp_216 216000000
+[2020-11-25 10:01:07]client [448] connected, module:hdmi
+[2020-11-25 10:01:07]AnalogDrvCur: Tap1(0x14, 0x14, 0x14, 0x14) Tap1(0x00, 0x00, 0x00, 0x00), Pd(0x00, 0x00, 0x00)
+[2020-11-25 10:01:07]_HalHdmitxIfGetInfoSinkInfoConfig 786, Check Edid Data Fail
+[2020-11-25 10:01:07]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:07]
+[2020-11-25 10:01:07]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:08]_HalHdmitxIfGetInfoSinkInfoConfig 737, Check Edid Data Fail
+[2020-11-25 10:01:08]
+[2020-11-25 10:01:08]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:08]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:08]
+[2020-11-25 10:01:08][MI ERR ]: _MI_HDMI_ChkColorFormatForSpecTiming[1204]: Failed To Check Color Format
+[2020-11-25 10:01:08]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 10:01:08]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:08]B InColor = 0, OutColor = 0
+[2020-11-25 10:01:08]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:08]B InColor = 0, OutColor = 0
+[2020-11-25 10:01:08]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:08]MDrv_HDMITx_Exhibit: Create Check Rx timer success!
+[2020-11-25 10:01:08]E_HDMITX_FSM_CHECK_HPD:: pre= 0, cur = 2
+[2020-11-25 10:01:08]~~~~~~Mhal_HDMITx_SetSwI2cInputMode 1019
+[2020-11-25 10:01:08]
+[2020-11-25 10:01:08]MDrv_HDMITx_ClearAVMUTE 
+[2020-11-25 10:01:09]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 10:01:09]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:09][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 10:01:09]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:09][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]MDrv_HDMITx_SetAVMUTE 
+[2020-11-25 10:01:09]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 10:01:09]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 10:01:09]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:09][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 10:01:09]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:09]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:09][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 10:01:09]
+[2020-11-25 10:01:10]_HalHdmitxIfGetInfoSinkInfoConfig 786, Check Edid Data Fail
+[2020-11-25 10:01:10]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:10]
+[2020-11-25 10:01:10]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:10]_HalHdmitxIfGetInfoSinkInfoConfig 737, Check Edid Data Fail
+[2020-11-25 10:01:10]
+[2020-11-25 10:01:10]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:10]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:10]
+[2020-11-25 10:01:10][MI ERR ]: _MI_HDMI_ChkColorFormatForSpecTiming[1204]: Failed To Check Color Format
+[2020-11-25 10:01:10]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 10:01:10]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:10]B InColor = 0, OutColor = 0
+[2020-11-25 10:01:10]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:10]B InColor = 0, OutColor = 0
+[2020-11-25 10:01:10]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:10]E_HDMITX_FSM_CHECK_HPD:: pre= 0, cur = 2
+[2020-11-25 10:01:10]~~~~~~Mhal_HDMITx_SetSwI2cInputMode 1019
+[2020-11-25 10:01:11]
+[2020-11-25 10:01:11]MDrv_HDMITx_ClearAVMUTE 
+[2020-11-25 10:01:11]AnalogDrvCur: Tap1(0x14, 0x14, 0x14, 0x14) Tap1(0x00, 0x00, 0x00, 0x00), Pd(0x08, 0x00, 0x00)
+[2020-11-25 10:01:11]client [448] connected, module:disp
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 4, hdmiTx = 0 [DACOUT_576I_50]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 2, hdmiTx = 0 [DACOUT_480I_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 8, hdmiTx = 0 [DACOUT_1080P_24]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 9, hdmiTx = 0 [DACOUT_1080P_25]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 10, hdmiTx = 0 [DACOUT_1080P_30]
+[2020-11-25 10:01:11]E_HDMITX_FSM_CHECK_HPD:: pre= 2, cur = 0
+[2020-11-25 10:01:11]~~~~~~Mhal_HDMITx_SetSwI2cInputMode 1019
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 6, hdmiTx = 0 [DACOUT_720P_50]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 7, hdmiTx = 0 [DACOUT_720P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 11, hdmiTx = 0 [DACOUT_1080I_50]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 13, hdmiTx = 0 [DACOUT_1080I_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 12, hdmiTx = 0 [DACOUT_1080P_50]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 14, hdmiTx = 0 [DACOUT_1080P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 5, hdmiTx = 0 [DACOUT_576P_50]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 3, hdmiTx = 0 [DACOUT_480P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 50] eTiming = 38, hdmiTx = 1  Not Fund!!!
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 50] eTiming = 50, hdmiTx = 1  Not Fund!!!
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 40, hdmiTx = 0 [DACOUT_1024X768P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 43, hdmiTx = 0 [DACOUT_1280X1024P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 41, hdmiTx = 0 [DACOUT_1366X768P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 44, hdmiTx = 0 [DACOUT_1440X900P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 42, hdmiTx = 0 [DACOUT_1280X800P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 46, hdmiTx = 0 [DACOUT_1600X1050P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 50] eTiming = 50, hdmiTx = 1  Not Fund!!!
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 45, hdmiTx = 0 [DACOUT_1600X1200P_60]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 50] eTiming = 50, hdmiTx = 1  Not Fund!!!
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 22, hdmiTx = 0 [DACOUT_2560X1440P_30]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 50] eTiming = 23, hdmiTx = 1  Not Fund!!!
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 30, hdmiTx = 0 [DACOUT_4K2KP_30]
+[2020-11-25 10:01:11][MI_SYSCFG_GetPanelInfo 42] eTiming = 32, hdmiTx = 0 [DACOUT_4K2KP_60]
+[2020-11-25 10:01:11]Nov 25 10:01:18 login[486]: root login on 'pts/2'
+[2020-11-25 10:01:12]_HalDispIfSetDeviceVgaParam 2347, Peaking is not set
+[2020-11-25 10:01:12]_HalDispIfSetDeviceHdmiParam 2425, Peaking is not set
+[2020-11-25 10:01:12]
+[2020-11-25 10:01:12]GE_EnableDynaClkGate
+[2020-11-25 10:01:12] MI_Moduledev_RegisterDev  
+[2020-11-25 10:01:12]client [444] connected, module:gfx
+[2020-11-25 10:01:12]
+[2020-11-25 10:01:12]sstar_FB_SetBlending 397 u8GOP=1,u8win=0 aType=1 u8constAlpha=255
+[2020-11-25 10:01:12]sstar_FB_SetBlending 397 u8GOP=1,u8win=0 aType=0 u8constAlpha=0
+[2020-11-25 10:01:12]
+[2020-11-25 10:01:12]sstar_FB_SetBlending 397 u8GOP=1,u8win=0 aType=1 u8constAlpha=255
+[2020-11-25 10:01:12]
+[2020-11-25 10:01:12]sstar_FB_SetBlending 397 u8GOP=0,u8win=0 aType=1 u8constAlpha=255
+[2020-11-25 10:01:12]client [448] connected, module:vdisp
+[2020-11-25 10:01:14]
+[2020-11-25 10:01:14]MDrv_HDMITx_SetAVMUTE 
+[2020-11-25 10:01:14]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 10:01:14]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 10:01:14]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:14]
+[2020-11-25 10:01:14]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:14][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 10:01:14]
+[2020-11-25 10:01:15]_HalHdmitxIfGetInfoSinkInfoConfig 712, Check Edid Data Fail
+[2020-11-25 10:01:15]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:15]
+[2020-11-25 10:01:15]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:15][MI ERR ]: MI_HDMI_IMPL_ForceGetEdid[1654]: Failed To Get Edid(0) (0x5)!
+[2020-11-25 10:01:15]
+[2020-11-25 10:01:15]_HalHdmitxIfGetInfoSinkInfoConfig 786, Check Edid Data Fail
+[2020-11-25 10:01:15]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:15]
+[2020-11-25 10:01:15]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:15]_HalHdmitxIfGetInfoSinkInfoConfig 737, Check Edid Data Fail
+[2020-11-25 10:01:15]
+[2020-11-25 10:01:15]_DrvHdmitxIfExecuteQuery 526, Query:SINK_INFO, Ret:ERR
+[2020-11-25 10:01:15]DrvHdmitxIfGetSinkInfo 891, Get Sink Info Fail
+[2020-11-25 10:01:15]
+[2020-11-25 10:01:15][MI ERR ]: _MI_HDMI_ChkColorFormatForSpecTiming[1204]: Failed To Check Color Format
+[2020-11-25 10:01:15]MDrv_HDMITx_GetSetAttrByOther 5664, IsSetAttr:0
+[2020-11-25 10:01:15]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:15]B InColor = 0, OutColor = 0
+[2020-11-25 10:01:15]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:15]B InColor = 0, OutColor = 0
+[2020-11-25 10:01:15]MDrv_HDMITx_SetHDMITxMode: DVI mode = 0 
+[2020-11-25 10:01:16]
+[2020-11-25 10:01:16]MDrv_HDMITx_ClearAVMUTE 
+[2020-11-25 10:01:16]AnalogDrvCur: Tap1(0x14, 0x14, 0x14, 0x14) Tap1(0x00, 0x00, 0x00, 0x00), Pd(0x08, 0x00, 0x00)
+[2020-11-25 10:01:16]_HalDispIfSetDeviceHdmiParam 2425, Peaking is not set
+[2020-11-25 10:01:17]_HalDispIfSetDeviceVgaParam 2347, Peaking is not set
+[2020-11-25 10:01:17]
+[2020-11-25 10:01:20]Nov 25 10:01:27 login[726]: root login on 'pts/3'
+[2020-11-25 10:01:29]client [448] connected, module:vdec
+[2020-11-25 10:01:33]client [448] connected, module:ao
+[2020-11-25 10:01:51]Nov 25 10:01:58 login[1073]: root login on 'pts/4'
+[2020-11-25 10:02:03]Nov 25 10:02:10 login[1162]: root login on 'pts/5'
+[2020-11-25 10:04:30]==20180309==> hub_port_init 1 #0
+[2020-11-25 10:04:30]Plug in USB Port3
+[2020-11-25 10:04:41]client [448] connected, module:divp
+[2020-11-25 10:04:41]DivpProcInit 459
+[2020-11-25 10:04:41][DIP] num_parents:1! CLK_dip 320000000
+[2020-11-25 10:04:41][DIP] Virtual IRQ: 29
+[2020-11-25 10:04:41]
+[2020-11-25 10:04:42]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:04:42]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:04:42]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:04:42]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:04:42]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:04:42]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:04:45]root hub reinitial [usbdis]
+[2020-11-25 10:12:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:12:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:16:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:17:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:44]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:45]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:46]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:47]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:48]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:49]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:49]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:49]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:49]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:49]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:49]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:50]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:51]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:52]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:22:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:53]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:54]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:23:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:24:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:31]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:32]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:33]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:34]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:35]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:36]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:37]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:38]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:39]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:40]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:40]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:40]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:25:40]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:55]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:56]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:57]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:58]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:29:59]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:00]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:01]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:02]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:03]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:04]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:05]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:30:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:06]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:07]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:08]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:09]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:10]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:11]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:12]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:13]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:14]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:15]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:16]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:17]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:18]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:32:19]CamOsTsemInit already inited, LR:0xBF994B3B
+[2020-11-25 10:37:18]CPU: 0 PID: 588 Comm: dvr1 Tainted: P           O    4.9.84 #1
+[2020-11-25 10:37:18]Hardware name: SStar Soc (Flattened Device Tree)
+[2020-11-25 10:37:18][<c001201d>] (unwind_backtrace) from [<c000fcbf>] (show_stack+0xb/0xc)
+[2020-11-25 10:37:18][<c000fcbf>] (show_stack) from [<c016b7ab>] (dump_stack+0x5b/0x74)
+[2020-11-25 10:37:18][<c016b7ab>] (dump_stack) from [<c0087185>] (dump_header+0x45/0x130)
+[2020-11-25 10:37:18][<c0087185>] (dump_header) from [<c0066107>] (out_of_memory+0x10b/0x2a6)
+[2020-11-25 10:37:18][<c0066107>] (out_of_memory) from [<c006877b>] (__alloc_pages_nodemask+0x683/0x6f8)
+[2020-11-25 10:37:18][<c006877b>] (__alloc_pages_nodemask) from [<c0064df7>] (filemap_fault+0x19d/0x40a)
+[2020-11-25 10:37:18][<c0064df7>] (filemap_fault) from [<c0078aaf>] (__do_fault+0x3f/0x84)
+[2020-11-25 10:37:18][<c0078aaf>] (__do_fault) from [<c007a7cb>] (handle_mm_fault+0x25b/0xad6)
+[2020-11-25 10:37:18][<c007a7cb>] (handle_mm_fault) from [<c0013741>] (do_page_fault+0xc5/0x1b4)
+[2020-11-25 10:37:18][<c0013741>] (do_page_fault) from [<c000925f>] (do_PrefetchAbort+0x27/0x64)
+[2020-11-25 10:37:18][<c000925f>] (do_PrefetchAbort) from [<c0010afb>] (__pabt_usr+0x5b/0x5c)
+[2020-11-25 10:37:18]Exception stack(0xc9eeffb0 to 0xc9eefff8)
+[2020-11-25 10:37:18]ffa0:                                     00000000 00000002 00000000 00000000
+[2020-11-25 10:37:18]ffc0: 0000024c 000001b8 000001c0 ae9b6ea8 00000000 ae9b7030 00000000 ae9b74c0
+[2020-11-25 10:37:18]ffe0: 0034c7d8 ae9b6ea0 000000f0 000c3c62 80000030 ffffffff
+[2020-11-25 10:37:18]Mem-Info:
+[2020-11-25 10:37:18]active_anon:18901 inactive_anon:280 isolated_anon:0
+[2020-11-25 10:37:18] active_file:23 inactive_file:44 isolated_file:0
+[2020-11-25 10:37:18] unevictable:929 dirty:0 writeback:0 unstable:0
+[2020-11-25 10:37:18] slab_reclaimable:355 slab_unreclaimable:2422
+[2020-11-25 10:37:18] mapped:5202 shmem:476 pagetables:307 bounce:0
+[2020-11-25 10:37:18] free:4040 free_pcp:0 free_cma:59
+[2020-11-25 10:37:18]Node 0 active_anon:75604kB inactive_anon:1120kB active_file:56kB inactive_file:204kB unevictable:3716kB isolated(anon):0kB isolated(file):0kB mapped:20800kB dirty:0kB writeback:0kB shmem:1904kB writeback_tmp:0kB unstable:0kB pages_scanned:3956 all_unreclaimable? no
+[2020-11-25 10:37:18]Normal free:15964kB min:16384kB low:20480kB high:24576kB active_anon:75604kB inactive_anon:1120kB active_file:32kB inactive_file:208kB unevictable:3716kB writepending:0kB present:144384kB managed:137724kB mlocked:0kB slab_reclaimable:1420kB slab_unreclaimable:9968kB kernel_stack:1952kB pagetables:1228kB bounce:0kB free_pcp:8kB local_pcp:8kB free_cma:236kB
+[2020-11-25 10:37:18]lowmem_reserve[]: 0 0
+[2020-11-25 10:37:18]Normal: 360*4kB (UMEHC) 85*8kB (MEHC) 45*16kB (UMEHC) 24*32kB (MEHC) 18*64kB (UMEHC) 45*128kB (UMEH) 11*256kB (UMH) 5*512kB (UM) 0*1024kB 0*2048kB = 15896kB
+[2020-11-25 10:37:18]1465 total pagecache pages
+[2020-11-25 10:37:18]36096 pages RAM
+[2020-11-25 10:37:18]0 pages HighMem/MovableOnly
+[2020-11-25 10:37:18]1665 pages reserved
+[2020-11-25 10:37:18]512 pages cma reserved
+[2020-11-25 10:37:18]Kernel panic - not syncing: Out of memory: compulsory panic_on_oom is enabled
+[2020-11-25 10:37:18]
+[2020-11-25 10:37:18]CPU0: stopping
+[2020-11-25 10:37:18]CPU: 0 PID: 0 Comm: swapper/0 Tainted: P           O    4.9.84 #1
+[2020-11-25 10:37:18]Hardware name: SStar Soc (Flattened Device Tree)
+[2020-11-25 10:37:18][<c001201d>] (unwind_backtrace) from [<c000fcbf>] (show_stack+0xb/0xc)
+[2020-11-25 10:37:18][<c000fcbf>] (show_stack) from [<c016b7ab>] (dump_stack+0x5b/0x74)
+[2020-11-25 10:37:18][<c016b7ab>] (dump_stack) from [<c00115ad>] (handle_IPI+0x85/0x10c)
+[2020-11-25 10:37:18][<c00115ad>] (handle_IPI) from [<c00092f5>] (gic_handle_irq+0x59/0x64)
+[2020-11-25 10:37:18][<c00092f5>] (gic_handle_irq) from [<c00104a5>] (__irq_svc+0x65/0xac)
+[2020-11-25 10:37:18]Exception stack(0xc0481f60 to 0xc0481fa8)
+[2020-11-25 10:37:18]1f60: 00000000 004e7abe cc4c12cc c0015aa1 c0480000 c0483bec 00000001 c04c6c11
+[2020-11-25 10:37:18]1f80: c0483c3c cc4ffac0 00000000 00000000 c0483980 c0481fb0 c000dd3b c000dd3c
+[2020-11-25 10:37:18]1fa0: 40000133 ffffffff
+[2020-11-25 10:37:18][<c00104a5>] (__irq_svc) from [<c000dd3c>] (arch_cpu_idle+0x14/0x20)
+[2020-11-25 10:37:18][<c000dd3c>] (arch_cpu_idle) from [<c003c97d>] (cpu_startup_entry+0x8d/0xd4)
+[2020-11-25 10:37:18][<c003c97d>] (cpu_startup_entry) from [<c0452913>] (start_kernel+0x267/0x2d4)
+[2020-11-25 10:37:18]Rebooting in 3 seconds..
+[2020-11-25 10:37:21]1
+[2020-11-25 10:37:21]IPL g8e04b60
+[2020-11-25 10:37:21]D-1f
+[2020-11-25 10:37:21]HW Reset
+[2020-11-25 10:37:21]miupll_233MHz
+[2020-11-25 10:37:21]MIU0 zq=0x003d
+[2020-11-25 10:37:21]miu_bw_set
+[2020-11-25 10:37:21]utmi_1_init done
+[2020-11-25 10:37:21]utmi_2_init done
+[2020-11-25 10:37:21]utmi_3_init done
+[2020-11-25 10:37:21]usbpll init done......
+[2020-11-25 10:37:21]SPI 54M
+[2020-11-25 10:37:21]clk_init done 
+[2020-11-25 10:37:21]P1 USB_rterm trim=0x0000
+[2020-11-25 10:37:21]P1 USB_HS_TX_CURRENT trim=0x0001
+[2020-11-25 10:37:21]P2 USB_rterm trim=0x0001
+[2020-11-25 10:37:21]P2 USB_HS_TX_CURRENT trim=0x0000
+[2020-11-25 10:37:21]P3 USB_rterm trim=0x0001
+[2020-11-25 10:37:21]P3 USB_HS_TX_CURRENT trim=0x0000
+[2020-11-25 10:37:21]PM_vol_bgap trim=0x0003
+[2020-11-25 10:37:21]GCR_SAR_DATA trim=0x018e
+[2020-11-25 10:37:21]ETH 10T output swing trim=0x0001
+[2020-11-25 10:37:21]ETH 100T output swing trim=0x0000
+[2020-11-25 10:37:21]ETH RX input impedance trim=0x0000
+[2020-11-25 10:37:21]ETH TX output impedance trim=0x0001
+[2020-11-25 10:37:21]MIPI_HS_RTERM trim=0x0001
+[2020-11-25 10:37:21]MIPI_LP_RTERM trim=0x0000
+[2020-11-25 10:37:21]TX_current trimming trim[0x1A]=0x0045
+[2020-11-25 10:37:21]TX_current trimming trim[0x1B]=0x0047
+[2020-11-25 10:37:21]TX_current trimming trim[0x1C]=0x0044
+[2020-11-25 10:37:21]HDMI2TX Rterm trim=0x0001
+[2020-11-25 10:37:21]HDMI2TX_Ibias_CH0 trim=0x0018
+[2020-11-25 10:37:21]HDMI2TX_Ibias_CH1 trim=0x001a
+[2020-11-25 10:37:21]HDMI2TX_Ibias_CH2 trim=0x0018
+[2020-11-25 10:37:21]HDMI2TX_Ibias_CH3 trim=0x001b
+[2020-11-25 10:37:21]256MB
+[2020-11-25 10:37:22]BIST0_0001-OK
+[2020-11-25 10:37:22]Enable MMU and CACHE
+[2020-11-25 10:37:22]Load IPL_CUST from SPINAND
+[2020-11-25 10:37:22]crc OK
+[2020-11-25 10:37:22]
+[2020-11-25 10:37:22]IPL_CUST g8e04b60
+[2020-11-25 10:37:22]runUBOOT()
+[2020-11-25 10:37:22]          runUBOOT()
+[2020-11-25 10:37:22][SPINAND]
+[2020-11-25 10:37:22]SPI 54M
+[2020-11-25 10:37:22]Load UBOOT from SPINAND
+[2020-11-25 10:37:22] -Verify UBOOT CRC32 passed!
+[2020-11-25 10:37:22] -Decompress UBOOT XZ
+[2020-11-25 10:37:22]  decomp_size=0x000792e4
+[2020-11-25 10:37:22]Disable MMU and D-cache before jump to UBOOT
+
+[2020-11-25 10:37:22]U-Boot 2015.01-svn4866 (Nov 21 2020 - 21:01:21)
+[2020-11-25 10:37:22]
+[2020-11-25 10:37:22]Version: I2svn4866#
+[2020-11-25 10:37:22]       Watchdog enabled
+[2020-11-25 10:37:22]I2C:   ready
+[2020-11-25 10:37:22]DRAM:  
+[2020-11-25 10:37:22]WARNING: Caches not enabled
+[2020-11-25 10:37:22]SPINAND: _MDrv_SPINAND_GET_INFO: Found SPINAND INFO 
+[2020-11-25 10:37:22](0xEF) (0xAA) (0x21) 
+[2020-11-25 10:37:22]SPINAND: board_nand_init: CIS contains part info
+[2020-11-25 10:37:22]128 MiB
+[2020-11-25 10:37:22]MMC:   MStar SD/MMC: 0
+[2020-11-25 10:37:22]In:    serial
+[2020-11-25 10:37:22]Out:   serial
+[2020-11-25 10:37:22]Err:   serial
+[2020-11-25 10:37:22]Net:   sstar_emac
+[2020-11-25 10:37:22]magic: 0x48444946, product:0x10A002, pcb:0xD2029610, custom:0x0, phy0: 0x142, phy1: 0x0
+[2020-11-25 10:37:24]Hit Ctrl+C to stop autoboot:  0 
+[2020-11-25 10:37:24]
+[2020-11-25 10:37:24]NAND read: device 0 offset 0x300000, size 0x500000
+[2020-11-25 10:37:25]Time:976341 us, speed:5369 KB/s
+[2020-11-25 10:37:25] 5242880 bytes read: OK
+[2020-11-25 10:37:25][add_hardinfo_to_cmdline:155]: with hardinfo
+[2020-11-25 10:37:25][WDT] Enalbe WATCHDOG 240 s
+[2020-11-25 10:37:25]
+[2020-11-25 10:37:25]set wdt time:240
+[2020-11-25 10:37:25]##  Booting kernel from Legacy Image at 22000000 ...
+[2020-11-25 10:37:25]   Image Name:   MVX4##I2M#svn4850#KL_LX409##[BR:
+[2020-11-25 10:37:25]   Image Type:   ARM Linux Kernel Image (lzma compressed)
+[2020-11-25 10:37:25]   Data Size:    2378484 Bytes = 2.3 MiB
+[2020-11-25 10:37:25]   Load Address: 20008000
+[2020-11-25 10:37:25]   Entry Point:  20008000
+[2020-11-25 10:37:25]   Verifying Checksum ... OK
+[2020-11-25 10:37:25]-usb_stop(USB_PORT0)
+[2020-11-25 10:37:25]-usb_stop(USB_PORT1)
+[2020-11-25 10:37:25]-usb_stop(USB_PORT2)
+[2020-11-25 10:37:25]   Uncompressing Kernel Image ... 
+[2020-11-25 10:37:25][XZ] !!!reserved 0x21000000 length=0x 1000000 for xz!!
+[2020-11-25 10:37:26]   XZ: uncompressed size=0x4c1000, ret=7
+[2020-11-25 10:37:26]OK
+[2020-11-25 10:37:26]atags:0x20000000
+[2020-11-25 10:37:26]
+[2020-11-25 10:37:26]Starting kernel ...
+[2020-11-25 10:37:26]
+[2020-11-25 10:37:26]Booting Linux on physical CPU 0x0
+[2020-11-25 10:37:26]Linux version 4.9.84 (caijinzhong@tiandy) (gcc version 4.9.4 (Buildroot 2017.08-gc7bbae9-dirty) ) #1 SMP PREEMPT Fri Nov 20 16:20:31 CST 2020
+[2020-11-25 10:37:26]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=50c5387d
+[2020-11-25 10:37:26]CPU: div instructions available: patching division code
+[2020-11-25 10:37:26]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-11-25 10:37:26]early_atags_to_fdt() success
+[2020-11-25 10:37:26]OF: fdt:Machine model: INFINITY2M SSC010A-S01A-S
+[2020-11-25 10:37:26]LXmem is 0xff00000 PHYS_OFFSET is 0x20000000
+[2020-11-25 10:37:26]Add mem start 0x20000000 size 0xff00000!!!!
+[2020-11-25 10:37:26]
+[2020-11-25 10:37:26]LX_MEM  = 0x20000000, 0xff00000
+[2020-11-25 10:37:26]LX_MEM2 = 0x0, 0x0
+[2020-11-25 10:37:26]LX_MEM3 = 0x0, 0x0
+[2020-11-25 10:37:26]EMAC_LEN= 0x0
+[2020-11-25 10:37:26]DRAM_LEN= 0x0
+[2020-11-25 10:37:26]no any mmap reserved
+[2020-11-25 10:37:26]deal_with_reserve_mma_heap memblock_reserve success mma_config[0].reserved_start=
+[2020-11-25 10:37:26]0x24800000
+[2020-11-25 10:37:26]
+[2020-11-25 10:37:26]deal_with_reserve_mma_heap memblock_reserve success mma_config[1].reserved_start=
+[2020-11-25 10:37:26]0x2c500000
+[2020-11-25 10:37:26]
+[2020-11-25 10:37:26]cma: Reserved 2 MiB at 0x2c200000
+[2020-11-25 10:37:26]Memory policy: Data cache writealloc
+[2020-11-25 10:37:26]percpu: Embedded 13 pages/cpu @cc4bf000 s24536 r8192 d20520 u53248
+[2020-11-25 10:37:26]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 35702
+[2020-11-25 10:37:26]Kernel command line: ubi.mtd=2 rootfstype=ramfs initrd=0x22280000,0x400000 mtdparts=nand0:0x300000(uboot),0x500000(kernel),-(ubi) LX_MEM=0xff00000 mma_heap=MMU_MMA,miu=0,sz=0x3800000 mma_heap=mma_heap_name0,miu=0,sz=0x3A00000 mma_memblock_remove=1 hardinfo=200a01000169202d0000000024100000
+[2020-11-25 10:37:26]PID hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 10:37:26]Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-11-25 10:37:26]Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[2020-11-25 10:37:26]Memory: 131580K/144384K available (2881K kernel code, 284K rwdata, 1356K rodata, 184K init, 191K bss, 10756K reserved, 2048K cma-reserved)
+[2020-11-25 10:37:26]Virtual kernel memory layout:
+[2020-11-25 10:37:26]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-11-25 10:37:26]    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[2020-11-25 10:37:26]    vmalloc : 0xcc800000 - 0xff800000   ( 816 MB)
+[2020-11-25 10:37:26]    lowmem  : 0xc0000000 - 0xcc500000   ( 197 MB)
+[2020-11-25 10:37:26]    modules : 0xbf800000 - 0xc0000000   (   8 MB)
+[2020-11-25 10:37:26]      .text : 0xc0008000 - 0xc02d8a00   (2883 kB)
+[2020-11-25 10:37:26]      .init : 0xc0452000 - 0xc0480000   ( 184 kB)
+[2020-11-25 10:37:26]      .data : 0xc0480000 - 0xc04c7098   ( 285 kB)
+[2020-11-25 10:37:26]       .bss : 0xc04c9000 - 0xc04f8f3c   ( 192 kB)
+[2020-11-25 10:37:26]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-11-25 10:37:26]Preemptible hierarchical RCU implementation.
+[2020-11-25 10:37:26]        Build-time adjustment of leaf fanout to 32.
+[2020-11-25 10:37:26]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-11-25 10:37:26]RCU: Adjusting geometry for rcu_fanout_leaf=32, nr_cpu_ids=2
+[2020-11-25 10:37:26]NR_IRQS:16 nr_irqs:16 16
+[2020-11-25 10:37:26]ms_init_main_intc: np->name=ms_main_intc, parent=gic
+[2020-11-25 10:37:26]ms_init_pm_intc: np->name=ms_pm_intc, parent=ms_main_intc
+[2020-11-25 10:37:26]ss_init_gpi_intc: np->name=ms_gpi_intc, parent=ms_main_intc
+[2020-11-25 10:37:26]Find CLK_cpupll_clk, hook ms_cpuclk_ops
+[2020-11-25 10:37:26]arm_arch_timer: Architected cp15 timer(s) running at 6.00MHz (virt).
+[2020-11-25 10:37:26]clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+[2020-11-25 10:37:26]sched_clock: 56 bits at 6MHz, resolution 166ns, wraps every 4398046511055ns
+[2020-11-25 10:37:26]Switching to timer-based delay loop, resolution 166ns
+[2020-11-25 10:37:26]Console: colour dummy device 80x30
+[2020-11-25 10:37:26]console [ttyS0] enabled
+[2020-11-25 10:37:26]Calibrating delay loop (skipped), value calculated using timer frequency.. 12.00 BogoMIPS (lpj=60000)
+[2020-11-25 10:37:26]pid_max: default: 4096 minimum: 301
+[2020-11-25 10:37:26]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 10:37:26]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-11-25 10:37:26]CPU: Testing write buffer coherency: ok
+[2020-11-25 10:37:26]CPU0: update cpu_capacity 1024
+[2020-11-25 10:37:26]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-11-25 10:37:26]Setting up static identity map for 0x20008240 - 0x20008270
+[2020-11-25 10:37:27]CPU1: update cpu_capacity 1024
+[2020-11-25 10:37:27]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-11-25 10:37:27]Brought up 2 CPUs
+[2020-11-25 10:37:27]SMP: Total of 2 processors activated (24.00 BogoMIPS).
+[2020-11-25 10:37:27]CPU: All CPU(s) started in SVC mode.
+[2020-11-25 10:37:27]devtmpfs: initialized
+[2020-11-25 10:37:27]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-11-25 10:37:27]clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[2020-11-25 10:37:27]futex hash table entries: 16 (order: -2, 1024 bytes)
+[2020-11-25 10:37:27]NET: Registered protocol family 16
+[2020-11-25 10:37:27]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-11-25 10:37:27]
+[2020-11-25 10:37:27]
+[2020-11-25 10:37:27]Version : MVX4##I2M#svn4850#KL_LX409##[BR:TD-NVR]#XVM
+[2020-11-25 10:37:27]
+[2020-11-25 10:37:27]GPIO: probe end[ss_gpi_intc_domain_alloc] hw:42 -> v:45
+[2020-11-25 10:37:27][MS_PM_INTC] hw:20 -> v:53
+[2020-11-25 10:37:27]td_modules init ok
+[2020-11-25 10:37:27]SCSI subsystem initialized
+[2020-11-25 10:37:27]usbcore: registered new interface driver usbfs
+[2020-11-25 10:37:27]usbcore: registered new interface driver hub
+[2020-11-25 10:37:27]usbcore: registered new device driver usb
+[2020-11-25 10:37:27]clocksource: Switched to clocksource arch_sys_counter
+[2020-11-25 10:37:27]NET: Registered protocol family 2
+[2020-11-25 10:37:27]TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-11-25 10:37:27]TCP bind hash table entries: 2048 (order: 3, 40960 bytes)
+[2020-11-25 10:37:27]TCP: Hash tables configured (established 2048 bind 2048)
+[2020-11-25 10:37:27]UDP hash table entries: 128 (order: 0, 6144 bytes)
+[2020-11-25 10:37:27]UDP-Lite hash table entries: 128 (order: 0, 6144 bytes)
+[2020-11-25 10:37:27]NET: Registered protocol family 1
+[2020-11-25 10:37:27]RPC: Registered named UNIX socket transport module.
+[2020-11-25 10:37:27]RPC: Registered udp transport module.
+[2020-11-25 10:37:27]RPC: Registered tcp transport module.
+[2020-11-25 10:37:27]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-11-25 10:37:27]Unpacking initramfs...
+[2020-11-25 10:37:27]Initramfs unpacking failed: junk in compressed archive
+[2020-11-25 10:37:27]Freeing initrd memory: 4096K
+[2020-11-25 10:37:27]workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[2020-11-25 10:37:27]fuse init (API version 7.26)
+[2020-11-25 10:37:27]io scheduler noop registered
+[2020-11-25 10:37:27]io scheduler deadline registered (default)
+[2020-11-25 10:37:27]libphy: Fixed MDIO Bus: probed
+[2020-11-25 10:37:27]PPP generic driver version 2.4.2
+[2020-11-25 10:37:27]PPP BSD Compression module registered
+[2020-11-25 10:37:27]PPP Deflate Compression module registered
+[2020-11-25 10:37:27]PPP MPPE Compression module registered
+[2020-11-25 10:37:27]NET: Registered protocol family 24
+[2020-11-25 10:37:27]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-11-25 10:37:27]Mstar_ehc_init version:20180309
+[2020-11-25 10:37:27]Sstar-ehci-2 H.W init
+[2020-11-25 10:37:27]CHIP_FUNCTION SET. ID=4, param=65537
+[2020-11-25 10:37:27]Titania3_series_start_ehc start
+[2020-11-25 10:37:27][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 10:37:27][USB] enable miu lower bound address subtraction
+[2020-11-25 10:37:27][USB] init squelch level 0x2
+[2020-11-25 10:37:27][USB] no platform_data, device tree coming
+[2020-11-25 10:37:27][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 10:37:27]BC disable 
+[2020-11-25 10:37:27][USB] soc:Sstar-ehci-2 irq --> 40
+[2020-11-25 10:37:27]Sstar-ehci-2 soc:Sstar-ehci-2: EHCI Host Controller
+[2020-11-25 10:37:27]Sstar-ehci-2 soc:Sstar-ehci-2: new USB bus registered, assigned bus number 1
+[2020-11-25 10:37:27]Sstar-ehci-2 soc:Sstar-ehci-2: irq 40, io mem 0xfd285000
+[2020-11-25 10:37:27]usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 10:37:27]usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 10:37:27]usb usb1: Product: EHCI Host Controller
+[2020-11-25 10:37:27]usb usb1: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 10:37:27]usb usb1: SerialNumber: mstar
+[2020-11-25 10:37:27]hub 1-0:1.0: USB hub found
+[2020-11-25 10:37:27]hub 1-0:1.0: 1 port detected
+[2020-11-25 10:37:27]Sstar-ehci-1 H.W init
+[2020-11-25 10:37:27]CHIP_FUNCTION SET. ID=4, param=1
+[2020-11-25 10:37:27]Titania3_series_start_ehc start
+[2020-11-25 10:37:27][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 10:37:27][USB] enable miu lower bound address subtraction
+[2020-11-25 10:37:27][USB] init squelch level 0x2
+[2020-11-25 10:37:27][USB] no platform_data, device tree coming
+[2020-11-25 10:37:27][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 10:37:27]BC disable 
+[2020-11-25 10:37:27][USB] soc:Sstar-ehci-1 irq --> 39
+[2020-11-25 10:37:27]Sstar-ehci-1 soc:Sstar-ehci-1: EHCI Host Controller
+[2020-11-25 10:37:27]Sstar-ehci-1 soc:Sstar-ehci-1: new USB bus registered, assigned bus number 2
+[2020-11-25 10:37:27]Sstar-ehci-1 soc:Sstar-ehci-1: irq 39, io mem 0xfd284800
+[2020-11-25 10:37:27]usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 10:37:27]usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 10:37:27]usb usb2: Product: EHCI Host Controller
+[2020-11-25 10:37:27]usb usb2: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 10:37:27]usb usb2: SerialNumber: mstar
+[2020-11-25 10:37:27]hub 2-0:1.0: USB hub found
+[2020-11-25 10:37:27]hub 2-0:1.0: 1 port detected
+[2020-11-25 10:37:27]Sstar-ehci-3 H.W init
+[2020-11-25 10:37:27]CHIP_FUNCTION SET. ID=4, param=131073
+[2020-11-25 10:37:28]Titania3_series_start_ehc start
+[2020-11-25 10:37:28][USB] config miu select [70] [e8] [ef] [ef]
+[2020-11-25 10:37:28][USB] enable miu lower bound address subtraction
+[2020-11-25 10:37:28][USB] init squelch level 0x2
+[2020-11-25 10:37:28][USB] no platform_data, device tree coming
+[2020-11-25 10:37:28][USB][EHC] dma coherent_mask 0xffffffffffffffff mask 0xffffffffffffffff
+[2020-11-25 10:37:28]BC disable 
+[2020-11-25 10:37:28][USB] soc:Sstar-ehci-3 irq --> 57
+[2020-11-25 10:37:28]Sstar-ehci-3 soc:Sstar-ehci-3: EHCI Host Controller
+[2020-11-25 10:37:28]Sstar-ehci-3 soc:Sstar-ehci-3: new USB bus registered, assigned bus number 3
+[2020-11-25 10:37:28]Sstar-ehci-3 soc:Sstar-ehci-3: irq 57, io mem 0xfd286400
+[2020-11-25 10:37:28]usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[2020-11-25 10:37:28]usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[2020-11-25 10:37:28]usb usb3: Product: EHCI Host Controller
+[2020-11-25 10:37:28]usb usb3: Manufacturer: Linux 4.9.84 ehci_hcd
+[2020-11-25 10:37:28]usb usb3: SerialNumber: mstar
+[2020-11-25 10:37:28]hub 3-0:1.0: USB hub found
+[2020-11-25 10:37:28]hub 3-0:1.0: 1 port detected
+[2020-11-25 10:37:28]usbcore: registered new interface driver usb-storage
+[2020-11-25 10:37:28]mousedev: PS/2 mouse device common for all mice
+[2020-11-25 10:37:28]i2c /dev entries driver
+[2020-11-25 10:37:28]usbcore: registered new interface driver usbhid
+[2020-11-25 10:37:28]usbhid: USB HID core driver
+[2020-11-25 10:37:28]1f221000.uart0: ttyS0 at MMIO 0x0 (irq = 31, base_baud = 10800000) is a unknown
+[2020-11-25 10:37:28]1f221200.uart1: ttyS1 at MMIO 0x0 (irq = 32, base_baud = 10800000) is a unknown
+[2020-11-25 10:37:28]1f220400.uart2: ttyS2 at MMIO 0x0 (irq = 34, base_baud = 10800000) is a unknown
+[2020-11-25 10:37:28]1f221400.uart2: ttyS3 at MMIO 0x0 (irq = 35, base_baud = 10800000) is a unknown
+[2020-11-25 10:37:28][Core Voltage] check_voltage_valid: Not support 0mV, use 850mV
+[2020-11-25 10:37:28]MSYS: DMEM request: [emac0_buff]:0x00000812
+[2020-11-25 10:37:28]MSYS: DMEM request: [emac0_buff]:0x00000812 success, CPU phy:@0x2C24D000, virt:@0xCC24D000
+[2020-11-25 10:37:28]libphy: mdio: probed
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: /soc/emac0/mdio-bus@emac0/ethernet-phy@0 has invalid PHY address
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 0
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 1
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 2
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 3
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 4
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 5
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 6
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 7
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 8
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 9
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 10
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 11
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 12
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 13
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 14
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 15
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 16
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 17
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 18
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 19
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 20
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 21
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 22
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 23
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 24
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 25
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 26
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 27
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 28
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 29
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 30
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 31
+[2020-11-25 10:37:28][emac_phy_connect][3234] connected mac emac0 to PHY at mdio-bus@emac0:00 [uid=11112222, driver=SStar 10/100 Ethernet Phy]
+[2020-11-25 10:37:28]MSYS: DMEM request: [emac1_buff]:0x00060812
+[2020-11-25 10:37:28]MSYS: DMEM request: [emac1_buff]:0x00060812 success, CPU phy:@0x2C250000, virt:@0xCC250000
+[2020-11-25 10:37:28]libphy: mdio: probed
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: /soc/emac1/mdio-bus@emac1/ethernet-phy@1 has invalid PHY address
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 0
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 1
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 2
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 3
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 4
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 5
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 6
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 7
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 8
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 9
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 10
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 11
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 12
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 13
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 14
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 15
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 16
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 17
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 18
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 19
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 20
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 21
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 22
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 23
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 24
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 25
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 26
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 27
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 28
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 29
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 30
+[2020-11-25 10:37:28]mdio_bus mdio-bus@emac1: scan phy ethernet-phy at address 31
+[2020-11-25 10:37:28][emac_phy_connect][3234] connected mac emac1 to PHY at mdio-bus@emac1:00 [uid=001cc816, driver=Generic PHY]
+[2020-11-25 10:37:28]ms_rtcpwc 1f006800.rtcpwc: rtc core: registered 1f006800.rtcpwc as rtc0
+[2020-11-25 10:37:28][ms_cpufreq_init] Current clk=998244352
+[2020-11-25 10:37:28]mstar_spinand_probe: mstar_spinand enableClock
+[2020-11-25 10:37:28]MSYS: DMEM request: [BDMA]:0x00000840
+[2020-11-25 10:37:28]MSYS: DMEM request: [BDMA]:0x00000840 success, CPU phy:@0x2C24E000, virt:@0xCC24E000
+[2020-11-25 10:37:28]MDrv_SPINAND_Init: Detected ID: MID =ef, DID =aa
+[2020-11-25 10:37:28]_dumpNandInformation:warning, Bytes / Page :  2048
+[2020-11-25 10:37:28]_dumpNandInformation:warning, Pages / Block:  64
+[2020-11-25 10:37:28]_dumpNandInformation:warning, Sector/ Page :  512
+[2020-11-25 10:37:28]_dumpNandInformation:warning, Spare / Page :  64
+[2020-11-25 10:37:28]_dumpNandInformation:warning, Current config r:4 w:4 drv:1
+[2020-11-25 10:37:28]mstar_spinand_probe: Magic memcmp pass
+[2020-11-25 10:37:28]mstar_spinand_probe: Get partition (Block 0 : page 1)
+[2020-11-25 10:37:28]mstar_spinand_probe: CIS contains part info
+[2020-11-25 10:37:28]mstar_spinand_probe: Before nand_scan()...
+[2020-11-25 10:37:28]system_area_size = 0x00800000
+[2020-11-25 10:37:28]3 cmdlinepart partitions found on MTD device nand0
+[2020-11-25 10:37:28]mstar_spinand_probe: Mtd parts parse
+[2020-11-25 10:37:28]Creating 3 MTD partitions on "nand0":
+[2020-11-25 10:37:28]0x000000000000-0x000000300000 : "uboot"
+[2020-11-25 10:37:28]0x000000300000-0x000000800000 : "kernel"
+[2020-11-25 10:37:28]0x000000800000-0x000008000000 : "ubi"
+[2020-11-25 10:37:28][ahci_sstar_probe] , priv->res_ahci_port0 =0xfd345100 
+[2020-11-25 10:37:28][ahci_sstar_probe] , priv->res_ahci_misc =0xfd2a4a00 
+[2020-11-25 10:37:28][SATA] phy_mode =2
+[2020-11-25 10:37:28]SATA_TX_R50 trim=0x0015
+[2020-11-25 10:37:28]SATA_RX_R50 trim=0x0011
+[2020-11-25 10:37:28]SATA_TX_R50_IBIAS trim=0x001F
+[2020-11-25 10:37:28]SATA_RXPLL_ICTRL_CDR trim=0x0000
+[2020-11-25 10:37:28][SATA0] Clock : ON
+[2020-11-25 10:37:28]sstar sata HW settings done!!!
+[2020-11-25 10:37:28][SATA] phy_mode =2
+[2020-11-25 10:37:28]ahci_sstar 1f345000.sata: AHCI 0001.0300 32 slots 1 ports 6 Gbps 0x1 impl platform mode
+[2020-11-25 10:37:28]ahci_sstar 1f345000.sata: flags: ncq sntf pm led clo only pmp fbs pio slum part ccc apst 
+[2020-11-25 10:37:28]ahci_sstar 1f345000.sata: port 0 is not capable of FBS
+[2020-11-25 10:37:28]scsi host0: ahci_sstar
+[2020-11-25 10:37:29]ata1: SATA max UDMA/133 mmio [mem 0x1f345000-0x1f3450ff] port 0x100 irq 51
+[2020-11-25 10:37:29][ahci_sstar_probe] , SSTAR AHCI SATA registered 
+[2020-11-25 10:37:29]NET: Registered protocol family 10
+[2020-11-25 10:37:29]NET: Registered protocol family 17
+[2020-11-25 10:37:29]Key type dns_resolver registered
+[2020-11-25 10:37:29]ThumbEE CPU extension supported.
+[2020-11-25 10:37:29]Registering SWP/SWPB emulation handler
+[2020-11-25 10:37:29]ubi0: attaching mtd2
+[2020-11-25 10:37:29]Sstar-emac 1f2a2000.emac0 eth0: Link is Down
+[2020-11-25 10:37:29]ubi0: scanning is finished
+[2020-11-25 10:37:29]ubi0: attached mtd2 (name "ubi", size 120 MiB)
+[2020-11-25 10:37:29]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-11-25 10:37:29]ata1.00: ATA-9: ST2000VX008-2E3164, CV12, max UDMA/133
+[2020-11-25 10:37:29]ata1.00: 3907029168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-11-25 10:37:29]ata1.00: configured for UDMA/133
+[2020-11-25 10:37:29]ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[2020-11-25 10:37:29]scsi 0:0:0:0: Direct-Access     ATA      ST2000VX008-2E31 CV12 PQ: 0 ANSI: 5
+[2020-11-25 10:37:29]ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[2020-11-25 10:37:29]ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[2020-11-25 10:37:29]ubi0: good PEBs: 960, bad PEBs: 0, corrupted PEBs: 0
+[2020-11-25 10:37:29]ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+[2020-11-25 10:37:29]ubi0: max/mean erase counter: 3/1, WL threshold: 4096, image sequence number: 758598555
+[2020-11-25 10:37:29]ubi0: available PEBs: 1, total reserved PEBs: 959, PEBs reserved for bad PEB handling: 20
+[2020-11-25 10:37:29]ubi0: background thread "ubi_bgt0d" started, PID 103
+[2020-11-25 10:37:29]OF: fdt:not creating '/sys/firmware/fdt': CRC check failed
+[2020-11-25 10:37:29]sd 0:0:0:0: [sda] 3907029168 512-byte logical blocks: (2.00 TB/1.82 TiB)
+[2020-11-25 10:37:29]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-11-25 10:37:29]sd 0:0:0:0: [sda] Write Protect is off
+[2020-11-25 10:37:29]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-11-25 10:37:29] sda: sda1 sda2
+[2020-11-25 10:37:29]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-11-25 10:37:29]This architecture does not have kernel memory protection.
+[2020-11-25 10:37:29]Sstar-emac 1f2a2800.emac1 eth1: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-11-25 10:37:29]random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]random: sysctl: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]sysctl: /etc/sysctl.conf: No sucrandom: S00devs: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]h file or directory
+[2020-11-25 10:37:29]
+[2020-11-25 10:37:29]         random: mknod: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29] _ _ __ _    _ _ _
+[2020-11-25 10:37:29]         /_ random: mknod: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]_  _ _/  / _ _  \ 
+[2020-11-25 10:37:29]            random: ln: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]/ /     / /   / /
+[2020-11-25 10:37:29]random: S01udev: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]
+[2020-11-25 10:37:29]          / /     / /   / /
+[2020-11-25 10:37:29]  random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]_ _ _ _/ /_ _ _/ /_ _/ /______
+[2020-11-25 10:37:29]random: mount: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]________________________________random: mkdir: uninitialized urandom read (4 bytes read)
+[2020-11-25 10:37:29]___
+[2020-11-25 10:37:29]
+[2020-11-25 10:37:29]
+[2020-11-25 10:37:29][RCS]: /etc/init.d/S00devs
+[2020-11-25 10:37:29]mknod: /dev/console: File exists
+[2020-11-25 10:37:29]mknod: /dev/null: File exists
+[2020-11-25 10:37:29][RCS]: /etc/init.d/S01udev
+[2020-11-25 10:37:29]udevd[120]: starting eudev-3.2.7
+[2020-11-25 10:37:29][RCS]: /etc/init.d/S80network
+[2020-11-25 10:37:29]sh: rootfstype=ramfs: unknown operand
+[2020-11-25 10:37:29]UBIFS (ubi0:0): background thread "ubifs_bgt0_0" started, PID 141
+[2020-11-25 10:37:29]UBIFS (ubi0:0): recovery needed
+[2020-11-25 10:37:29]UBIFS (ubi0:0): recovery completed
+[2020-11-25 10:37:29]UBIFS (ubi0:0): UBIFS: mounted UBI device 0, volume 0, name "tdfs"
+[2020-11-25 10:37:29]UBIFS (ubi0:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[2020-11-25 10:37:30]UBIFS (ubi0:0): FS size: 105263104 bytes (100 MiB, 829 LEBs), journal size 9023488 bytes (8 MiB, 72 LEBs)
+[2020-11-25 10:37:30]UBIFS (ubi0:0): reserved for root: 0 bytes (0 KiB)
+[2020-11-25 10:37:30]UBIFS (ubi0:0): media format: w4/r0 (latest is w4/r0), UUID 93A9E73D-2EF3-4082-A66F-520E845B8118, small LPT model
+[2020-11-25 10:37:30]Auto login as root ...
+[2020-11-25 10:37:30]Jan  1 00:00:03 login[143]: root login on 'ttyS0'
+[2020-11-25 10:37:30]Welcome to TdLinux.
+[2020-11-25 10:37:30]-sh: nfsroot: Permission denied
+[2020-11-25 10:37:30]~ # mount config
+[2020-11-25 10:37:30]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-11-25 10:37:30]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-11-25 10:37:30]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-11-25 10:37:30]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-11-25 10:37:30]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-11-25 10:37:30]ln: /tdfs/dvr/log/log.dat: File exists
+[2020-11-25 10:37:30]ln: /tdfs/dvr/log/logalarm.dat: File exists
+[2020-11-25 10:37:30]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-11-25 10:37:30]ln: /config/config_tool: File exists
+[2020-11-25 10:37:30]ln: /config/dump_config: File exists
+[2020-11-25 10:37:30]ln: /config/dump_mmap: File exists
+[2020-11-25 10:37:30]ln: /config/mmap.ini: File exists
+[2020-11-25 10:37:30]ln: /config/fbdev.ini: File exists
+[2020-11-25 10:37:30]ln: /config/pq.ini: File exists
+[2020-11-25 10:37:30]ln: /config/board.ini: File exists
+[2020-11-25 10:37:30]ln: /config/vdec_fw: File exists
+[2020-11-25 10:37:30]ln: /config/PQ_general: File exists
+[2020-11-25 10:37:30]ln: /config/pq: File exists
+[2020-11-25 10:37:30]ln: /config/panel: File exists
+[2020-11-25 10:37:30]ln: /config/model: File exists
+[2020-11-25 10:37:30]ln: /config/DLC: File exists
+[2020-11-25 10:37:30]ln: /config/ColorMatrix: File exists
+[2020-11-25 10:37:30]ln: /root/snmp/snmpd.log: File exists
+[2020-11-25 10:37:30]ln: /sbin/udhcpc6: File exists
+[2020-11-25 10:37:30]======mkconfig end====
+[2020-11-25 10:37:31]check successfully!!!
+[2020-11-25 10:37:31]/tdfs
+[2020-11-25 10:37:31]check successfully!!!
+[2020-11-25 10:37:31]/tdfs
+[2020-11-25 10:37:31]BANK:0x0030 16bit-offset 0x00
+[2020-11-25 10:37:31]0x0000
+[2020-11-25 10:37:31]BANK:0x0030 16bit-offset 0x04
+[2020-11-25 10:37:31]0x0000
+[2020-11-25 10:37:31]BANK:0x0030 16bit-offset 0x05
+[2020-11-25 10:37:31]0x0000
+[2020-11-25 10:37:31]ifconfig: SIOCSIFADDR: No such device
+[2020-11-25 10:37:32]mount: mounting 10.30.30.183:/home/guojinzhao/debug/ssr621_128/ on /dbg failed: Permission denied
+[2020-11-25 10:37:33]check successfully!!!
+[2020-11-25 10:37:33]/tdfs/dvr
+[2020-11-25 10:37:33]check successfully!!!
+[2020-11-25 10:37:33]/tdfs/dvr
+[2020-11-25 10:37:33]jpe driver probed
+[2020-11-25 10:37:33]module [sys] init
+[2020-11-25 10:37:33]MI_SYSCFG_SetupMmapLoader default_config_path:/config/config_tool, argv1:/config/load_mmap,argv2:/config/mmap.ini
+[2020-11-25 10:37:33]Function = init_glob_miu_kranges, Line = 604, Insert KProtect for LX @ MIU: 0
+[2020-11-25 10:37:33]Function = init_glob_miu_kranges, Line = 613, [INIT] for LX0 kprotect: from 0x20000000 to 0x2FF00000, using block 0
+[2020-11-25 10:37:33]config...... strPath:/config/config_tool, argv0:/config/load_config
+[2020-11-25 10:37:33]function:parese_Cmdline,pCmd_Section:0xff00000
+[2020-11-25 10:37:33]MM
+[2020-11-25 10:37:33]U_
+[2020-11-25 10:37:33]MM
+[2020-11-25 10:37:33]A    miu=0,sz=3800000  reserved_start=24800000
+[2020-11-25 10:37:33][MDrv_MMU_SetRegion] not support , chipId = 1 
+[2020-11-25 10:37:33]r_front->miuBlockIndex:0,r_front->start_cpu_bus_pa:0x20000000,r_front->start_cpu_bus_pa+r_front->length:0x24800000
+[2020-11-25 10:37:33]r_back->miuBlockIndex:1,r_back->start_cpu_bus_pa:0x28000000,r_back->start_cpu_bus_pa+r_back->length:0x2ff00000
+[2020-11-25 10:37:33]mi_sys_mma_allocator_create success, heap_base_addr=24800000 length=3800000 
+[2020-11-25 10:37:33]mm
+[2020-11-25 10:37:33]a_
+[2020-11-25 10:37:33]he
+[2020-11-25 10:37:33]ap
+[2020-11-25 10:37:33]_n
+[2020-11-25 10:37:33]am
+[2020-11-25 10:37:33]e0
+[2020-11-25 10:37:33]    miu=0,sz=3a00000  reserved_start=2c500000
+[2020-11-25 10:37:33]r_front->miuBlockIndex:1,r_front->start_cpu_bus_pa:0x28000000,r_front->start_cpu_bus_pa+r_front->length:0x2c500000
+[2020-11-25 10:37:33]mi_sys_mma_allocator_create success, heap_base_addr=2c500000 length=3a00000 
+[2020-11-25 10:37:33]Kernel CONFIG_HZ = 100
+[2020-11-25 10:37:33]Sigmastar Module version: project_commit.37dc458 sdk_commit.7af5ac4/home/aaron.guo/i2m/tiandy/sdk build_time.20201110212355
+[2020-11-25 10:37:33]module [ai] init
+[2020-11-25 10:37:33]module [ao] init
+[2020-11-25 10:37:33]module [gfx] init
+[2020-11-25 10:37:33]module [disp] init
+[2020-11-25 10:37:33]module [divp] init
+[2020-11-25 10:37:33]module [hdmi] init
+[2020-11-25 10:37:33]module [panel] init
+[2020-11-25 10:37:33]insmod: can't insert 'mi_sed.ko': No such file or directory
+[2020-11-25 10:37:33]module [vdec] init
+[2020-11-25 10:37:33]module [vdisp] init
+[2020-11-25 10:37:33]module [venc] init Oct 15 2020 22:41:12
+[2020-11-25 10:37:33]tdsecurity_init lock and dir list
+[2020-11-25 10:37:33]BANK:0x0030 16bit-offset 0x00
+[2020-11-25 10:37:33]0x0000
+[2020-11-25 10:37:33]BANK:0x0030 16bit-offset 0x04
+[2020-11-25 10:37:33]0x0000
+[2020-11-25 10:37:33]BANK:0x0030 16bit-elevator: type cfq not found
+[2020-11-25 10:37:34]elevator: switch to cfq
+[2020-11-25 10:37:34] failed
+[2020-11-25 10:37:34]offset 0x05
+[2020-11-25 10:37:34]0x0000
+[2020-11-25 10:37:34]sh: write error: Invalid argument
+[2020-11-25 10:37:34]load: line 56: can't create /sys/block/sdb/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]load: line 57: can't create /sys/block/sdc/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]load: line 58: can't create /sys/block/sdd/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]load: line 59: can't create /sys/block/sde/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]load: line 60: can't create /sys/block/sdf/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]load: line 61: can't create /sys/block/sdg/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]load: line 62: can't create /sys/block/sdh/queue/scheduler: nonexistent directory
+[2020-11-25 10:37:34]ln: /dev/mytty0: No such file or directory
+[2020-11-25 10:37:49]Jan  1 08:00:22 login[410]: root login on 'pts/0'
+[2020-11-25 11:06:13]Jan  1 08:28:46 login[999]: root login on 'pts/1'

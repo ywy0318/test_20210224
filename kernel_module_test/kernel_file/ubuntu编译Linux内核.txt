@@ -1,0 +1,45 @@
+Disk Usage Analyzer
+vi /etc/fstab
+.host:/SharedFile /mnt/hgfs vmhgfs defaults 0 0
+
+uname -r
+4.15.0-45-generic
+
+sudo make modules_install # 生成模块
+sudo make #before  生成内核
+sudo make install # 生成内核
+
+make menuconfig
+
+输入下列命令将内核作为引导，将数字更改为你自己编译的版本号：
+sudo update-initramfs -c -k 4.10.14
+
+打开 /etc/default/grub 注释 GRUP_HIDDEN_TIMEOUT = 0 仅在前头加一个#即可。
+
+grep menuentry /boot/grub/grub.cfg
+
+2.然后修改grub文件中的GRUB_DEFAULT="Ubuntu，Linux 4.15.0-29-generic".
+sudo gedit /etc/default/grub
+
+sudo update-grub
+
+下面更新一下grub：
+sudo update-grub
+如果看不到启动选择界面，请执行以下操作
+sudo vi /etc/default/grub
+sudo update-grub
+
+Makefile:1044: "Cannot use CONFIG_STACK_VALIDATION, please install libelf-dev, libelf-devel or elfutils-libelf-devel"
+
+
+
+VMWare虚拟机无法打开内核设备"\\.\Global\vmx86"的解决方法
+
+cmd执行：
+1、net start vmci
+2、net start vmx86
+3、net start VMnetuserif 
+
+
+wmic
+cpu get *

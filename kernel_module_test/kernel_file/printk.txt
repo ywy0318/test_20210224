@@ -1,0 +1,36 @@
+
+arch/x86/mm/fault.c
+838:static inline void
+show_signal_msg(struct pt_regs *regs, unsigned long error_code,
+		unsigned long address, struct task_struct *tsk);
+861	static void
+__bad_area_nosemaphore(struct pt_regs *regs, unsigned long error_code,
+		       unsigned long address, u32 *pkey, int si_code);
+
+
+---- init_intel Matches (2 in 1 files) ----
+intel.c (D:\gdb_backstrace\linux-4.19.132_86_driver_Documentation\arch\x86\kernel\cpu) line 659 : static void init_intel(struct cpuinfo_x86 *c)
+intel.c (D:\gdb_backstrace\linux-4.19.132_86_driver_Documentation\arch\x86\kernel\cpu) line 1032 : 	.c_init		= init_intel,
+
+---- intel_cpu_dev Matches (2 in 1 files) ----
+intel.c (D:\gdb_backstrace\linux-4.19.132_86_driver_Documentation\arch\x86\kernel\cpu) line 974 : static const struct cpu_dev intel_cpu_dev = {
+intel.c (D:\gdb_backstrace\linux-4.19.132_86_driver_Documentation\arch\x86\kernel\cpu) line 1037 : cpu_dev_register(intel_cpu_dev);
+
+			   
+include/linux/printk.h
+
+#define pr_emerg(fmt, ...) \
+ printk(KERN_EMERG "%s (%d) %s"pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define pr_alert(fmt, ...) \
+ printk(KERN_ALERT "%s (%d) %s"pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define pr_crit(fmt, ...) \
+ printk(KERN_CRIT "%s (%d) %s"pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define pr_err(fmt, ...) \
+ printk(KERN_ERR "%s (%d) %s"pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define pr_warning(fmt, ...) \
+ printk(KERN_WARNING "%s (%d) %s"pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define pr_warn pr_warning
+#define pr_notice(fmt, ...) \
+ printk(KERN_NOTICE "%s (%d) %s"pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define pr_info(fmt, ...) \
+ printk(KERN_INFO " %s (%d) %s" pr_fmt(fmt),__FILE__,__LINE__,__FUNCTION__, ##__VA_ARGS__)

@@ -1,0 +1,125 @@
+﻿[10.30.41.92_10.21_10:01:27.653]
+[10.30.41.92_10.21_10:01:27.655](none) login: 
+[10.30.41.92_10.21_10:01:27.707](none) login: root
+[10.30.41.92_10.21_10:01:27.713]Password: 
+[10.30.41.92_10.21_10:01:27.713]
+[10.30.41.92_10.21_10:01:27.713]cd /dbg/
+[10.30.41.92_10.21_10:01:27.728]Welcome to HiLinux.
+[10.30.41.92_10.21_10:01:27.728]None of nfsroot found in cmdline.
+[10.30.41.92_10.21_10:01:27.728]~ # 
+[10.30.41.92_10.21_10:01:27.728]~ # cd /dbg/
+[10.30.41.92_10.21_10:01:27.728]-sh: cd: can't cd to /dbg/
+[10.30.41.92_10.21_10:01:27.778]~ # 
+[10.30.41.92_10.21_10:01:36.518]~ # /tdfs/nand/tools/strace mount -t nfs -o intr,nolock,rsize=1024,wsize=1024 10.30.30.183:/home/yangweiyu/dbg/media_dvr_1020/dvr /dbg/
+[10.30.41.92_10.21_10:01:36.543]execve("/bin/mount", ["mount", "-t", "nfs", "-o", "intr,nolock,rsize=1024,wsize=102"..., "10.30.30.183:/home/yangweiyu/dbg"..., "/dbg/"], [/* 10 vars */]) = 0
+[10.30.41.92_10.21_10:01:36.543]mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|0x4000000, -1, 0x5100000000) = 0x76fd1000
+[10.30.41.92_10.21_10:01:36.543]stat("/etc/ld.so.cache", 0x7eb758e8)    = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.543]stat("/etc/ld.so.preload", 0x7eb75990)  = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/usr/local/lib/libm.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/usr/lib/libm.so.0", O_RDONLY)    = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/tdfs/lib/libm.so.0", O_RDONLY)   = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/tdfs/usr/lib/libm.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/tdfs/dvr/lib/libm.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/tdfs/dvr/applib/libm.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.544]open("/lib/libm.so.0", O_RDONLY)        = 3
+[10.30.41.92_10.21_10:01:36.544]fstat(3, {st_mode=S_IFREG|0777, st_size=43152, ...}) = 0
+[10.30.41.92_10.21_10:01:36.545]mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|0x4000000, -1, 0x5100000000) = 0x76fd0000
+[10.30.41.92_10.21_10:01:36.545]read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\270\23\0\0004\0\0\0\350"..., 4096) = 4096
+[10.30.41.92_10.21_10:01:36.545]mmap2(NULL, 77824, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0x3d00000000) = 0x76fb1000
+[10.30.41.92_10.21_10:01:36.545]mmap2(0x76fb1000, 41983, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 3, 0x4800000000) = 0x76fb1000
+[10.30.41.92_10.21_10:01:36.545]mmap2(0x76fc3000, 1268, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x4800000000) = 0x76fc3000
+[10.30.41.92_10.21_10:01:36.545]close(3)                                = 0
+[10.30.41.92_10.21_10:01:36.545]munmap(0x76fd0000, 4096)                = 0
+[10.30.41.92_10.21_10:01:36.546]open("/usr/local/lib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.546]open("/usr/lib/libc.so.0", O_RDONLY)    = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.546]open("/tdfs/lib/libc.so.0", O_RDONLY)   = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.546]open("/tdfs/usr/lib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.546]open("/tdfs/dvr/lib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.546]open("/tdfs/dvr/applib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.546]open("/lib/libc.so.0", O_RDONLY)        = 3
+[10.30.41.92_10.21_10:01:36.546]fstat(3, {st_mode=S_IFREG|0777, st_size=615672, ...}) = 0
+[10.30.41.92_10.21_10:01:36.546]mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|0x4000000, -1, 0x5100000000) = 0x76fd0000
+[10.30.41.92_10.21_10:01:36.546]read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\260\273\0\0004\0\0\0\250"..., 4096) = 4096
+[10.30.41.92_10.21_10:01:36.546]mmap2(NULL, 671744, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0x3e00000000) = 0x76f0d000
+[10.30.41.92_10.21_10:01:36.546]mmap2(0x76f0d000, 610932, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 3, 0x4900000000) = 0x76f0d000
+[10.30.41.92_10.21_10:01:36.546]mmap2(0x76faa000, 2628, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x4800000000) = 0x76faa000
+[10.30.41.92_10.21_10:01:36.547]mmap2(0x76fab000, 21344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0x5800000000) = 0x76fab000
+[10.30.41.92_10.21_10:01:36.547]close(3)                                = 0
+[10.30.41.92_10.21_10:01:36.547]munmap(0x76fd0000, 4096)                = 0
+[10.30.41.92_10.21_10:01:36.547]open("/usr/local/lib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.547]open("/usr/lib/libc.so.0", O_RDONLY)    = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.547]open("/tdfs/lib/libc.so.0", O_RDONLY)   = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.547]open("/tdfs/usr/lib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.547]open("/tdfs/dvr/lib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.547]open("/tdfs/dvr/applib/libc.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.547]open("/lib/libc.so.0", O_RDONLY)        = 3
+[10.30.41.92_10.21_10:01:36.596]fstat(3, {st_mode=S_IFREG|0777, st_size=615672, ...}) = 0
+[10.30.41.92_10.21_10:01:36.596]close(3)                                = 0
+[10.30.41.92_10.21_10:01:36.596]stat("/lib/ld-uClibc.so.0", {st_mode=S_IFREG|0777, st_size=26228, ...}) = 0
+[10.30.41.92_10.21_10:01:36.596]mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|0x4000000, -1, 0x5100000000) = 0x76fd0000
+[10.30.41.92_10.21_10:01:36.596]set_tls(0x76fd0490, 0x76fd0b30, 0x76fd0b38, 0x76fd0490, 0x76fd2300) = 0
+[10.30.41.92_10.21_10:01:36.596]open("/dev/urandom", O_RDONLY)          = 3
+[10.30.41.92_10.21_10:01:36.596]read(3, "\26\332WD"..., 4)              = 4
+[10.30.41.92_10.21_10:01:36.597]close(3)                                = 0
+[10.30.41.92_10.21_10:01:36.597]ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+[10.30.41.92_10.21_10:01:36.597]ioctl(1, SNDCTL_TMR_TIMEBASE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+[10.30.41.92_10.21_10:01:36.597]getuid32()                              = 0
+[10.30.41.92_10.21_10:01:36.603]brk(0)                                  = 0xe94000
+[10.30.41.92_10.21_10:01:36.603]brk(0xe95000)                           = 0xe95000
+[10.30.41.92_10.21_10:01:36.603]getuid32()                              = 0
+[10.30.41.92_10.21_10:01:36.603]geteuid32()                             = 0
+[10.30.41.92_10.21_10:01:36.603]brk(0xe96000)                           = 0xe96000
+[10.30.41.92_10.21_10:01:36.604]brk(0xe97000)                           = 0xe97000
+[10.30.41.92_10.21_10:01:36.604]mount("10.30.30.183:/home/yangweiyu/dbg/media_dvr_1020/dvr", "/dbg/", "nfs", MS_SILENT, "intr,nolock,rsize=1024,wsize=102"...) = -1 ENOENT (No such file or directory)
+[10.30.41.92_10.21_10:01:36.604]brk(0xe98000)                           = 0xe98000
+[10.30.41.92_10.21_10:01:36.604]write(2, "mount: mounting 10.30.30.183:/hom"..., 111mount: mounting 10.30.30.183:/home/yangweiyu/dbg/media_dvr_1020/dvr on /dbg/ failed: No such file or directory
+[10.30.41.92_10.21_10:01:36.605]) = 111
+[10.30.41.92_10.21_10:01:36.606]exit_group(-1)                          = ?
+[10.30.41.92_10.21_10:01:47.832]~ # mount
+[10.30.41.92_10.21_10:01:47.889]rootfs on / type rootfs (rw)
+[10.30.41.92_10.21_10:01:47.890]proc on /proc type proc (rw,relatime)
+[10.30.41.92_10.21_10:01:47.890]sysfs on /sys type sysfs (rw,relatime)
+[10.30.41.92_10.21_10:01:47.890]tmpfs on /dev type tmpfs (rw,relatime)
+[10.30.41.92_10.21_10:01:47.890]devpts on /dev/pts type devpts (rw,relatime,mode=600)
+[10.30.41.92_10.21_10:01:47.890]/dev/mtdblock2 on /tdfs type yaffs2 (rw,relatime)
+[10.30.41.92_10.21_10:01:47.890]/dev/mtdblock3 on /config type yaffs2 (rw,relatime)
+[10.30.41.92_10.21_10:01:47.891]tmpfs on /var/run/raid-info type tmpfs (rw,relatime,size=512k)
+[10.30.41.92_10.21_10:02:32.353]~ # 
+[10.30.41.92_10.21_10:02:32.540]~ # 
+[10.30.41.92_10.21_10:02:32.698]~ # 
+[10.30.41.92_10.21_10:03:29.938]~ # 
+[10.30.41.92_10.21_10:03:30.095]~ # 
+[10.30.41.92_10.21_10:03:30.961]~ # mount
+[10.30.41.92_10.21_10:03:31.023]rootfs on / type rootfs (rw)
+[10.30.41.92_10.21_10:03:31.023]proc on /proc type proc (rw,relatime)
+[10.30.41.92_10.21_10:03:31.023]sysfs on /sys type sysfs (rw,relatime)
+[10.30.41.92_10.21_10:03:31.023]tmpfs on /dev type tmpfs (rw,relatime)
+[10.30.41.92_10.21_10:03:31.023]devpts on /dev/pts type devpts (rw,relatime,mode=600)
+[10.30.41.92_10.21_10:03:31.024]/dev/mtdblock2 on /tdfs type yaffs2 (rw,relatime)
+[10.30.41.92_10.21_10:03:31.024]/dev/mtdblock3 on /config type yaffs2 (rw,relatime)
+[10.30.41.92_10.21_10:03:31.024]tmpfs on /var/run/raid-info type tmpfs (rw,relatime,size=512k)
+[10.30.41.92_10.21_10:03:31.024]10.30.30.183:/home/yangweiyu/dbg/media_dvr_1020/dvr on /dbg type nfs (rw,relatime,vers=3,rsize=1024,wsize=1024,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=10.30.30.183,mountvers=3,mountproto=tcp,local_lock=all,addr=10.30.30.183)
+[10.30.41.92_10.21_10:03:32.129]~ # 
+[10.30.41.92_10.21_10:03:32.305]~ # 
+[10.30.41.92_10.21_10:03:32.480]~ # 
+[10.30.41.92_10.21_10:03:37.754]~ # umount  /dbg/
+[10.30.41.92_10.21_10:03:38.007]~ # 
+[10.30.41.92_10.21_10:03:38.192]~ # 
+[10.30.41.92_10.21_10:03:38.354]~ # 
+[10.30.41.92_10.21_10:03:38.471]~ # 
+[10.30.41.92_10.21_10:03:39.192]~ # mount
+[10.30.41.92_10.21_10:03:39.247]rootfs on / type rootfs (rw)
+[10.30.41.92_10.21_10:03:39.247]proc on /proc type proc (rw,relatime)
+[10.30.41.92_10.21_10:03:39.247]sysfs on /sys type sysfs (rw,relatime)
+[10.30.41.92_10.21_10:03:39.247]tmpfs on /dev type tmpfs (rw,relatime)
+[10.30.41.92_10.21_10:03:39.248]devpts on /dev/pts type devpts (rw,relatime,mode=600)
+[10.30.41.92_10.21_10:03:39.248]/dev/mtdblock2 on /tdfs type yaffs2 (rw,relatime)
+[10.30.41.92_10.21_10:03:39.248]/dev/mtdblock3 on /config type yaffs2 (rw,relatime)
+[10.30.41.92_10.21_10:03:39.249]tmpfs on /var/run/raid-info type tmpfs (rw,relatime,size=512k)
+[10.30.41.92_10.21_10:03:40.251]~ # 
+[10.30.41.92_10.21_10:03:40.430]~ # 
+[10.30.41.92_10.21_10:03:40.591]~ # 
+[10.30.41.92_10.21_10:03:57.720]~ # 
+[10.30.41.92_10.21_10:03:57.926]~ # 
+[10.30.41.92_10.21_10:04:00.240]~ # mkdir /dbg;mount -t nfs -o intr,nolock,rsize=1024,wsize=1024 10.30.30.183:/home/yangweiyu/dbg/media_dvr_1020/dvr /dbg/
+[10.30.41.92_10.21_10:04:00.291]mkdir: can't create directory '/dbg': File exists

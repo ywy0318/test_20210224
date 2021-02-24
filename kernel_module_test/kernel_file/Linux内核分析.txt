@@ -1,0 +1,135 @@
+1.       Linux体系结构（linux系统构成）
+
+Linux可以分为两部分，分别为用户空间和内核空间具体如下图
+a)        用户空间包括：用户的应用程序、C库
+
+b)        内核空间包括：系统调用接口、内核（狭义内核）、平台架构相关的代码
+2.       为什么要分为内核空间和用户空间
+
+我们在分析u-boot的时候就说到过，我们的cpu在不同的工作模式下可以访问的寄存器是不一样的，所以为了保护我们的操作系统，避免用户程序将内核搞崩，所以进行了内核空间和用户空间的划分。
+
+a)        Arm处理器工作模式划分：usr、FIQ、IRQ、svc、abt、und、sys（具体介绍在http://www.cnblogs.com/wrjvszq/p/4199682.html）
+
+b)        X86处理器工作模式划分：Ring0—Ring3，Ring0下可以执行特权指令，可以访问IO设备，Ring3则有很多的限制
+
+注：我们可以通过系统调用和硬件中断来完成用户空间到内核空间的转移
+3.       Linux内核结构（广义内核）
+
+Linux内核由七个部分构成，具体如下图：
+a)        系统调用接口（SCI）：open、read、write等系统调用
+
+b)        进程管理（PM）：创建进程、删除进程、调度进程等
+
+c)        内存管理（MM）：内存分配、管理等
+
+d)        虚拟文件系统（VFS）：为多种文件系统提供统一的操作接口
+
+e)        网络协议栈：提供各种网络协议
+
+f)         CPU架构相关代码（Arch）：为的是提高至移植性
+
+g)        设备驱动程序（DD）：各种设备驱动，占到内核的70%左右代码
+Linux内核源码简介
+1.       源码获取
+
+Linux内核获取有两种方法，一种是在www.kernel.org 直接获取，另一种是使用git获取（具体方法参考网络）。
+
+2.       源码目录简介
+
+其源码主要有以下目录（介绍重要目录）：
+
+a)        Arch目录：存放处理器相关的代码。下设子目录，分别对应具体的CPU，每个子目录有boot，mm，以及kernel三个子目录，分别对应系统引导以及存储管理，和系统调用
+
+b)        Include目录：内核所需要的大部分头文件目录。与平台无关的在include/linux子目录下，与平台相关的则放在include相应的子目录中。
+
+c)        fs目录：存放各种文件系统的实现代码。
+
+d)        init目录：init子目录包含核心的初始化代码（不是系统的引导代码）。其包含两个文件main.c和version.c，可以用来研究核心如何工作。
+
+e)        ipc目录：包含核心进程间的通信代码。
+
+f)         kernel目录：包含内核管理的核心代码。与硬件相关代码放在arch/*/kernel目录下。
+
+g)        mm目录：包含了所有的内存管理代码。与硬件相关的内存管理代码位于arch/*/mm目录下。
+
+h)        scripts目录：包含用于配置核心的脚本文件。
+
+i)          lib目录：包含了核心的库代码，与硬件相关的库代码被放在arch/*/lib/目录下
+
+
+
+l  Linux内核配置、编译、安装
+
+1.       X86配置
+
+Linux内核的编译有两种方法，具体如下：
+
+a)        交互式：在内核顶层的目录下运行make config，按照提示一步一步的按照自己的需求对内核进行配置。
+
+b)        菜单式：在内核顶层的目录下运行make menuconfig，菜单式的按照自己的需求对内核进行配置。
+
+2.       X86编译
+
+Linux内核的编译要经过以下步骤，具体如下：
+
+1.        内核编译：linux内核的编译有以下两种方法。
+
+n  make zImage：编译出的内核小于512k（老版本内核）
+
+n  make bzImage：通用编译命令
+
+注：在以上两个命令中加V=1可查看编译过程中的详细信息
+
+2.        内核模块编译：执行make modules编译内核模块。
+
+3.        内核模块安装：执行make modules_install将编译好的内核模块复制到当前系统的/lib/modules下的**目录下。
+
+4.        内核模块打包：执行mkinitrd initrd-$version $version对内核模块进行打包，其中initrd-$version表示要打包为的文件的名字，$version表示要打包的目录即我们上一步生成的目录。
+
+3.       X86安装
+
+Linux内核的安装要经过以下步骤，具体如下：
+
+a)        拷贝内核：复制1编译出来的内核映像到启动目录cp arch/$cpu/boot/bzImage（1编译出来的bzimage）/boot/vmlinuz-$version
+
+b)        拷贝内核模块文件：执行cp initrd-$version（4生成的文件） /boot/ 将4生成的文件拷贝到boot下
+
+c)        修改启动配置文件：修改/etc/grub.conf文件
+
+
+
+arch/x86/Makefile:114: stack-protector enabled but compiler support broken
+arch/x86/Makefile:129: CONFIG_X86_X32 enabled but no binutils support
+Makefile:664: Cannot use CONFIG_CC_STACKPROTECTOR_STRONG: -fstack-protector-strong not supported by compiler
+make: ygcc: Command not found
+  CHK     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  CC      arch/x86/purgatory/purgatory.o
+/bin/sh: 1: ygcc: not found
+scripts/Makefile.build:257: recipe for target 'arch/x86/purgatory/purgatory.o' failed
+make[1]: *** [arch/x86/purgatory/purgatory.o] Error 127
+arch/x86/Makefile:184: recipe for target 'archprepare' failed
+make: *** [archprepare] Error 2
+
+
+ Miscellaneous filesystems
+*
+Miscellaneous filesystems (MISC_FILESYSTEMS) [Y/n/?] 
+
+
+
+
+Provide system-wide ring of trusted keys (SYSTEM_TRUSTED_KEYRING) [Y/n/?] n
+Profiling support (PROFILING) [N/y/?] n
+Optimize very unlikely/likely branches (JUMP_LABEL) [N/y/?] n
+Stack Protector buffer overflow detection
+  1. None (CC_STACKPROTECTOR_NONE)
+  2. Regular (CC_STACKPROTECTOR_REGULAR)
+> 3. Strong (CC_STACKPROTECTOR_STRONG)
+choice[1-3?]: 1
+zzh@ubuntu:~$ uname -a
+Linux ubuntu 4.10.0-28-generic #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+zzh@ubuntu:~$ cat /proc/version
+Linux version 4.10.0-28-generic (buildd@lgw01-12) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017
+zzh@ubuntu:~$ 

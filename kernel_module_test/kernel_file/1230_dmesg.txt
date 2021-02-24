@@ -1,0 +1,2393 @@
+[    0.000000]  init/main.c start_kernel (550) Linux version 4.19.132 (root@ubuntu) (gcc version 9.3.0 (Debian 9.3.0-14)) #10 SMP Tue Dec 29 17:20:19 CST 2020
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.19.132 root=UUID=7948e99d-4e2e-40bf-b955-60fecd9db270 ro console=tty1,console=ttyS1,115200n8
+[    0.000000]  arch/x86/kernel/cpu/common.c early_cpu_init (1230) KERNEL supported cpus:
+[    0.000000]  arch/x86/kernel/cpu/common.c early_cpu_init (1248)   Intel GenuineIntel
+[    0.000000]  arch/x86/kernel/cpu/common.c early_cpu_init (1248)   AMD AuthenticAMD
+[    0.000000]  arch/x86/kernel/cpu/common.c early_cpu_init (1248)   Centaur CentaurHauls
+[    0.000000]  arch/x86/kernel/cpu/intel.c early_init_intel (272) Disabled fast string operations
+[    0.000000]  arch/x86/kernel/fpu/xstate.c print_xstate_feature (298) x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000]  arch/x86/kernel/fpu/xstate.c print_xstate_feature (298) x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000]  arch/x86/kernel/fpu/xstate.c print_xstate_feature (298) x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000]  arch/x86/kernel/fpu/xstate.c print_xstate_offset_size (402) x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000]  arch/x86/kernel/fpu/xstate.c fpu__init_system_xstate (784) x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000]  arch/x86/kernel/e820.c e820__memory_setup (1243) BIOS-provided physical RAM map:
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x0000000000000000-0x000000000009e7ff] usable
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x000000000009e800-0x000000000009ffff] reserved
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000000dc000-0x00000000000fffff] reserved
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x0000000000100000-0x00000000bfecffff] usable
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000bfed0000-0x00000000bfefefff] ACPI data
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000bfeff000-0x00000000bfefffff] ACPI NVS
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000bff00000-0x00000000bfffffff] usable
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000f0000000-0x00000000f7ffffff] reserved
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000fec00000-0x00000000fec0ffff] reserved
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x00000000fffe0000-0x00000000ffffffff] reserved
+[    0.000000]  arch/x86/kernel/e820.c e820__print_table (194) BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000]  drivers/firmware/dmi_scan.c dmi_present (572) SMBIOS 2.7 present.
+[    0.000000]  drivers/firmware/dmi_scan.c dmi_present (582) DMI: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 04/13/2018
+[    0.000000]  arch/x86/kernel/cpu/hypervisor.c detect_hypervisor_vendor (72) Hypervisor detected: VMware
+[    0.000000]  arch/x86/kernel/cpu/vmware.c vmware_platform_setup (145) vmware: TSC freq read from hypervisor : 3000.003 MHz
+[    0.000000]  arch/x86/kernel/cpu/vmware.c vmware_platform_setup (161) vmware: Host bus clock speed read from hypervisor : 66000000 Hz
+[    0.000002]  arch/x86/kernel/cpu/vmware.c vmware_sched_clock_setup (101) vmware: using sched offset of 36472156986 ns
+[    0.000008]  arch/x86/kernel/tsc.c determine_cpu_tsc_frequencies (1405) tsc: Detected 3000.003 MHz processor
+[    0.004767] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.004770] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.004774]  arch/x86/kernel/e820.c e820_end_pfn (835) last_pfn = 0x140000 max_arch_pfn = 0x400000000
+[    0.004796] MTRR default type: uncachable
+[    0.004796] MTRR fixed ranges enabled:
+[    0.004797]   00000-9FFFF write-back
+[    0.004798]   A0000-BFFFF uncachable
+[    0.004798]   C0000-CFFFF write-protect
+[    0.004799]   D0000-EFFFF uncachable
+[    0.004799]   F0000-FFFFF write-protect
+[    0.004799] MTRR variable ranges enabled:
+[    0.004800]   0 base 00000000000 mask 3E000000000 write-back
+[    0.004801]   1 base 000C0000000 mask 3FFC0000000 uncachable
+[    0.004801]   2 disabled
+[    0.004802]   3 disabled
+[    0.004802]   4 disabled
+[    0.004802]   5 disabled
+[    0.004803]   6 disabled
+[    0.004803]   7 disabled
+[    0.004825]  arch/x86/mm/pat.c __init_cache_modes (205) x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.004839]  arch/x86/kernel/cpu/mtrr/cleanup.c mtrr_cleanup (735) total RAM covered: 130048M
+[    0.005078]  arch/x86/kernel/cpu/mtrr/cleanup.c mtrr_cleanup (780) Found optimal setting for mtrr clean up
+[    0.005079]  arch/x86/kernel/cpu/mtrr/cleanup.c mtrr_print_out_one_result (646)  gran_size: 64K 	chunk_size: 64K 	num_reg: 7  	lose cover RAM: 0G
+[    0.005141] e820: update [mem 0xc0000000-0xffffffff] usable ==> reserved
+[    0.005147]  arch/x86/kernel/e820.c e820_end_pfn (835) last_pfn = 0xc0000 max_arch_pfn = 0x400000000
+[    0.011980]  arch/x86/kernel/mpparse.c smp_scan_config (600) found SMP MP-table at [mem 0x000f6a80-0x000f6a8f]
+[    0.012058] Scanning 1 areas for low memory corruption
+[    0.012101] Using GB pages for direct mapping
+[    0.012231] RAMDISK: [mem 0x0b9be000-0x21cd6fff]
+[    0.012252]  drivers/acpi/tables.c acpi_table_init (751) ACPI: Early table checksum verification disabled
+[    0.012292] ACPI: RSDP 0x00000000000F6A10 000024 (v02 PTLTD )
+[    0.012296] ACPI: XSDT 0x00000000BFEDC633 00005C (v01 INTEL  440BX    06040000 VMW  01324272)
+[    0.012302] ACPI: FACP 0x00000000BFEFEE73 0000F4 (v04 INTEL  440BX    06040000 PTL  000F4240)
+[    0.012308] ACPI: DSDT 0x00000000BFEDDFD8 020E9B (v01 PTLTD  Custom   06040000 MSFT 03000001)
+[    0.012312] ACPI: FACS 0x00000000BFEFFFC0 000040
+[    0.012314] ACPI: FACS 0x00000000BFEFFFC0 000040
+[    0.012316] ACPI: BOOT 0x00000000BFEDDFB0 000028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+[    0.012319] ACPI: APIC 0x00000000BFEDD86E 000742 (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+[    0.012322] ACPI: MCFG 0x00000000BFEDD832 00003C (v01 PTLTD  $PCITBL$ 06040000  LTP 00000001)
+[    0.012325] ACPI: SRAT 0x00000000BFEDC72F 0008D0 (v02 VMWARE MEMPLUG  06040000 VMW  00000001)
+[    0.012327] ACPI: HPET 0x00000000BFEDC6F7 000038 (v01 VMWARE VMW HPET 06040000 VMW  00000001)
+[    0.012330] ACPI: WAET 0x00000000BFEDC6CF 000028 (v01 VMWARE VMW WAET 06040000 VMW  00000001)
+[    0.012338] ACPI: Local APIC address 0xfee00000
+[    0.012349] system APIC only can use physical flat
+[    0.012350]  arch/x86/kernel/apic/probe_64.c default_acpi_madt_oem_check (64) Setting APIC routing to physical flat.
+[    0.012387] SRAT: PXM 0 -> APIC 0x00 -> Node 0
+[    0.012387] SRAT: PXM 0 -> APIC 0x01 -> Node 0
+[    0.012388] SRAT: PXM 0 -> APIC 0x02 -> Node 0
+[    0.012388] SRAT: PXM 0 -> APIC 0x03 -> Node 0
+[    0.012389] SRAT: PXM 0 -> APIC 0x04 -> Node 0
+[    0.012390] SRAT: PXM 0 -> APIC 0x05 -> Node 0
+[    0.012390] SRAT: PXM 0 -> APIC 0x06 -> Node 0
+[    0.012391] SRAT: PXM 0 -> APIC 0x07 -> Node 0
+[    0.012391] SRAT: PXM 0 -> APIC 0x08 -> Node 0
+[    0.012392] SRAT: PXM 0 -> APIC 0x09 -> Node 0
+[    0.012392] SRAT: PXM 0 -> APIC 0x0a -> Node 0
+[    0.012393] SRAT: PXM 0 -> APIC 0x0b -> Node 0
+[    0.012393] SRAT: PXM 0 -> APIC 0x0c -> Node 0
+[    0.012394] SRAT: PXM 0 -> APIC 0x0d -> Node 0
+[    0.012394] SRAT: PXM 0 -> APIC 0x0e -> Node 0
+[    0.012395] SRAT: PXM 0 -> APIC 0x0f -> Node 0
+[    0.012395] SRAT: PXM 0 -> APIC 0x10 -> Node 0
+[    0.012396] SRAT: PXM 0 -> APIC 0x11 -> Node 0
+[    0.012396] SRAT: PXM 0 -> APIC 0x12 -> Node 0
+[    0.012397] SRAT: PXM 0 -> APIC 0x13 -> Node 0
+[    0.012397] SRAT: PXM 0 -> APIC 0x14 -> Node 0
+[    0.012398] SRAT: PXM 0 -> APIC 0x15 -> Node 0
+[    0.012398] SRAT: PXM 0 -> APIC 0x16 -> Node 0
+[    0.012399] SRAT: PXM 0 -> APIC 0x17 -> Node 0
+[    0.012399] SRAT: PXM 0 -> APIC 0x18 -> Node 0
+[    0.012400] SRAT: PXM 0 -> APIC 0x19 -> Node 0
+[    0.012400] SRAT: PXM 0 -> APIC 0x1a -> Node 0
+[    0.012401] SRAT: PXM 0 -> APIC 0x1b -> Node 0
+[    0.012401] SRAT: PXM 0 -> APIC 0x1c -> Node 0
+[    0.012402] SRAT: PXM 0 -> APIC 0x1d -> Node 0
+[    0.012402] SRAT: PXM 0 -> APIC 0x1e -> Node 0
+[    0.012403] SRAT: PXM 0 -> APIC 0x1f -> Node 0
+[    0.012403] SRAT: PXM 0 -> APIC 0x20 -> Node 0
+[    0.012404] SRAT: PXM 0 -> APIC 0x21 -> Node 0
+[    0.012404] SRAT: PXM 0 -> APIC 0x22 -> Node 0
+[    0.012405] SRAT: PXM 0 -> APIC 0x23 -> Node 0
+[    0.012405] SRAT: PXM 0 -> APIC 0x24 -> Node 0
+[    0.012406] SRAT: PXM 0 -> APIC 0x25 -> Node 0
+[    0.012406] SRAT: PXM 0 -> APIC 0x26 -> Node 0
+[    0.012407] SRAT: PXM 0 -> APIC 0x27 -> Node 0
+[    0.012407] SRAT: PXM 0 -> APIC 0x28 -> Node 0
+[    0.012408] SRAT: PXM 0 -> APIC 0x29 -> Node 0
+[    0.012408] SRAT: PXM 0 -> APIC 0x2a -> Node 0
+[    0.012409] SRAT: PXM 0 -> APIC 0x2b -> Node 0
+[    0.012409] SRAT: PXM 0 -> APIC 0x2c -> Node 0
+[    0.012410] SRAT: PXM 0 -> APIC 0x2d -> Node 0
+[    0.012410] SRAT: PXM 0 -> APIC 0x2e -> Node 0
+[    0.012411] SRAT: PXM 0 -> APIC 0x2f -> Node 0
+[    0.012411] SRAT: PXM 0 -> APIC 0x30 -> Node 0
+[    0.012412] SRAT: PXM 0 -> APIC 0x31 -> Node 0
+[    0.012412] SRAT: PXM 0 -> APIC 0x32 -> Node 0
+[    0.012413] SRAT: PXM 0 -> APIC 0x33 -> Node 0
+[    0.012413] SRAT: PXM 0 -> APIC 0x34 -> Node 0
+[    0.012414] SRAT: PXM 0 -> APIC 0x35 -> Node 0
+[    0.012414] SRAT: PXM 0 -> APIC 0x36 -> Node 0
+[    0.012415] SRAT: PXM 0 -> APIC 0x37 -> Node 0
+[    0.012415] SRAT: PXM 0 -> APIC 0x38 -> Node 0
+[    0.012416] SRAT: PXM 0 -> APIC 0x39 -> Node 0
+[    0.012416] SRAT: PXM 0 -> APIC 0x3a -> Node 0
+[    0.012417] SRAT: PXM 0 -> APIC 0x3b -> Node 0
+[    0.012417] SRAT: PXM 0 -> APIC 0x3c -> Node 0
+[    0.012418] SRAT: PXM 0 -> APIC 0x3d -> Node 0
+[    0.012418] SRAT: PXM 0 -> APIC 0x3e -> Node 0
+[    0.012419] SRAT: PXM 0 -> APIC 0x3f -> Node 0
+[    0.012419] SRAT: PXM 0 -> APIC 0x40 -> Node 0
+[    0.012420] SRAT: PXM 0 -> APIC 0x41 -> Node 0
+[    0.012420] SRAT: PXM 0 -> APIC 0x42 -> Node 0
+[    0.012421] SRAT: PXM 0 -> APIC 0x43 -> Node 0
+[    0.012421] SRAT: PXM 0 -> APIC 0x44 -> Node 0
+[    0.012422] SRAT: PXM 0 -> APIC 0x45 -> Node 0
+[    0.012422] SRAT: PXM 0 -> APIC 0x46 -> Node 0
+[    0.012423] SRAT: PXM 0 -> APIC 0x47 -> Node 0
+[    0.012423] SRAT: PXM 0 -> APIC 0x48 -> Node 0
+[    0.012424] SRAT: PXM 0 -> APIC 0x49 -> Node 0
+[    0.012424] SRAT: PXM 0 -> APIC 0x4a -> Node 0
+[    0.012425] SRAT: PXM 0 -> APIC 0x4b -> Node 0
+[    0.012425] SRAT: PXM 0 -> APIC 0x4c -> Node 0
+[    0.012426] SRAT: PXM 0 -> APIC 0x4d -> Node 0
+[    0.012426] SRAT: PXM 0 -> APIC 0x4e -> Node 0
+[    0.012427] SRAT: PXM 0 -> APIC 0x4f -> Node 0
+[    0.012427] SRAT: PXM 0 -> APIC 0x50 -> Node 0
+[    0.012428] SRAT: PXM 0 -> APIC 0x51 -> Node 0
+[    0.012428] SRAT: PXM 0 -> APIC 0x52 -> Node 0
+[    0.012429] SRAT: PXM 0 -> APIC 0x53 -> Node 0
+[    0.012429] SRAT: PXM 0 -> APIC 0x54 -> Node 0
+[    0.012430] SRAT: PXM 0 -> APIC 0x55 -> Node 0
+[    0.012430] SRAT: PXM 0 -> APIC 0x56 -> Node 0
+[    0.012431] SRAT: PXM 0 -> APIC 0x57 -> Node 0
+[    0.012431] SRAT: PXM 0 -> APIC 0x58 -> Node 0
+[    0.012432] SRAT: PXM 0 -> APIC 0x59 -> Node 0
+[    0.012432] SRAT: PXM 0 -> APIC 0x5a -> Node 0
+[    0.012433] SRAT: PXM 0 -> APIC 0x5b -> Node 0
+[    0.012433] SRAT: PXM 0 -> APIC 0x5c -> Node 0
+[    0.012434] SRAT: PXM 0 -> APIC 0x5d -> Node 0
+[    0.012434] SRAT: PXM 0 -> APIC 0x5e -> Node 0
+[    0.012435] SRAT: PXM 0 -> APIC 0x5f -> Node 0
+[    0.012435] SRAT: PXM 0 -> APIC 0x60 -> Node 0
+[    0.012436] SRAT: PXM 0 -> APIC 0x61 -> Node 0
+[    0.012436] SRAT: PXM 0 -> APIC 0x62 -> Node 0
+[    0.012437] SRAT: PXM 0 -> APIC 0x63 -> Node 0
+[    0.012437] SRAT: PXM 0 -> APIC 0x64 -> Node 0
+[    0.012438] SRAT: PXM 0 -> APIC 0x65 -> Node 0
+[    0.012438] SRAT: PXM 0 -> APIC 0x66 -> Node 0
+[    0.012439] SRAT: PXM 0 -> APIC 0x67 -> Node 0
+[    0.012439] SRAT: PXM 0 -> APIC 0x68 -> Node 0
+[    0.012440] SRAT: PXM 0 -> APIC 0x69 -> Node 0
+[    0.012440] SRAT: PXM 0 -> APIC 0x6a -> Node 0
+[    0.012441] SRAT: PXM 0 -> APIC 0x6b -> Node 0
+[    0.012441] SRAT: PXM 0 -> APIC 0x6c -> Node 0
+[    0.012442] SRAT: PXM 0 -> APIC 0x6d -> Node 0
+[    0.012442] SRAT: PXM 0 -> APIC 0x6e -> Node 0
+[    0.012443] SRAT: PXM 0 -> APIC 0x6f -> Node 0
+[    0.012443] SRAT: PXM 0 -> APIC 0x70 -> Node 0
+[    0.012444] SRAT: PXM 0 -> APIC 0x71 -> Node 0
+[    0.012444] SRAT: PXM 0 -> APIC 0x72 -> Node 0
+[    0.012445] SRAT: PXM 0 -> APIC 0x73 -> Node 0
+[    0.012445] SRAT: PXM 0 -> APIC 0x74 -> Node 0
+[    0.012446] SRAT: PXM 0 -> APIC 0x75 -> Node 0
+[    0.012446] SRAT: PXM 0 -> APIC 0x76 -> Node 0
+[    0.012447] SRAT: PXM 0 -> APIC 0x77 -> Node 0
+[    0.012447] SRAT: PXM 0 -> APIC 0x78 -> Node 0
+[    0.012448] SRAT: PXM 0 -> APIC 0x79 -> Node 0
+[    0.012448] SRAT: PXM 0 -> APIC 0x7a -> Node 0
+[    0.012449] SRAT: PXM 0 -> APIC 0x7b -> Node 0
+[    0.012450] SRAT: PXM 0 -> APIC 0x7c -> Node 0
+[    0.012450] SRAT: PXM 0 -> APIC 0x7d -> Node 0
+[    0.012451] SRAT: PXM 0 -> APIC 0x7e -> Node 0
+[    0.012451] SRAT: PXM 0 -> APIC 0x7f -> Node 0
+[    0.012455]  drivers/acpi/numa.c acpi_numa_memory_affinity_init (301) ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0x0009ffff]
+[    0.012456]  drivers/acpi/numa.c acpi_numa_memory_affinity_init (301) ACPI: SRAT: Node 0 PXM 0 [mem 0x00100000-0xbfffffff]
+[    0.012457]  drivers/acpi/numa.c acpi_numa_memory_affinity_init (301) ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x13fffffff]
+[    0.012457]  drivers/acpi/numa.c acpi_numa_memory_affinity_init (301) ACPI: SRAT: Node 0 PXM 0 [mem 0x140000000-0x103fffffff] hotplug
+[    0.012460] NUMA: Node 0 [mem 0x00000000-0x0009ffff] + [mem 0x00100000-0xbfffffff] -> [mem 0x00000000-0xbfffffff]
+[    0.012461] NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x13fffffff] -> [mem 0x00000000-0x13fffffff]
+[    0.012467] NODE_DATA(0) allocated [mem 0x13ffd5000-0x13fffffff]
+[    0.101792]  mm/page_alloc.c free_area_init_nodes (6917) Zone ranges:
+[    0.101795]  mm/page_alloc.c free_area_init_nodes (6921)   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.101797]  mm/page_alloc.c free_area_init_nodes (6921)   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.101798]  mm/page_alloc.c free_area_init_nodes (6921)   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+[    0.101799]  mm/page_alloc.c free_area_init_nodes (6921)   Device   empty
+[    0.101800]  mm/page_alloc.c free_area_init_nodes (6934) Movable zone start for each node
+[    0.101802]  mm/page_alloc.c free_area_init_nodes (6942) Early memory node ranges
+[    0.101803]  mm/page_alloc.c free_area_init_nodes (6944)   node   0: [mem 0x0000000000001000-0x000000000009dfff]
+[    0.101804]  mm/page_alloc.c free_area_init_nodes (6944)   node   0: [mem 0x0000000000100000-0x00000000bfecffff]
+[    0.101805]  mm/page_alloc.c free_area_init_nodes (6944)   node   0: [mem 0x00000000bff00000-0x00000000bfffffff]
+[    0.101805]  mm/page_alloc.c free_area_init_nodes (6944)   node   0: [mem 0x0000000100000000-0x000000013fffffff]
+[    0.120136]  mm/page_alloc.c zero_resv_unavail (6523) Zeroed struct page in unavailable ranges: 147 pages
+[    0.120144]  mm/page_alloc.c free_area_init_node (6439) Initmem setup node 0 [mem 0x0000000000001000-0x000000013fffffff]
+[    0.120155] On node 0 totalpages: 1048429
+[    0.120158]   DMA zone: 64 pages used for memmap
+[    0.120160]   DMA zone: 21 pages reserved
+[    0.120162]   DMA zone: 3997 pages, LIFO batch:0
+[    0.127664]   DMA32 zone: 12224 pages used for memmap
+[    0.127666]   DMA32 zone: 782288 pages, LIFO batch:63
+[    0.198443]   Normal zone: 4096 pages used for memmap
+[    0.198448]   Normal zone: 262144 pages, LIFO batch:63
+[    0.262165] ACPI: PM-Timer IO Port: 0x1008
+[    0.262169] ACPI: Local APIC address 0xfee00000
+[    0.262174] system APIC only can use physical flat
+[    0.262185]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    0.262186]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.262187]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.262187]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.262188]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.262189]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+[    0.262189]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+[    0.262190]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+[    0.262191]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+[    0.262191]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+[    0.262192]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+[    0.262193]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+[    0.262193]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+[    0.262194]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+[    0.262195]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+[    0.262195]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+[    0.262196]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x10] high edge lint[0x1])
+[    0.262197]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x11] high edge lint[0x1])
+[    0.262197]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x12] high edge lint[0x1])
+[    0.262198]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x13] high edge lint[0x1])
+[    0.262199]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x14] high edge lint[0x1])
+[    0.262199]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x15] high edge lint[0x1])
+[    0.262200]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x16] high edge lint[0x1])
+[    0.262201]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x17] high edge lint[0x1])
+[    0.262201]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x18] high edge lint[0x1])
+[    0.262202]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x19] high edge lint[0x1])
+[    0.262203]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x1a] high edge lint[0x1])
+[    0.262203]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x1b] high edge lint[0x1])
+[    0.262204]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x1c] high edge lint[0x1])
+[    0.262205]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x1d] high edge lint[0x1])
+[    0.262205]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x1e] high edge lint[0x1])
+[    0.262206]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x1f] high edge lint[0x1])
+[    0.262207]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x20] high edge lint[0x1])
+[    0.262207]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x21] high edge lint[0x1])
+[    0.262208]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x22] high edge lint[0x1])
+[    0.262209]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x23] high edge lint[0x1])
+[    0.262209]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x24] high edge lint[0x1])
+[    0.262210]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x25] high edge lint[0x1])
+[    0.262211]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x26] high edge lint[0x1])
+[    0.262211]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x27] high edge lint[0x1])
+[    0.262212]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x28] high edge lint[0x1])
+[    0.262213]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x29] high edge lint[0x1])
+[    0.262214]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x2a] high edge lint[0x1])
+[    0.262214]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x2b] high edge lint[0x1])
+[    0.262215]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x2c] high edge lint[0x1])
+[    0.262216]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x2d] high edge lint[0x1])
+[    0.262216]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x2e] high edge lint[0x1])
+[    0.262217]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x2f] high edge lint[0x1])
+[    0.262218]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x30] high edge lint[0x1])
+[    0.262218]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x31] high edge lint[0x1])
+[    0.262219]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x32] high edge lint[0x1])
+[    0.262220]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x33] high edge lint[0x1])
+[    0.262220]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x34] high edge lint[0x1])
+[    0.262221]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x35] high edge lint[0x1])
+[    0.262222]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x36] high edge lint[0x1])
+[    0.262222]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x37] high edge lint[0x1])
+[    0.262223]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x38] high edge lint[0x1])
+[    0.262224]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x39] high edge lint[0x1])
+[    0.262224]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x3a] high edge lint[0x1])
+[    0.262225]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x3b] high edge lint[0x1])
+[    0.262226]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x3c] high edge lint[0x1])
+[    0.262226]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x3d] high edge lint[0x1])
+[    0.262227]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x3e] high edge lint[0x1])
+[    0.262228]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x3f] high edge lint[0x1])
+[    0.262228]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x40] high edge lint[0x1])
+[    0.262229]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x41] high edge lint[0x1])
+[    0.262230]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x42] high edge lint[0x1])
+[    0.262230]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x43] high edge lint[0x1])
+[    0.262231]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x44] high edge lint[0x1])
+[    0.262231]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x45] high edge lint[0x1])
+[    0.262232]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x46] high edge lint[0x1])
+[    0.262233]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x47] high edge lint[0x1])
+[    0.262233]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x48] high edge lint[0x1])
+[    0.262234]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x49] high edge lint[0x1])
+[    0.262235]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x4a] high edge lint[0x1])
+[    0.262235]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x4b] high edge lint[0x1])
+[    0.262236]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x4c] high edge lint[0x1])
+[    0.262237]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x4d] high edge lint[0x1])
+[    0.262237]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x4e] high edge lint[0x1])
+[    0.262238]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x4f] high edge lint[0x1])
+[    0.262239]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x50] high edge lint[0x1])
+[    0.262239]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x51] high edge lint[0x1])
+[    0.262240]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x52] high edge lint[0x1])
+[    0.262241]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x53] high edge lint[0x1])
+[    0.262241]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x54] high edge lint[0x1])
+[    0.262242]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x55] high edge lint[0x1])
+[    0.262243]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x56] high edge lint[0x1])
+[    0.262243]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x57] high edge lint[0x1])
+[    0.262244]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x58] high edge lint[0x1])
+[    0.262245]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x59] high edge lint[0x1])
+[    0.262245]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x5a] high edge lint[0x1])
+[    0.262246]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x5b] high edge lint[0x1])
+[    0.262247]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x5c] high edge lint[0x1])
+[    0.262247]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x5d] high edge lint[0x1])
+[    0.262248]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x5e] high edge lint[0x1])
+[    0.262249]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x5f] high edge lint[0x1])
+[    0.262249]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x60] high edge lint[0x1])
+[    0.262250]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x61] high edge lint[0x1])
+[    0.262251]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x62] high edge lint[0x1])
+[    0.262251]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x63] high edge lint[0x1])
+[    0.262252]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x64] high edge lint[0x1])
+[    0.262253]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x65] high edge lint[0x1])
+[    0.262253]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x66] high edge lint[0x1])
+[    0.262254]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x67] high edge lint[0x1])
+[    0.262255]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x68] high edge lint[0x1])
+[    0.262255]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x69] high edge lint[0x1])
+[    0.262256]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x6a] high edge lint[0x1])
+[    0.262257]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x6b] high edge lint[0x1])
+[    0.262257]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x6c] high edge lint[0x1])
+[    0.262258]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x6d] high edge lint[0x1])
+[    0.262259]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x6e] high edge lint[0x1])
+[    0.262259]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x6f] high edge lint[0x1])
+[    0.262260]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x70] high edge lint[0x1])
+[    0.262261]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x71] high edge lint[0x1])
+[    0.262261]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x72] high edge lint[0x1])
+[    0.262262]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x73] high edge lint[0x1])
+[    0.262263]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x74] high edge lint[0x1])
+[    0.262263]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x75] high edge lint[0x1])
+[    0.262264]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x76] high edge lint[0x1])
+[    0.262265]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x77] high edge lint[0x1])
+[    0.262265]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x78] high edge lint[0x1])
+[    0.262266]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x79] high edge lint[0x1])
+[    0.262267]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x7a] high edge lint[0x1])
+[    0.262267]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x7b] high edge lint[0x1])
+[    0.262268]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x7c] high edge lint[0x1])
+[    0.262269]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x7d] high edge lint[0x1])
+[    0.262269]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x7e] high edge lint[0x1])
+[    0.262270]  drivers/acpi/tables.c acpi_table_print_madt_entry (126) ACPI: LAPIC_NMI (acpi_id[0x7f] high edge lint[0x1])
+[    0.262321]  arch/x86/kernel/apic/io_apic.c mp_register_ioapic (2867) IOAPIC[0]: apic_id 128, version 17, address 0xfec00000, GSI 0-23
+[    0.262324]  drivers/acpi/tables.c acpi_table_print_madt_entry (99) ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high edge)
+[    0.262326] ACPI: IRQ0 used by override.
+[    0.262327] ACPI: IRQ9 used by override.
+[    0.262329] Using ACPI (MADT) for SMP configuration information
+[    0.262331] ACPI: HPET id: 0x8086af01 base: 0xfed00000
+[    0.262335]  arch/x86/kernel/apic/apic.c init_apic_mappings (2027) TSC deadline timer available
+[    0.262345]  arch/x86/kernel/smpboot.c prefill_possible_map (1456) smpboot: Allowing 128 CPUs, 124 hotplug CPUs
+[    0.262357]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.262358]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0x0009e000-0x0009efff]
+[    0.262359]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.262359]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0x000a0000-0x000dbfff]
+[    0.262360]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0x000dc000-0x000fffff]
+[    0.262361]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xbfed0000-0xbfefefff]
+[    0.262362]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xbfeff000-0xbfefffff]
+[    0.262363]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xc0000000-0xefffffff]
+[    0.262364]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xf0000000-0xf7ffffff]
+[    0.262364]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xf8000000-0xfebfffff]
+[    0.262365]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xfec00000-0xfec0ffff]
+[    0.262365]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xfec10000-0xfedfffff]
+[    0.262366]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.262367]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xfee01000-0xfffdffff]
+[    0.262367]  kernel/power/snapshot.c __register_nosave_region (979) PM: Registered nosave memory: [mem 0xfffe0000-0xffffffff]
+[    0.262369]  arch/x86/kernel/e820.c e820__setup_pci_gap (653) [mem 0xc0000000-0xefffffff] available for PCI devices
+[    0.262370] Booting paravirtualized kernel on VMware hypervisor
+[    0.262372]  kernel/time/clocksource.c __clocksource_update_freq_scale (927) clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.262380]  drivers/char/random.c _warn_unseeded_randomness (1612) random: get_random_bytes called from start_kernel+0xa8/0x582 with crng_init=0
+[    0.262386]  arch/x86/kernel/setup_percpu.c setup_per_cpu_areas (172) setup_percpu: NR_CPUS:8192 nr_cpumask_bits:128 nr_cpu_ids:128 nr_node_ids:1
+[    0.718276]  mm/percpu.c pcpu_embed_first_chunk (2537) percpu: Embedded 46 pages/cpu s151552 r8192 d28672 u262144
+[    0.718293] pcpu-alloc: s151552 r8192 d28672 u262144 alloc=1*2097152
+[    0.718311] pcpu-alloc: [0] 000 001 002 003 004 005 006 007 
+[    0.718313] pcpu-alloc: [0] 008 009 010 011 012 013 014 015 
+[    0.718315] pcpu-alloc: [0] 016 017 018 019 020 021 022 023 
+[    0.718317] pcpu-alloc: [0] 024 025 026 027 028 029 030 031 
+[    0.718318] pcpu-alloc: [0] 032 033 034 035 036 037 038 039 
+[    0.718319] pcpu-alloc: [0] 040 041 042 043 044 045 046 047 
+[    0.718320] pcpu-alloc: [0] 048 049 050 051 052 053 054 055 
+[    0.718321] pcpu-alloc: [0] 056 057 058 059 060 061 062 063 
+[    0.718322] pcpu-alloc: [0] 064 065 066 067 068 069 070 071 
+[    0.718323] pcpu-alloc: [0] 072 073 074 075 076 077 078 079 
+[    0.718325] pcpu-alloc: [0] 080 081 082 083 084 085 086 087 
+[    0.718326] pcpu-alloc: [0] 088 089 090 091 092 093 094 095 
+[    0.718327] pcpu-alloc: [0] 096 097 098 099 100 101 102 103 
+[    0.718328] pcpu-alloc: [0] 104 105 106 107 108 109 110 111 
+[    0.718329] pcpu-alloc: [0] 112 113 114 115 116 117 118 119 
+[    0.718330] pcpu-alloc: [0] 120 121 122 123 124 125 126 127 
+[    0.718377]  mm/page_alloc.c build_all_zonelists (5463) Built 1 zonelists, mobility grouping on.  Total pages: 1032024
+[    0.718379]  mm/page_alloc.c build_all_zonelists (5468) Policy zone: Normal
+[    0.718381]  init/main.c start_kernel (569) Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.19.132 root=UUID=7948e99d-4e2e-40bf-b955-60fecd9db270 ro console=tty1,console=ttyS1,115200n8
+[    0.718417]  kernel/printk/printk.c log_buf_add_cpu (1092) log_buf_len individual max cpu contribution: 4096 bytes
+[    0.718418]  kernel/printk/printk.c log_buf_add_cpu (1094) log_buf_len total cpu_extra contributions: 520192 bytes
+[    0.718418]  kernel/printk/printk.c log_buf_add_cpu (1096) log_buf_len min size: 262144 bytes
+[    0.718822]  kernel/printk/printk.c setup_log_buf (1141) log_buf_len: 1048576 bytes
+[    0.718823]  kernel/printk/printk.c setup_log_buf (1142) early log buf free: 224212(85%)
+[    1.038648] Calgary: detecting Calgary via BIOS EBDA area
+[    1.038650] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    1.048973]  mm/page_alloc.c mem_init_print_info (7114) Memory: 3640648K/4193716K available (14348K kernel code, 2695K rwdata, 4692K rodata, 2492K init, 4928K bss, 553068K reserved, 0K cma-reserved)
+[    1.054225]  mm/slub.c kmem_cache_init (4265) SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=128, Nodes=1
+[    1.054385]  arch/x86/mm/pti.c pti_init (605) Kernel/User page tables isolation: enabled
+[    1.068956]  kernel/trace/ftrace.c ftrace_init (6185) ftrace: allocating 40854 entries in 160 pages
+[    1.137047]  kernel/rcu/tree_plugin.h rcu_bootup_announce (915) rcu: Hierarchical RCU implementation.
+[    1.137050]  kernel/rcu/tree_plugin.h rcu_bootup_announce_oddness (94) rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=128.
+[    1.137051]  kernel/rcu/update.c rcu_tasks_bootup_oddness (866) 	Tasks RCU enabled.
+[    1.137052]  kernel/rcu/tree.c rcu_init_geometry (4076) rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=128
+[    1.140696] NR_IRQS: 524544, nr_irqs: 1448, preallocated irqs: 16
+[    1.143126]  drivers/tty/vt/vt.c con_init (3385) Console: colour VGA+ 80x25
+[    1.172406]  kernel/printk/printk.c register_console (2745) console [tty1] enabled
+[    1.172785] ACPI: Core revision 20180810
+[    1.173229]  kernel/time/clocksource.c __clocksource_update_freq_scale (927) clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+[    1.173438] hpet clockevent registered
+[    1.173454]  arch/x86/kernel/apic/apic.c apic_intr_mode_init (1401) APIC: Switch to symmetric I/O mode setup
+[    1.179963] x2apic enabled
+[    1.218029]  arch/x86/kernel/apic/probe_64.c default_setup_apic_routing (38) Switched APIC routing to physical x2apic.
+[    1.220273] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    1.220472]  kernel/time/clocksource.c __clocksource_update_freq_scale (927) clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2b3e47e4533, max_idle_ns: 440795202126 ns
+[    1.220924]  init/calibrate.c calibrate_delay (289) Calibrating delay loop (skipped) preset value.. 6000.00 BogoMIPS (lpj=12000012)
+[    1.224912]  kernel/pid.c pid_idr_init (464) pid_max: default: 131072 minimum: 1024
+[    1.225205]  security/security.c security_init (78) Security Framework initialized
+[    1.225418]  security/yama/yama_lsm.c yama_add_hooks (484) Yama: becoming mindful.
+[    1.237875] AppArmor: AppArmor initialized
+[    1.239325]  mm/page_alloc.c alloc_large_system_hash (7692) Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    1.240339]  mm/page_alloc.c alloc_large_system_hash (7692) Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    1.240690]  mm/page_alloc.c alloc_large_system_hash (7692) Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.245453]  mm/page_alloc.c alloc_large_system_hash (7692) Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.268923]  arch/x86/kernel/cpu/intel.c early_init_intel (272) Disabled fast string operations
+[    1.272967]  arch/x86/kernel/cpu/common.c cpu_detect_tlb (655) Last level iTLB entries: 4KB 128, 2MB 8, 4MB 8
+[    1.273264]  arch/x86/kernel/cpu/common.c cpu_detect_tlb (659) Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    1.273573]  arch/x86/kernel/cpu/bugs.c spectre_v1_select_mitigation (568) Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    1.273981]  arch/x86/kernel/cpu/bugs.c spectre_v2_select_mitigation (920) Spectre V2 : Mitigation: Full generic retpoline
+[    1.274315]  arch/x86/kernel/cpu/bugs.c spectre_v2_select_mitigation (931) Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    1.274715]  arch/x86/kernel/cpu/bugs.c spectre_v2_select_mitigation (946) Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    1.275087]  arch/x86/kernel/cpu/bugs.c spectre_v2_user_select_mitigation (751) Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    1.275506]  arch/x86/kernel/cpu/bugs.c ssb_select_mitigation (1191) Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+[    1.275968]  arch/x86/kernel/cpu/bugs.c taa_select_mitigation (371) TAA: Vulnerable: Clear CPU buffers attempted, no microcode
+[    1.276912]  arch/x86/kernel/cpu/bugs.c srbds_select_mitigation (470) SRBDS: Unknown: Dependent on hypervisor status
+[    1.277225]  arch/x86/kernel/cpu/bugs.c mds_print_mitigation (264) MDS: Vulnerable: Clear CPU buffers attempted, no microcode
+[    1.280910]  mm/page_alloc.c free_reserved_area (7061) Freeing SMP alternatives memory: 36K
+[    1.286112]  arch/x86/kernel/smpboot.c native_smp_prepare_cpus (1312) smpboot: CPU0: Intel(R) Core(TM) i5-8500 CPU @ 3.00GHz (family: 0x6, model: 0x9e, stepping: 0xa)
+[    1.287417]  arch/x86/events/core.c init_hw_perf_events (1748) Performance Events: Skylake events, core PMU driver.
+[    1.287735]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'cpu cycles' unavailable
+[    1.288044]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'instructions' unavailable
+[    1.288357]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'bus cycles' unavailable
+[    1.288665]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'cache references' unavailable
+[    1.288910]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'cache misses' unavailable
+[    1.288910]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'branch instructions' unavailable
+[    1.288910]  arch/x86/events/intel/core.c intel_arch_events_quirk (3836) core: CPUID marked event: 'branch misses' unavailable
+[    1.288910]  arch/x86/events/core.c init_hw_perf_events (1822) ... version:                1
+[    1.288914]  arch/x86/events/core.c init_hw_perf_events (1823) ... bit width:              48
+[    1.289151]  arch/x86/events/core.c init_hw_perf_events (1824) ... generic registers:      8
+[    1.289396]  arch/x86/events/core.c init_hw_perf_events (1825) ... value mask:             0000ffffffffffff
+[    1.289664]  arch/x86/events/core.c init_hw_perf_events (1826) ... max period:             000000007fffffff
+[    1.289933]  arch/x86/events/core.c init_hw_perf_events (1827) ... fixed-purpose events:   0
+[    1.290166]  arch/x86/events/core.c init_hw_perf_events (1828) ... event mask:             00000000000000ff
+[    1.291067]  kernel/rcu/srcutree.c srcu_bootup_announce (1307) rcu: Hierarchical SRCU implementation.
+[    1.292447]  kernel/watchdog_hld.c hardlockup_detector_perf_init (289) NMI watchdog: Perf NMI watchdog permanently disabled
+[    1.321464]  kernel/smp.c smp_init (571) smp: Bringing up secondary CPUs ...
+[    1.322378] x86: Booting SMP configuration:
+[    1.322504] .... node  #0, CPUs:          #1
+[    0.079907]  arch/x86/kernel/cpu/intel.c early_init_intel (272) Disabled fast string operations
+[    1.323276]    #2
+[    0.079907]  arch/x86/kernel/cpu/intel.c early_init_intel (272) Disabled fast string operations
+[    1.325641]    #3
+[    0.079907]  arch/x86/kernel/cpu/intel.c early_init_intel (272) Disabled fast string operations
+[    1.326463]  kernel/smp.c smp_init (583) smp: Brought up 1 node, 4 CPUs
+[    1.326463]  arch/x86/kernel/smpboot.c calculate_max_logical_packages (1358) smpboot: Max logical packages: 32
+[    1.326463]  arch/x86/kernel/smpboot.c impress_friends (611) smpboot: Total of 4 processors activated (24000.02 BogoMIPS)
+[    1.340929] devtmpfs: initialized
+[    1.341017]  arch/x86/mm/init_64.c probe_memory_block_size (1361) x86/mm: Memory block size: 128MB
+[    1.342858]  drivers/acpi/nvs.c suspend_nvs_register (98) PM: Registering ACPI NVS region [mem 0xbfeff000-0xbfefffff] (4096 bytes)
+[    1.342858]  kernel/time/clocksource.c __clocksource_update_freq_scale (927) clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    1.342858]  mm/page_alloc.c alloc_large_system_hash (7692) futex hash table entries: 32768 (order: 9, 2097152 bytes)
+[    1.349331]  drivers/pinctrl/core.c pinctrl_init (2260) pinctrl core: initialized pinctrl subsystem
+[    1.349578]  drivers/base/power/trace.c read_magic_time (121) RTC time:  1:22:44, date: 12/30/20
+[    1.349817]  net/socket.c sock_init (2692) YWY
+[    1.349839]  net/socket.c sockfs_mount (357) YWY
+[    1.354065]  net/socket.c sock_register (2649) NET: Registered protocol family 16
+[    1.354267]  kernel/audit.c audit_init (1607) audit: initializing netlink subsys (disabled)
+[    1.354368]  kernel/audit.c kauditd_printk_skb (546) audit: type=2000 audit(1609291364.136:1): state=initialized audit_enabled=0 res=1
+[    1.357105] cpuidle: using governor ladder
+[    1.360934] cpuidle: using governor menu
+[    1.360982] Simple Boot Flag at 0x36 set to 0x80
+[    1.361049] ACPI: bus type PCI registered
+[    1.361092]  drivers/pci/hotplug/acpiphp_core.c acpiphp_init (323) acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.361881]  arch/x86/pci/mmconfig-shared.c pci_mmconfig_add (108) PCI: MMCONFIG for domain 0000 [bus 00-7f] at [mem 0xf0000000-0xf7ffffff] (base 0xf0000000)
+[    1.362004]  arch/x86/pci/mmconfig-shared.c is_mmconf_reserved (469) PCI: MMCONFIG at [mem 0xf0000000-0xf7ffffff] reserved in E820
+[    1.362111] PCI: Using configuration type 1 for base access
+[    1.369218]  mm/hugetlb.c report_hugepages (2231) HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    1.369218]  mm/hugetlb.c report_hugepages (2231) HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    1.373423]  drivers/acpi/osi.c acpi_osi_setup_late (246) ACPI: Added _OSI(Module Device)
+[    1.373423]  drivers/acpi/osi.c acpi_osi_setup_late (246) ACPI: Added _OSI(Processor Device)
+[    1.373423]  drivers/acpi/osi.c acpi_osi_setup_late (246) ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.373437]  drivers/acpi/osi.c acpi_osi_setup_late (246) ACPI: Added _OSI(Processor Aggregator Device)
+[    1.373520]  drivers/acpi/osi.c acpi_osi_setup_late (246) ACPI: Added _OSI(Linux-Dell-Video)
+[    1.373596]  drivers/acpi/osi.c acpi_osi_setup_late (246) ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    1.392910] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    1.400378] ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+[    1.417543] ACPI: Interpreter enabled
+[    1.417600]  drivers/acpi/sleep.c acpi_sleep_init (1304) ACPI: (supports S0 S1 S4 S5)
+[    1.417672] ACPI: Using IOAPIC for interrupt routing
+[    1.417741] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.419532] ACPI: Enabled 4 GPEs in block 00 to 0F
+[    1.607248]  drivers/acpi/pci_root.c acpi_pci_root_add (588) ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-7f])
+[    1.607351] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    1.607597] acpi PNP0A03:00: _OSC: platform does not support [AER LTR]
+[    1.607857] acpi PNP0A03:00: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    1.609575]  drivers/pci/probe.c pci_register_host_bridge (851) PCI host bridge to bus 0000:00
+[    1.609657] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.609726] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff window]
+[    1.609794] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff window]
+[    1.609863] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff window]
+[    1.609932] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+[    1.610001] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.610063] pci_bus 0000:00: root bus resource [io  0x0d00-0xfeff window]
+[    1.610125] pci_bus 0000:00: root bus resource [bus 00-7f]
+[    1.610220] pci 0000:00:00.0: [8086:7190] type 00 class 0x060000
+[    1.610850] pci 0000:00:01.0: [8086:7191] type 01 class 0x060400
+[    1.611331] pci 0000:00:07.0: [8086:7110] type 00 class 0x060100
+[    1.612058] pci 0000:00:07.1: [8086:7111] type 00 class 0x01018a
+[    1.613306] pci 0000:00:07.1: reg 0x20: [io  0x1060-0x106f]
+[    1.613822] pci 0000:00:07.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    1.613890] pci 0000:00:07.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    1.613950] pci 0000:00:07.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    1.614014] pci 0000:00:07.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    1.614280] pci 0000:00:07.3: [8086:7113] type 00 class 0x068000
+[    1.616090] pci 0000:00:07.3: quirk: [io  0x1000-0x103f] claimed by PIIX4 ACPI
+[    1.616172] pci 0000:00:07.3: quirk: [io  0x1040-0x104f] claimed by PIIX4 SMB
+[    1.616535] pci 0000:00:07.7: [15ad:0740] type 00 class 0x088000
+[    1.617173] pci 0000:00:07.7: reg 0x10: [io  0x1080-0x10bf]
+[    1.617630] pci 0000:00:07.7: reg 0x14: [mem 0xfebfe000-0xfebfffff 64bit]
+[    1.619668] pci 0000:00:0f.0: [15ad:0405] type 00 class 0x030000
+[    1.620914] pci 0000:00:0f.0: reg 0x10: [io  0x1070-0x107f]
+[    1.622105] pci 0000:00:0f.0: reg 0x14: [mem 0xe8000000-0xefffffff pref]
+[    1.623238] pci 0000:00:0f.0: reg 0x18: [mem 0xfe000000-0xfe7fffff]
+[    1.627047] pci 0000:00:0f.0: reg 0x30: [mem 0x00000000-0x00007fff pref]
+[    1.627486] pci 0000:00:10.0: [1000:0030] type 00 class 0x010000
+[    1.628138] pci 0000:00:10.0: reg 0x10: [io  0x1400-0x14ff]
+[    1.628726] pci 0000:00:10.0: reg 0x14: [mem 0xfeba0000-0xfebbffff 64bit]
+[    1.629237] pci 0000:00:10.0: reg 0x1c: [mem 0xfebc0000-0xfebdffff 64bit]
+[    1.630494] pci 0000:00:10.0: reg 0x30: [mem 0x00000000-0x00003fff pref]
+[    1.630884] pci 0000:00:11.0: [15ad:0790] type 01 class 0x060401
+[    1.631577] pci 0000:00:15.0: [15ad:07a0] type 01 class 0x060400
+[    1.632246] pci 0000:00:15.0: PME# supported from D0 D3hot D3cold
+[    1.632587] pci 0000:00:15.1: [15ad:07a0] type 01 class 0x060400
+[    1.633247] pci 0000:00:15.1: PME# supported from D0 D3hot D3cold
+[    1.633591] pci 0000:00:15.2: [15ad:07a0] type 01 class 0x060400
+[    1.634262] pci 0000:00:15.2: PME# supported from D0 D3hot D3cold
+[    1.634601] pci 0000:00:15.3: [15ad:07a0] type 01 class 0x060400
+[    1.635264] pci 0000:00:15.3: PME# supported from D0 D3hot D3cold
+[    1.635600] pci 0000:00:15.4: [15ad:07a0] type 01 class 0x060400
+[    1.636262] pci 0000:00:15.4: PME# supported from D0 D3hot D3cold
+[    1.636598] pci 0000:00:15.5: [15ad:07a0] type 01 class 0x060400
+[    1.637253] pci 0000:00:15.5: PME# supported from D0 D3hot D3cold
+[    1.637589] pci 0000:00:15.6: [15ad:07a0] type 01 class 0x060400
+[    1.638269] pci 0000:00:15.6: PME# supported from D0 D3hot D3cold
+[    1.638603] pci 0000:00:15.7: [15ad:07a0] type 01 class 0x060400
+[    1.639265] pci 0000:00:15.7: PME# supported from D0 D3hot D3cold
+[    1.639601] pci 0000:00:16.0: [15ad:07a0] type 01 class 0x060400
+[    1.640265] pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+[    1.640602] pci 0000:00:16.1: [15ad:07a0] type 01 class 0x060400
+[    1.641262] pci 0000:00:16.1: PME# supported from D0 D3hot D3cold
+[    1.641606] pci 0000:00:16.2: [15ad:07a0] type 01 class 0x060400
+[    1.642274] pci 0000:00:16.2: PME# supported from D0 D3hot D3cold
+[    1.642612] pci 0000:00:16.3: [15ad:07a0] type 01 class 0x060400
+[    1.643275] pci 0000:00:16.3: PME# supported from D0 D3hot D3cold
+[    1.643611] pci 0000:00:16.4: [15ad:07a0] type 01 class 0x060400
+[    1.644273] pci 0000:00:16.4: PME# supported from D0 D3hot D3cold
+[    1.644608] pci 0000:00:16.5: [15ad:07a0] type 01 class 0x060400
+[    1.645269] pci 0000:00:16.5: PME# supported from D0 D3hot D3cold
+[    1.645605] pci 0000:00:16.6: [15ad:07a0] type 01 class 0x060400
+[    1.646290] pci 0000:00:16.6: PME# supported from D0 D3hot D3cold
+[    1.646641] pci 0000:00:16.7: [15ad:07a0] type 01 class 0x060400
+[    1.647297] pci 0000:00:16.7: PME# supported from D0 D3hot D3cold
+[    1.647630] pci 0000:00:17.0: [15ad:07a0] type 01 class 0x060400
+[    1.648287] pci 0000:00:17.0: PME# supported from D0 D3hot D3cold
+[    1.648623] pci 0000:00:17.1: [15ad:07a0] type 01 class 0x060400
+[    1.649275] pci 0000:00:17.1: PME# supported from D0 D3hot D3cold
+[    1.649617] pci 0000:00:17.2: [15ad:07a0] type 01 class 0x060400
+[    1.650282] pci 0000:00:17.2: PME# supported from D0 D3hot D3cold
+[    1.650617] pci 0000:00:17.3: [15ad:07a0] type 01 class 0x060400
+[    1.651272] pci 0000:00:17.3: PME# supported from D0 D3hot D3cold
+[    1.651606] pci 0000:00:17.4: [15ad:07a0] type 01 class 0x060400
+[    1.652263] pci 0000:00:17.4: PME# supported from D0 D3hot D3cold
+[    1.652597] pci 0000:00:17.5: [15ad:07a0] type 01 class 0x060400
+[    1.653249] pci 0000:00:17.5: PME# supported from D0 D3hot D3cold
+[    1.653623] pci 0000:00:17.6: [15ad:07a0] type 01 class 0x060400
+[    1.654280] pci 0000:00:17.6: PME# supported from D0 D3hot D3cold
+[    1.654615] pci 0000:00:17.7: [15ad:07a0] type 01 class 0x060400
+[    1.655271] pci 0000:00:17.7: PME# supported from D0 D3hot D3cold
+[    1.655605] pci 0000:00:18.0: [15ad:07a0] type 01 class 0x060400
+[    1.656259] pci 0000:00:18.0: PME# supported from D0 D3hot D3cold
+[    1.656595] pci 0000:00:18.1: [15ad:07a0] type 01 class 0x060400
+[    1.657250] pci 0000:00:18.1: PME# supported from D0 D3hot D3cold
+[    1.657600] pci 0000:00:18.2: [15ad:07a0] type 01 class 0x060400
+[    1.658254] pci 0000:00:18.2: PME# supported from D0 D3hot D3cold
+[    1.658591] pci 0000:00:18.3: [15ad:07a0] type 01 class 0x060400
+[    1.659246] pci 0000:00:18.3: PME# supported from D0 D3hot D3cold
+[    1.659580] pci 0000:00:18.4: [15ad:07a0] type 01 class 0x060400
+[    1.660263] pci 0000:00:18.4: PME# supported from D0 D3hot D3cold
+[    1.660831] pci 0000:00:18.5: [15ad:07a0] type 01 class 0x060400
+[    1.661617] pci 0000:00:18.5: PME# supported from D0 D3hot D3cold
+[    1.662052] pci 0000:00:18.6: [15ad:07a0] type 01 class 0x060400
+[    1.662719] pci 0000:00:18.6: PME# supported from D0 D3hot D3cold
+[    1.663082] pci 0000:00:18.7: [15ad:07a0] type 01 class 0x060400
+[    1.663746] pci 0000:00:18.7: PME# supported from D0 D3hot D3cold
+[    1.664127] pci_bus 0000:01: extended config space not accessible
+[    1.664468] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    1.664702] pci_bus 0000:02: extended config space not accessible
+[    1.664929]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [32] registered
+[    1.665056]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [33] registered
+[    1.665214]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [34] registered
+[    1.665340]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [35] registered
+[    1.665463]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [36] registered
+[    1.665589]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [37] registered
+[    1.665712]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [38] registered
+[    1.665834]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [39] registered
+[    1.665956]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [40] registered
+[    1.666078]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [41] registered
+[    1.666201]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [42] registered
+[    1.666323]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [43] registered
+[    1.666446]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [44] registered
+[    1.666568]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [45] registered
+[    1.666903]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [46] registered
+[    1.667036]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [47] registered
+[    1.667160]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [48] registered
+[    1.667283]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [49] registered
+[    1.667406]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [50] registered
+[    1.667528]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [51] registered
+[    1.667651]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [52] registered
+[    1.667777]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [53] registered
+[    1.667900]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [54] registered
+[    1.668022]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [55] registered
+[    1.668145]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [56] registered
+[    1.668268]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [57] registered
+[    1.668406]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [58] registered
+[    1.668531]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [59] registered
+[    1.668653]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [60] registered
+[    1.668776]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [61] registered
+[    1.668898]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [62] registered
+[    1.668938]  drivers/pci/hotplug/acpiphp_core.c acpiphp_register_hotplug_slot (297) acpiphp: Slot [63] registered
+[    1.669147] pci 0000:02:00.0: [15ad:0774] type 00 class 0x0c0300
+[    1.671874] pci 0000:02:00.0: reg 0x20: [io  0x2080-0x209f]
+[    1.672896] pci 0000:02:01.0: [8086:100f] type 00 class 0x020000
+[    1.673563] pci 0000:02:01.0: reg 0x10: [mem 0xfd5c0000-0xfd5dffff 64bit]
+[    1.674159] pci 0000:02:01.0: reg 0x18: [mem 0xfdff0000-0xfdffffff 64bit]
+[    1.674702] pci 0000:02:01.0: reg 0x20: [io  0x2000-0x203f]
+[    1.675788] pci 0000:02:01.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+[    1.676326] pci 0000:02:02.0: [1274:1371] type 00 class 0x040100
+[    1.676629] pci 0000:02:02.0: reg 0x10: [io  0x2040-0x207f]
+[    1.678493] pci 0000:02:03.0: [15ad:0770] type 00 class 0x0c0320
+[    1.678792] pci 0000:02:03.0: reg 0x10: [mem 0xfd5ef000-0xfd5effff]
+[    1.680589] pci 0000:02:05.0: [15ad:07e0] type 00 class 0x010601
+[    1.687352] pci 0000:02:05.0: reg 0x24: [mem 0xfd5ee000-0xfd5eefff]
+[    1.688662] pci 0000:02:05.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+[    1.690093] pci 0000:02:05.0: PME# supported from D3hot
+[    1.691942] pci 0000:00:11.0: PCI bridge to [bus 02] (subtractive decode)
+[    1.692337] pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+[    1.692412] pci 0000:00:11.0:   bridge window [mem 0xfd500000-0xfdffffff]
+[    1.692558] pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+[    1.692562] pci 0000:00:11.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+[    1.692565] pci 0000:00:11.0:   bridge window [mem 0x000d0000-0x000d3fff window] (subtractive decode)
+[    1.692567] pci 0000:00:11.0:   bridge window [mem 0x000d4000-0x000d7fff window] (subtractive decode)
+[    1.692569] pci 0000:00:11.0:   bridge window [mem 0x000d8000-0x000dbfff window] (subtractive decode)
+[    1.692571] pci 0000:00:11.0:   bridge window [mem 0xc0000000-0xfebfffff window] (subtractive decode)
+[    1.692574] pci 0000:00:11.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+[    1.692577] pci 0000:00:11.0:   bridge window [io  0x0d00-0xfeff window] (subtractive decode)
+[    1.693804] pci 0000:00:15.0: PCI bridge to [bus 03]
+[    1.694031] pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+[    1.694083] pci 0000:00:15.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+[    1.694185] pci 0000:00:15.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+[    1.695076] pci 0000:00:15.1: PCI bridge to [bus 04]
+[    1.695281] pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+[    1.695333] pci 0000:00:15.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+[    1.695435] pci 0000:00:15.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+[    1.696030] pci 0000:00:15.2: PCI bridge to [bus 05]
+[    1.696097] pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+[    1.696115] pci 0000:00:15.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+[    1.696149] pci 0000:00:15.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+[    1.696430] pci 0000:00:15.3: PCI bridge to [bus 06]
+[    1.696514] pci 0000:00:15.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+[    1.696548] pci 0000:00:15.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+[    1.696834] pci 0000:00:15.4: PCI bridge to [bus 07]
+[    1.696913] pci 0000:00:15.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+[    1.696947] pci 0000:00:15.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+[    1.697232] pci 0000:00:15.5: PCI bridge to [bus 08]
+[    1.697316] pci 0000:00:15.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+[    1.697349] pci 0000:00:15.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+[    1.697634] pci 0000:00:15.6: PCI bridge to [bus 09]
+[    1.697718] pci 0000:00:15.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+[    1.697751] pci 0000:00:15.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+[    1.698033] pci 0000:00:15.7: PCI bridge to [bus 0a]
+[    1.698117] pci 0000:00:15.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+[    1.698150] pci 0000:00:15.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+[    1.698432] pci 0000:00:16.0: PCI bridge to [bus 0b]
+[    1.698499] pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+[    1.698516] pci 0000:00:16.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+[    1.698550] pci 0000:00:16.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+[    1.698836] pci 0000:00:16.1: PCI bridge to [bus 0c]
+[    1.698903] pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+[    1.698921] pci 0000:00:16.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+[    1.698954] pci 0000:00:16.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+[    1.699234] pci 0000:00:16.2: PCI bridge to [bus 0d]
+[    1.699302] pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+[    1.699326] pci 0000:00:16.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+[    1.699360] pci 0000:00:16.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+[    1.699645] pci 0000:00:16.3: PCI bridge to [bus 0e]
+[    1.699729] pci 0000:00:16.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+[    1.699762] pci 0000:00:16.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+[    1.700079] pci 0000:00:16.4: PCI bridge to [bus 0f]
+[    1.700164] pci 0000:00:16.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+[    1.700198] pci 0000:00:16.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+[    1.700482] pci 0000:00:16.5: PCI bridge to [bus 10]
+[    1.700566] pci 0000:00:16.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+[    1.700600] pci 0000:00:16.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+[    1.700888] pci 0000:00:16.6: PCI bridge to [bus 11]
+[    1.700938] pci 0000:00:16.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+[    1.700972] pci 0000:00:16.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+[    1.701262] pci 0000:00:16.7: PCI bridge to [bus 12]
+[    1.701346] pci 0000:00:16.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+[    1.701380] pci 0000:00:16.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+[    1.701669] pci 0000:00:17.0: PCI bridge to [bus 13]
+[    1.701737] pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+[    1.701754] pci 0000:00:17.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+[    1.701788] pci 0000:00:17.0:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+[    1.702074] pci 0000:00:17.1: PCI bridge to [bus 14]
+[    1.702141] pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+[    1.702159] pci 0000:00:17.1:   bridge window [mem 0xfce00000-0xfcefffff]
+[    1.702193] pci 0000:00:17.1:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+[    1.702638] pci 0000:00:17.2: PCI bridge to [bus 15]
+[    1.702706] pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+[    1.702724] pci 0000:00:17.2:   bridge window [mem 0xfca00000-0xfcafffff]
+[    1.702758] pci 0000:00:17.2:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+[    1.703049] pci 0000:00:17.3: PCI bridge to [bus 16]
+[    1.703133] pci 0000:00:17.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+[    1.703167] pci 0000:00:17.3:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+[    1.703449] pci 0000:00:17.4: PCI bridge to [bus 17]
+[    1.703532] pci 0000:00:17.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+[    1.703566] pci 0000:00:17.4:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+[    1.705203] pci 0000:00:17.5: PCI bridge to [bus 18]
+[    1.705591] pci 0000:00:17.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+[    1.705741] pci 0000:00:17.5:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+[    1.707165] pci 0000:00:17.6: PCI bridge to [bus 19]
+[    1.707599] pci 0000:00:17.6:   bridge window [mem 0xfba00000-0xfbafffff]
+[    1.707746] pci 0000:00:17.6:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+[    1.708505] pci 0000:00:17.7: PCI bridge to [bus 1a]
+[    1.708590] pci 0000:00:17.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+[    1.708623] pci 0000:00:17.7:   bridge window [mem 0xe5c00000-0xe5cfffff 64bit pref]
+[    1.708910] pci 0000:00:18.0: PCI bridge to [bus 1b]
+[    1.708923] pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+[    1.708940] pci 0000:00:18.0:   bridge window [mem 0xfd100000-0xfd1fffff]
+[    1.708974] pci 0000:00:18.0:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+[    1.709264] pci 0000:00:18.1: PCI bridge to [bus 1c]
+[    1.709331] pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+[    1.709349] pci 0000:00:18.1:   bridge window [mem 0xfcd00000-0xfcdfffff]
+[    1.709383] pci 0000:00:18.1:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+[    1.709670] pci 0000:00:18.2: PCI bridge to [bus 1d]
+[    1.709754] pci 0000:00:18.2:   bridge window [mem 0xfc900000-0xfc9fffff]
+[    1.709788] pci 0000:00:18.2:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+[    1.710077] pci 0000:00:18.3: PCI bridge to [bus 1e]
+[    1.710161] pci 0000:00:18.3:   bridge window [mem 0xfc500000-0xfc5fffff]
+[    1.710194] pci 0000:00:18.3:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+[    1.710478] pci 0000:00:18.4: PCI bridge to [bus 1f]
+[    1.710563] pci 0000:00:18.4:   bridge window [mem 0xfc100000-0xfc1fffff]
+[    1.710596] pci 0000:00:18.4:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+[    1.710879] pci 0000:00:18.5: PCI bridge to [bus 20]
+[    1.710962] pci 0000:00:18.5:   bridge window [mem 0xfbd00000-0xfbdfffff]
+[    1.710996] pci 0000:00:18.5:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+[    1.711288] pci 0000:00:18.6: PCI bridge to [bus 21]
+[    1.711372] pci 0000:00:18.6:   bridge window [mem 0xfb900000-0xfb9fffff]
+[    1.711406] pci 0000:00:18.6:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+[    1.711688] pci 0000:00:18.7: PCI bridge to [bus 22]
+[    1.711771] pci 0000:00:18.7:   bridge window [mem 0xfb500000-0xfb5fffff]
+[    1.711805] pci 0000:00:18.7:   bridge window [mem 0xe5b00000-0xe5bfffff 64bit pref]
+[    1.714206] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 7 *9 10 11 14 15)
+[    1.714349] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 9 10 *11 14 15)
+[    1.714489] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 9 *10 11 14 15)
+[    1.714626] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 *7 9 10 11 14 15)
+[    1.753854] SCSI subsystem initialized
+[    1.754235] libata version 3.00 loaded.
+[    1.754235] ACPI: bus type USB registered
+[    1.754235]  drivers/usb/core/driver.c usb_register_driver (971) usbcore: registered new interface driver usbfs
+[    1.754235]  drivers/usb/core/driver.c usb_register_driver (971) usbcore: registered new interface driver hub
+[    1.754235]  drivers/usb/core/driver.c usb_register_device_driver (902) usbcore: registered new device driver usb
+[    1.754235]  drivers/pps/pps.c pps_init (486) pps_core: LinuxPPS API ver. 1 registered
+[    1.754235]  drivers/pps/pps.c pps_init (487) pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.754235]  drivers/ptp/ptp_clock.c ptp_init (410) PTP clock support registered
+[    1.754235] EDAC MC: Ver: 3.0.0
+[    1.769040] PCI: Using ACPI for IRQ routing
+[    1.780910] PCI: pci_cache_line_size set to 64 bytes
+[    1.780910] e820: reserve RAM buffer [mem 0x0009e800-0x0009ffff]
+[    1.780910] e820: reserve RAM buffer [mem 0xbfed0000-0xbfffffff]
+[    1.780913] NetLabel: Initializing
+[    1.780913] NetLabel:  domain hash size = 128
+[    1.780913] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.780913] NetLabel:  unlabeled traffic allowed by default
+[    1.781786] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+[    1.781866] hpet0: 16 comparators, 64-bit 14.318180 MHz counter
+[    1.784912]  kernel/time/clocksource.c __clocksource_select (796) clocksource: Switched to clocksource tsc-early
+[    1.901196] VFS: Disk quotas dquot_6.6.0
+[    1.901274]  fs/quota/dquot.c dquot_init (2996) VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.901857] AppArmor: AppArmor Filesystem Enabled
+[    1.901927] pnp: PnP ACPI init
+[    1.902135] system 00:00: [io  0x1000-0x103f] has been reserved
+[    1.902193] system 00:00: [io  0x1040-0x104f] has been reserved
+[    1.902249] system 00:00: [io  0x0cf0-0x0cf1] has been reserved
+[    1.902307] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    1.902324] pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    1.902335] pnp 00:02: Plug and Play ACPI device, IDs PNP0303 (active)
+[    1.902349] pnp 00:03: Plug and Play ACPI device, IDs VMW0003 PNP0f13 (active)
+[    1.902559] system 00:04: [mem 0xfed00000-0xfed003ff] has been reserved
+[    1.902624] system 00:04: Plug and Play ACPI device, IDs PNP0103 PNP0c01 (active)
+[    1.904135] pnp 00:05: Plug and Play ACPI device, IDs PNP0501 (active)
+[    1.904501] system 00:06: [io  0xfce0-0xfcff] has been reserved
+[    1.904562] system 00:06: [mem 0xf0000000-0xf7ffffff] has been reserved
+[    1.904624] system 00:06: [mem 0xfe800000-0xfe9fffff] has been reserved
+[    1.904686] system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    1.978060] pnp: PnP ACPI: found 7 devices
+[    1.988826]  kernel/time/clocksource.c __clocksource_update_freq_scale (927) clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.989277] pci 0000:00:15.3: bridge window [io  0x1000-0x0fff] to [bus 06] add_size 1000
+[    1.989329] pci 0000:00:15.4: bridge window [io  0x1000-0x0fff] to [bus 07] add_size 1000
+[    1.989380] pci 0000:00:15.5: bridge window [io  0x1000-0x0fff] to [bus 08] add_size 1000
+[    1.989432] pci 0000:00:15.6: bridge window [io  0x1000-0x0fff] to [bus 09] add_size 1000
+[    1.989483] pci 0000:00:15.7: bridge window [io  0x1000-0x0fff] to [bus 0a] add_size 1000
+[    1.989684] pci 0000:00:16.3: bridge window [io  0x1000-0x0fff] to [bus 0e] add_size 1000
+[    1.989735] pci 0000:00:16.4: bridge window [io  0x1000-0x0fff] to [bus 0f] add_size 1000
+[    1.989786] pci 0000:00:16.5: bridge window [io  0x1000-0x0fff] to [bus 10] add_size 1000
+[    1.989838] pci 0000:00:16.6: bridge window [io  0x1000-0x0fff] to [bus 11] add_size 1000
+[    1.989888] pci 0000:00:16.7: bridge window [io  0x1000-0x0fff] to [bus 12] add_size 1000
+[    1.990090] pci 0000:00:17.3: bridge window [io  0x1000-0x0fff] to [bus 16] add_size 1000
+[    1.990141] pci 0000:00:17.4: bridge window [io  0x1000-0x0fff] to [bus 17] add_size 1000
+[    1.990192] pci 0000:00:17.5: bridge window [io  0x1000-0x0fff] to [bus 18] add_size 1000
+[    1.990243] pci 0000:00:17.6: bridge window [io  0x1000-0x0fff] to [bus 19] add_size 1000
+[    1.990298] pci 0000:00:17.7: bridge window [io  0x1000-0x0fff] to [bus 1a] add_size 1000
+[    1.990449] pci 0000:00:18.2: bridge window [io  0x1000-0x0fff] to [bus 1d] add_size 1000
+[    1.990500] pci 0000:00:18.3: bridge window [io  0x1000-0x0fff] to [bus 1e] add_size 1000
+[    1.990551] pci 0000:00:18.4: bridge window [io  0x1000-0x0fff] to [bus 1f] add_size 1000
+[    1.990602] pci 0000:00:18.5: bridge window [io  0x1000-0x0fff] to [bus 20] add_size 1000
+[    1.990653] pci 0000:00:18.6: bridge window [io  0x1000-0x0fff] to [bus 21] add_size 1000
+[    1.990704] pci 0000:00:18.7: bridge window [io  0x1000-0x0fff] to [bus 22] add_size 1000
+[    1.990717] pci 0000:00:0f.0: BAR 6: assigned [mem 0xc0000000-0xc0007fff pref]
+[    1.990787] pci 0000:00:10.0: BAR 6: assigned [mem 0xc0008000-0xc000bfff pref]
+[    1.990856] pci 0000:00:15.3: BAR 13: no space for [io  size 0x1000]
+[    1.990914] pci 0000:00:15.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.990976] pci 0000:00:15.4: BAR 13: no space for [io  size 0x1000]
+[    1.991034] pci 0000:00:15.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.991095] pci 0000:00:15.5: BAR 13: no space for [io  size 0x1000]
+[    1.991173] pci 0000:00:15.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.991235] pci 0000:00:15.6: BAR 13: no space for [io  size 0x1000]
+[    1.991293] pci 0000:00:15.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.991355] pci 0000:00:15.7: BAR 13: no space for [io  size 0x1000]
+[    1.991433] pci 0000:00:15.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.991495] pci 0000:00:16.3: BAR 13: no space for [io  size 0x1000]
+[    1.991553] pci 0000:00:16.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.991614] pci 0000:00:16.4: BAR 13: no space for [io  size 0x1000]
+[    1.991673] pci 0000:00:16.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.991733] pci 0000:00:16.5: BAR 13: no space for [io  size 0x1000]
+[    1.991791] pci 0000:00:16.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.991852] pci 0000:00:16.6: BAR 13: no space for [io  size 0x1000]
+[    1.991910] pci 0000:00:16.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.991971] pci 0000:00:16.7: BAR 13: no space for [io  size 0x1000]
+[    1.992029] pci 0000:00:16.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992090] pci 0000:00:17.3: BAR 13: no space for [io  size 0x1000]
+[    1.992148] pci 0000:00:17.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.992209] pci 0000:00:17.4: BAR 13: no space for [io  size 0x1000]
+[    1.992267] pci 0000:00:17.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.992328] pci 0000:00:17.5: BAR 13: no space for [io  size 0x1000]
+[    1.992386] pci 0000:00:17.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.992447] pci 0000:00:17.6: BAR 13: no space for [io  size 0x1000]
+[    1.992505] pci 0000:00:17.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.992567] pci 0000:00:17.7: BAR 13: no space for [io  size 0x1000]
+[    1.992624] pci 0000:00:17.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992686] pci 0000:00:18.2: BAR 13: no space for [io  size 0x1000]
+[    1.992753] pci 0000:00:18.2: BAR 13: failed to assign [io  size 0x1000]
+[    1.992814] pci 0000:00:18.3: BAR 13: no space for [io  size 0x1000]
+[    1.992872] pci 0000:00:18.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.992933] pci 0000:00:18.4: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.5: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.6: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.7: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.7: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.6: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.5: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.4: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.3: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:18.2: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:18.2: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:17.7: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:17.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:17.6: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:17.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:17.5: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:17.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:17.4: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:17.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:17.3: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:17.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:16.7: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:16.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:16.6: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:16.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:16.5: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:16.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:16.4: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:16.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:16.3: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:16.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:15.7: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:15.7: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:15.6: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:15.6: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:15.5: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:15.5: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:15.4: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:15.4: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:15.3: BAR 13: no space for [io  size 0x1000]
+[    1.992983] pci 0000:00:15.3: BAR 13: failed to assign [io  size 0x1000]
+[    1.992983] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    1.996051] pci 0000:02:01.0: BAR 6: assigned [mem 0xfd500000-0xfd50ffff pref]
+[    1.996121] pci 0000:02:05.0: BAR 6: assigned [mem 0xfd510000-0xfd51ffff pref]
+[    1.996188] pci 0000:00:11.0: PCI bridge to [bus 02]
+[    1.996245] pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+[    1.996336] pci 0000:00:11.0:   bridge window [mem 0xfd500000-0xfdffffff]
+[    1.996415] pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+[    1.996520] pci 0000:00:15.0: PCI bridge to [bus 03]
+[    1.996578] pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+[    1.996668] pci 0000:00:15.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+[    1.996789] pci 0000:00:15.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+[    1.996951] pci 0000:00:15.1: PCI bridge to [bus 04]
+[    1.997012] pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+[    1.997096] pci 0000:00:15.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+[    1.997175] pci 0000:00:15.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+[    1.997309] pci 0000:00:15.2: PCI bridge to [bus 05]
+[    1.997368] pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+[    1.997452] pci 0000:00:15.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+[    1.997531] pci 0000:00:15.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+[    1.997650] pci 0000:00:15.3: PCI bridge to [bus 06]
+[    1.997725] pci 0000:00:15.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+[    1.997804] pci 0000:00:15.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+[    1.997923] pci 0000:00:15.4: PCI bridge to [bus 07]
+[    1.997999] pci 0000:00:15.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+[    1.998077] pci 0000:00:15.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+[    1.998195] pci 0000:00:15.5: PCI bridge to [bus 08]
+[    1.998271] pci 0000:00:15.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+[    1.998350] pci 0000:00:15.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+[    1.998468] pci 0000:00:15.6: PCI bridge to [bus 09]
+[    1.998543] pci 0000:00:15.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+[    1.998622] pci 0000:00:15.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+[    1.998740] pci 0000:00:15.7: PCI bridge to [bus 0a]
+[    1.998815] pci 0000:00:15.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+[    1.998894] pci 0000:00:15.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+[    1.999012] pci 0000:00:16.0: PCI bridge to [bus 0b]
+[    1.999071] pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+[    1.999153] pci 0000:00:16.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+[    1.999232] pci 0000:00:16.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+[    1.999351] pci 0000:00:16.1: PCI bridge to [bus 0c]
+[    1.999410] pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+[    1.999492] pci 0000:00:16.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+[    1.999571] pci 0000:00:16.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+[    1.999916] pci 0000:00:16.2: PCI bridge to [bus 0d]
+[    1.999976] pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+[    2.000058] pci 0000:00:16.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+[    2.000137] pci 0000:00:16.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+[    2.000255] pci 0000:00:16.3: PCI bridge to [bus 0e]
+[    2.000332] pci 0000:00:16.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+[    2.000411] pci 0000:00:16.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+[    2.000567] pci 0000:00:16.4: PCI bridge to [bus 0f]
+[    2.000647] pci 0000:00:16.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+[    2.000727] pci 0000:00:16.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+[    2.000848] pci 0000:00:16.5: PCI bridge to [bus 10]
+[    2.000932] pci 0000:00:16.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+[    2.001012] pci 0000:00:16.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+[    2.001132] pci 0000:00:16.6: PCI bridge to [bus 11]
+[    2.001208] pci 0000:00:16.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+[    2.001287] pci 0000:00:16.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+[    2.001405] pci 0000:00:16.7: PCI bridge to [bus 12]
+[    2.001481] pci 0000:00:16.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+[    2.001560] pci 0000:00:16.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+[    2.001678] pci 0000:00:17.0: PCI bridge to [bus 13]
+[    2.001738] pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+[    2.001821] pci 0000:00:17.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+[    2.001900] pci 0000:00:17.0:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+[    2.002019] pci 0000:00:17.1: PCI bridge to [bus 14]
+[    2.002078] pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+[    2.002160] pci 0000:00:17.1:   bridge window [mem 0xfce00000-0xfcefffff]
+[    2.002239] pci 0000:00:17.1:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+[    2.002357] pci 0000:00:17.2: PCI bridge to [bus 15]
+[    2.002416] pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+[    2.002499] pci 0000:00:17.2:   bridge window [mem 0xfca00000-0xfcafffff]
+[    2.002577] pci 0000:00:17.2:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+[    2.002695] pci 0000:00:17.3: PCI bridge to [bus 16]
+[    2.002771] pci 0000:00:17.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+[    2.002850] pci 0000:00:17.3:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+[    2.002968] pci 0000:00:17.4: PCI bridge to [bus 17]
+[    2.003043] pci 0000:00:17.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+[    2.003122] pci 0000:00:17.4:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+[    2.003240] pci 0000:00:17.5: PCI bridge to [bus 18]
+[    2.003315] pci 0000:00:17.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+[    2.003394] pci 0000:00:17.5:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+[    2.003512] pci 0000:00:17.6: PCI bridge to [bus 19]
+[    2.003588] pci 0000:00:17.6:   bridge window [mem 0xfba00000-0xfbafffff]
+[    2.003667] pci 0000:00:17.6:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+[    2.003790] pci 0000:00:17.7: PCI bridge to [bus 1a]
+[    2.003865] pci 0000:00:17.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+[    2.003944] pci 0000:00:17.7:   bridge window [mem 0xe5c00000-0xe5cfffff 64bit pref]
+[    2.004063] pci 0000:00:18.0: PCI bridge to [bus 1b]
+[    2.004123] pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+[    2.004205] pci 0000:00:18.0:   bridge window [mem 0xfd100000-0xfd1fffff]
+[    2.004284] pci 0000:00:18.0:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+[    2.004403] pci 0000:00:18.1: PCI bridge to [bus 1c]
+[    2.004541] pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+[    2.004627] pci 0000:00:18.1:   bridge window [mem 0xfcd00000-0xfcdfffff]
+[    2.004707] pci 0000:00:18.1:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+[    2.004837] pci 0000:00:18.2: PCI bridge to [bus 1d]
+[    2.004920] pci 0000:00:18.2:   bridge window [mem 0xfc900000-0xfc9fffff]
+[    2.005001] pci 0000:00:18.2:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+[    2.005122] pci 0000:00:18.3: PCI bridge to [bus 1e]
+[    2.005199] pci 0000:00:18.3:   bridge window [mem 0xfc500000-0xfc5fffff]
+[    2.005278] pci 0000:00:18.3:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+[    2.005398] pci 0000:00:18.4: PCI bridge to [bus 1f]
+[    2.005474] pci 0000:00:18.4:   bridge window [mem 0xfc100000-0xfc1fffff]
+[    2.005553] pci 0000:00:18.4:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+[    2.005672] pci 0000:00:18.5: PCI bridge to [bus 20]
+[    2.005748] pci 0000:00:18.5:   bridge window [mem 0xfbd00000-0xfbdfffff]
+[    2.005827] pci 0000:00:18.5:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+[    2.005946] pci 0000:00:18.6: PCI bridge to [bus 21]
+[    2.006022] pci 0000:00:18.6:   bridge window [mem 0xfb900000-0xfb9fffff]
+[    2.006101] pci 0000:00:18.6:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+[    2.006220] pci 0000:00:18.7: PCI bridge to [bus 22]
+[    2.006296] pci 0000:00:18.7:   bridge window [mem 0xfb500000-0xfb5fffff]
+[    2.006375] pci 0000:00:18.7:   bridge window [mem 0xe5b00000-0xe5bfffff 64bit pref]
+[    2.006494] pci_bus 0000:00: resource 4 [mem 0x000a0000-0x000bffff window]
+[    2.006495] pci_bus 0000:00: resource 5 [mem 0x000d0000-0x000d3fff window]
+[    2.006495] pci_bus 0000:00: resource 6 [mem 0x000d4000-0x000d7fff window]
+[    2.006496] pci_bus 0000:00: resource 7 [mem 0x000d8000-0x000dbfff window]
+[    2.006497] pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]
+[    2.006497] pci_bus 0000:00: resource 9 [io  0x0000-0x0cf7 window]
+[    2.006498] pci_bus 0000:00: resource 10 [io  0x0d00-0xfeff window]
+[    2.006499] pci_bus 0000:02: resource 0 [io  0x2000-0x3fff]
+[    2.006500] pci_bus 0000:02: resource 1 [mem 0xfd500000-0xfdffffff]
+[    2.006500] pci_bus 0000:02: resource 2 [mem 0xe7b00000-0xe7ffffff 64bit pref]
+[    2.006501] pci_bus 0000:02: resource 4 [mem 0x000a0000-0x000bffff window]
+[    2.006501] pci_bus 0000:02: resource 5 [mem 0x000d0000-0x000d3fff window]
+[    2.006502] pci_bus 0000:02: resource 6 [mem 0x000d4000-0x000d7fff window]
+[    2.006502] pci_bus 0000:02: resource 7 [mem 0x000d8000-0x000dbfff window]
+[    2.006503] pci_bus 0000:02: resource 8 [mem 0xc0000000-0xfebfffff window]
+[    2.006503] pci_bus 0000:02: resource 9 [io  0x0000-0x0cf7 window]
+[    2.006504] pci_bus 0000:02: resource 10 [io  0x0d00-0xfeff window]
+[    2.006505] pci_bus 0000:03: resource 0 [io  0x4000-0x4fff]
+[    2.006505] pci_bus 0000:03: resource 1 [mem 0xfd400000-0xfd4fffff]
+[    2.006506] pci_bus 0000:03: resource 2 [mem 0xe7a00000-0xe7afffff 64bit pref]
+[    2.006507] pci_bus 0000:04: resource 0 [io  0x8000-0x8fff]
+[    2.006507] pci_bus 0000:04: resource 1 [mem 0xfd000000-0xfd0fffff]
+[    2.006508] pci_bus 0000:04: resource 2 [mem 0xe7600000-0xe76fffff 64bit pref]
+[    2.006508] pci_bus 0000:05: resource 0 [io  0xc000-0xcfff]
+[    2.006509] pci_bus 0000:05: resource 1 [mem 0xfcc00000-0xfccfffff]
+[    2.006509] pci_bus 0000:05: resource 2 [mem 0xe7200000-0xe72fffff 64bit pref]
+[    2.006510] pci_bus 0000:06: resource 1 [mem 0xfc800000-0xfc8fffff]
+[    2.006511] pci_bus 0000:06: resource 2 [mem 0xe6e00000-0xe6efffff 64bit pref]
+[    2.006511] pci_bus 0000:07: resource 1 [mem 0xfc400000-0xfc4fffff]
+[    2.006512] pci_bus 0000:07: resource 2 [mem 0xe6a00000-0xe6afffff 64bit pref]
+[    2.006512] pci_bus 0000:08: resource 1 [mem 0xfc000000-0xfc0fffff]
+[    2.006513] pci_bus 0000:08: resource 2 [mem 0xe6600000-0xe66fffff 64bit pref]
+[    2.006513] pci_bus 0000:09: resource 1 [mem 0xfbc00000-0xfbcfffff]
+[    2.006514] pci_bus 0000:09: resource 2 [mem 0xe6200000-0xe62fffff 64bit pref]
+[    2.006515] pci_bus 0000:0a: resource 1 [mem 0xfb800000-0xfb8fffff]
+[    2.006515] pci_bus 0000:0a: resource 2 [mem 0xe5e00000-0xe5efffff 64bit pref]
+[    2.006516] pci_bus 0000:0b: resource 0 [io  0x5000-0x5fff]
+[    2.006516] pci_bus 0000:0b: resource 1 [mem 0xfd300000-0xfd3fffff]
+[    2.006517] pci_bus 0000:0b: resource 2 [mem 0xe7900000-0xe79fffff 64bit pref]
+[    2.006517] pci_bus 0000:0c: resource 0 [io  0x9000-0x9fff]
+[    2.006518] pci_bus 0000:0c: resource 1 [mem 0xfcf00000-0xfcffffff]
+[    2.006518] pci_bus 0000:0c: resource 2 [mem 0xe7500000-0xe75fffff 64bit pref]
+[    2.006519] pci_bus 0000:0d: resource 0 [io  0xd000-0xdfff]
+[    2.006519] pci_bus 0000:0d: resource 1 [mem 0xfcb00000-0xfcbfffff]
+[    2.006520] pci_bus 0000:0d: resource 2 [mem 0xe7100000-0xe71fffff 64bit pref]
+[    2.006521] pci_bus 0000:0e: resource 1 [mem 0xfc700000-0xfc7fffff]
+[    2.006521] pci_bus 0000:0e: resource 2 [mem 0xe6d00000-0xe6dfffff 64bit pref]
+[    2.006522] pci_bus 0000:0f: resource 1 [mem 0xfc300000-0xfc3fffff]
+[    2.006522] pci_bus 0000:0f: resource 2 [mem 0xe6900000-0xe69fffff 64bit pref]
+[    2.006523] pci_bus 0000:10: resource 1 [mem 0xfbf00000-0xfbffffff]
+[    2.006523] pci_bus 0000:10: resource 2 [mem 0xe6500000-0xe65fffff 64bit pref]
+[    2.006524] pci_bus 0000:11: resource 1 [mem 0xfbb00000-0xfbbfffff]
+[    2.006524] pci_bus 0000:11: resource 2 [mem 0xe6100000-0xe61fffff 64bit pref]
+[    2.006525] pci_bus 0000:12: resource 1 [mem 0xfb700000-0xfb7fffff]
+[    2.006526] pci_bus 0000:12: resource 2 [mem 0xe5d00000-0xe5dfffff 64bit pref]
+[    2.006526] pci_bus 0000:13: resource 0 [io  0x6000-0x6fff]
+[    2.006527] pci_bus 0000:13: resource 1 [mem 0xfd200000-0xfd2fffff]
+[    2.006527] pci_bus 0000:13: resource 2 [mem 0xe7800000-0xe78fffff 64bit pref]
+[    2.006528] pci_bus 0000:14: resource 0 [io  0xa000-0xafff]
+[    2.006528] pci_bus 0000:14: resource 1 [mem 0xfce00000-0xfcefffff]
+[    2.006529] pci_bus 0000:14: resource 2 [mem 0xe7400000-0xe74fffff 64bit pref]
+[    2.006529] pci_bus 0000:15: resource 0 [io  0xe000-0xefff]
+[    2.006530] pci_bus 0000:15: resource 1 [mem 0xfca00000-0xfcafffff]
+[    2.006530] pci_bus 0000:15: resource 2 [mem 0xe7000000-0xe70fffff 64bit pref]
+[    2.006531] pci_bus 0000:16: resource 1 [mem 0xfc600000-0xfc6fffff]
+[    2.006532] pci_bus 0000:16: resource 2 [mem 0xe6c00000-0xe6cfffff 64bit pref]
+[    2.006532] pci_bus 0000:17: resource 1 [mem 0xfc200000-0xfc2fffff]
+[    2.006533] pci_bus 0000:17: resource 2 [mem 0xe6800000-0xe68fffff 64bit pref]
+[    2.006533] pci_bus 0000:18: resource 1 [mem 0xfbe00000-0xfbefffff]
+[    2.006534] pci_bus 0000:18: resource 2 [mem 0xe6400000-0xe64fffff 64bit pref]
+[    2.006535] pci_bus 0000:19: resource 1 [mem 0xfba00000-0xfbafffff]
+[    2.006535] pci_bus 0000:19: resource 2 [mem 0xe6000000-0xe60fffff 64bit pref]
+[    2.006536] pci_bus 0000:1a: resource 1 [mem 0xfb600000-0xfb6fffff]
+[    2.006536] pci_bus 0000:1a: resource 2 [mem 0xe5c00000-0xe5cfffff 64bit pref]
+[    2.006537] pci_bus 0000:1b: resource 0 [io  0x7000-0x7fff]
+[    2.006537] pci_bus 0000:1b: resource 1 [mem 0xfd100000-0xfd1fffff]
+[    2.006538] pci_bus 0000:1b: resource 2 [mem 0xe7700000-0xe77fffff 64bit pref]
+[    2.006539] pci_bus 0000:1c: resource 0 [io  0xb000-0xbfff]
+[    2.006539] pci_bus 0000:1c: resource 1 [mem 0xfcd00000-0xfcdfffff]
+[    2.006540] pci_bus 0000:1c: resource 2 [mem 0xe7300000-0xe73fffff 64bit pref]
+[    2.006540] pci_bus 0000:1d: resource 1 [mem 0xfc900000-0xfc9fffff]
+[    2.006541] pci_bus 0000:1d: resource 2 [mem 0xe6f00000-0xe6ffffff 64bit pref]
+[    2.006541] pci_bus 0000:1e: resource 1 [mem 0xfc500000-0xfc5fffff]
+[    2.006542] pci_bus 0000:1e: resource 2 [mem 0xe6b00000-0xe6bfffff 64bit pref]
+[    2.006542] pci_bus 0000:1f: resource 1 [mem 0xfc100000-0xfc1fffff]
+[    2.006543] pci_bus 0000:1f: resource 2 [mem 0xe6700000-0xe67fffff 64bit pref]
+[    2.006543] pci_bus 0000:20: resource 1 [mem 0xfbd00000-0xfbdfffff]
+[    2.006544] pci_bus 0000:20: resource 2 [mem 0xe6300000-0xe63fffff 64bit pref]
+[    2.006545] pci_bus 0000:21: resource 1 [mem 0xfb900000-0xfb9fffff]
+[    2.006545] pci_bus 0000:21: resource 2 [mem 0xe5f00000-0xe5ffffff 64bit pref]
+[    2.006546] pci_bus 0000:22: resource 1 [mem 0xfb500000-0xfb5fffff]
+[    2.006546] pci_bus 0000:22: resource 2 [mem 0xe5b00000-0xe5bfffff 64bit pref]
+[    2.006765]  net/socket.c sock_register (2649) NET: Registered protocol family 2
+[    2.007538]  mm/page_alloc.c alloc_large_system_hash (7692) tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes)
+[    2.007690]  mm/page_alloc.c alloc_large_system_hash (7692) TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    2.008285]  mm/page_alloc.c alloc_large_system_hash (7692) TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    2.012151]  net/ipv4/tcp.c tcp_init (3934) TCP: Hash tables configured (established 32768 bind 32768)
+[    2.023704]  mm/page_alloc.c alloc_large_system_hash (7692) UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    2.024045]  mm/page_alloc.c alloc_large_system_hash (7692) UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    2.024880]  net/socket.c sock_register (2649) NET: Registered protocol family 1
+[    2.024959] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    2.025119] pci 0000:00:0f.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    2.026299] PCI: CLS mismatch (32 != 64), using 64 bytes
+[    2.027044] Unpacking initramfs...
+[   16.543055]  mm/page_alloc.c free_reserved_area (7061) Freeing initrd memory: 363620K
+[   16.543257] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[   16.543389]  kernel/dma/swiotlb.c swiotlb_print_info (173) software IO TLB: mapped [mem 0xbbed0000-0xbfed0000] (64MB)
+[   16.543661] Scanning for low memory corruption every 60 seconds
+[   16.546415]  certs/system_keyring.c system_trusted_keyring_init (98) Initialise system trusted keyrings
+[   16.546513]  security/keys/key.c register_key_type (1132) Key type blacklist registered
+[   16.546810]  mm/workingset.c workingset_init (522) workingset: timestamp_bits=36 max_order=20 bucket_order=0
+[   16.555577]  mm/zbud.c init_zbud (613) zbud: loaded
+[   16.569869]  fs/squashfs/super.c init_squashfs_fs (454) squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   16.572358] fuse init (API version 7.27)
+[   16.958046]  security/keys/key.c register_key_type (1132) Key type asymmetric registered
+[   16.958129]  crypto/asymmetric_keys/asymmetric_type.c register_asymmetric_key_parser (576) Asymmetric key parser 'x509' registered
+[   16.958239] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[   16.958487] io scheduler noop registered
+[   16.958530] io scheduler deadline registered
+[   16.958602] io scheduler cfq registered (default)
+[   16.959282] pcieport 0000:00:15.0: Signaling PME with IRQ 24
+[   16.959396] pciehp 0000:00:15.0:pcie004: Slot #160 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.960275] pcieport 0000:00:15.1: Signaling PME with IRQ 25
+[   16.960385] pciehp 0000:00:15.1:pcie004: Slot #161 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.961293] pcieport 0000:00:15.2: Signaling PME with IRQ 26
+[   16.961402] pciehp 0000:00:15.2:pcie004: Slot #162 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.962421] pcieport 0000:00:15.3: Signaling PME with IRQ 27
+[   16.962536] pciehp 0000:00:15.3:pcie004: Slot #163 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.963791] pcieport 0000:00:15.4: Signaling PME with IRQ 28
+[   16.963908] pciehp 0000:00:15.4:pcie004: Slot #164 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.964905] pcieport 0000:00:15.5: Signaling PME with IRQ 29
+[   16.965029] pciehp 0000:00:15.5:pcie004: Slot #165 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.966019] pcieport 0000:00:15.6: Signaling PME with IRQ 30
+[   16.966133] pciehp 0000:00:15.6:pcie004: Slot #166 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.967128] pcieport 0000:00:15.7: Signaling PME with IRQ 31
+[   16.967240] pciehp 0000:00:15.7:pcie004: Slot #167 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.968278] pcieport 0000:00:16.0: Signaling PME with IRQ 32
+[   16.968392] pciehp 0000:00:16.0:pcie004: Slot #192 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.970526] pcieport 0000:00:16.1: Signaling PME with IRQ 33
+[   16.970641] pciehp 0000:00:16.1:pcie004: Slot #193 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.971640] pcieport 0000:00:16.2: Signaling PME with IRQ 34
+[   16.971752] pciehp 0000:00:16.2:pcie004: Slot #194 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.972643] pcieport 0000:00:16.3: Signaling PME with IRQ 35
+[   16.972753] pciehp 0000:00:16.3:pcie004: Slot #195 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.973644] pcieport 0000:00:16.4: Signaling PME with IRQ 36
+[   16.973753] pciehp 0000:00:16.4:pcie004: Slot #196 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.974687] pcieport 0000:00:16.5: Signaling PME with IRQ 37
+[   16.974952] pciehp 0000:00:16.5:pcie004: Slot #197 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.975942] pcieport 0000:00:16.6: Signaling PME with IRQ 38
+[   16.976055] pciehp 0000:00:16.6:pcie004: Slot #198 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.977025] pcieport 0000:00:16.7: Signaling PME with IRQ 39
+[   16.977144] pciehp 0000:00:16.7:pcie004: Slot #199 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.978136] pcieport 0000:00:17.0: Signaling PME with IRQ 40
+[   16.978248] pciehp 0000:00:17.0:pcie004: Slot #224 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.979240] pcieport 0000:00:17.1: Signaling PME with IRQ 41
+[   16.979356] pciehp 0000:00:17.1:pcie004: Slot #225 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.980421] pcieport 0000:00:17.2: Signaling PME with IRQ 42
+[   16.980560] pciehp 0000:00:17.2:pcie004: Slot #226 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.982498] pcieport 0000:00:17.3: Signaling PME with IRQ 43
+[   16.982628] pciehp 0000:00:17.3:pcie004: Slot #227 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.983696] pcieport 0000:00:17.4: Signaling PME with IRQ 44
+[   16.983813] pciehp 0000:00:17.4:pcie004: Slot #228 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.984745] pcieport 0000:00:17.5: Signaling PME with IRQ 45
+[   16.984862] pciehp 0000:00:17.5:pcie004: Slot #229 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.985802] pcieport 0000:00:17.6: Signaling PME with IRQ 46
+[   16.985914] pciehp 0000:00:17.6:pcie004: Slot #230 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.986847] pcieport 0000:00:17.7: Signaling PME with IRQ 47
+[   16.986966] pciehp 0000:00:17.7:pcie004: Slot #231 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.987923] pcieport 0000:00:18.0: Signaling PME with IRQ 48
+[   16.988036] pciehp 0000:00:18.0:pcie004: Slot #256 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.988998] pcieport 0000:00:18.1: Signaling PME with IRQ 49
+[   16.989113] pciehp 0000:00:18.1:pcie004: Slot #257 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.990171] pcieport 0000:00:18.2: Signaling PME with IRQ 50
+[   16.990287] pciehp 0000:00:18.2:pcie004: Slot #258 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.991284] pcieport 0000:00:18.3: Signaling PME with IRQ 51
+[   16.991397] pciehp 0000:00:18.3:pcie004: Slot #259 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.992496] pcieport 0000:00:18.4: Signaling PME with IRQ 52
+[   16.992611] pciehp 0000:00:18.4:pcie004: Slot #260 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.993672] pcieport 0000:00:18.5: Signaling PME with IRQ 53
+[   16.993784] pciehp 0000:00:18.5:pcie004: Slot #261 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.994779] pcieport 0000:00:18.6: Signaling PME with IRQ 54
+[   16.994892] pciehp 0000:00:18.6:pcie004: Slot #262 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.995929] pcieport 0000:00:18.7: Signaling PME with IRQ 55
+[   16.996044] pciehp 0000:00:18.7:pcie004: Slot #263 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+
+[   16.997740] intel_idle: Please enable MWAIT in BIOS SETUP
+[   16.998130] ACPI: AC Adapter [ACAD] (on-line)
+[   16.998335]  drivers/input/input.c input_register_device (2153) input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[   16.998465] ACPI: Power Button [PWRF]
+[   17.000091]  drivers/tty/serial/8250/8250_core.c serial8250_init (1139) Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[   17.023031]  drivers/tty/serial/serial_core.c uart_report_port (2275) 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[   17.074549] loop: module loaded
+[   17.075299] ata_piix 0000:00:07.1: version 2.13
+[   17.076035] scsi host0: ata_piix
+[   17.076442] scsi host1: ata_piix
+[   17.076506] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x1060 irq 14
+[   17.076569] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x1068 irq 15
+[   17.076698]  drivers/net/phy/mdio_bus.c __mdiobus_register (422) libphy: Fixed MDIO Bus: probed
+[   17.076777]  drivers/net/tun.c tun_init (3486) tun: Universal TUN/TAP device driver, 1.6
+[   17.076997]  drivers/net/ppp/ppp_generic.c ppp_init (1174) PPP generic driver version 2.4.2
+[   17.077211] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   17.077276]  drivers/usb/host/ehci-pci.c ehci_pci_init (413) ehci-pci: EHCI PCI platform driver
+[   17.077738] ehci-pci 0000:02:03.0: EHCI Host Controller
+[   17.077794] ehci-pci 0000:02:03.0: new USB bus registered, assigned bus number 1
+[   17.078023] ehci-pci 0000:02:03.0: cache line size of 64 is not supported
+[   17.078060] ehci-pci 0000:02:03.0: irq 17, io mem 0xfd5ef000
+[   17.094126] ehci-pci 0000:02:03.0: USB 2.0 started, EHCI 1.00
+[   17.094706] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[   17.095041] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   17.095332] usb usb1: Product: EHCI Host Controller
+[   17.095538] usb usb1: Manufacturer: Linux 4.19.132 ehci_hcd
+[   17.095766] usb usb1: SerialNumber: 0000:02:03.0
+[   17.096504] hub 1-0:1.0: USB hub found
+[   17.096702] hub 1-0:1.0: 6 ports detected
+[   17.097536]  drivers/usb/host/ehci-platform.c ehci_platform_init (513) ehci-platform: EHCI generic platform driver
+[   17.097959] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[   17.098216]  drivers/usb/host/ohci-pci.c ohci_pci_init (310) ohci-pci: OHCI PCI platform driver
+[   17.098586]  drivers/usb/host/ohci-platform.c ohci_platform_init (347) ohci-platform: OHCI generic platform driver
+[   17.098987] uhci_hcd: USB Universal Host Controller Interface driver
+[   17.100776] uhci_hcd 0000:02:00.0: UHCI Host Controller
+[   17.101016] uhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 2
+[   17.101495] uhci_hcd 0000:02:00.0: detected 2 ports
+[   17.102400] uhci_hcd 0000:02:00.0: irq 18, io base 0x00002080
+[   17.103020] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 4.19
+[   17.103353] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   17.103643] usb usb2: Product: UHCI Host Controller
+[   17.103849] usb usb2: Manufacturer: Linux 4.19.132 uhci_hcd
+[   17.104076] usb usb2: SerialNumber: 0000:02:00.0
+[   17.104800] hub 2-0:1.0: USB hub found
+[   17.104998] hub 2-0:1.0: 2 ports detected
+[   17.105801]  drivers/input/serio/i8042-x86ia64io.h i8042_pnp_init (1097) i8042: PNP: PS/2 Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq 1,12
+[   17.108320] serio: i8042 KBD port at 0x60,0x64 irq 1
+[   17.108521] serio: i8042 AUX port at 0x60,0x64 irq 12
+[   17.109339]  drivers/input/mousedev.c mousedev_init (1115) mousedev: PS/2 mouse device common for all mice
+[   17.114940]  drivers/input/input.c input_register_device (2153) input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[   17.131166] rtc_cmos 00:01: registered as rtc0
+[   17.131234] rtc_cmos 00:01: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+[   17.131315] i2c /dev entries driver
+[   17.131403]  drivers/md/dm-uevent.c dm_uevent_init (211) device-mapper: uevent: version 1.0.3
+[   17.131643]  drivers/md/dm-ioctl.c dm_interface_init (1978) device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[   17.132165]  drivers/leds/trigger/ledtrig-cpu.c ledtrig_cpu_init (165) ledtrig-cpu: registered to indicate activity on CPUs
+[   17.132482]  net/socket.c sock_register (2649) NET: Registered protocol family 10
+[   17.143429]  net/ipv6/seg6.c seg6_init (467) Segment Routing with IPv6
+[   17.143521]  net/socket.c sock_register (2649) NET: Registered protocol family 17
+[   17.143808]  security/keys/key.c register_key_type (1132) Key type dns_resolver registered
+[   17.144467]  arch/x86/kernel/cpu/mcheck/mce.c mcheck_late_init (2473) mce: Using 0 MCE banks
+[   17.144557]  drivers/ras/cec.c cec_init (520) RAS: Correctable Errors collector initialized.
+[   17.144641] sched_clock: Marking stable (17068541294, 75907948)->(17340547994, -196098752)
+[   17.148114]  kernel/taskstats.c taskstats_init (701) registered taskstats version 1
+[   17.148196]  certs/system_keyring.c load_system_certificate_list (144) Loading compiled-in X.509 certificates
+[   17.149084]  certs/system_keyring.c load_system_certificate_list (176) Loaded X.509 cert 'Build time autogenerated kernel key: 6fe08136bc4bab2c2ccb299e702c529ff55aeda5'
+[   17.149238]  mm/zswap.c init_zswap (1336) zswap: loaded using pool lzo/zbud
+[   17.151237]  security/keys/key.c register_key_type (1132) Key type big_key registered
+[   17.151316]  security/keys/key.c register_key_type (1132) Key type trusted registered
+[   17.153266]  security/keys/key.c register_key_type (1132) Key type encrypted registered
+[   17.153345] AppArmor: AppArmor sha1 policy hashing enabled
+[   17.153403]  security/integrity/ima/ima_init.c ima_init (113) ima: No TPM chip found, activating TPM-bypass!
+[   17.153492]  security/integrity/ima/ima_crypto.c ima_init_crypto (76) ima: Allocated hash algorithm: sha1
+[   17.153583]  security/integrity/evm/evm_main.c evm_init_config (77) evm: Initialising EVM extended attributes:
+[   17.153670]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.selinux
+[   17.153743]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.SMACK64
+[   17.153817]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.SMACK64EXEC
+[   17.153893]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.SMACK64TRANSMUTE
+[   17.153972]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.SMACK64MMAP
+[   17.154049]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.apparmor
+[   17.154165]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.ima
+[   17.154464]  security/integrity/evm/evm_main.c evm_init_config (79) evm: security.capability
+[   17.154540]  security/integrity/evm/evm_main.c evm_init_config (87) evm: HMAC attrs: 0x1
+[   17.189134]  drivers/base/power/trace.c late_resume_init (286)   Magic number: 0:219:358
+[   17.189565] rtc_cmos 00:01: setting system clock to 2020-12-30 01:23:00 UTC (1609291380)
+[   17.261493]  mm/page_alloc.c free_reserved_area (7061) Freeing unused decrypted memory: 2040K
+[   17.262584]  mm/page_alloc.c free_reserved_area (7061) Freeing unused kernel image memory: 2492K
+[   17.274759] Write protecting the kernel read-only data: 22528k
+[   17.275763]  mm/page_alloc.c free_reserved_area (7061) Freeing unused kernel image memory: 2008K
+[   17.276143]  mm/page_alloc.c free_reserved_area (7061) Freeing unused kernel image memory: 1452K
+[   17.282632]  arch/x86/mm/dump_pagetables.c ptdump_walk_pgd_level_core (570) x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[   17.282793]  arch/x86/mm/dump_pagetables.c ptdump_walk_user_pgd_level_checkwx (597) x86/mm: Checking user space page tables
+[   17.288860]  arch/x86/mm/dump_pagetables.c ptdump_walk_pgd_level_core (570) x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[   17.288970]  init/main.c run_init_process (1005) Run /init as init process
+[   17.360036]  net/socket.c __sys_bind (1474) YWY
+[   17.360040]  net/socket.c __sys_listen (1508) YWY
+[   17.360104]  net/socket.c __sys_bind (1474) YWY
+[   17.360871] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   17.361036] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   17.361108] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[   17.379827]  net/socket.c __sys_bind (1474) YWY
+[   17.380181]  net/socket.c __sys_bind (1474) YWY
+[   17.380384]  net/socket.c __sys_bind (1474) YWY
+[   17.381078]  net/socket.c __sys_bind (1474) YWY
+[   17.381323]  net/socket.c __sys_bind (1474) YWY
+[   17.382632]  net/socket.c __sys_bind (1474) YWY
+[   17.383119]  net/socket.c __sys_bind (1474) YWY
+[   17.383992]  net/socket.c __sys_bind (1474) YWY
+[   17.384144]  net/socket.c __sys_bind (1474) YWY
+[   17.384344]  net/socket.c __sys_bind (1474) YWY
+[   17.385410]  net/socket.c __sys_bind (1474) YWY
+[   17.386570]  net/socket.c __sys_bind (1474) YWY
+[   17.399181]  net/socket.c __sys_bind (1474) YWY
+[   17.400382]  net/socket.c __sys_bind (1474) YWY
+[   17.400665]  net/socket.c __sys_bind (1474) YWY
+[   17.449433] usb 2-1: new full-speed USB device number 2 using uhci_hcd
+[   17.543329]  net/socket.c __sys_bind (1474) YWY
+[   17.543768]  net/socket.c __sys_bind (1474) YWY
+[   17.544222]  net/socket.c __sys_bind (1474) YWY
+[   17.544358]  net/socket.c __sys_bind (1474) YWY
+[   17.544499]  net/socket.c __sys_bind (1474) YWY
+[   17.544646]  net/socket.c __sys_bind (1474) YWY
+[   17.544777]  net/socket.c __sys_bind (1474) YWY
+[   17.544912]  net/socket.c __sys_bind (1474) YWY
+[   17.545052]  net/socket.c __sys_bind (1474) YWY
+[   17.545189]  net/socket.c __sys_bind (1474) YWY
+[   17.545320]  net/socket.c __sys_bind (1474) YWY
+[   17.545552]  net/socket.c __sys_bind (1474) YWY
+[   17.569022]  arch/x86/kernel/tsc.c tsc_refine_calibration_work (1319) tsc: Refined TSC clocksource calibration: 3000.006 MHz
+[   17.569218]  kernel/time/clocksource.c __clocksource_update_freq_scale (927) clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2b3e4b16716, max_idle_ns: 440795256380 ns
+[   17.570980]  kernel/time/clocksource.c __clocksource_select (796) clocksource: Switched to clocksource tsc
+[   17.578707]  net/socket.c __sys_bind (1474) YWY
+[   17.579609]  net/socket.c __sys_bind (1474) YWY
+[   17.579777]  net/socket.c __sys_bind (1474) YWY
+[   17.580012]  net/socket.c __sys_bind (1474) YWY
+[   17.633748]  drivers/net/ethernet/intel/e1000/e1000_main.c e1000_init_module (226) e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[   17.633946]  drivers/net/ethernet/intel/e1000/e1000_main.c e1000_init_module (228) e1000: Copyright (c) 1999-2006 Intel Corporation.
+[   17.634776]  drivers/input/input.c input_register_device (2153) input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+[   17.635319]  drivers/input/input.c input_register_device (2153) input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+[   17.636651] ahci 0000:02:05.0: version 3.0
+[   17.637447] ahci 0000:02:05.0: AHCI 0001.0300 32 slots 30 ports 6 Gbps 0x3fffffff impl SATA mode
+[   17.637531] ahci 0000:02:05.0: flags: 64bit ncq clo only 
+[   17.638218] Fusion MPT base driver 3.04.20
+[   17.638279] Copyright (c) 1999-2008 LSI Corporation
+[   17.639603] scsi host2: ahci
+[   17.639946] scsi host3: ahci
+[   17.644128] Fusion MPT SPI Host driver 3.04.20
+[   17.644797] mptbase: ioc0: Initiating bringup
+[   17.649029] scsi host4: ahci
+[   17.649628] scsi host5: ahci
+[   17.650380] scsi host6: ahci
+[   17.650595] scsi host7: ahci
+[   17.653229] scsi host8: ahci
+[   17.654924]  net/socket.c __sys_accept4 (1548) YWY
+[   17.655051] scsi host9: ahci
+[   17.655338] scsi host10: ahci
+[   17.655547] scsi host11: ahci
+[   17.655749] scsi host12: ahci
+[   17.655921] scsi host13: ahci
+[   17.656145] scsi host14: ahci
+[   17.656352] scsi host15: ahci
+[   17.656535] scsi host16: ahci
+[   17.656715] scsi host17: ahci
+[   17.656931] scsi host18: ahci
+[   17.657140] scsi host19: ahci
+[   17.657373] scsi host20: ahci
+[   17.657555] scsi host21: ahci
+[   17.657774] scsi host22: ahci
+[   17.658015] scsi host23: ahci
+[   17.658194] scsi host24: ahci
+[   17.658360] scsi host25: ahci
+[   17.658555] scsi host26: ahci
+[   17.658785] scsi host27: ahci
+[   17.659027] scsi host28: ahci
+[   17.659215] scsi host29: ahci
+[   17.659446] scsi host30: ahci
+[   17.659622] scsi host31: ahci
+[   17.659691] ata3: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee100 irq 56
+[   17.659761] ata4: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee180 irq 56
+[   17.659830] ata5: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee200 irq 56
+[   17.659898] ata6: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee280 irq 56
+[   17.659967] ata7: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee300 irq 56
+[   17.660035] ata8: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee380 irq 56
+[   17.660104] ata9: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee400 irq 56
+[   17.660172] ata10: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee480 irq 56
+[   17.660241] ata11: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee500 irq 56
+[   17.660310] ata12: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee580 irq 56
+[   17.660378] ata13: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee600 irq 56
+[   17.660447] ata14: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee680 irq 56
+[   17.660516] ata15: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee700 irq 56
+[   17.660584] ata16: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee780 irq 56
+[   17.660653] ata17: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee800 irq 56
+[   17.660722] ata18: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee880 irq 56
+[   17.660790] ata19: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee900 irq 56
+[   17.660859] ata20: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5ee980 irq 56
+[   17.660928] ata21: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eea00 irq 56
+[   17.661050] ata22: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eea80 irq 56
+[   17.661121] ata23: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eeb00 irq 56
+[   17.661190] ata24: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eeb80 irq 56
+[   17.661259] ata25: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eec00 irq 56
+[   17.661328] ata26: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eec80 irq 56
+[   17.661397] ata27: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eed00 irq 56
+[   17.661465] ata28: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eed80 irq 56
+[   17.661534] ata29: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eee00 irq 56
+[   17.661603] ata30: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eee80 irq 56
+[   17.661673] ata31: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eef00 irq 56
+[   17.661742] ata32: SATA max UDMA/133 abar m4096@0xfd5ee000 port 0xfd5eef80 irq 56
+[   17.706834] usb 2-1: New USB device found, idVendor=0e0f, idProduct=0003, bcdDevice= 1.03
+[   17.706917] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[   17.707233] usb 2-1: Product: VMware Virtual USB Mouse
+[   17.707284] usb 2-1: Manufacturer: VMware
+[   17.783920] ioc0: LSI53C1030 B0: Capabilities={Initiator}
+[   17.861029] usb 2-2: new full-speed USB device number 3 using uhci_hcd
+[   18.001047] ata3: SATA link down (SStatus 0 SControl 300)
+[   18.013707] ata14: SATA link down (SStatus 0 SControl 300)
+[   18.013791] ata16: SATA link down (SStatus 0 SControl 300)
+[   18.013872] ata9: SATA link down (SStatus 0 SControl 300)
+[   18.013952] ata5: SATA link down (SStatus 0 SControl 300)
+[   18.014026] ata7: SATA link down (SStatus 0 SControl 300)
+[   18.014095] ata4: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[   18.014214] ata8: SATA link down (SStatus 0 SControl 300)
+[   18.014300] ata6: SATA link down (SStatus 0 SControl 300)
+[   18.014383] ata11: SATA link down (SStatus 0 SControl 300)
+[   18.014459] ata13: SATA link down (SStatus 0 SControl 300)
+[   18.014522] ata12: SATA link down (SStatus 0 SControl 300)
+[   18.014585] ata4.00: ATAPI: VMware Virtual SATA CDRW Drive, 00000001, max UDMA/33
+[   18.014706] ata10: SATA link down (SStatus 0 SControl 300)
+[   18.014789] ata15: SATA link down (SStatus 0 SControl 300)
+[   18.014931] ata4.00: configured for UDMA/33
+[   18.015321] scsi 3:0:0:0: CD-ROM            NECVMWar VMware SATA CD01 1.00 PQ: 0 ANSI: 5
+[   18.016865] ata17: SATA link down (SStatus 0 SControl 300)
+[   18.016931] ata18: SATA link down (SStatus 0 SControl 300)
+[   18.020197] ata23: SATA link down (SStatus 0 SControl 300)
+[   18.020274] ata24: SATA link down (SStatus 0 SControl 300)
+[   18.020342] ata20: SATA link down (SStatus 0 SControl 300)
+[   18.020408] ata21: SATA link down (SStatus 0 SControl 300)
+[   18.020472] ata25: SATA link down (SStatus 0 SControl 300)
+[   18.020552] ata19: SATA link down (SStatus 0 SControl 300)
+[   18.020624] ata22: SATA link down (SStatus 0 SControl 300)
+[   18.023286] ata31: SATA link down (SStatus 0 SControl 300)
+[   18.023359] ata32: SATA link down (SStatus 0 SControl 300)
+[   18.023426] ata29: SATA link down (SStatus 0 SControl 300)
+[   18.023494] ata26: SATA link down (SStatus 0 SControl 300)
+[   18.023558] ata30: SATA link down (SStatus 0 SControl 300)
+[   18.023628] ata27: SATA link down (SStatus 0 SControl 300)
+[   18.023698] ata28: SATA link down (SStatus 0 SControl 300)
+[   18.026057] scsi host32: ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=1, MaxQ=128, IRQ=17
+[   18.044544] usb 2-2: New USB device found, idVendor=0e0f, idProduct=0002, bcdDevice= 1.00
+[   18.044640] usb 2-2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[   18.044704] usb 2-2: Product: VMware Virtual USB Hub
+[   18.072100] sr 3:0:0:0: [sr0] scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+[   18.072236]  drivers/cdrom/cdrom.c register_cdrom (599) cdrom: Uniform CD-ROM driver Revision: 3.20
+[   18.072667] sr 3:0:0:0: Attached scsi CD-ROM sr0
+[   18.072860] sr 3:0:0:0: Attached scsi generic sg0 type 5
+[   18.095868] hub 2-2:1.0: USB hub found
+[   18.099622] hub 2-2:1.0: 7 ports detected
+[   18.138921] e1000 0000:02:01.0 eth0: (PCI:66MHz:32-bit) 00:0c:29:59:bd:2b
+[   18.139008] e1000 0000:02:01.0 eth0: Intel(R) PRO/1000 Network Connection
+[   18.140918]  net/socket.c __sys_bind (1474) YWY
+[   18.140928] e1000 0000:02:01.0 ens33: renamed from eth0
+[   18.173552]  drivers/usb/core/driver.c usb_register_driver (971) usbcore: registered new interface driver usbhid
+[   18.173658]  drivers/hid/usbhid/hid-core.c hid_init (1681) usbhid: USB HID core driver
+[   18.311271] scsi 32:0:0:0: Direct-Access     VMware,  VMware Virtual S 1.0  PQ: 0 ANSI: 2
+[   18.329570] scsi target32:0:0: Beginning Domain Validation
+[   18.330737] scsi target32:0:0: Domain Validation skipping write tests
+[   18.330800] scsi target32:0:0: Ending Domain Validation
+[   18.330897] scsi target32:0:0: FAST-40 WIDE SCSI 80.0 MB/s ST (25 ns, offset 127)
+[   18.334296] sd 32:0:0:0: Attached scsi generic sg1 type 0
+[   18.334459] sd 32:0:0:0: [sda] 209715200 512-byte logical blocks: (107 GB/100 GiB)
+[   18.334646] sd 32:0:0:0: [sda] Write Protect is off
+[   18.334697] sd 32:0:0:0: [sda] Mode Sense: 61 00 00 00
+[   18.334789] sd 32:0:0:0: [sda] Cache data unavailable
+[   18.334841] sd 32:0:0:0: [sda] Assuming drive cache: write through
+[   18.335970]  sda: sda1 sda2 < sda5 > sda3 sda4
+[   18.336838] sd 32:0:0:0: [sda] Attached SCSI disk
+[   18.481175]  drivers/char/random.c crng_fast_load (877) random: fast init done
+[   18.643817]  net/socket.c __sys_bind (1474) YWY
+[   18.644889]  net/socket.c __sys_bind (1474) YWY
+[   18.688692] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   18.688728]  net/socket.c __sys_bind (1474) YWY
+[   18.769335]  net/socket.c __sys_accept4 (1548) YWY
+[   20.214230]  drivers/char/random.c crng_reseed (962) random: crng init done
+[   20.214348]  drivers/char/random.c crng_reseed (970) random: 7 urandom warning(s) missed due to ratelimiting
+[   20.224530] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[   20.224713] systemd[1]: Detected virtualization vmware.
+[   20.224803] systemd[1]: Detected architecture x86-64.
+[   20.248556] systemd[1]: Set hostname to <ubuntu>.
+[   20.267251]  net/socket.c __sys_bind (1474) YWY
+[   20.842473]  net/socket.c __sys_bind (1474) YWY
+[   21.490488]  net/socket.c __sys_bind (1474) YWY
+[   21.490896]  net/socket.c __sys_bind (1474) YWY
+[   21.491139]  net/socket.c __sys_listen (1508) YWY
+[   21.705410] systemd[1]: Created slice User and Session Slice.
+[   21.705733]  net/socket.c __sys_bind (1474) YWY
+[   21.705750] systemd[1]: Listening on Syslog Socket.
+[   21.706016] systemd[1]: Reached target Remote File Systems (Pre).
+[   21.706205] systemd[1]: Reached target User and Group Name Lookups.
+[   21.706529] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[   21.706768]  net/socket.c __sys_bind (1474) YWY
+[   21.706774]  net/socket.c __sys_bind (1474) YWY
+[   21.706823]  net/socket.c __sys_listen (1508) YWY
+[   21.706876] systemd[1]: Listening on udev Control Socket.
+[   21.707123]  net/socket.c __sys_bind (1474) YWY
+[   21.707256]  net/socket.c __sys_bind (1474) YWY
+[   21.707431]  net/socket.c __sys_bind (1474) YWY
+[   21.707481]  net/socket.c __sys_listen (1508) YWY
+[   21.708491]  net/socket.c __sys_bind (1474) YWY
+[   21.708541]  net/socket.c __sys_listen (1508) YWY
+[   21.708590]  net/socket.c __sys_bind (1474) YWY
+[   21.772603]  net/socket.c __sys_bind (1474) YWY
+[   22.697866]  net/socket.c __sys_accept4 (1548) YWY
+[   22.698602]  net/socket.c __sys_accept4 (1548) YWY
+[   22.699381]  net/socket.c __sys_accept4 (1548) YWY
+[   22.700130]  net/socket.c __sys_accept4 (1548) YWY
+[   22.701361] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
+[   22.702242]  net/socket.c __sys_accept4 (1548) YWY
+[   22.703251]  net/socket.c __sys_accept4 (1548) YWY
+[   22.703894]  net/socket.c __sys_accept4 (1548) YWY
+[   22.964097]  net/socket.c __sys_accept4 (1548) YWY
+[   22.990999]  net/socket.c __sys_accept4 (1548) YWY
+[   22.991065]  net/socket.c __sys_accept4 (1548) YWY
+[   22.991173]  net/socket.c __sys_accept4 (1548) YWY
+[   22.991464]  net/socket.c __sys_accept4 (1548) YWY
+[   22.991484]  net/socket.c __sys_accept4 (1548) YWY
+[   23.128099]  net/socket.c __sys_accept4 (1548) YWY
+[   23.156658]  net/socket.c __sys_accept4 (1548) YWY
+[   23.241961]  net/socket.c __sys_accept4 (1548) YWY
+[   23.254159]  net/socket.c __sys_accept4 (1548) YWY
+[   23.291683] lp: driver loaded but no devices found
+[   23.332076]  drivers/char/ppdev.c ppdev_init (873) ppdev: user-space parallel port driver
+[   23.451755] systemd-journald[379]: Received request to flush runtime journal from PID 1
+[   23.451955]  net/socket.c __sys_accept4 (1548) YWY
+[   23.452112]  net/socket.c __sys_accept4 (1548) YWY
+[   23.452326]  net/socket.c __sys_accept4 (1548) YWY
+[   23.452474]  net/socket.c __sys_accept4 (1548) YWY
+[   23.452648]  net/socket.c __sys_accept4 (1548) YWY
+[   23.452868]  net/socket.c __sys_accept4 (1548) YWY
+[   23.453011]  net/socket.c __sys_accept4 (1548) YWY
+[   23.453235]  net/socket.c __sys_accept4 (1548) YWY
+[   23.453314]  net/socket.c __sys_accept4 (1548) YWY
+[   23.495647]  net/socket.c __sys_accept4 (1548) YWY
+[   23.496155]  net/socket.c __sys_accept4 (1548) YWY
+[   23.496896]  net/socket.c __sys_accept4 (1548) YWY
+[   23.497742]  net/socket.c __sys_accept4 (1548) YWY
+[   23.499178]  net/socket.c __sys_accept4 (1548) YWY
+[   23.520901]  net/socket.c __sys_accept4 (1548) YWY
+[   23.521298]  net/socket.c __sys_accept4 (1548) YWY
+[   23.617182]  net/socket.c __sys_accept4 (1548) YWY
+[   23.626565]  net/socket.c __sys_accept4 (1548) YWY
+[   23.800038]  net/socket.c __sys_accept4 (1548) YWY
+[   23.800878]  net/socket.c __sys_accept4 (1548) YWY
+[   23.802181]  net/socket.c __sys_accept4 (1548) YWY
+[   24.237546]  net/socket.c __sys_bind (1474) YWY
+[   24.237930]  net/socket.c __sys_bind (1474) YWY
+[   24.238159]  net/socket.c __sys_bind (1474) YWY
+[   24.238270]  net/socket.c __sys_bind (1474) YWY
+[   24.238390]  net/socket.c __sys_bind (1474) YWY
+[   24.238501]  net/socket.c __sys_bind (1474) YWY
+[   24.238611]  net/socket.c __sys_bind (1474) YWY
+[   24.238727]  net/socket.c __sys_bind (1474) YWY
+[   24.238823]  net/socket.c __sys_bind (1474) YWY
+[   24.239001]  net/socket.c __sys_bind (1474) YWY
+[   24.246567]  net/socket.c __sys_bind (1474) YWY
+[   24.246717]  net/socket.c __sys_bind (1474) YWY
+[   24.246938]  net/socket.c __sys_bind (1474) YWY
+[   24.250251]  net/socket.c __sys_bind (1474) YWY
+[   24.375313]  net/socket.c __sys_bind (1474) YWY
+[   24.375730]  net/socket.c __sys_bind (1474) YWY
+[   24.697365] piix4_smbus 0000:00:07.3: SMBus Host Controller not enabled!
+[   24.804076] vmw_vmci 0000:00:07.7: Found VMCI PCI device at 0x11080, irq 16
+[   24.804138] vmw_vmci 0000:00:07.7: Using capabilities 0xc
+[   24.805126]  drivers/misc/vmw_vmci/vmci_driver.c vmci_drv_init (75) Guest personality initialized and is active
+[   24.805275]  drivers/misc/vmw_vmci/vmci_host.c vmci_host_init (1020) VMCI host device registered (name=vmci, major=10, minor=57)
+[   24.805276]  drivers/misc/vmw_vmci/vmci_driver.c vmci_drv_init (88) Initialized host personality
+[   25.255071]  arch/x86/events/intel/rapl.c rapl_advertise (662) RAPL PMU: API unit is 2^-32 Joules, 5 fixed counters, 10737418240 ms ovfl timer
+[   25.255072]  arch/x86/events/intel/rapl.c rapl_advertise (667) RAPL PMU: hw unit of domain pp0-core 2^-0 Joules
+[   25.255072]  arch/x86/events/intel/rapl.c rapl_advertise (667) RAPL PMU: hw unit of domain package 2^-0 Joules
+[   25.255073]  arch/x86/events/intel/rapl.c rapl_advertise (667) RAPL PMU: hw unit of domain dram 2^-0 Joules
+[   25.255073]  arch/x86/events/intel/rapl.c rapl_advertise (667) RAPL PMU: hw unit of domain pp1-gpu 2^-0 Joules
+[   25.255074]  arch/x86/events/intel/rapl.c rapl_advertise (667) RAPL PMU: hw unit of domain psys 2^-0 Joules
+[   26.157988]  net/socket.c __sys_bind (1474) YWY
+[   26.157989]  net/socket.c __sys_bind (1474) YWY
+[   26.157996]  net/socket.c __sys_bind (1474) YWY
+[   26.157996]  net/socket.c __sys_bind (1474) YWY
+[   26.334214]  net/socket.c __sys_bind (1474) YWY
+[   26.334221]  net/socket.c __sys_bind (1474) YWY
+[   26.344019]  net/socket.c __sys_bind (1474) YWY
+[   26.344027]  net/socket.c __sys_bind (1474) YWY
+[   26.346998]  net/socket.c __sys_bind (1474) YWY
+[   26.347005]  net/socket.c __sys_bind (1474) YWY
+[   26.349962]  net/socket.c __sys_bind (1474) YWY
+[   26.349968]  net/socket.c __sys_bind (1474) YWY
+[   26.358033]  net/socket.c __sys_bind (1474) YWY
+[   26.358069]  net/socket.c __sys_bind (1474) YWY
+[   26.358868]  net/socket.c __sys_accept4 (1548) YWY
+[   26.404633]  mm/swapfile.c __do_sys_swapon (3287) Adding 998396k swap on /dev/sda5.  Priority:-2 extents:1 across:998396k FS
+[   26.463988]  net/socket.c __sys_accept4 (1548) YWY
+[   26.465237]  net/socket.c __sys_accept4 (1548) YWY
+[   26.466337] EXT4-fs (sda4): mounting ext2 file system using the ext4 subsystem
+[   26.467811] EXT4-fs (sda4): warning: mounting unchecked fs, running e2fsck is recommended
+[   26.468130] EXT4-fs (sda4): mounted filesystem without journal. Opts: (null)
+[   26.469684]  net/socket.c __sys_accept4 (1548) YWY
+[   26.518110]  net/socket.c __sys_accept4 (1548) YWY
+[   26.519319]  net/socket.c __sys_accept4 (1548) YWY
+[   26.522778]  net/socket.c __sys_accept4 (1548) YWY
+[   26.524397]  net/socket.c __sys_accept4 (1548) YWY
+[   26.524926]  net/socket.c __sys_accept4 (1548) YWY
+[   26.525494]  net/socket.c __sys_accept4 (1548) YWY
+[   26.679050]  net/socket.c __sys_accept4 (1548) YWY
+[   26.679696]  net/socket.c __sys_accept4 (1548) YWY
+[   26.683040]  net/socket.c __sys_accept4 (1548) YWY
+[   26.697290]  net/socket.c __sys_accept4 (1548) YWY
+[   26.728397]  net/socket.c __sys_accept4 (1548) YWY
+[   26.728718]  net/socket.c __sys_accept4 (1548) YWY
+[   26.730299]  net/socket.c __sys_accept4 (1548) YWY
+[   26.857505]  net/socket.c __sys_accept4 (1548) YWY
+[   26.859383]  net/socket.c __sys_accept4 (1548) YWY
+[   26.914017]  net/socket.c __sys_bind (1474) YWY
+[   27.126153]  net/socket.c __sys_accept4 (1548) YWY
+[   27.127187]  net/socket.c __sys_accept4 (1548) YWY
+[   27.128502]  net/socket.c __sys_accept4 (1548) YWY
+[   27.128710]  net/socket.c __sys_accept4 (1548) YWY
+[   27.129601]  net/socket.c __sys_accept4 (1548) YWY
+[   27.179839]  net/socket.c __sys_bind (1474) YWY
+[   27.181389]  net/socket.c __sys_bind (1474) YWY
+[   27.181860]  net/socket.c __sys_bind (1474) YWY
+[   27.182336]  net/socket.c __sys_bind (1474) YWY
+[   27.182708]  net/socket.c __sys_bind (1474) YWY
+[   27.183144]  net/socket.c __sys_bind (1474) YWY
+[   27.183415]  net/socket.c __sys_bind (1474) YWY
+[   27.183633]  net/socket.c __sys_bind (1474) YWY
+[   27.183805]  net/socket.c __sys_bind (1474) YWY
+[   27.197540]  net/socket.c __sys_accept4 (1548) YWY
+[   27.197701]  net/socket.c __sys_accept4 (1548) YWY
+[   27.199554]  net/socket.c __sys_accept4 (1548) YWY
+[   27.364262]  net/socket.c __sys_bind (1474) YWY
+[   27.420162]  net/socket.c __sys_bind (1474) YWY
+[   27.420222]  net/socket.c sock_register (2649) NET: Registered protocol family 40
+[   27.420508]  net/socket.c __sys_bind (1474) YWY
+[   27.495076]  net/socket.c __sys_bind (1474) YWY
+[   27.514346]  net/socket.c __sys_bind (1474) YWY
+[   27.515956]  net/socket.c __sys_accept4 (1548) YWY
+[   27.540869]  net/socket.c __sys_bind (1474) YWY
+[   27.763383]  net/socket.c __sys_accept4 (1548) YWY
+[   28.557599]  net/socket.c __sys_accept4 (1548) YWY
+[   28.662847]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291391.969:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/lightdm/lightdm-guest-session" pid=709 comm="apparmor_parser"
+[   28.662850]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291391.969:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/lightdm/lightdm-guest-session//chromium" pid=709 comm="apparmor_parser"
+[   28.704776]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.009:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince" pid=711 comm="apparmor_parser"
+[   28.704780]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.009:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince//sanitized_helper" pid=711 comm="apparmor_parser"
+[   28.704781]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.009:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer" pid=711 comm="apparmor_parser"
+[   28.704783]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.009:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer//sanitized_helper" pid=711 comm="apparmor_parser"
+[   28.704784]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.009:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-thumbnailer" pid=711 comm="apparmor_parser"
+[   28.704785]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.009:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-thumbnailer//sanitized_helper" pid=711 comm="apparmor_parser"
+[   28.727658]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.033:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=710 comm="apparmor_parser"
+[   28.727662]  kernel/audit.c kauditd_printk_skb (546) audit: type=1400 audit(1609291392.033:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=710 comm="apparmor_parser"
+[   28.930100]  net/socket.c __sys_bind (1474) YWY
+[   28.930103]  net/socket.c __sys_listen (1508) YWY
+[   28.930269]  net/socket.c __sys_bind (1474) YWY
+[   28.930271]  net/socket.c __sys_listen (1508) YWY
+[   28.930416]  net/socket.c __sys_bind (1474) YWY
+[   28.930419]  net/socket.c __sys_listen (1508) YWY
+[   28.930585]  net/socket.c __sys_bind (1474) YWY
+[   28.930588]  net/socket.c __sys_listen (1508) YWY
+[   28.930741]  net/socket.c __sys_bind (1474) YWY
+[   28.930744]  net/socket.c __sys_listen (1508) YWY
+[   28.930748]  net/socket.c __sys_bind (1474) YWY
+[   28.930750]  net/socket.c __sys_listen (1508) YWY
+[   28.983414]  net/socket.c __sys_bind (1474) YWY
+[   28.983440]  net/socket.c __sys_listen (1508) YWY
+[   28.985901]  net/socket.c __sys_accept4 (1548) YWY
+[   28.986162]  net/socket.c __sys_accept4 (1548) YWY
+[   28.987624]  net/socket.c __sys_accept4 (1548) YWY
+[   28.988203]  net/socket.c __sys_accept4 (1548) YWY
+[   28.988632]  net/socket.c __sys_accept4 (1548) YWY
+[   28.989205]  net/socket.c __sys_accept4 (1548) YWY
+[   28.990344]  net/socket.c __sys_accept4 (1548) YWY
+[   28.991292]  net/socket.c __sys_accept4 (1548) YWY
+[   28.991813]  net/socket.c __sys_accept4 (1548) YWY
+[   29.082515]  net/socket.c __sys_bind (1474) YWY
+[   29.082519]  net/socket.c __sys_listen (1508) YWY
+[   29.122951]  net/socket.c __sys_bind (1474) YWY
+[   29.123210]  net/socket.c __sys_bind (1474) YWY
+[   29.123429]  net/socket.c __sys_bind (1474) YWY
+[   29.123663]  net/socket.c __sys_bind (1474) YWY
+[   29.226502]  net/socket.c __sys_accept4 (1548) YWY
+[   29.228640]  net/socket.c __sys_accept4 (1548) YWY
+[   29.231013]  net/socket.c __sys_accept4 (1548) YWY
+[   29.231917]  net/socket.c __sys_accept4 (1548) YWY
+[   29.233195]  net/socket.c __sys_accept4 (1548) YWY
+[   29.233205]  net/socket.c __sys_accept4 (1548) YWY
+[   29.938907]  net/socket.c __sys_accept4 (1548) YWY
+[   29.938941]  net/socket.c __sys_accept4 (1548) YWY
+[   29.940790]  net/socket.c __sys_accept4 (1548) YWY
+[   29.941362]  net/socket.c __sys_accept4 (1548) YWY
+[   29.943863]  net/socket.c __sys_accept4 (1548) YWY
+[   29.944012]  net/socket.c __sys_accept4 (1548) YWY
+[   29.944140]  net/socket.c __sys_accept4 (1548) YWY
+[   29.944277]  net/socket.c __sys_accept4 (1548) YWY
+[   29.956805]  net/socket.c __sys_accept4 (1548) YWY
+[   30.021516]  net/socket.c __sys_accept4 (1548) YWY
+[   30.023993]  net/socket.c __sys_accept4 (1548) YWY
+[   30.024379]  net/socket.c __sys_accept4 (1548) YWY
+[   30.025505]  net/socket.c __sys_accept4 (1548) YWY
+[   30.026186]  net/socket.c __sys_accept4 (1548) YWY
+[   30.027250]  net/socket.c __sys_accept4 (1548) YWY
+[   30.027860]  net/socket.c __sys_accept4 (1548) YWY
+[   30.028931]  net/socket.c __sys_accept4 (1548) YWY
+[   30.029614]  net/socket.c __sys_accept4 (1548) YWY
+[   30.030761]  net/socket.c __sys_accept4 (1548) YWY
+[   30.032014]  net/socket.c __sys_accept4 (1548) YWY
+[   30.035352]  net/socket.c __sys_accept4 (1548) YWY
+[   30.036752]  net/socket.c __sys_accept4 (1548) YWY
+[   30.037983]  net/socket.c __sys_accept4 (1548) YWY
+[   30.190250]  net/socket.c __sys_accept4 (1548) YWY
+[   30.226437]  net/socket.c __sys_accept4 (1548) YWY
+[   30.272392]  net/socket.c __sys_accept4 (1548) YWY
+[   30.287657]  net/socket.c __sys_accept4 (1548) YWY
+[   30.349465]  net/socket.c __sys_bind (1474) YWY
+[   30.349509]  net/socket.c __sys_bind (1474) YWY
+[   30.481596]  net/socket.c __sys_accept4 (1548) YWY
+[   30.926034]  net/socket.c __sys_bind (1474) YWY
+[   31.024541]  net/socket.c __sys_accept4 (1548) YWY
+[   31.222514]  net/socket.c __sys_accept4 (1548) YWY
+[   31.305402]  net/socket.c __sys_bind (1474) YWY
+[   31.305417]  net/socket.c __sys_listen (1508) YWY
+[   31.305814]  net/socket.c __sys_accept4 (1548) YWY
+[   31.310676]  net/socket.c __sys_accept4 (1548) YWY
+[   31.378116]  net/socket.c __sys_bind (1474) YWY
+[   31.378133]  net/socket.c __sys_bind (1474) YWY
+[   31.378154]  net/socket.c __sys_bind (1474) YWY
+[   31.378159]  net/socket.c __sys_bind (1474) YWY
+[   31.378165]  net/socket.c __sys_bind (1474) YWY
+[   31.487502]  net/socket.c __sys_accept4 (1548) YWY
+[   32.088394]  net/socket.c __sys_accept4 (1548) YWY
+[   32.090473]  net/socket.c __sys_accept4 (1548) YWY
+[   32.169937]  net/socket.c __sys_accept4 (1548) YWY
+[   32.169980]  net/socket.c __sys_accept4 (1548) YWY
+[   32.171406]  net/socket.c __sys_accept4 (1548) YWY
+[   32.172007]  net/socket.c __sys_accept4 (1548) YWY
+[   32.186940]  net/socket.c __sys_accept4 (1548) YWY
+[   32.193307]  net/socket.c __sys_accept4 (1548) YWY
+[   32.801901]  net/socket.c __sys_bind (1474) YWY
+[   32.956712]  net/socket.c __sys_accept4 (1548) YWY
+[   32.957636]  net/socket.c __sys_accept4 (1548) YWY
+[   32.958035]  net/socket.c __sys_bind (1474) YWY
+[   32.958042]  net/socket.c __sys_listen (1508) YWY
+[   32.958052]  net/socket.c __sys_bind (1474) YWY
+[   32.958057]  net/socket.c __sys_listen (1508) YWY
+[   33.064330]  net/socket.c __sys_accept4 (1548) YWY
+[   33.089488]  net/socket.c __sys_accept4 (1548) YWY
+[   33.278590]  net/socket.c __sys_accept4 (1548) YWY
+[   33.278863]  net/socket.c __sys_accept4 (1548) YWY
+[   33.279112]  net/socket.c __sys_accept4 (1548) YWY
+[   33.283508]  net/socket.c __sys_bind (1474) YWY
+[   33.283916]  net/socket.c __sys_accept4 (1548) YWY
+[   33.285333]  net/socket.c __sys_accept4 (1548) YWY
+[   33.709840]  net/socket.c __sys_accept4 (1548) YWY
+[   33.845692]  net/socket.c __sys_accept4 (1548) YWY
+[   34.186745]  net/socket.c __sys_bind (1474) YWY
+[   34.186752]  net/socket.c __sys_bind (1474) YWY
+[   34.309844]  net/socket.c __sys_bind (1474) YWY
+[   34.313887]  net/socket.c __sys_accept4 (1548) YWY
+[   34.314952]  net/socket.c __sys_bind (1474) YWY
+[   34.314984]  net/socket.c __sys_bind (1474) YWY
+[   34.403511]  net/socket.c __sys_accept4 (1548) YWY
+[   34.722439]  net/socket.c __sys_accept4 (1548) YWY
+[   34.962227]  net/socket.c __sys_accept4 (1548) YWY
+[   34.970267]  net/socket.c __sys_accept4 (1548) YWY
+[   35.048219]  net/socket.c __sys_accept4 (1548) YWY
+[   35.065369]  net/socket.c __sys_bind (1474) YWY
+[   35.227853]  net/socket.c __sys_bind (1474) YWY
+[   35.295410]  net/socket.c __sys_accept4 (1548) YWY
+[   35.296097]  net/socket.c __sys_bind (1474) YWY
+[   35.622578]  net/socket.c __sys_bind (1474) YWY
+[   35.665167]  net/socket.c __sys_accept4 (1548) YWY
+[   35.764599]  net/socket.c __sys_bind (1474) YWY
+[   35.764602]  net/socket.c __sys_listen (1508) YWY
+[   35.764614]  net/socket.c __sys_bind (1474) YWY
+[   35.764622]  net/socket.c __sys_listen (1508) YWY
+[   35.787989]  net/socket.c __sys_bind (1474) YWY
+[   36.165744]  net/socket.c __sys_accept4 (1548) YWY
+[   36.166527]  net/socket.c __sys_bind (1474) YWY
+[   36.278998]  net/ipv6/addrconf.c addrconf_notify (3492) IPv6: ADDRCONF(NETDEV_UP): ens33: link is not ready
+[   36.283390]  net/ipv6/addrconf.c addrconf_notify (3492) IPv6: ADDRCONF(NETDEV_UP): ens33: link is not ready
+[   36.285835]  drivers/net/ethernet/intel/e1000/e1000_main.c e1000_watchdog (2443) e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+[   36.286629]  net/ipv6/addrconf.c addrconf_notify (3528) IPv6: ADDRCONF(NETDEV_CHANGE): ens33: link becomes ready
+[   36.355568]  net/socket.c __sys_accept4 (1548) YWY
+[   36.355735]  net/socket.c __sys_accept4 (1548) YWY
+[   36.359595]  net/socket.c __sys_accept4 (1548) YWY
+[   36.362917]  net/socket.c __sys_bind (1474) YWY
+[   36.362924]  net/socket.c __sys_bind (1474) YWY
+[   36.365789]  net/socket.c __sys_accept4 (1548) YWY
+[   36.365895]  net/socket.c __sys_accept4 (1548) YWY
+[   36.469315]  net/socket.c __sys_bind (1474) YWY
+[   36.469323]  net/socket.c __sys_listen (1508) YWY
+[   36.661133]  net/socket.c __sys_accept4 (1548) YWY
+[   36.856352]  net/socket.c __sys_bind (1474) YWY
+[   36.856456]  net/socket.c __sys_bind (1474) YWY
+[   36.856495]  net/socket.c __sys_bind (1474) YWY
+[   37.080119]  net/socket.c __sys_accept4 (1548) YWY
+[   37.082795]  net/socket.c __sys_bind (1474) YWY
+[   37.082979]  net/socket.c __sys_bind (1474) YWY
+[   37.083039]  net/socket.c __sys_bind (1474) YWY
+[   37.083081]  net/socket.c __sys_bind (1474) YWY
+[   37.083128]  net/socket.c __sys_bind (1474) YWY
+[   37.104463]  net/socket.c __sys_bind (1474) YWY
+[   37.109364]  net/socket.c __sys_accept4 (1548) YWY
+[   37.434180]  net/socket.c __sys_bind (1474) YWY
+[   37.438052]  net/socket.c __sys_bind (1474) YWY
+[   37.438096]  net/socket.c __sys_bind (1474) YWY
+[   37.438104]  net/socket.c __sys_bind (1474) YWY
+[   37.438105]  net/socket.c __sys_listen (1508) YWY
+[   37.438195]  net/socket.c __sys_accept4 (1548) YWY
+[   37.534698]  net/socket.c __sys_bind (1474) YWY
+[   38.005838]  net/socket.c __sys_bind (1474) YWY
+[   38.005884]  net/socket.c __sys_bind (1474) YWY
+[   38.006688]  net/socket.c __sys_bind (1474) YWY
+[   38.101209]  net/socket.c __sys_bind (1474) YWY
+[   38.105066]  net/socket.c __sys_bind (1474) YWY
+[   38.106449]  net/socket.c __sys_bind (1474) YWY
+[   38.110240]  net/socket.c __sys_bind (1474) YWY
+[   38.111042]  net/socket.c __sys_bind (1474) YWY
+[   38.117043]  net/socket.c __sys_bind (1474) YWY
+[   38.117074]  net/socket.c __sys_bind (1474) YWY
+[   38.118227]  net/socket.c __sys_bind (1474) YWY
+[   38.237377]  net/socket.c __sys_accept4 (1548) YWY
+[   38.252443]  net/socket.c __sys_bind (1474) YWY
+[   38.253656]  net/socket.c __sys_bind (1474) YWY
+[   38.260021]  net/socket.c __sys_bind (1474) YWY
+[   38.260057]  net/socket.c __sys_bind (1474) YWY
+[   38.261686]  net/socket.c __sys_bind (1474) YWY
+[   38.272763]  net/socket.c __sys_accept4 (1548) YWY
+[   38.892782]  net/socket.c __sys_bind (1474) YWY
+[   38.893048]  net/socket.c __sys_bind (1474) YWY
+[   38.893303]  net/socket.c __sys_bind (1474) YWY
+[   42.084361]  net/socket.c __sys_accept4 (1548) YWY
+[   42.084871]  net/socket.c __sys_accept4 (1548) YWY
+[   42.086264]  net/socket.c __sys_accept4 (1548) YWY
+[   42.086386]  net/socket.c __sys_accept4 (1548) YWY
+[   42.088669]  net/socket.c __sys_accept4 (1548) YWY
+[   42.171947]  net/socket.c __sys_bind (1474) YWY
+[   42.172644]  net/socket.c __sys_accept4 (1548) YWY
+[   42.498808]  net/socket.c __sys_accept4 (1548) YWY
+[   42.705631]  net/socket.c __sys_bind (1474) YWY
+[   43.609661]  net/socket.c __sys_accept4 (1548) YWY
+[   43.793992]  net/socket.c __sys_accept4 (1548) YWY
+[   43.858404]  net/socket.c __sys_accept4 (1548) YWY
+[   43.916532]  net/socket.c __sys_accept4 (1548) YWY
+[   44.093921]  net/socket.c __sys_bind (1474) YWY
+[   44.098946]  net/socket.c __sys_bind (1474) YWY
+[   44.098973]  net/socket.c __sys_bind (1474) YWY
+[   44.098975]  net/socket.c __sys_listen (1508) YWY
+[   44.177947]  net/socket.c __sys_bind (1474) YWY
+[   44.177952]  net/socket.c __sys_listen (1508) YWY
+[   44.242104]  net/socket.c __sys_accept4 (1548) YWY
+[   44.287354]  net/socket.c __sys_bind (1474) YWY
+[   44.287357]  net/socket.c __sys_listen (1508) YWY
+[   45.095910]  net/socket.c __sys_accept4 (1548) YWY
+[   45.100380]  net/socket.c __sys_accept4 (1548) YWY
+[   45.101704]  net/socket.c __sys_accept4 (1548) YWY
+[   45.101718]  net/socket.c __sys_accept4 (1548) YWY
+[   45.304061]  net/socket.c __sys_accept4 (1548) YWY
+[   45.336568]  net/socket.c __sys_accept4 (1548) YWY
+[   45.462526]  net/socket.c __sys_bind (1474) YWY
+[   45.463606]  net/socket.c __sys_accept4 (1548) YWY
+[   45.512853]  net/socket.c __sys_bind (1474) YWY
+[   45.512860]  net/socket.c __sys_listen (1508) YWY
+[   45.528872]  net/socket.c __sys_accept4 (1548) YWY
+[   45.667305]  net/socket.c __sys_accept4 (1548) YWY
+[   45.670080]  net/socket.c __sys_accept4 (1548) YWY
+[   45.670957]  net/socket.c __sys_accept4 (1548) YWY
+[   45.670974]  net/socket.c __sys_accept4 (1548) YWY
+[   45.709678]  net/socket.c __sys_accept4 (1548) YWY
+[   45.710337]  net/socket.c __sys_accept4 (1548) YWY
+[   45.710980]  net/socket.c __sys_accept4 (1548) YWY
+[   45.712168]  net/socket.c __sys_accept4 (1548) YWY
+[   45.991473]  net/socket.c __sys_accept4 (1548) YWY
+[   46.085268]  net/socket.c __sys_accept4 (1548) YWY
+[   46.085605]  net/socket.c __sys_accept4 (1548) YWY
+[   46.085619]  net/socket.c __sys_accept4 (1548) YWY
+[   46.355215]  net/socket.c __sys_accept4 (1548) YWY
+[   46.629139]  net/socket.c __sys_accept4 (1548) YWY
+[   47.077570]  net/socket.c __sys_bind (1474) YWY
+[   47.348831]  net/socket.c __sys_accept4 (1548) YWY
+[   47.358307]  net/socket.c __sys_accept4 (1548) YWY
+[   47.358918]  net/socket.c __sys_accept4 (1548) YWY
+[   47.359760]  net/socket.c __sys_accept4 (1548) YWY
+[   47.446555]  net/socket.c __sys_bind (1474) YWY
+[   47.446557]  net/socket.c __sys_listen (1508) YWY
+[   47.446652]  net/socket.c __sys_accept4 (1548) YWY
+[   47.504252]  net/socket.c __sys_accept4 (1548) YWY
+[   47.507773]  net/socket.c __sys_accept4 (1548) YWY
+[   47.576053]  net/socket.c __sys_accept4 (1548) YWY
+[   47.732457]  net/socket.c __sys_accept4 (1548) YWY
+[   47.735940]  net/socket.c __sys_accept4 (1548) YWY
+[   47.738380]  net/socket.c __sys_accept4 (1548) YWY
+[   47.738393]  net/socket.c __sys_accept4 (1548) YWY
+[   47.768981]  net/socket.c __sys_accept4 (1548) YWY
+[   47.978727]  net/socket.c __sys_accept4 (1548) YWY
+[   47.981854]  net/socket.c __sys_accept4 (1548) YWY
+[   48.087945]  net/socket.c __sys_accept4 (1548) YWY
+[   48.146785]  net/socket.c __sys_accept4 (1548) YWY
+[   48.153680]  net/socket.c __sys_accept4 (1548) YWY
+[   48.155417]  net/socket.c __sys_accept4 (1548) YWY
+[   48.159191]  net/socket.c __sys_accept4 (1548) YWY
+[   48.162013]  net/socket.c __sys_accept4 (1548) YWY
+[   48.162567]  net/socket.c __sys_accept4 (1548) YWY
+[   48.197617]  net/socket.c __sys_accept4 (1548) YWY
+[   48.206380]  net/socket.c __sys_accept4 (1548) YWY
+[   48.207173]  net/socket.c __sys_accept4 (1548) YWY
+[   48.208331]  net/socket.c __sys_accept4 (1548) YWY
+[   48.279772]  net/socket.c __sys_accept4 (1548) YWY
+[   48.282946]  net/socket.c __sys_accept4 (1548) YWY
+[   48.576063]  net/socket.c __sys_accept4 (1548) YWY
+[   48.706437]  net/socket.c __sys_accept4 (1548) YWY
+[   48.713684]  net/socket.c __sys_accept4 (1548) YWY
+[   48.714285]  net/socket.c __sys_accept4 (1548) YWY
+[   48.718698]  net/socket.c __sys_accept4 (1548) YWY
+[   48.729268]  net/socket.c __sys_accept4 (1548) YWY
+[   48.742287]  net/socket.c __sys_accept4 (1548) YWY
+[   49.217822]  net/socket.c __sys_accept4 (1548) YWY
+[   49.218013]  net/socket.c __sys_accept4 (1548) YWY
+[   49.298840]  net/socket.c __sys_accept4 (1548) YWY
+[   49.315534]  net/socket.c __sys_accept4 (1548) YWY
+[   49.460652]  net/socket.c __sys_accept4 (1548) YWY
+[   49.498408]  net/socket.c __sys_bind (1474) YWY
+[   49.498729]  net/socket.c __sys_accept4 (1548) YWY
+[   49.500393]  net/socket.c __sys_bind (1474) YWY
+[   49.501708]  net/socket.c __sys_bind (1474) YWY
+[   49.502837]  net/socket.c __sys_bind (1474) YWY
+[   49.503854]  net/socket.c __sys_bind (1474) YWY
+[   49.504916]  net/socket.c __sys_bind (1474) YWY
+[   49.506099]  net/socket.c __sys_bind (1474) YWY
+[   49.507220]  net/socket.c __sys_bind (1474) YWY
+[   49.508298]  net/socket.c __sys_bind (1474) YWY
+[   49.595528]  net/socket.c __sys_accept4 (1548) YWY
+[   49.595571]  net/socket.c __sys_accept4 (1548) YWY
+[   49.623637]  net/socket.c __sys_accept4 (1548) YWY
+[   49.780215]  net/socket.c __sys_accept4 (1548) YWY
+[   49.798832]  net/socket.c __sys_accept4 (1548) YWY
+[   49.798964]  net/socket.c __sys_accept4 (1548) YWY
+[   49.815862]  net/socket.c __sys_accept4 (1548) YWY
+[   49.852469]  net/socket.c __sys_accept4 (1548) YWY
+[   49.853165]  net/socket.c __sys_bind (1474) YWY
+[   49.873095]  net/socket.c __sys_accept4 (1548) YWY
+[   50.108219]  net/socket.c __sys_bind (1474) YWY
+[   50.122092]  net/socket.c __sys_accept4 (1548) YWY
+[   50.144316]  net/socket.c __sys_bind (1474) YWY
+[   50.144323]  net/socket.c __sys_listen (1508) YWY
+[   50.168282]  net/socket.c __sys_accept4 (1548) YWY
+[   50.172027]  net/socket.c __sys_accept4 (1548) YWY
+[   50.175798]  net/socket.c __sys_bind (1474) YWY
+[   50.188812]  net/socket.c __sys_accept4 (1548) YWY
+[   50.228260]  net/socket.c __sys_bind (1474) YWY
+[   50.271779]  net/socket.c __sys_accept4 (1548) YWY
+[   50.303396]  net/socket.c __sys_bind (1474) YWY
+[   50.303605]  net/socket.c __sys_bind (1474) YWY
+[   50.303755]  net/socket.c __sys_bind (1474) YWY
+[   50.566077]  net/socket.c __sys_accept4 (1548) YWY
+[   50.568128]  net/socket.c __sys_accept4 (1548) YWY
+[   50.586050]  net/socket.c __sys_accept4 (1548) YWY
+[   50.586118]  net/socket.c __sys_accept4 (1548) YWY
+[   50.586165]  net/socket.c __sys_accept4 (1548) YWY
+[   50.613344]  net/socket.c __sys_accept4 (1548) YWY
+[   50.719723]  net/socket.c __sys_accept4 (1548) YWY
+[   50.723196]  net/socket.c __sys_accept4 (1548) YWY
+[   50.759165]  net/socket.c __sys_accept4 (1548) YWY
+[   50.837587]  net/socket.c __sys_bind (1474) YWY
+[   50.984016]  net/socket.c __sys_bind (1474) YWY
+[   50.984121]  net/socket.c __sys_bind (1474) YWY
+[   50.984130]  net/socket.c __sys_bind (1474) YWY
+[   51.642940]  net/socket.c __sys_accept4 (1548) YWY
+[   55.617072]  net/socket.c __sys_accept4 (1548) YWY
+[   55.678374]  net/socket.c __sys_accept4 (1548) YWY
+[   57.291462]  net/socket.c __sys_bind (1474) YWY
+[   57.294377]  net/socket.c __sys_bind (1474) YWY
+[   65.718493]  net/socket.c __sys_accept4 (1548) YWY
+[   67.541835]  net/socket.c __sys_bind (1474) YWY
+[   70.753482]  net/socket.c __sys_accept4 (1548) YWY
+[   70.786111]  net/socket.c __sys_accept4 (1548) YWY
+[   70.786960]  net/socket.c __sys_accept4 (1548) YWY
+[   70.795210]  net/socket.c __sys_accept4 (1548) YWY
+[   70.802721]  net/socket.c __sys_accept4 (1548) YWY
+[   70.805595]  net/socket.c __sys_bind (1474) YWY
+[   70.869030]  net/socket.c __sys_bind (1474) YWY
+[   70.873958]  net/socket.c __sys_bind (1474) YWY
+[   70.873984]  net/socket.c __sys_bind (1474) YWY
+[   70.873987]  net/socket.c __sys_listen (1508) YWY
+[   70.878600]  net/socket.c __sys_bind (1474) YWY
+[   70.878604]  net/socket.c __sys_listen (1508) YWY
+[   70.935514]  net/socket.c __sys_accept4 (1548) YWY
+[   71.142403]  net/socket.c __sys_accept4 (1548) YWY
+[   71.790451]  net/socket.c __sys_accept4 (1548) YWY
+[   71.828708]  net/socket.c __sys_accept4 (1548) YWY
+[   71.958483]  net/socket.c __sys_accept4 (1548) YWY
+[   72.471487]  net/socket.c __sys_bind (1474) YWY
+[   72.471490]  net/socket.c __sys_listen (1508) YWY
+[   72.471554]  net/socket.c __sys_accept4 (1548) YWY
+[   72.478324]  net/socket.c __sys_accept4 (1548) YWY
+[   72.479467]  net/socket.c __sys_accept4 (1548) YWY
+[   72.482546]  net/socket.c __sys_bind (1474) YWY
+[   72.482548]  net/socket.c __sys_listen (1508) YWY
+[   72.502485]  net/socket.c __sys_accept4 (1548) YWY
+[   72.502511]  net/socket.c __sys_bind (1474) YWY
+[   72.514669]  net/socket.c __sys_accept4 (1548) YWY
+[   72.516324]  net/socket.c __sys_accept4 (1548) YWY
+[   72.516769]  net/socket.c __sys_accept4 (1548) YWY
+[   72.526303]  net/socket.c __sys_accept4 (1548) YWY
+[   72.528560]  net/socket.c __sys_accept4 (1548) YWY
+[   72.690298]  net/socket.c __sys_accept4 (1548) YWY
+[   72.692274]  net/socket.c __sys_bind (1474) YWY
+[   72.692279]  net/socket.c __sys_listen (1508) YWY
+[   72.692307]  net/socket.c __sys_accept4 (1548) YWY
+[   72.692380]  net/socket.c __sys_bind (1474) YWY
+[   72.692383]  net/socket.c __sys_listen (1508) YWY
+[   72.693957]  net/socket.c __sys_accept4 (1548) YWY
+[   72.694038]  net/socket.c __sys_accept4 (1548) YWY
+[   72.696655]  net/socket.c __sys_accept4 (1548) YWY
+[   72.711326]  net/socket.c __sys_accept4 (1548) YWY
+[   72.711332]  net/socket.c __sys_accept4 (1548) YWY
+[   72.712046]  net/socket.c __sys_accept4 (1548) YWY
+[   72.712127]  net/socket.c __sys_accept4 (1548) YWY
+[   72.719725]  net/socket.c __sys_accept4 (1548) YWY
+[   72.787146]  net/socket.c __sys_accept4 (1548) YWY
+[   72.829031]  net/socket.c __sys_accept4 (1548) YWY
+[   72.831369]  net/socket.c __sys_accept4 (1548) YWY
+[   72.835977]  net/socket.c __sys_accept4 (1548) YWY
+[   72.837754]  net/socket.c __sys_accept4 (1548) YWY
+[   72.839492]  net/socket.c __sys_accept4 (1548) YWY
+[   72.995267]  net/socket.c __sys_accept4 (1548) YWY
+[   72.996980]  net/socket.c __sys_accept4 (1548) YWY
+[   72.996996]  net/socket.c __sys_accept4 (1548) YWY
+[   72.999187]  net/socket.c __sys_accept4 (1548) YWY
+[   73.003759]  net/socket.c __sys_bind (1474) YWY
+[   73.003762]  net/socket.c __sys_listen (1508) YWY
+[   73.003932]  net/socket.c __sys_bind (1474) YWY
+[   73.005894]  net/socket.c __sys_accept4 (1548) YWY
+[   73.115165]  net/socket.c __sys_accept4 (1548) YWY
+[   73.145728]  net/socket.c __sys_accept4 (1548) YWY
+[   73.196285]  net/socket.c __sys_accept4 (1548) YWY
+[   73.196327]  net/socket.c __sys_accept4 (1548) YWY
+[   73.371449]  net/socket.c __sys_accept4 (1548) YWY
+[   73.387986]  net/socket.c __sys_accept4 (1548) YWY
+[   73.388022]  net/socket.c __sys_accept4 (1548) YWY
+[   73.391609]  net/socket.c __sys_accept4 (1548) YWY
+[   73.391919]  net/socket.c __sys_accept4 (1548) YWY
+[   73.392581]  net/socket.c __sys_accept4 (1548) YWY
+[   73.393272]  net/socket.c __sys_accept4 (1548) YWY
+[   73.394361]  net/socket.c __sys_accept4 (1548) YWY
+[   73.394375]  net/socket.c __sys_accept4 (1548) YWY
+[   73.396345]  net/socket.c __sys_accept4 (1548) YWY
+[   73.396954]  net/socket.c __sys_accept4 (1548) YWY
+[   73.400764]  net/socket.c __sys_accept4 (1548) YWY
+[   73.409246]  net/socket.c __sys_bind (1474) YWY
+[   73.409248]  net/socket.c __sys_listen (1508) YWY
+[   73.409978]  net/socket.c __sys_accept4 (1548) YWY
+[   73.411587]  net/socket.c __sys_accept4 (1548) YWY
+[   73.411953]  net/socket.c __sys_accept4 (1548) YWY
+[   73.412919]  net/socket.c __sys_accept4 (1548) YWY
+[   73.413044]  net/socket.c __sys_accept4 (1548) YWY
+[   73.414267]  net/socket.c __sys_accept4 (1548) YWY
+[   73.414623]  net/socket.c __sys_accept4 (1548) YWY
+[   73.414887]  net/socket.c __sys_accept4 (1548) YWY
+[   73.415811]  net/socket.c __sys_accept4 (1548) YWY
+[   73.416376]  net/socket.c __sys_accept4 (1548) YWY
+[   73.417441]  net/socket.c __sys_accept4 (1548) YWY
+[   73.460539]  net/socket.c __sys_accept4 (1548) YWY
+[   73.460557]  net/socket.c __sys_accept4 (1548) YWY
+[   73.501974]  net/socket.c __sys_accept4 (1548) YWY
+[   73.503818]  net/socket.c __sys_accept4 (1548) YWY
+[   73.608939]  net/socket.c __sys_accept4 (1548) YWY
+[   73.613626]  net/socket.c __sys_accept4 (1548) YWY
+[   73.615393]  net/socket.c __sys_accept4 (1548) YWY
+[   73.623305]  net/socket.c __sys_accept4 (1548) YWY
+[   73.627044]  net/socket.c __sys_accept4 (1548) YWY
+[   73.627502]  net/socket.c __sys_accept4 (1548) YWY
+[   73.822222]  net/socket.c __sys_bind (1474) YWY
+[   73.822265]  net/socket.c __sys_listen (1508) YWY
+[   74.301265]  net/socket.c __sys_accept4 (1548) YWY
+[   74.303831]  net/socket.c __sys_accept4 (1548) YWY
+[   74.803741]  net/socket.c __sys_accept4 (1548) YWY
+[   74.816573]  net/socket.c __sys_accept4 (1548) YWY
+[   74.835068]  net/socket.c __sys_accept4 (1548) YWY
+[   74.844529]  net/socket.c __sys_accept4 (1548) YWY
+[   74.848291]  net/socket.c __sys_accept4 (1548) YWY
+[   74.849168]  net/socket.c __sys_accept4 (1548) YWY
+[   74.858844]  net/socket.c __sys_accept4 (1548) YWY
+[   74.923938]  net/socket.c __sys_accept4 (1548) YWY
+[   74.970169]  net/socket.c __sys_accept4 (1548) YWY
+[   74.974789]  net/socket.c __sys_accept4 (1548) YWY
+[   74.975633]  net/socket.c __sys_accept4 (1548) YWY
+[   74.976521]  net/socket.c __sys_accept4 (1548) YWY
+[   74.979859]  net/socket.c __sys_accept4 (1548) YWY
+[   74.986592]  net/socket.c __sys_accept4 (1548) YWY
+[   75.059184]  net/socket.c __sys_accept4 (1548) YWY
+[   75.070132]  net/socket.c __sys_accept4 (1548) YWY
+[   75.188126]  net/socket.c __sys_accept4 (1548) YWY
+[   75.211997]  net/socket.c __sys_accept4 (1548) YWY
+[   75.238830]  net/socket.c __sys_accept4 (1548) YWY
+[   75.240893]  net/socket.c __sys_accept4 (1548) YWY
+[   75.243092]  net/socket.c __sys_accept4 (1548) YWY
+[   75.728464]  net/socket.c __sys_accept4 (1548) YWY
+[   75.730868]  net/socket.c __sys_accept4 (1548) YWY
+[   75.734419]  net/socket.c __sys_accept4 (1548) YWY
+[   75.756537]  net/socket.c __sys_accept4 (1548) YWY
+[   75.780027]  net/socket.c __sys_accept4 (1548) YWY
+[   75.790690]  net/socket.c __sys_accept4 (1548) YWY
+[   75.791343]  net/socket.c __sys_accept4 (1548) YWY
+[   75.798965]  net/socket.c __sys_accept4 (1548) YWY
+[   75.806728]  net/socket.c __sys_accept4 (1548) YWY
+[   75.806848]  net/socket.c __sys_accept4 (1548) YWY
+[   75.808861]  net/socket.c __sys_accept4 (1548) YWY
+[   75.809342]  net/socket.c __sys_accept4 (1548) YWY
+[   75.815186]  net/socket.c __sys_accept4 (1548) YWY
+[   75.818614]  net/socket.c __sys_accept4 (1548) YWY
+[   75.819131]  net/socket.c __sys_accept4 (1548) YWY
+[   75.824116]  net/socket.c __sys_accept4 (1548) YWY
+[   75.835190]  net/socket.c __sys_accept4 (1548) YWY
+[   75.836266]  net/socket.c __sys_accept4 (1548) YWY
+[   75.836281]  net/socket.c __sys_accept4 (1548) YWY
+[   75.848234]  net/socket.c __sys_accept4 (1548) YWY
+[   75.848522]  net/socket.c __sys_accept4 (1548) YWY
+[   75.849850]  net/socket.c __sys_accept4 (1548) YWY
+[   75.850380]  net/socket.c __sys_accept4 (1548) YWY
+[   75.856027]  net/socket.c __sys_accept4 (1548) YWY
+[   75.856493]  net/socket.c __sys_accept4 (1548) YWY
+[   75.857285]  net/socket.c __sys_accept4 (1548) YWY
+[   75.858064]  net/socket.c __sys_accept4 (1548) YWY
+[   75.863626]  net/socket.c __sys_accept4 (1548) YWY
+[   75.864128]  net/socket.c __sys_accept4 (1548) YWY
+[   75.866136]  net/socket.c __sys_accept4 (1548) YWY
+[   75.868676]  net/socket.c __sys_accept4 (1548) YWY
+[   75.874862]  net/socket.c __sys_accept4 (1548) YWY
+[   75.877474]  net/socket.c __sys_accept4 (1548) YWY
+[   75.878244]  net/socket.c __sys_accept4 (1548) YWY
+[   75.878442]  net/socket.c __sys_accept4 (1548) YWY
+[   75.878895]  net/socket.c __sys_accept4 (1548) YWY
+[   75.880365]  net/socket.c __sys_accept4 (1548) YWY
+[   75.883219]  net/socket.c __sys_accept4 (1548) YWY
+[   75.884096]  net/socket.c __sys_accept4 (1548) YWY
+[   75.884737]  net/socket.c __sys_accept4 (1548) YWY
+[   75.885400]  net/socket.c __sys_accept4 (1548) YWY
+[   75.906230]  net/socket.c __sys_accept4 (1548) YWY
+[   75.909369]  net/socket.c __sys_accept4 (1548) YWY
+[   76.060972]  net/socket.c __sys_accept4 (1548) YWY
+[   76.063918]  net/socket.c __sys_accept4 (1548) YWY
+[   76.075657]  net/socket.c __sys_accept4 (1548) YWY
+[   76.080034]  net/socket.c __sys_accept4 (1548) YWY
+[   76.084357]  net/socket.c __sys_accept4 (1548) YWY
+[   76.084372]  net/socket.c __sys_accept4 (1548) YWY
+[   76.133775]  net/socket.c __sys_accept4 (1548) YWY
+[   76.144963]  net/socket.c __sys_accept4 (1548) YWY
+[   76.148708]  net/socket.c __sys_accept4 (1548) YWY
+[   76.150007]  net/socket.c __sys_accept4 (1548) YWY
+[   76.206404]  net/socket.c __sys_bind (1474) YWY
+[   76.206941]  net/socket.c __sys_accept4 (1548) YWY
+[   76.222145]  net/socket.c __sys_bind (1474) YWY
+[   76.222151]  net/socket.c __sys_listen (1508) YWY
+[   76.241737]  net/socket.c __sys_accept4 (1548) YWY
+[   76.244049]  net/socket.c __sys_accept4 (1548) YWY
+[   76.244488]  net/socket.c __sys_accept4 (1548) YWY
+[   76.245520]  net/socket.c __sys_accept4 (1548) YWY
+[   76.322255]  net/socket.c __sys_accept4 (1548) YWY
+[   76.371526]  net/socket.c __sys_accept4 (1548) YWY
+[   76.376176]  net/socket.c __sys_bind (1474) YWY
+[   76.376178]  net/socket.c __sys_listen (1508) YWY
+[   76.376194]  net/socket.c __sys_bind (1474) YWY
+[   76.376210]  net/socket.c __sys_listen (1508) YWY
+[   76.381878]  net/socket.c __sys_accept4 (1548) YWY
+[   76.405172]  net/socket.c __sys_accept4 (1548) YWY
+[   76.406852]  net/socket.c __sys_accept4 (1548) YWY
+[   76.406869]  net/socket.c __sys_accept4 (1548) YWY
+[   76.407257]  net/socket.c __sys_bind (1474) YWY
+[   76.445800]  net/socket.c __sys_bind (1474) YWY
+[   76.447131]  net/socket.c __sys_accept4 (1548) YWY
+[   76.448357]  net/socket.c __sys_accept4 (1548) YWY
+[   76.459753]  net/socket.c __sys_accept4 (1548) YWY
+[   76.459769]  net/socket.c __sys_accept4 (1548) YWY
+[   76.462184]  net/socket.c __sys_accept4 (1548) YWY
+[   76.537732]  net/socket.c __sys_accept4 (1548) YWY
+[   76.538423]  net/socket.c __sys_bind (1474) YWY
+[   77.790468]  net/socket.c __sys_bind (1474) YWY
+[   78.331346]  net/socket.c __sys_accept4 (1548) YWY
+[   78.890112]  net/socket.c __sys_accept4 (1548) YWY
+[   79.138535]  net/socket.c __sys_accept4 (1548) YWY
+[   79.242030]  net/socket.c __sys_accept4 (1548) YWY
+[   79.242047]  net/socket.c __sys_accept4 (1548) YWY
+[   79.364735]  net/socket.c __sys_accept4 (1548) YWY
+[   79.429367]  net/socket.c __sys_accept4 (1548) YWY
+[   79.430384]  net/socket.c __sys_accept4 (1548) YWY
+[   79.581686]  net/socket.c __sys_accept4 (1548) YWY
+[   79.766549]  net/socket.c __sys_accept4 (1548) YWY
+[   79.863105]  net/socket.c __sys_accept4 (1548) YWY
+[   79.863727]  net/socket.c __sys_accept4 (1548) YWY
+[   79.867332]  net/socket.c __sys_accept4 (1548) YWY
+[   79.869446]  net/socket.c __sys_accept4 (1548) YWY
+[   79.877016]  net/socket.c __sys_accept4 (1548) YWY
+[   80.139040]  net/socket.c __sys_accept4 (1548) YWY
+[   80.189830]  net/socket.c __sys_accept4 (1548) YWY
+[   80.899578]  net/socket.c __sys_accept4 (1548) YWY
+[   80.901126]  net/socket.c __sys_accept4 (1548) YWY
+[   80.928043]  net/socket.c __sys_accept4 (1548) YWY
+[   80.937383]  net/socket.c __sys_accept4 (1548) YWY
+[   80.939148]  net/socket.c __sys_accept4 (1548) YWY
+[   81.531229]  net/socket.c __sys_accept4 (1548) YWY
+[   81.577465]  net/socket.c __sys_accept4 (1548) YWY
+[   81.578445]  net/socket.c __sys_accept4 (1548) YWY
+[   81.621881]  net/socket.c __sys_accept4 (1548) YWY
+[   81.624540]  net/socket.c __sys_accept4 (1548) YWY
+[   81.625597]  net/socket.c __sys_accept4 (1548) YWY
+[   81.638937]  net/socket.c __sys_accept4 (1548) YWY
+[   81.641930]  net/socket.c __sys_accept4 (1548) YWY
+[   81.647663]  net/socket.c __sys_accept4 (1548) YWY
+[   81.651413]  net/socket.c __sys_accept4 (1548) YWY
+[   81.652743]  net/socket.c __sys_accept4 (1548) YWY
+[   81.670731]  net/socket.c __sys_accept4 (1548) YWY
+[   81.672713]  net/socket.c __sys_accept4 (1548) YWY
+[   81.674925]  net/socket.c __sys_accept4 (1548) YWY
+[   81.681233]  net/socket.c __sys_accept4 (1548) YWY
+[   81.845708]  net/socket.c __sys_accept4 (1548) YWY
+[   81.914708]  net/socket.c __sys_accept4 (1548) YWY
+[   81.915934]  net/socket.c __sys_accept4 (1548) YWY
+[   82.029875]  net/socket.c __sys_accept4 (1548) YWY
+[   82.039235]  net/socket.c __sys_accept4 (1548) YWY
+[   82.043067]  net/socket.c __sys_accept4 (1548) YWY
+[   82.043664]  net/socket.c __sys_accept4 (1548) YWY
+[   82.063340]  net/socket.c __sys_accept4 (1548) YWY
+[   82.064764]  net/socket.c __sys_accept4 (1548) YWY
+[   82.066424]  net/socket.c __sys_accept4 (1548) YWY
+[   82.067171]  net/socket.c __sys_accept4 (1548) YWY
+[   82.084486]  net/socket.c __sys_accept4 (1548) YWY
+[   82.092238]  net/socket.c __sys_accept4 (1548) YWY
+[   82.099350]  net/socket.c __sys_bind (1474) YWY
+[   82.099568]  net/socket.c __sys_accept4 (1548) YWY
+[   82.103272]  net/socket.c __sys_accept4 (1548) YWY
+[   82.106646]  net/socket.c __sys_accept4 (1548) YWY
+[   82.108311]  net/socket.c __sys_accept4 (1548) YWY
+[   82.121264]  net/socket.c __sys_bind (1474) YWY
+[   82.121270]  net/socket.c __sys_bind (1474) YWY
+[   82.122347]  net/socket.c __sys_accept4 (1548) YWY
+[   82.178692]  net/socket.c __sys_accept4 (1548) YWY
+[   82.178710]  net/socket.c __sys_accept4 (1548) YWY
+[   82.200856]  net/socket.c __sys_accept4 (1548) YWY
+[   82.200879]  net/socket.c __sys_accept4 (1548) YWY
+[   82.220111]  net/socket.c __sys_accept4 (1548) YWY
+[   82.235410]  net/socket.c __sys_bind (1474) YWY
+[   82.235608]  net/socket.c __sys_accept4 (1548) YWY
+[   82.289500]  net/socket.c __sys_bind (1474) YWY
+[   82.289533]  net/socket.c __sys_bind (1474) YWY
+[   82.516928]  net/socket.c __sys_accept4 (1548) YWY
+[   82.631909]  net/socket.c __sys_accept4 (1548) YWY
+[   82.834191]  net/socket.c __sys_accept4 (1548) YWY
+[   82.906113]  net/socket.c __sys_accept4 (1548) YWY
+[   82.971379]  net/socket.c __sys_accept4 (1548) YWY
+[   83.008689]  net/socket.c __sys_accept4 (1548) YWY
+[   83.017582]  net/socket.c __sys_bind (1474) YWY
+[   83.038322]  net/socket.c __sys_accept4 (1548) YWY
+[   83.040307]  net/socket.c __sys_accept4 (1548) YWY
+[   83.041511]  net/socket.c __sys_accept4 (1548) YWY
+[   83.049848]  net/socket.c __sys_accept4 (1548) YWY
+[   83.053517]  net/socket.c __sys_accept4 (1548) YWY
+[   83.053968]  net/socket.c __sys_accept4 (1548) YWY
+[   83.055194]  net/socket.c __sys_bind (1474) YWY
+[   83.071102]  net/socket.c __sys_accept4 (1548) YWY
+[   83.100629]  net/socket.c __sys_accept4 (1548) YWY
+[   83.109145]  net/socket.c __sys_accept4 (1548) YWY
+[   83.109162]  net/socket.c __sys_accept4 (1548) YWY
+[   83.173908]  net/socket.c __sys_bind (1474) YWY
+[   83.175299]  net/socket.c __sys_accept4 (1548) YWY
+[   83.179725]  net/socket.c __sys_accept4 (1548) YWY
+[   83.179739]  net/socket.c __sys_accept4 (1548) YWY
+[   83.182916]  net/socket.c __sys_accept4 (1548) YWY
+[   83.190561]  net/socket.c __sys_accept4 (1548) YWY
+[   83.190577]  net/socket.c __sys_accept4 (1548) YWY
+[   83.485882]  net/socket.c __sys_accept4 (1548) YWY
+[   83.488440]  net/socket.c __sys_accept4 (1548) YWY
+[   83.488478]  net/socket.c __sys_accept4 (1548) YWY
+[   83.489468]  net/socket.c __sys_accept4 (1548) YWY
+[   83.490956]  net/socket.c __sys_accept4 (1548) YWY
+[   83.490972]  net/socket.c __sys_accept4 (1548) YWY
+[   83.506166]  net/socket.c __sys_accept4 (1548) YWY
+[   83.531061]  net/socket.c __sys_bind (1474) YWY
+[   83.532724]  net/socket.c __sys_accept4 (1548) YWY
+[   83.540977]  net/socket.c __sys_accept4 (1548) YWY
+[   83.547903]  net/socket.c __sys_accept4 (1548) YWY
+[   83.548504]  net/socket.c __sys_accept4 (1548) YWY
+[   84.212625]  net/socket.c __sys_accept4 (1548) YWY
+[   84.423455]  net/socket.c __sys_accept4 (1548) YWY
+[   85.118243]  net/socket.c __sys_accept4 (1548) YWY
+[   85.119700]  net/socket.c __sys_accept4 (1548) YWY
+[   85.132146]  net/socket.c __sys_bind (1474) YWY
+[   85.132149]  net/socket.c __sys_listen (1508) YWY
+[   85.132408]  net/socket.c __sys_accept4 (1548) YWY
+[   85.132825]  net/socket.c __sys_accept4 (1548) YWY
+[   85.194291]  net/socket.c __sys_bind (1474) YWY
+[   85.194293]  net/socket.c __sys_listen (1508) YWY
+[   85.194603]  net/socket.c __sys_accept4 (1548) YWY
+[   85.194996]  net/socket.c __sys_accept4 (1548) YWY
+[   85.291818]  net/socket.c __sys_accept4 (1548) YWY
+[   85.697480]  net/socket.c __sys_accept4 (1548) YWY
+[   85.714160]  net/socket.c __sys_accept4 (1548) YWY
+[   85.769574]  net/socket.c __sys_accept4 (1548) YWY
+[   86.109143]  net/socket.c __sys_bind (1474) YWY
+[   86.379653]  net/socket.c __sys_bind (1474) YWY
+[   86.381265]  net/socket.c __sys_accept4 (1548) YWY
+[   87.090089]  net/socket.c __sys_bind (1474) YWY
+[   87.090091]  net/socket.c __sys_listen (1508) YWY
+[   87.090695]  net/socket.c __sys_accept4 (1548) YWY
+[   87.091584]  net/socket.c __sys_accept4 (1548) YWY
+[   87.126250]  net/socket.c __sys_bind (1474) YWY
+[   87.126253]  net/socket.c __sys_listen (1508) YWY
+[   87.126590]  net/socket.c __sys_accept4 (1548) YWY
+[   87.127078]  net/socket.c __sys_accept4 (1548) YWY
+[   88.038989]  net/socket.c __sys_bind (1474) YWY
+[   88.053456]  net/socket.c __sys_accept4 (1548) YWY
+[   88.061150]  net/socket.c __sys_accept4 (1548) YWY
+[   88.061847]  net/socket.c __sys_accept4 (1548) YWY
+[   88.090999]  net/socket.c __sys_bind (1474) YWY
+[   90.887742]  net/socket.c __sys_accept4 (1548) YWY
+[   91.650208]  net/socket.c __sys_accept4 (1548) YWY
+[   91.660887]  net/socket.c __sys_accept4 (1548) YWY
+[   91.664838]  net/socket.c __sys_accept4 (1548) YWY
+[   91.666390]  net/socket.c __sys_accept4 (1548) YWY
+[   91.679104]  net/socket.c __sys_accept4 (1548) YWY
+[   91.679122]  net/socket.c __sys_accept4 (1548) YWY
+[   91.712479]  net/socket.c __sys_accept4 (1548) YWY
+[   91.721761]  net/socket.c __sys_accept4 (1548) YWY
+[   91.725180]  net/socket.c __sys_accept4 (1548) YWY
+[   91.726294]  net/socket.c __sys_accept4 (1548) YWY
+[   91.845837]  net/socket.c __sys_accept4 (1548) YWY
+[   98.294232]  net/socket.c __sys_bind (1474) YWY
+[   98.294279]  net/socket.c __sys_bind (1474) YWY
+[  101.065013]  net/socket.c __sys_bind (1474) YWY
+[  101.789295]  net/socket.c __sys_accept4 (1548) YWY
+[  101.790887]  net/socket.c __sys_accept4 (1548) YWY
+[  101.790901]  net/socket.c __sys_accept4 (1548) YWY
+[  101.846360]  net/socket.c __sys_accept4 (1548) YWY
+[  102.152816]  net/socket.c __sys_accept4 (1548) YWY
+[  102.156129]  net/socket.c __sys_accept4 (1548) YWY
+[  102.156541]  net/socket.c __sys_accept4 (1548) YWY
+[  102.167150]  net/socket.c __sys_accept4 (1548) YWY
+[  102.205071]  net/socket.c __sys_accept4 (1548) YWY
+[  113.107672]  net/socket.c __sys_accept4 (1548) YWY
+[  130.546083]  net/socket.c __sys_bind (1474) YWY
+[  130.549227]  net/socket.c __sys_bind (1474) YWY
+[  135.987389]  net/socket.c __sys_bind (1474) YWY

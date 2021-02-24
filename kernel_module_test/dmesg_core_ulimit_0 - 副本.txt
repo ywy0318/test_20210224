@@ -1,0 +1,20 @@
+[  485.515845] show_signal_msg: 12 callbacks suppressed
+[  485.515847] test_core[2417]: segfault at 0 ip 00007f589be6b834 sp 00007fffe515daf8 error 6 in libc-2.30.so[7f589bd2f000+14a000]
+[  485.515851]  arch/x86/mm/fault.c show_signal_msg (856) YWY
+[  485.515852] Code: fe 7f 6c 17 c0 c5 fe 7f 74 17 a0 c5 fe 7f 7c 17 80 c5 f8 77 c3 c5 fe 6f 06 c5 fe 6f 4e 20 c5 fe 6f 54 16 e0 c5 fe 6f 5c 16 c0 <c5> fe 7f 07 c5 fe 7f 4f 20 c5 fe 7f 54 17 e0 c5 fe 7f 5c 17 c0 c5
+[  485.515853]  arch/x86/mm/fault.c __bad_area_nosemaphore (909) YWY
+[  485.515860]  fs/coredump.c do_coredump (601) YWY
+[  485.539858]  fs/coredump.c do_coredump (768) YWY
+
+
+
+
+[  485.760080]  fs/binfmt_elf.c elf_core_dump (2421) YWY
+[  609.887196] test_core[2443]: segfault at 0 ip 00007f010a600834 sp 00007ffecc604c18 error 6 in libc-2.30.so[7f010a4c4000+14a000]
+[  609.887201]  arch/x86/mm/fault.c show_signal_msg (856) YWY
+[  609.887202] Code: fe 7f 6c 17 c0 c5 fe 7f 74 17 a0 c5 fe 7f 7c 17 80 c5 f8 77 c3 c5 fe 6f 06 c5 fe 6f 4e 20 c5 fe 6f 54 16 e0 c5 fe 6f 5c 16 c0 <c5> fe 7f 07 c5 fe 7f 4f 20 c5 fe 7f 54 17 e0 c5 fe 7f 5c 17 c0 c5
+[  609.887202]  arch/x86/mm/fault.c __bad_area_nosemaphore (909) YWY
+[  609.887210]  fs/coredump.c do_coredump (601) YWY
+[  609.888899]  fs/coredump.c do_coredump (768) YWY
+
+

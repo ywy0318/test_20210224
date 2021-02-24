@@ -1,0 +1,1 @@
+cmd_/mnt/hgfs/share/code/kernel_test/startstop/startstop.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds  --build-id  -o /mnt/hgfs/share/code/kernel_test/startstop/startstop.ko /mnt/hgfs/share/code/kernel_test/startstop/startstop.o /mnt/hgfs/share/code/kernel_test/startstop/startstop.mod.o ;  true

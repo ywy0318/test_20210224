@@ -1,0 +1,986 @@
+Disk Usage Analyzer
+vi /etc/fstab
+.host:/SharedFile /mnt/hgfs vmhgfs defaults 0 0
+
+uname -r
+4.15.0-45-generic
+
+
+
+Ubuntu开机后出现上述问题，在busybox中的只能找到/dev/sda
+ 具体操作： 
+1. 编辑 /etc/default/grub 文件。 我用的是vi。 可以 sudo vi /etc/default/grub 
+2. 找到 #GRUB_DISABLE_LINUX_UUID=true 这一行 
+3. 去掉前面的#号。（#号表示这一行是注释啦，去掉之后，就是让这一行的配置起作用。） 
+4. 保存退出。 
+5. 执行 sudo update-grub ( update-grub会更新/boot/grub/grub.cfg文件 ) 
+
+fsck.ext4 -y /dev/sda1
+
+sudo make menuconfig
+
+输入下列命令将内核作为引导，将数字更改为你自己编译的版本号：
+sudo update-initramfs -c -k 4.10.14
+
+打开 /etc/default/grub 注释 GRUP_HIDDEN_TIMEOUT = 0 仅在前头加一个#即可。
+
+grep menuentry /boot/grub/grub.cfg
+
+2.然后修改grub文件中的GRUB_DEFAULT="Ubuntu，Linux 4.15.0-29-generic".
+sudo gedit /etc/default/grub
+
+sudo update-grub
+
+========================================
+2020-07-12
+yangweiyu@ubuntu:/$ sudo update-grub
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.19.132
+Found initrd image: /boot/initrd.img-4.19.132
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found memtest86+ image: /boot/memtest86+.elf
+Found memtest86+ image: /boot/memtest86+.bin
+done
+yangweiyu@ubuntu:/boot$ sudo md5sum ./*
+[sudo] password for yangweiyu: 
+888648d57570081a2c3ab765cc6ba050  ./config-4.15.0-45-generic
+475c60d2d655e3be010a88f88ba29cd3  ./config-4.19.132
+md5sum: ./grub: Is a directory
+e06eb6d76ee1127fa6c433fce51dcbdd  ./initrd.img-4.15.0-45-generic
+0299c81e772160e10d15079e3e9ae856  ./initrd.img-4.19.132
+f0fc0ff4ad6055c3a6ba5524de414fcd  ./memtest86+.bin
+d9b1ae4a129bf3b77ba61137b4081e24  ./memtest86+.elf
+eedb8b06ebad36265b9624350b369c1b  ./memtest86+_multiboot.bin
+03cd6ba67c1c99a3710628a5e6e81675  ./System.map-4.15.0-45-generic
+97815ce911db683ef27817ac5be24846  ./System.map-4.19.132
+2936a8360c2a45ca448cd2ebd9e48050  ./vmlinuz-4.15.0-45-generic
+027822f2473f167dd8c8df9b1b6ee285  ./vmlinuz-4.19.132
+total 650628
+-rw-r--r-- 1 root root    217027 Jan 30  2019 config-4.15.0-45-generic
+-rw-r--r-- 1 root root    219217 Jul 12 06:06 config-4.19.132
+drwxr-xr-x 5 root root      4096 Jul 14 21:16 grub
+-rw-r--r-- 1 root root  54481933 Jun 25 06:20 initrd.img-4.15.0-45-generic
+-rw-r--r-- 1 root root 585532565 Jul 12 06:13 initrd.img-4.19.132
+-rw-r--r-- 1 root root    182704 Jan 28  2016 memtest86+.bin
+-rw-r--r-- 1 root root    184380 Jan 28  2016 memtest86+.elf
+-rw-r--r-- 1 root root    184840 Jan 28  2016 memtest86+_multiboot.bin
+-rw------- 1 root root   4048670 Jan 30  2019 System.map-4.15.0-45-generic
+-rw-r--r-- 1 root root   4369827 Jul 12 06:06 System.map-4.19.132
+-rw-r--r-- 1 root root   8128088 Feb 27  2019 vmlinuz-4.15.0-45-generic
+-rw-r--r-- 1 root root   8660864 Jul 12 06:06 vmlinuz-4.19.132
+2020-07-12
+==============================================================
+2020-07-15
+yangweiyu@ubuntu:~/ywy$ sudo sudo update-grub
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.19.132-2020-07-14
+Found initrd image: /boot/initrd.img-4.19.132-2020-07-14
+Found linux image: /boot/vmlinuz-4.19.132
+Found initrd image: /boot/initrd.img-4.19.132
+Found linux image: /boot/vmlinuz-4.15.0-45-generic
+Found initrd image: /boot/initrd.img-4.15.0-45-generic
+Found memtest86+ image: /boot/memtest86+.elf
+Found memtest86+ image: /boot/memtest86+.bin
+done
+yangweiyu@ubuntu:~/ywy$ sudo md5sum /boot/*
+888648d57570081a2c3ab765cc6ba050  /boot/config-4.15.0-45-generic
+475c60d2d655e3be010a88f88ba29cd3  /boot/config-4.19.132
+00baaa0e97409c4ce68601c3155411ab  /boot/config-4.19.132-2020-07-14
+md5sum: /boot/grub: Is a directory
+e06eb6d76ee1127fa6c433fce51dcbdd  /boot/initrd.img-4.15.0-45-generic
+0299c81e772160e10d15079e3e9ae856  /boot/initrd.img-4.19.132
+96b48d077cf8b560ace431da36fd7d95  /boot/initrd.img-4.19.132-2020-07-14
+f0fc0ff4ad6055c3a6ba5524de414fcd  /boot/memtest86+.bin
+d9b1ae4a129bf3b77ba61137b4081e24  /boot/memtest86+.elf
+eedb8b06ebad36265b9624350b369c1b  /boot/memtest86+_multiboot.bin
+03cd6ba67c1c99a3710628a5e6e81675  /boot/System.map-4.15.0-45-generic
+97815ce911db683ef27817ac5be24846  /boot/System.map-4.19.132
+4a5ceadff04c572081bd36a7a5d1c422  /boot/System.map-4.19.132-2020-07-14
+2936a8360c2a45ca448cd2ebd9e48050  /boot/vmlinuz-4.15.0-45-generic
+027822f2473f167dd8c8df9b1b6ee285  /boot/vmlinuz-4.19.132
+9503874bf652751085da3e562b3eda67  /boot/vmlinuz-4.19.132-2020-07-14
+yangweiyu@ubuntu:~/ywy$ 
+2020-07-15
+Kernel Panic – not syncing: VFS: Unable to mount root fs on unknown-block
+=================================================
+
+
+下面更新一下grub：
+sudo update-grub
+如果看不到启动选择界面，请执行以下操作
+sudo vi /etc/default/grub
+sudo update-grub
+
+Makefile:1044: "Cannot use CONFIG_STACK_VALIDATION, please install libelf-dev, libelf-devel or elfutils-libelf-devel"
+
+
+
+VMWare虚拟机无法打开内核设备"\\.\Global\vmx86"的解决方法
+
+cmd执行：
+1、net start vmci
+2、net start vmx86
+3、net start VMnetuserif 
+
+
+wmic
+cpu get *
+
+仔细分析，其实解决起来很简单，进入内核配置界面：Device Drivers  —>Memory Technology Device (MTD) support  —>Mapping drivers for chip access  —>CFI Flash device in physical memory map —>Physical length of flash mapping, 
+将默认的0×40000改为0，重新编译烧录即可解决。
+注意如果使用xshell是改不了的，估计是字符终端对于删除键实现不太好，要么老老实实在原系统中修改要么直接改linux-2.6.x/.config中的配置项：CONFIG_MTD_PHYSMAP_LEN=0 
+
+
+首先，说明一下LFS kernel panic -not syncing :VFS:Unable to mount root fs on Unknown-block(0,0)出现的2113几个可能原因：5261
+1./etc/fstab文件4102配置错误，此配置文1653件是记录硬盘分区的文件，配置错了，当然就有可能出现Unable to mount root fs啦~~~解决这问题的办法就是找一张LIVECD启动了系统，然后修改此文件内容，很简单的，只要用文本编辑器打开了这文件，然后认真研究一下就明白该怎样做，如果出现要uuid之类的东东，那就到/dev/disk/by-uuid/目录下找，只要使得各挂载点与分区对应即可。
+
+2.menu.lst。/boot/grub/menu.lst 此文件出错也是有可能的。当出现这错误的时候，不妨先看看此文件配置是否正确。诸如sda与hda的问题，sda不行，就试下hda呗~~~
+
+3.initrd没有启动。内核载入内存后，某些系统会执行initrd文件的，如果没有启动，就会出现本文要解决的那问题。当然LFS是没有做initrd文件的，所以忽略此问题。如果您的出错原因在这，那你就用LIVECD启动了，然后到/boot/目录下，看看有没有initrd相似的文件，有的话，在menu.lst文件的启动项中加入initrd (hdx,y)/boot/initrd 这样就能解决了~~~
+
+4.内核编译的时候没有添加相应的硬件模块~~~这问题不好说，因为编译一个内核真的太不简单了~~~哈哈~~~有个必定能编译成功的办法，就是，假如你使用的某个版本的linux，把/proc/config.gz文件复制出来，解压，然后重命名为.config（注意前面有个点哦~~~）。复制到将要编译的内核源文件中，然后直接make，当然，如果你要在内核中增加其他模块的话，就先make menuconfig。当然，选项只能是只增不减罗~~~哈哈~~~
+（说明一下，这方法我没测试过，但是按道理来说是可以的，至少同一版本的内核是肯定成功的，除非不同版本之间的.config文件格式不一样了~~~） 
+
+uname -r  查看当前内核版本
+
+rpm -qa|grep kernel  查看系统已安装的内核
+
+vim /boot/grub/grub.conf  配置默认内核启动项
+
+编译内核时，出现以下错误：
+
+kernel panic--not syncing:VFS:Uable to mount root fs on unknown-block(0,0)
+与
+
+scsi
+
+Ext2
+
+Ext3
+
+initrd
+
+Ram disk
+
+等驱动内核选择相关
+
+
+最近在倒腾Ubuntu，然后想着怎么美化一下界面，于是照着网上的教程整了一下Flatabulous这个软件，然后好像/boot就满了。关机之后再开机就出现了如题所述的错误，无法开机，也无法进入recovery mode,整个系统都感觉没救了。找了一些答案好多都说需要使用live CD的方式启动，太麻烦了。后来找到了一个靠谱点的教程，现在记录一下。
+
+首先，最好对你的系统做个备份，或者导出，确保意外发生的时候，给你的造成的损失是最小的。
+
+出现这种错误的原因多半是/boot盘空间不够，你的Ubuntu内核做了许多的更新，而默认情况下，Ubuntu将保留旧的内核并将它们添加到可在Grub2启动加载器菜单中启动的可用内核列表中。
+
+你可以通过以下命令来确定你的/boot是否已经爆满：
+
+
+查看开机时间
+第一步：开机自检，加载BIOS
+
+第二步：读取ＭＢＲ
+
+第三步：Boot Loader　grub引导菜单
+
+第四步：加载kernel内核
+
+第五步：init进程依据inittab文件夹来设定运行级别
+
+第六步：init进程执行rc.sysinit
+
+第七步：启动内核模块
+
+第八步：执行不同运行级别的脚本程序
+
+第九步：执行/etc/rc.d/rc.local
+
+第十步：执行/bin/login程序，启动mingetty,进入登录状态
+
+查看开机日志
+dmesg
+
+Ubuntu删除自己编译的内核
+sudo rm -rf /lib/modules/2.6.37.6
+sudo rm -rf /usr/src/linux-headers-2.6.37.6
+sudo rm /boot/*2.6.37.6*
+sudo rm /var/lib/dpkg/info/linux-headers-2.6.37.6*
+
+sudo make modules_install # 生成模块
+sudo make #before  生成内核
+sudo make install # 生成内核
+sudo update-grub
+
+=======================
+20200722
+Virtualization 去掉了---v000
+20200723
+Device Drivers : Virtualization drivers---v001
+
+--v002
+Device Drivers : Multiple devices drivers support (RAID and LVM)
+Device Drivers : Ultra Wideband devices
+Device Drivers : MMC/SD/SDIO card support
+Device Drivers : Sony MemoryStick card support
+Device Drivers : MCB support
+Device Drivers : Thunderbolt support
+Device Drivers : FPGA Configuration Framework
+Device Drivers : FMC
+Device Drivers : Pulse-Width Modulation (PWM) Support
+Device Drivers : Virtio drivers
+Device Drivers : InfiniBand support
+Device Drivers : Graphics support -  AMD GPU
+Device Drivers : Graphics support -  Virtio GPU drivers
+Device Drivers : Graphics support -  Nouveau (NVIDIA) cards
+Device Drivers : Graphics support -  Virtual GEM provider---待续
+Device Drivers : Graphics support -  QXL virtual GPU---待续
+
+Device Drivers :Multimedia support - Analog TV support
+Device Drivers :Multimedia support - Digital TV support
+Device Drivers :Multimedia support - Cameras/video grabbers support
+Device Drivers :Multimedia support - AM/FM radio receivers/transmitters support
+Device Drivers :Multimedia support - Software defined radio support
+Device Drivers :Multimedia support - HDMI CEC support---待续
+Device Drivers :Multimedia support - Media USB Adapter
+Device Drivers :Multimedia support - Media PCI Adapter
+--v002
+
+
+========================
+total 630M---v001
+-rw-r--r-- 1 root root 212K Jan 30  2019 config-4.15.0-45-generic
+-rw-r--r-- 1 root root 214K Jul 24 09:23 config-4.19.132
+drwxr-xr-x 5 root root 4.0K Jul 24 09:34 grub
+-rw-r--r-- 1 root root  52M Jun 25 06:20 initrd.img-4.15.0-45-generic
+-rw-r--r-- 1 root root 553M Jul 24 09:26 initrd.img-4.19.132
+-rw-r--r-- 1 root root 179K Jan 28  2016 memtest86+.bin
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+.elf
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+_multiboot.bin
+-rw------- 1 root root 3.9M Jan 30  2019 System.map-4.15.0-45-generic
+-rw-r--r-- 1 root root 4.2M Jul 24 09:23 System.map-4.19.132
+-rw-r--r-- 1 root root 7.8M Feb 27  2019 vmlinuz-4.15.0-45-generic
+-rw-r--r-- 1 root root 8.3M Jul 24 09:23 vmlinuz-4.19.132
+===============================
+total 504M--v002
+-rw-r--r-- 1 root root 212K Jan 30  2019 config-4.15.0-45-generic
+-rw-r--r-- 1 root root 196K Jul 25 13:08 config-4.19.132
+drwxr-xr-x 5 root root 4.0K Jul 25 13:11 grub
+-rw-r--r-- 1 root root  52M Jun 25 06:20 initrd.img-4.15.0-45-generic
+-rw-r--r-- 1 root root 427M Jul 25 13:10 initrd.img-4.19.132
+-rw-r--r-- 1 root root 179K Jan 28  2016 memtest86+.bin
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+.elf
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+_multiboot.bin
+-rw------- 1 root root 3.9M Jan 30  2019 System.map-4.15.0-45-generic
+-rw-r--r-- 1 root root 4.1M Jul 25 13:08 System.map-4.19.132
+-rw-r--r-- 1 root root 7.8M Feb 27  2019 vmlinuz-4.15.0-45-generic
+-rw-r--r-- 1 root root 8.1M Jul 25 13:08 vmlinuz-4.19.132
+======================================
+yangweiyu@ubuntu:/disk4/linux-4.19.132$ lsmod 
+Module                  Size  Used by
+vmw_vsock_vmci_transport    32768  2
+vsock                  36864  3 vmw_vsock_vmci_transport
+coretemp               16384  0
+snd_ens1371            28672  2
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+snd_ac97_codec        131072  1 snd_ens1371
+pcbc                   16384  0
+gameport               20480  1 snd_ens1371
+ac97_bus               16384  1 snd_ac97_codec
+snd_pcm               102400  2 snd_ac97_codec,snd_ens1371
+aesni_intel           200704  0
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+aes_x86_64             20480  1 aesni_intel
+snd_rawmidi            32768  2 snd_seq_midi,snd_ens1371
+input_leds             16384  0
+crypto_simd            16384  1 aesni_intel
+snd_seq                65536  2 snd_seq_midi,snd_seq_midi_event
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_timer              32768  2 snd_seq,snd_pcm
+joydev                 20480  0
+serio_raw              16384  0
+glue_helper            16384  1 aesni_intel
+snd                    77824  11 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+soundcore              16384  1 snd
+intel_rapl_perf        16384  0
+vmw_balloon            20480  0
+i2c_piix4              24576  0
+vmw_vmci               69632  2 vmw_balloon,vmw_vsock_vmci_transport
+mac_hid                16384  0
+parport_pc             36864  0
+ppdev                  20480  0
+lp                     20480  0
+parport                49152  3 parport_pc,lp,ppdev
+autofs4                40960  2
+hid_generic            16384  0
+usbhid                 49152  0
+hid                   122880  2 usbhid,hid_generic
+vmwgfx                278528  4
+ttm                   110592  1 vmwgfx
+drm_kms_helper        172032  1 vmwgfx
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+drm                   471040  7 vmwgfx,drm_kms_helper,ttm
+mptspi                 24576  3
+mptscsih               36864  1 mptspi
+psmouse               151552  0
+mptbase                98304  2 mptspi,mptscsih
+ahci                   40960  0
+e1000                 143360  0
+pata_acpi              16384  0
+libahci                32768  1 ahci
+scsi_transport_spi     32768  1 mptspi
+===============================================
+yangweiyu@ubuntu:~$ lsmod 
+Module                  Size  Used by
+vmw_vsock_vmci_transport    32768  2
+vsock                  36864  3 vmw_vsock_vmci_transport
+snd_ens1371            28672  2
+snd_ac97_codec        131072  1 snd_ens1371
+gameport               16384  1 snd_ens1371
+coretemp               16384  0
+ac97_bus               16384  1 snd_ac97_codec
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+snd_pcm                98304  2 snd_ac97_codec,snd_ens1371
+pcbc                   16384  0
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            32768  2 snd_seq_midi,snd_ens1371
+aesni_intel           188416  0
+snd_seq                65536  2 snd_seq_midi,snd_seq_midi_event
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+input_leds             16384  0
+snd_timer              32768  2 snd_seq,snd_pcm
+aes_x86_64             20480  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+glue_helper            16384  1 aesni_intel
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+joydev                 24576  0
+intel_rapl_perf        16384  0
+snd                    81920  11 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+serio_raw              16384  0
+soundcore              16384  1 snd
+vmw_balloon            20480  0
+vmw_vmci               69632  2 vmw_balloon,vmw_vsock_vmci_transport
+shpchp                 36864  0
+i2c_piix4              24576  0
+mac_hid                16384  0
+parport_pc             36864  0
+ppdev                  20480  0
+lp                     20480  0
+parport                49152  3 parport_pc,lp,ppdev
+autofs4                40960  2
+hid_generic            16384  0
+usbhid                 49152  0
+hid                   118784  2 usbhid,hid_generic
+vmwgfx                274432  4
+ttm                   106496  1 vmwgfx
+psmouse               151552  0
+drm_kms_helper        172032  1 vmwgfx
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+mptspi                 24576  3
+ahci                   40960  0
+mptscsih               40960  1 mptspi
+libahci                32768  1 ahci
+drm                   401408  7 vmwgfx,drm_kms_helper,ttm
+mptbase               102400  2 mptspi,mptscsih
+e1000                 143360  0
+scsi_transport_spi     32768  1 mptspi
+pata_acpi              16384  0
+===============================================
+
+df -h 
+
+
+现在的情况是系统已经无法进入，连修复模式也没办法开启，所以我们要想办法。在进入引导界面的时候，可以选择Ubuntu高级选项，然后选择一个非修复模式的系统进入。当然不是所有情况下都能顺利进入系统，这个时候你只能祈祷能够顺利进入登录界面咯。
+
+登录之后，打开命令行工具，使用以下命令查看你的当前内核：
+
+
+uname -a 
+
+然后把输出结果记在你的小本本上吧，等会千万不能删除这个内核。
+
+接下来就是通过以下命令查看你的机器上安装的所有内核：
+ 
+
+dpkg --list | -grep linux-image 
+
+
+找到所有比当前内核版本低的内核。当你知道要删除哪些内核时，请继续在下面将其删除。运行以下命令删除您选择的内核：
+
+
+
+sudo apt-get purge linux-image-xxxx-generic 
+
+
+或者：
+
+ 
+
+
+sudo apt-get purge linux-image-extra-xxx-xx-generic 
+
+
+最后，运行下面的命令更新grub2：
+
+
+sudo update-grub2 
+
+
+最后的最后，重启你的机器：
+
+
+ 
+
+
+sudo reboot 
+
+
+这次在登录的时候，就可以直接使用第一个选项Ubuntu进行登录了。
+
+
+====
+内核启动报错：Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
+
+
+从网上找到一个是这样说的：好多次遇到这样的flash加载问题，刚开始满世界找答案，总以为自己不小心动了某些不改动的内核开关，
+甚至重新解压内核重新移植来发泄自己的不满。kobject_add failed for physmap-flash.0 with -EEXIST, don’t try to register things with the same name in the same directory.
+
+仔细分析，其实解决起来很简单，进入内核配置界面：Device Drivers  —>Memory Technology Device (MTD) support  —>Mapping drivers for chip access 
+ —>CFI Flash device in physical memory map —>Physical length of flash mapping, 将默认的0×40000改为0，
+ 重新编译烧录即可解决。注意如果使用xshell是改不了的，估计是字符终端对于删除键实现不太好，要么老老实实在原系统中修改要么直接改linux-2.6.x/.config中的配置项：CONFIG_MTD_PHYSMAP_LEN=0 
+ 
+ 
+ 
+ 
+ general setup找到 Initial RAM filesystem and RAM disk 这一行，enable它
+filesystem 里启动对ext2文件系统的支持，因为ramdisk是ext2文件系统。
+device drivers-> block devices：
+找到下面两个设置ramdisk的默认数量，虽然我们只有1个ramdisk，不过他自带默认是16，那就16吧，重点是第二个默认的ramdisk大小(默认是16384，也就是默认为16M的ramdisk)，注意以kbytes为单位，我做的ramdisk是64M，上面说了，就是65536Kbytes。所以ram磁盘大小必须设置为65536千字节，不然会内核恐慌（kernel panic）报错的。
+(16)    Default number of RAM disks
+(65536) Default RAM disk size (kbytes)
+修改后，重启系统，顺利开机。另外内核命令行参数设置如下：
+其实就是默认的：
+Kernel command line: console=ttyPS0,115200 root=/dev/ram rw earlyprintk
+在uboot启动时设置环境变量：
+setenv bootargs ‘console=ttyPS0,115200 root=/dev/ram rw earlyprintk’
+
+ 
+ 
+ 
+ 
+ total 692M
+-rw-r--r-- 1 root root 212K Jan 30  2019 config-4.15.0-45-generic
+-rw-r--r-- 1 root root 215K Jul 12 06:06 config-4.19.132
+-rw-r--r-- 1 root root 186K Jul 20 09:22 config-4.19.132-2020-07-14
+drwxr-xr-x 5 root root 4.0K Jul 20 09:29 grub
+-rw-r--r-- 1 root root  52M Jun 25 06:20 initrd.img-4.15.0-45-generic
+-rw-r--r-- 1 root root 559M Jul 12 06:13 initrd.img-4.19.132
+-rw-r--r-- 1 root root  47M Jul 20 09:22 initrd.img-4.19.132-2020-07-14
+-rw-r--r-- 1 root root 179K Jan 28  2016 memtest86+.bin
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+.elf
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+_multiboot.bin
+-rw------- 1 root root 3.9M Jan 30  2019 System.map-4.15.0-45-generic
+-rw-r--r-- 1 root root 4.2M Jul 12 06:06 System.map-4.19.132
+-rw-r--r-- 1 root root 3.3M Jul 20 09:22 System.map-4.19.132-2020-07-14
+-rw-r--r-- 1 root root 7.8M Feb 27  2019 vmlinuz-4.15.0-45-generic
+-rw-r--r-- 1 root root 8.3M Jul 12 06:06 vmlinuz-4.19.132
+-rw-r--r-- 1 root root 6.3M Jul 20 09:22 vmlinuz-4.19.132-2020-07-14
+
+
+total 630M
+-rw-r--r-- 1 root root 212K Jan 30  2019 config-4.15.0-45-generic
+-rw-r--r-- 1 root root 214K Jul 23 09:55 config-4.19.132
+drwxr-xr-x 5 root root 4.0K Jul 23 10:12 grub
+-rw-r--r-- 1 root root  52M Jun 25 06:20 initrd.img-4.15.0-45-generic
+-rw-r--r-- 1 root root 553M Jul 23 09:57 initrd.img-4.19.132
+-rw-r--r-- 1 root root 179K Jan 28  2016 memtest86+.bin
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+.elf
+-rw-r--r-- 1 root root 181K Jan 28  2016 memtest86+_multiboot.bin
+-rw------- 1 root root 3.9M Jan 30  2019 System.map-4.15.0-45-generic
+-rw-r--r-- 1 root root 4.2M Jul 23 09:55 System.map-4.19.132
+-rw-r--r-- 1 root root 7.8M Feb 27  2019 vmlinuz-4.15.0-45-generic
+-rw-r--r-- 1 root root 8.3M Jul 23 09:55 vmlinuz-4.19.132
+
+
+ 
+终于解决LFS kernel panic -not syncing :VFS:Unable to mount root fs on Unknown-block(0,0)问题，此问题解决了，意味着LFS成功搭建了。
+ 首先，说明一下LFS kernel panic -not syncing :VFS:Unable to mount root fs on Unknown-block(0,0)出现的几个可能原因：
+1./etc/fstab文件配置错误，此配置文件是记录硬盘分区的文件，配置错了，当然就有可能出现Unable to mount root fs啦~~~解决这问题的办法就是找一张LIVECD启动了系统，
+然后修改此文件内容，很简单的，只要用文本编辑器打开了这文件，然后认真研究一下就明白该怎样做，如果出现要uuid之类的东东，那就到/dev/disk/by-uuid/目录下找，只要使得各挂载点与分区对应即可。
+
+2.menu.lst。/boot/grub/menu.lst 此文件出错也是有可能的。当出现这错误的时候，不妨先看看此文件配置是否正确。诸如sda与hda的问题，sda不行，就试下hda呗~~~
+
+3.initrd没有启动。内核载入内存后，某些系统会执行initrd文件的，如果没有启动，就会出现本文要解决的那问题。当然LFS是没有做initrd文件的，所以忽略此问题。
+如果您的出错原因在这，那你就用LIVECD启动了，然后到/boot/目录下，看看有没有initrd相似的文件，有的话，在menu.lst文件的启动项中加入initrd (hdx,y)/boot/initrd 这样就能解决了~~~
+
+4.内核编译的时候没有添加相应的硬件模块~~~这问题不好说，因为编译一个内核真的太不简单了~~~哈哈~~~有个必定能编译成功的办法，
+就是，假如你使用的某个版本的linux，把/proc/config.gz文件复制出来，解压，然后重命名为.config（注意前面有个点哦~~~）。
+复制到将要编译的内核源文件中，然后直接make，当然，如果你要在内核中增加其他模块的话，就先make menuconfig。
+当然，选项只能是只增不减罗~~~哈哈~~~（说明一下，这方法我没测试过，但是按道理来说是可以的，至少同一版本的内核是肯定成功的，除非不同版本之间的.config文件格式不一样了~~~）
+ 
+ 
+ 
+make defconfig
+ 
+3.引导加载程序一般包括2个部分：主引导加载程序和二级引导加载程序。其中主引导加载程序位于MBR中，体积很小，主要负责载入真正的引导加载程序（二级引导加载程序）。二级引导加载程序从磁盘中载入操作系统，并能够提供更为丰富的人机交互。主要的引导加载程序有LILO,GRUB等。其中Ubuntu默认GRUB为引导加载程序。
+由于引导加载程序需要读取文件分区表（DPL）,因此它必须能够识别磁盘的文件系统格式如FAT,FAT32,NTFS，ex2,ex4...等等。注意windows提供的loader无法识别linux的文件系统，而linux下的loader如grub,lilo等既能识别windows文件系统，也能识别linux文件系统。
+引导加载程序读取操作系统核心文件,并将其加载到内存中，利用核心的功能开始测试硬件并加载相应的驱动程序，包括硬盘、CPU、网卡(对！你没看错，确实有网卡，linux把网卡驱动并入了核心中)，声卡等等。
+实际核心文件一般为/boot/vmlinuz-2.x.xx-xx-generic，但核心在载入过程中仅载入根目录/而已，因此根目录下存在一个vmlinuz的链接文件指向实际的核心文件。
+此外，核心的一部分功能需要使用别的文件来提供，需要在载入核心的同时也载入这些功能文件(如小型linux系统启动时常用内存模拟的虚拟磁盘RAM Disk来完成某些功能)。因此根目录下还有一个链接文件initrd，它指向/boot/initrd.img-2.x.xx-xx-generic的映像文件。Loader加载根目录的时候会同时加载该映像文件创建RamDisk。
+initrd.img所创建的RamDisk中包含了一个名为linuxrc的程序，存放在initrd虚拟磁盘的最顶层目录下。RamDisk创建成功后，核心将调用该程序执行硬件驱动模块的加载以驱动硬件设备。硬件驱动加载完成后，initrd创建的RamDisc将被移除，然后操作系统开始运行启动管理器。用于根据需要加载服务程序、用户自定义启动程序，直到进入登录界面。
+ 
+ 
+=====================================================
+第一步：开机自检，加载BIOS
+
+第二步：读取ＭＢＲ
+
+第三步：Boot Loader　grub引导菜单
+
+第四步：加载kernel内核
+
+第五步：init进程依据inittab文件夹来设定运行级别
+
+第六步：init进程执行rc.sysinit
+
+第七步：启动内核模块
+
+第八步：执行不同运行级别的脚本程序
+
+第九步：执行/etc/rc.d/rc.local
+
+第十步：执行/bin/login程序，启动mingetty,进入登录状态
+ 
+asmlinkage void __init start_kernel(void) 
+
+{ 
+  char * command_line; 
+  extern struct kernel_param __start___param[], __stop___param[];  
+
+  smp_setup_processor_id();  //来设置smp process id，当然目前看到的代码里面这里是空的
+  
+  unwind_init(); 
+
+//lockdep是linux内核的一个调试模块，用来检查内核互斥机制尤其是自旋锁潜在的死锁问题。  
+//自旋锁由于是查询方式等待，不释放处理器，比一般的互斥机制更容易死锁，  
+//故引入lockdep检查以下几种情况可能的死锁（lockdep将有专门的文章详细介绍，在此只是简单列举）：  
+//  
+//·同一个进程递归地加锁同一把锁；  
+//  
+//·一把锁既在中断（或中断下半部）使能的情况下执行过加锁操作，  
+// 又在中断（或中断下半部）里执行过加锁操作。这样该锁有可能在锁定时由于中断发生又试图在同一处理器上加锁；  
+//  
+//·加锁后导致依赖图产生成闭环，这是典型的死锁现象。  
+   lockdep_init(); 
+   
+
+//关闭当前CUP中断  
+local_irq_disable(); 
+
+//修改标记early_boot_irqs_enabled;  
+//通过一个静态全局变量 early_boot_irqs_enabled来帮助我们调试代码，  
+//通过这个标记可以帮助我们知道是否在”early bootup code”，也可以通过这个标志警告是有无效的终端打开  
+early_boot_irqs_off(); 
+
+//每一个中断都有一个IRQ描述符（struct irq_desc）来进行描述。  
+//这个函数的主要作用是设置所有的 IRQ描述符（struct irq_desc）的锁是统一的锁，  
+//还是每一个IRQ描述符（struct irq_desc）都有一个小锁。  
+early_init_irq_lock_class(); 
+
+ 
+
+ 
+
+ 
+
+/*
+
+ * Interrupts are still disabled. Do necessary setups, then
+ * enable them
+ */ 
+// 大内核锁（BKL--Big Kernel Lock）  
+//大内核锁本质上也是自旋锁，但是它又不同于自旋锁，自旋锁是不可以递归获得锁的，因为那样会导致死锁。  
+//但大内核锁可以递归获得锁。大内核锁用于保护整个内核，而自旋锁用于保护非常特定的某一共享资源。  
+//进程保持大内核锁时可以发生调度，具体实现是：  
+//在执行schedule时，schedule将检查进程是否拥有大内核锁，如果有，它将被释放，以致于其它的进程能够获得该锁，  
+//而当轮到该进程运行时，再让它重新获得大内核锁。注意在保持自旋锁期间是不运行发生调度的。  
+//需要特别指出，整个内核只有一个大内核锁，其实不难理解，内核只有一个，而大内核锁是保护整个内核的，当然有且只有一个就足够了。  
+//还需要特别指出的是，大内核锁是历史遗留，内核中用的非常少，一般保持该锁的时间较长，因此不提倡使用它。  
+//从2.6.11内核起，大内核锁可以通过配置内核使其变得可抢占（自旋锁是不可抢占的），这时它实质上是一个互斥锁，使用信号量实现。  
+//大内核锁的API包括：  
+//  
+//void lock_kernel(void);  
+//  
+//该函数用于得到大内核锁。它可以递归调用而不会导致死锁。  
+//  
+//void unlock_kernel(void);  
+//  
+//该函数用于释放大内核锁。当然必须与lock_kernel配对使用，调用了多少次lock_kernel，就需要调用多少次unlock_kernel。  
+//大内核锁的API使用非常简单，按照以下方式使用就可以了：  
+//lock_kernel(); //对被保护的共享资源的访问 … unlock_kernel()；  
+//http://blog.csdn.net/universus/archive/2010/05/25/5623971.aspx  
+  lock_kernel(); 
+
+ 
+//初始化time ticket，时钟  
+  tick_init(); 
+
+ 
+
+//函数 tick_init() 很简单，调用 clockevents_register_notifier 函数向 clockevents_chain 通知链注册元素：  
+// tick_notifier。这个元素的回调函数指明了当时钟事件设备信息发生变化（例如新加入一个时钟事件设备等等）时，  
+//应该执行的操作，该回调函数为 tick_notify   
+//http://blogold.chinaunix.net/u3/97642/showart_2050200.html  
+  boot_cpu_init();
+
+  
+
+//初始化页地址，当然对于arm这里是个空函数  
+//http://book.chinaunix.net/special/ebook/PrenticeHall/PrenticeHallPTRTheLinuxKernelPrimer/0131181637/ch08lev1sec5.html  
+  page_address_init(); 
+
+  
+
+/*打印KER_NOTICE,这里的KER_NOTICE是字符串<5>*/
+  printk(KERN_NOTICE);
+
+ 
+
+ 
+
+/*打印以下linux版本信息:       
+“Linux version 2.6.22.6 (book@book-desktop) (gcc version 3.4.5) #1 Fri Jun 16 00:55:53 CST 2017” */
+ printk(linux_banner);
+      
+
+//系结构相关的内核初始化过程,处理uboot传递进来的atag参数( setup_memory_tags()和setup_commandline _tags() )  
+//http://www.cublog.cn/u3/94690/showart_2238008.html  
+setup_arch(&command_line); 
+
+  
+
+//处理启动命令，这里就是设置的cmd_line，
+//保存未改变的comand_line到字符数组static_command_line［］ 中。
+//保存  boot_command_line到字符数组saved_command_line［］中  
+setup_command_line(command_line); 
+
+unwind_setup();
+
+//如果没有定义CONFIG_SMP宏，则这个函数为空函数。  
+//如果定义了CONFIG_SMP宏，则这个setup_per_cpu_areas()函数给每个CPU分配内存，  
+//并拷贝.data.percpu段的数据。为系统中的每个CPU的per_cpu变量申请空间。  
+setup_per_cpu_areas();
+
+//定义在include/asm-x86/smp.h。  
+//如果是SMP环境，则设置boot CPU的一些数据。在引导过程中使用的CPU称为boot CPU  
+smp_prepare_boot_cpu(); /* arch-specific boot-cpu hooks */ 
+/* 进程调度器初始化 */
+sched_init(); 
+
+/* 禁止内核抢占 */  
+preempt_disable();
+      
+//设置node 和 zone 数据结构  
+//内存管理的讲解：http://blog.chinaunix.net/space.php?uid=361890&do=blog&cuid=2146541  
+build_all_zonelists(NULL); 
+ 
+//初始化page allocation相关结构  
+page_alloc_init();
+
+/* 打印Linux启动命令行参数 */   
+printk(KERN_NOTICE "Kernel command line: %s/n", boot_command_line); 
+  
+//解析内核参数  
+//对内核参数的解析：http://hi.baidu.com/yuhuntero/blog/item/654a7411e45ce519b8127ba9.html  
+parse_early_param(); 
+parse_args("Booting kernel", static_command_line, __start___param, 
+  __stop___param - __start___param, 
+  &unknown_bootoption); 
+
+/*
+* These use large bootmem allocations and must precede
+* kmem_cache_init()
+*/ 
+//初始化hash表，以便于从进程的PID获得对应的进程描述指针，按照实际的物理内存初始化pid hash表  
+//这里涉及到进程管理http://blog.csdn.net/satanwxd/archive/2010/03/27/5422053.aspx  
+pidhash_init(); 
+
+//初始化VFS的两个重要数据结构dcache和inode的缓存。  
+//http://blog.csdn.net/yunsongice/archive/2011/02/01/6171324.aspx  
+vfs_caches_init_early(); 
+
+//把编译期间，kbuild设置的异常表，也就是__start___ex_table和__stop___ex_table之中的所有元素进行排序  
+sort_main_extable(); 
+
+//初始化中断向量表  
+//http://blog.csdn.net/yunsongice/archive/2011/02/01/6171325.aspx  
+trap_init(); 
+
+//memory map初始化  
+//http://blog.csdn.net/huyugv_830913/archive/2010/09/15/5886970.aspx  
+mm_init(); 
+
+/*
+* Set up the scheduler prior starting any interrupts (such as the
+* timer interrupt). Full topology setup happens at smp_init()
+* time - but meanwhile we still have a functioning scheduler.
+*/ 
+//核心进程调度器初始化，调度器的初始化的优先级要高于任何中断的建立，  
+//并且初始化进程0，即idle进程，但是并没有设置idle进程的NEED_RESCHED标志，  
+//所以还会继续完成内核初始化剩下的事情。  
+//这里仅仅为进程调度程序的执行做准备。  
+//它所做的具体工作是调用init_bh函数(kernel/softirq.c)把timer,tqueue,immediate三个人物队列加入下半部分的数组  
+sched_init(); 
+
+/*
+* Disable preemption - early bootup scheduling is extremely
+* fragile until we cpu_idle() for the first time.
+*/ 
+//抢占计数器加1   
+ preempt_disable();
+
+ 
+
+//检查中断是否打开,如果已经打开，则关闭中断   
+  if (!irqs_disabled()) { 
+  printk(KERN_WARNING "start_kernel(): bug: interrupts were " 
+  "enabled *very* early, fixing it/n"); 
+  local_irq_disable(); 
+  } 
+
+ 
+
+  sort_main_extable();  /*
+ * trap_init函数完成对系统保留中断向量（异常、非屏蔽中断以及系统调用）              
+ * 的初始化，init_IRQ函数则完成其余中断向量的初始化
+ */
+ trap_init();    
+
+//Read-Copy-Update的初始化  
+//RCU机制是Linux2.6之后提供的一种数据一致性访问的机制，  
+//从RCU（read-copy-update）的名称上看，我们就能对他的实现机制有一个大概的了解，  
+//在修改数据的时候，首先需要读取数据，然后生成一个副本，对副本进行修改，  
+//修改完成之后再将老数据update成新的数据，此所谓RCU。  
+//http://blog.ednchina.com/tiloog/193361/message.aspx  
+//http://blogold.chinaunix.net/u1/51562/showart_1341707.html  
+rcu_init();
+ 
+//初始化IRQ中断和终端描述符。  
+//初始化系统中支持的最大可能的中断描述结构struct irqdesc变量数组irq_desc[NR_IRQS],  
+//把每个结构变量irq_desc[n]都初始化为预先定义好的坏中断描述结构变量bad_irq_desc,  
+//并初始化该中断的链表表头成员结构变量pend  
+init_IRQ();    
+
+/* 初始化hash表，便于从进程的PID获得对应的进程描述符指针 */
+pidhash_init();
+
+ 
+
+//初始化定时器Timer相关的数据结构  
+//http://www.ibm.com/developerworks/cn/linux/l-cn-clocks/index.html  
+init_timers();  
+
+//对高精度时钟进行初始化  
+hrtimers_init();
+ 
+//软中断初始化  
+//http://blogold.chinaunix.net/u1/51562/showart_494363.html  
+softirq_init(); 
+ 
+//初始化时钟源  
+timekeeping_init(); 
+ 
+//初始化系统时间，  
+//检查系统定时器描述结构struct sys_timer全局变量system_timer是否为空，  
+//如果为空将其指向dummy_gettimeoffset()函数。  
+//http://www.ibm.com/developerworks/cn/linux/l-cn-clocks/index.html  
+time_init();  
+
+//profile只是内核的一个调试性能的工具，  
+//这个可以通过menuconfig中的Instrumentation Support->profile打开。  
+//http://www.linuxdiyf.com/bbs//thread-71446-1-1.html  
+profile_init();
+    
+/*if判断中断是否打开,如果已经打开，打印数据*/   
+if (!irqs_disabled()) 
+    printk(KERN_CRIT "start_kernel(): bug: interrupts were enabled early/n"); 
+
+//与开始的early_boot_irqs_off相对应  
+early_boot_irqs_on(); 
+ 
+//与local_irq_disbale相对应，开CPU中断  
+local_irq_enable();
+
+/** HACK ALERT! This is early. We're enabling the console before
+* we've done PCI setups etc, and console_init() must be aware of
+* this. But we do want output early, in case something goes wrong.
+*/ 
+//初始化控制台以显示printk的内容，在此之前调用的printk，只是把数据存到缓冲区里，  
+//只有在这个函数调用后，才会在控制台打印出内容  
+//该函数执行后可调用printk()函数将log_buf中符合打印级别要求的系统信息打印到控制台上。  
+console_init(); 
+
+if (panic_later) 
+panic(panic_later, panic_param);  
+
+//如果定义了CONFIG_LOCKDEP宏，那么就打印锁依赖信息，否则什么也不做  
+lockdep_info(); 
+
+/*
+* Need to run this when irqs are enabled, because it wants
+* to self-test [hard/soft]-irqs on/off lock inversion bugs
+* too:
+*/ 
+//如果定义CONFIG_DEBUG_LOCKING_API_SELFTESTS宏  
+//则locking_selftest()是一个空函数，否则执行锁自测  
+ locking_selftest(); 
+
+  
+
+#ifdef CONFIG_BLK_DEV_INITRD  
+if (initrd_start && !initrd_below_start_ok && 
+   page_to_pfn(virt_to_page((void *)initrd_start)) < min_low_pfn) { 
+printk(KERN_CRIT "initrd overwritten (0x%08lx < 0x%08lx) - " 
+   "disabling it./n",    page_to_pfn(virt_to_page((void *)initrd_start)), 
+   min_low_pfn); 
+initrd_start = 0; 
+} 
+#endif
+
+ 
+ /* 虚拟文件系统的初始化 */
+ vfs_caches_init_early();       
+ cpuset_init_early();
+ mem_init();
+
+/* slab初始化 */
+kmem_cache_init();  
+
+//是否是对SMP的支持，单核是否需要？？这个要分析  
+setup_per_cpu_pageset(); 
+
+numa_policy_init(); 
+
+if (late_time_init) 
+   late_time_init(); 
+
+//calibrate_delay（）函数可以计算出cpu在一秒钟内执行了多少次一个极短的循环，  
+//计算出来的值经过处理后得到BogoMIPS 值，  
+//Bogo是Bogus(伪)的意思，MIPS是millions of instructions per second(百万条指令每秒)的缩写。  
+//这样我们就知道了其实这个函数是linux内核中一个cpu性能测试函数。  
+//http://blogold.chinaunix.net/u2/86768/showart_2196664.html  
+calibrate_delay();
+   
+//PID是process id的缩写  
+//http://blog.csdn.net/satanwxd/archive/2010/03/27/5422053.aspx  
+pidmap_init();
+
+ /* 接下来的函数中，大多数都是为有关的管理机制建立专用的slab缓存 */ 
+pgtable_cache_init();
+ 
+/* 初始化优先级树index_bits_to_maxindex数组 */
+prio_tree_init();          
+
+//来自mm/rmap.c  
+//分配一个anon_vma_cachep作为anon_vma的slab缓存。  
+//这个技术是PFRA（页框回收算法）技术中的组成部分。  
+//这个技术为定位而生——快速的定位指向同一页框的所有页表项。  
+anon_vma_init();
+
+    
+#ifdef CONFIG_X86  
+if (efi_enabled) 
+efi_enter_virtual_mode(); 
+#endif 
+
+//根据物理内存大小计算允许创建进程的数量  
+//http://www.jollen.org/blog/2006/11/jollen_linux_3_fork_init.html  
+fork_init(totalram_pages);
+
+   
+//给进程的各种资源管理结构分配了相应的对象缓存区  
+//http://www.shangshuwu.cn/index.php/Linux内核的进程创建  
+proc_caches_init(); 
+
+//创建 buffer_head SLAB 缓存  
+buffer_init(); 
+
+unnamed_dev_init();
+
+//初始化key的management stuff  
+key_init(); 
+
+//关于系统安全的初始化，主要是访问控制  
+//http://blog.csdn.net/nhczp/archive/2008/04/29/2341194.aspx  
+security_init();  
+
+//调用kmem_cache_create()函数来为VFS创建各种SLAB分配器缓存  
+//包括：names_cachep、filp_cachep、dquot_cachep和bh_cachep等四个SLAB分配器缓存  
+vfs_caches_init(totalram_pages); 
+ 
+radix_tree_init(); 
+
+//创建信号队列  
+signals_init();
+
+   
+
+/* rootfs populating might need page-writeback */ 
+//回写相关的初始化  
+//http://blog.csdn.net/yangp01/archive/2010/04/06/5454822.aspx  \page_writeback_init();   
+
+#ifdef CONFIG_PROC_FS  
+   proc_root_init(); 
+#endif  
+
+//http://blogold.chinaunix.net/u1/51562/showart_1777937.html  
+cpuset_init();
+ 
+////进程状态初始化，实际上就是分配了一个存储线程状态的高速缓存  
+taskstats_init_early(); 
+
+delayacct_init();  
+
+//测试CPU的各种缺陷，记录检测到的缺陷，以便于内核的其他部分以后可以使用他们工作。  
+check_bugs(); 
+ 
+//电源相关的初始化  
+//http://blogold.chinaunix.net/u/548/showart.php?id=377952  
+acpi_early_init(); /* before LAPIC and SMP init */ 
+ 
+
+//接着进入rest_init()创建init进程,创建根文件系统，启动应用程序
+rest_init(); 
+} 
+======================================
+modinfo 
+模块名和.ko 的对应关系;
+打印信息;
+ubuntu14.04 printk()默认打印的位置
+
+tail /var/log/syslog 即可显示printk打印的信息
+https://www.jianshu.com/p/15da13a67ebc
+=====================================
+x86_64_start_kernel(head64.c)--->x86_64_start_reservations(head64.c)
+--->start_kernel(main.c-init)--->rest_init(main.c)
+
+
+
+
+在rel系列的操作系统中；在/boot目录下有grub目录，还有initrd-XXX.img,还有vmlinuz.....其实这3个文件和目录是系统启动的关键；
+grub第一阶段在MBR中，功能就是引导第2阶段，第1.5阶段和第2阶段在/boot/grub当中；
+为什么叫他1.5阶段，是因为系统中就这么命名的;
+而1.5阶段中就启动需要的常见的文件系统类别，当然如果自制系统，可以把文件系统模块放到这个里面；
+第2阶段就是为了引导系统的；
+之后系统启动，然后通过rc.sysinit开始加载和初始化各种驱动；

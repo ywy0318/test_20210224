@@ -1,0 +1,2905 @@
+﻿/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr 
+Index   ThrId   Line    Arg        time                         Name
+1       427     52879   0x7        Thu Jan  1 08:00:14 1970     PthreadUICMDRecv
+2       418     342     (nil)      Thu Jan  1 08:00:13 1970     RtMsg_WriteProcMsgTask
+3       429     824     (nil)      Wed Jul 10 21:34:32 2019     watchdog_thread
+4       490     388     (nil)      Wed Jul 10 21:34:33 2019     SendEmail
+5       486     1783    0x4e64c8   Wed Jul 10 21:34:33 2019     timer_ntp
+6       428     853     (nil)      Thu Jan  1 08:00:14 1970     hw_FlashLedThread
+7       492     477     (nil)      Wed Jul 10 21:34:33 2019     Arp_EthMonitorThread
+8       517     57      (nil)      Wed Jul 10 21:34:35 2019     disk_NfsThread
+9       516     521     (nil)      Wed Jul 10 21:34:35 2019     disk_UsbThread
+10      519     1041    (nil)      Wed Jul 10 21:34:35 2019     disk_EsataThread
+11      521     616     (nil)      Wed Jul 10 21:34:35 2019     Hi_getaudiodata_proc
+12      520     42      (nil)      Wed Jul 10 21:34:35 2019     com_ReadThread
+13      518     895     0x5d8a78   Wed Jul 10 21:34:35 2019     disk_SATAThread
+14      491     123     (nil)      Wed Jul 10 21:34:33 2019     SendPicFtp
+15      528     147     (nil)      Wed Jul 10 21:34:35 2019     TskEpollThread
+16      527     57      0x2a84328  Wed Jul 10 21:34:35 2019     MsgQueuProcTask
+17      531     7996    (nil)      Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+18      530     69      0x2af2510  Wed Jul 10 21:34:35 2019     TskUdpCmdRecv
+19      529     1378    (nil)      Wed Jul 10 21:34:35 2019     Pthread_Tcp_Connect
+20      533     350     0x2af2510  Wed Jul 10 21:34:35 2019     udp_cmdSchedule
+21      535     7996    0x3        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+22      534     7996    0x2        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+23      537     7996    0x5        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+24      539     7996    0x7        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+25      538     7996    0x6        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+26      536     7996    0x4        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+27      532     7996    0x1        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+28      526     162     (nil)      Wed Jul 10 21:34:35 2019     TskVdecStateCheck
+29      541     8119    (nil)      Wed Jul 10 21:34:35 2019     TskNvsStatProess
+30      543     238     (nil)      Wed Jul 10 21:34:35 2019     pthread_timer
+31      552     10702   (nil)      Wed Jul 10 21:34:35 2019     TskIpChannelProess
+32      554     10702   0x2        Wed Jul 10 21:34:35 2019     TskIpChannelProess
+33      553     10702   0x1        Wed Jul 10 21:34:35 2019     TskIpChannelProess
+34      551     14348   (nil)      Wed Jul 10 21:34:35 2019     TskIpSerchTimer
+35      556     10479   (nil)      Wed Jul 10 21:34:35 2019     TskIpChannelTalk
+36      559     2744    (nil)      Wed Jul 10 21:34:35 2019     GetAudio
+37      557     14543   (nil)      Wed Jul 10 21:34:35 2019     TaskSendComDataToApp
+38      555     10702   0x3        Wed Jul 10 21:34:35 2019     TskIpChannelProess
+39      563     4151    (nil)      Wed Jul 10 21:34:35 2019     AudioStreamThread
+40      568     83      0x2b84698  Wed Jul 10 21:34:35 2019     PthreadCmdRecv
+41      565     520     (nil)      Wed Jul 10 21:34:35 2019     ptzex_Thread
+42      564     29127   (nil)      Wed Jul 10 21:34:35 2019     TskAutoChgChnIpByMacPro
+43      570     1456    0x1        Wed Jul 10 21:34:35 2019     ChnData_TcpDataSend_ThreadEx
+44      572     2965    (nil)      Wed Jul 10 21:34:35 2019     TskNetServerBitCheck
+45      571     710     (nil)      Wed Jul 10 21:34:35 2019     ChnData_UdpDataSend_Thread
+46      569     1456    (nil)      Wed Jul 10 21:34:35 2019     ChnData_TcpDataSend_ThreadEx
+47      560     646     (nil)      Wed Jul 10 21:34:35 2019     msc_UpdateAuStat
+48      577     537     (nil)      Wed Jul 10 21:34:35 2019     active_RecvDataThread
+49      590     56175   0x2f37c18  Wed Jul 10 21:35:06 2019     PthreadOtherCMDRecv
+50      589     52879   0x6        Wed Jul 10 21:35:06 2019     PthreadUICMDRecv
+51      638     258     (nil)      Wed Jul 10 21:35:07 2019     sqlFifo_Thread
+52      641     936     (nil)      Wed Jul 10 21:35:07 2019     preview_AutoSwitchTask
+53      640     1719    (nil)      Wed Jul 10 21:35:07 2019     dg_KeepGrpList
+54      596     811     0x2e5cb20  Wed Jul 10 21:35:06 2019     cloud_PthreadAppRecv
+55      648     8539    (nil)      Wed Jul 10 21:35:07 2019     Rec_DelByStoreTime
+56      650     1751    (nil)      Wed Jul 10 21:35:07 2019     rec_data_proc_task
+57      649     6330    (nil)      Wed Jul 10 21:35:07 2019     rec_data_watch_task
+58      652     1751    0x2        Wed Jul 10 21:35:07 2019     rec_data_proc_task
+59      654     6773    (nil)      Wed Jul 10 21:35:07 2019     rec_Sync
+60      653     1751    0x3        Wed Jul 10 21:35:07 2019     rec_data_proc_task
+61      651     1751    0x1        Wed Jul 10 21:35:07 2019     rec_data_proc_task
+62      643     410     (nil)      Wed Jul 10 21:35:07 2019     SplitAv_SplitAvThread
+63      658     4601    (nil)      Wed Jul 10 21:35:07 2019     rec_SetStatusThread
+64      657     4575    (nil)      Wed Jul 10 21:35:07 2019     rec_BurningThread
+65      663     803     (nil)      Wed Jul 10 21:35:07 2019     udpRcvThread
+66      664     1069    0x2a6f078  Wed Jul 10 21:35:07 2019     comRcvThread
+67      666     2233    (nil)      Wed Jul 10 21:35:07 2019     alm_CheckAlarmThread
+68      665     1037    0x2a6f078  Wed Jul 10 21:35:07 2019     AH_QueryThread
+69      662     53      (nil)      Wed Jul 10 21:35:07 2019     TskRegister
+70      668     285     (nil)      Wed Jul 10 21:35:07 2019     sys_BlockTimerThread
+71      670     744     (nil)      Wed Jul 10 21:35:07 2019     StartSetTimeTimers
+72      669     230     (nil)      Wed Jul 10 21:35:07 2019     sund_BlockTimerThread
+73      672     769     (nil)      Wed Jul 10 21:35:07 2019     Arp_TableReleaseTimer
+74      674     1997    (nil)      Wed Jul 10 21:35:22 2019     excp_CheckMacThread
+75      673     2078    (nil)      Wed Jul 10 21:35:22 2019     excp_DetectThread
+76      671     757     (nil)      Wed Jul 10 21:35:07 2019     StartIpHeartTimers
+77      667     5023    (nil)      Wed Jul 10 21:35:07 2019     alm_LinkMulitSnap
+78      676     3309    0x49cad0   Wed Jul 10 21:35:07 2019     Pppoe_dialThread
+79      678     1854    0x1        Wed Jul 10 21:35:07 2019     tskParsePicStream
+80      677     1854    (nil)      Wed Jul 10 21:35:07 2019     tskParsePicStream
+81      13421   118     0xb6bc69fc Mon Aug  5 16:45:25 2019     MyThreadTask
+82      13220   166     0x2c65c58  Mon Aug  5 16:45:19 2019     PthreadTcpClientRecv
+83      13456   118     0xb6bc69ac Mon Aug  5 16:45:37 2019     MyThreadTask
+84      13439   118     0xb6bc69c0 Mon Aug  5 16:45:31 2019     MyThreadTask
+85      9797    69      0xb6bc67a0 Sun Jul 28 16:07:09 2019     ThrPoolSchld
+86      13514   118     0xb6bc6984 Mon Aug  5 16:45:49 2019     MyThreadTask
+87      13548   118     0xb6bc695c Mon Aug  5 16:46:01 2019     MyThreadTask
+88      13531   118     0xb6bc6970 Mon Aug  5 16:45:55 2019     MyThreadTask
+89      16252   166     0x3037570  Sun Aug 11 11:13:48 2019     PthreadTcpClientRecv
+90      16389   118     0xb6bc68f8 Sun Aug 11 11:15:10 2019     MyThreadTask
+91      16371   118     0xb6bc6920 Sun Aug 11 11:15:04 2019     MyThreadTask
+92      16076   166     0x38f0858  Sun Aug 11 11:03:54 2019     PthreadTcpClientRecv
+93      13497   118     0xb6bc6998 Mon Aug  5 16:45:43 2019     MyThreadTask
+94      675     1466    (nil)      Wed Jul 10 21:35:07 2019     rec_VodThread
+95      655     1390    (nil)      Wed Jul 10 21:35:07 2019     cpc_TimerThread
+96      576     163     (nil)      Wed Jul 10 21:34:35 2019     active_Register
+97      540     8242    (nil)      Wed Jul 10 21:34:35 2019     TskNvsHeartProess
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep UI
+1       427     52879   0x7        Thu Jan  1 08:00:14 1970     PthreadUICMDRecv
+50      589     52879   0x6        Wed Jul 10 21:35:06 2019     PthreadUICMDRecv
+/tdfs/dvr # 
+/tdfs/dvr # ./strace -p 427 -tt -T
+./strace: Process 427 attached
+15:54:51.798566 futex(0x450de4, FUTEX_WAIT_PRIVATE, 2, NULL^C./strace: Process 427 detached
+ <detached ...>
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ./gd
+/tdfs/dvr # ls gd
+/tdfs/dvr # ls /root/
+Equifax_Secure_CA.crt  https                  msmtprc                pm_callback            snmp                   ssllist
+/tdfs/dvr # ls /nand/tools/
+gdb_v500       getlog.sh      inotify        logman.tar.gz  sdviewer.tgz   strace.tar.gz
+/tdfs/dvr # /nand/tools/gdb_v500 -
+/tdfs/dvr # ps | grep dvr
+/tdfs/dvr # ./closedog 
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x12070c00: 0x00000001 --> 0x1ACCE551 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x12070008: 0x00000003 --> 0x00000000 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x1207000c: 0x00000000 --> 0x00000000 
+[END]
+/tdfs/dvr # ./closedog 
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x12070c00: 0x00000001 --> 0x1ACCE551 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x12070008: 0x00000000 --> 0x00000000 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x1207000c: 0x00000000 --> 0x00000000 
+[END]
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ps | grep dvr
+  262 root       0:00 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+  406 root       0:00 /bin/sh -c /dvr/dvr1
+  407 root     131606 /dvr/dvr1
+  410 root     200:08 /dvr/dvr1
+  419 root      60:57 /dvr/dvr1
+29028 root       0:00 grep dvr
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "arm-hisiv500-linux".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+Attaching to process 407
+Reading symbols from /tdfs/dvr/dvr1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpi.so...done.
+Reading symbols from /lib/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 16389]
+[New LWP 16371]
+[New LWP 16252]
+[New LWP 16076]
+[New LWP 13548]
+[New LWP 13531]
+[New LWP 13514]
+[New LWP 13497]
+[New LWP 13456]
+[New LWP 13439]
+[New LWP 13421]
+[New LWP 13220]
+[New LWP 9797]
+[New LWP 1035]
+[New LWP 1034]
+[New LWP 1033]
+[New LWP 678]
+[New LWP 677]
+[New LWP 676]
+[New LWP 675]
+[New LWP 674]
+[New LWP 673]
+[New LWP 672]
+[New LWP 671]
+[New LWP 670]
+[New LWP 669]
+[New LWP 668]
+[New LWP 667]
+[New LWP 666]
+[New LWP 665]
+[New LWP 664]
+[New LWP 663]
+[New LWP 662]
+[New LWP 658]
+[New LWP 657]
+[New LWP 655]
+[New LWP 654]
+[New LWP 653]
+[New LWP 652]
+[New LWP 651]
+[New LWP 650]
+[New LWP 649]
+[New LWP 648]
+[New LWP 643]
+[New LWP 641]
+[New LWP 640]
+[New LWP 639]
+[New LWP 638]
+[New LWP 597]
+[New LWP 596]
+[New LWP 590]
+[New LWP 589]
+[New LWP 577]
+[New LWP 576]
+[New LWP 573]
+[New LWP 572]
+[New LWP 571]
+[New LWP 570]
+[New LWP 569]
+[New LWP 568]
+[New LWP 565]
+[New LWP 564]
+[New LWP 563]
+[New LWP 560]
+[New LWP 559]
+[New LWP 558]
+[New LWP 557]
+[New LWP 556]
+[New LWP 555]
+[New LWP 554]
+[New LWP 553]
+[New LWP 552]
+[New LWP 551]
+[New LWP 550]
+[New LWP 549]
+[New LWP 548]
+[New LWP 547]
+[New LWP 546]
+[New LWP 545]
+[New LWP 544]
+[New LWP 543]
+[New LWP 542]
+[New LWP 541]
+[New LWP 540]
+[New LWP 539]
+[New LWP 538]
+[New LWP 537]
+[New LWP 536]
+[New LWP 535]
+[New LWP 534]
+[New LWP 532]
+[New LWP 533]
+[New LWP 531]
+[New LWP 530]
+[New LWP 529]
+[New LWP 528]
+[New LWP 527]
+[New LWP 526]
+[New LWP 525]
+[New LWP 524]
+[New LWP 523]
+[New LWP 522]
+[New LWP 521]
+[New LWP 520]
+[New LWP 519]
+[New LWP 518]
+[New LWP 517]
+[New LWP 516]
+[New LWP 492]
+[New LWP 491]
+[New LWP 490]
+[New LWP 486]
+[New LWP 430]
+[New LWP 429]
+[New LWP 428]
+[New LWP 427]
+[New LWP 420]
+[New LWP 418]
+[New LWP 411]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/libthread_db.so.1".
+Reading symbols from /lib/libdl.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libm.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/librt.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnettcp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetudp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetactive.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcmedia.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libao.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdatacenter.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmempool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhardware.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdvo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libinit.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsmart.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libringbuf.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtiandy.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libother.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsysnotify.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtransport.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsqlite3.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfont.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvrrtmsg.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmixaudio.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libpcap.so.1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk_push.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libstdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcommon.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvideoprobe.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libconvertvideo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmmjournal.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdk_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcpci.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfreetype.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnewpb.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libstdc++.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libuserdata.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librec_vca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libTdAlgoRecVca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsys_raid.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmp4v2.so.2...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdmp4.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdjson.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libos.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librtkapi.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libapi8367c.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvdrtrecord.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//lib3g.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhash.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmcu_upgrade.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsplitav.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmsmtp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcrypto.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libssl.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libcurl.so.4...done.
+Reading symbols from /tdfs/dvr/lib//libmultimedia.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/ld-uClibc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libgcc_s.so.1...(no debugging symbols found)...done.
+Reading symbols from ./lib/libupgrade.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/libvca_pea.so...done.
+Reading symbols from ./lib/libvca_avd.so...done.
+Reading symbols from /tdfs/dvr/lib//libexamplechannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdipcichannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libipchannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libonvifminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvcchannel.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/liburl.so...done.
+0xb6175ed4 in nanosleep () from /lib/libc.so.0
+(gdb) p *(pthread_mutex_t*)0x450de4
+No symbol "pthread_mutex_t" in current context.
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "arm-hisiv500-linux".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+Attaching to process 407
+Reading symbols from /tdfs/dvr/dvr1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpi.so...done.
+Reading symbols from /lib/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 16389]
+[New LWP 16371]
+[New LWP 16252]
+[New LWP 16076]
+[New LWP 13548]
+[New LWP 13531]
+[New LWP 13514]
+[New LWP 13497]
+[New LWP 13456]
+[New LWP 13439]
+[New LWP 13421]
+[New LWP 13220]
+[New LWP 9797]
+[New LWP 1035]
+[New LWP 1034]
+[New LWP 1033]
+[New LWP 678]
+[New LWP 677]
+[New LWP 676]
+[New LWP 675]
+[New LWP 674]
+[New LWP 673]
+[New LWP 672]
+[New LWP 671]
+[New LWP 670]
+[New LWP 669]
+[New LWP 668]
+[New LWP 667]
+[New LWP 666]
+[New LWP 665]
+[New LWP 664]
+[New LWP 663]
+[New LWP 662]
+[New LWP 658]
+[New LWP 657]
+[New LWP 655]
+[New LWP 654]
+[New LWP 653]
+[New LWP 652]
+[New LWP 651]
+[New LWP 650]
+[New LWP 649]
+[New LWP 648]
+[New LWP 643]
+[New LWP 641]
+[New LWP 640]
+[New LWP 639]
+[New LWP 638]
+[New LWP 597]
+[New LWP 596]
+[New LWP 590]
+[New LWP 589]
+[New LWP 577]
+[New LWP 576]
+[New LWP 573]
+[New LWP 572]
+[New LWP 571]
+[New LWP 570]
+[New LWP 569]
+[New LWP 568]
+[New LWP 565]
+[New LWP 564]
+[New LWP 563]
+[New LWP 560]
+[New LWP 559]
+[New LWP 558]
+[New LWP 557]
+[New LWP 556]
+[New LWP 555]
+[New LWP 554]
+[New LWP 553]
+[New LWP 552]
+[New LWP 551]
+[New LWP 550]
+[New LWP 549]
+[New LWP 548]
+[New LWP 547]
+[New LWP 546]
+[New LWP 545]
+[New LWP 544]
+[New LWP 543]
+[New LWP 542]
+[New LWP 541]
+[New LWP 540]
+[New LWP 539]
+[New LWP 538]
+[New LWP 537]
+[New LWP 536]
+[New LWP 535]
+[New LWP 534]
+[New LWP 532]
+[New LWP 533]
+[New LWP 531]
+[New LWP 530]
+[New LWP 529]
+[New LWP 528]
+[New LWP 527]
+[New LWP 526]
+[New LWP 525]
+[New LWP 524]
+[New LWP 523]
+[New LWP 522]
+[New LWP 521]
+[New LWP 520]
+[New LWP 519]
+[New LWP 518]
+[New LWP 517]
+[New LWP 516]
+[New LWP 492]
+[New LWP 491]
+[New LWP 490]
+[New LWP 486]
+[New LWP 430]
+[New LWP 429]
+[New LWP 428]
+[New LWP 427]
+[New LWP 420]
+[New LWP 418]
+[New LWP 411]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/libthread_db.so.1".
+Reading symbols from /lib/libdl.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libm.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/librt.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnettcp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetudp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetactive.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcmedia.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libao.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdatacenter.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmempool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhardware.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdvo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libinit.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsmart.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libringbuf.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtiandy.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libother.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsysnotify.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtransport.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsqlite3.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfont.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvrrtmsg.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmixaudio.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libpcap.so.1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk_push.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libstdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcommon.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvideoprobe.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libconvertvideo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmmjournal.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdk_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcpci.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfreetype.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnewpb.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libstdc++.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libuserdata.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librec_vca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libTdAlgoRecVca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsys_raid.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmp4v2.so.2...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdmp4.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdjson.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libos.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librtkapi.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libapi8367c.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvdrtrecord.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//lib3g.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhash.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmcu_upgrade.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsplitav.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmsmtp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcrypto.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libssl.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libcurl.so.4...done.
+Reading symbols from /tdfs/dvr/lib//libmultimedia.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/ld-uClibc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libgcc_s.so.1...(no debugging symbols found)...done.
+Reading symbols from ./lib/libupgrade.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/libvca_pea.so...done.
+Reading symbols from ./lib/libvca_avd.so...done.
+Reading symbols from /tdfs/dvr/lib//libexamplechannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdipcichannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libipchannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libonvifminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvcchannel.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/liburl.so...done.
+0xb6175ed4 in nanosleep () from /lib/libc.so.0
+(gdb) p *(pthread_mutex_lock*)0x450de4
+A syntax error in expression, near `)0x450de4'.
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+/tdfs/dvr # cat /proc/
+1/            14/           22/           29018/        42/           55/           9/            crypto        iomem         misc          slabinfo      vmallocinfo
+10/           14453/        258/          3/            43/           588/          980/          device-tree/  ioports       modules       softirqs      vmstat
+100/          15/           261/          30/           431/          595/          981/          devices       irq/          mounts        stat          yaffs
+1001/         15491/        262/          31/           44/           600/          99/           diskstats     kallsyms      mtd           sys/          zoneinfo
+107/          16/           266/          31100/        45/           642/          buddyinfo     driver/       kmsg          net/          sysvipc/
+109/          17/           267/          32/           470/          7/            bus/          execdomains   kpagecount    pagetypeinfo  thread-self/
+11/           18/           28/           405/          489/          72/           cgroups       fb            kpageflags    partitions    timer_list
+11219/        19/           28991/        406/          5/            766/          cmdline       filesystems   loadavg       private/      tty/
+120/          2/            28993/        407/          507/          8/            consoles      fs/           locks         sched_debug   umap/
+1275/         20/           29000/        410/          52/           839/          cpu/          higmac/       media-mem     scsi/         uptime
+13/           21/           29001/        419/          54/           840/          cpuinfo       interrupts    meminfo       self/         version
+/tdfs/dvr # cat /proc/cpu
+cpu/     cpuinfo
+/tdfs/dvr # cat /proc/cpuinfo 
+processor       : 0
+model name      : ARMv7 Processor rev 5 (v7l)
+BogoMIPS        : 2596.86
+Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x0
+CPU part        : 0xc07
+CPU revision    : 5
+
+processor       : 1
+model name      : ARMv7 Processor rev 5 (v7l)
+BogoMIPS        : 2590.31
+Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x0
+CPU part        : 0xc07
+CPU revision    : 5
+
+Hardware        : Hisilicon Hi3536C (Flattened Device Tree)
+Revision        : 0000
+Serial          : 0000000000000000
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "arm-hisiv500-linux".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+Attaching to process 407
+Reading symbols from /tdfs/dvr/dvr1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpi.so...done.
+Reading symbols from /lib/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 16389]
+[New LWP 16371]
+[New LWP 16252]
+[New LWP 16076]
+[New LWP 13548]
+[New LWP 13531]
+[New LWP 13514]
+[New LWP 13497]
+[New LWP 13456]
+[New LWP 13439]
+[New LWP 13421]
+[New LWP 13220]
+[New LWP 9797]
+[New LWP 1035]
+[New LWP 1034]
+[New LWP 1033]
+[New LWP 678]
+[New LWP 677]
+[New LWP 676]
+[New LWP 675]
+[New LWP 674]
+[New LWP 673]
+[New LWP 672]
+[New LWP 671]
+[New LWP 670]
+[New LWP 669]
+[New LWP 668]
+[New LWP 667]
+[New LWP 666]
+[New LWP 665]
+[New LWP 664]
+[New LWP 663]
+[New LWP 662]
+[New LWP 658]
+[New LWP 657]
+[New LWP 655]
+[New LWP 654]
+[New LWP 653]
+[New LWP 652]
+[New LWP 651]
+[New LWP 650]
+[New LWP 649]
+[New LWP 648]
+[New LWP 643]
+[New LWP 641]
+[New LWP 640]
+[New LWP 639]
+[New LWP 638]
+[New LWP 597]
+[New LWP 596]
+[New LWP 590]
+[New LWP 589]
+[New LWP 577]
+[New LWP 576]
+[New LWP 573]
+[New LWP 572]
+[New LWP 571]
+[New LWP 570]
+[New LWP 569]
+[New LWP 568]
+[New LWP 565]
+[New LWP 564]
+[New LWP 563]
+[New LWP 560]
+[New LWP 559]
+[New LWP 558]
+[New LWP 557]
+[New LWP 556]
+[New LWP 555]
+[New LWP 554]
+[New LWP 553]
+[New LWP 552]
+[New LWP 551]
+[New LWP 550]
+[New LWP 549]
+[New LWP 548]
+[New LWP 547]
+[New LWP 546]
+[New LWP 545]
+[New LWP 544]
+[New LWP 543]
+[New LWP 542]
+[New LWP 541]
+[New LWP 540]
+[New LWP 539]
+[New LWP 538]
+[New LWP 537]
+[New LWP 536]
+[New LWP 535]
+[New LWP 534]
+[New LWP 532]
+[New LWP 533]
+[New LWP 531]
+[New LWP 530]
+[New LWP 529]
+[New LWP 528]
+[New LWP 527]
+[New LWP 526]
+[New LWP 525]
+[New LWP 524]
+[New LWP 523]
+[New LWP 522]
+[New LWP 521]
+[New LWP 520]
+[New LWP 519]
+[New LWP 518]
+[New LWP 517]
+[New LWP 516]
+[New LWP 492]
+[New LWP 491]
+[New LWP 490]
+[New LWP 486]
+[New LWP 430]
+[New LWP 429]
+[New LWP 428]
+[New LWP 427]
+[New LWP 420]
+[New LWP 418]
+[New LWP 411]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/libthread_db.so.1".
+Reading symbols from /lib/libdl.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libm.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/librt.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnettcp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetudp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetactive.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcmedia.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libao.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdatacenter.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmempool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhardware.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdvo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libinit.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsmart.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libringbuf.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtiandy.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libother.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsysnotify.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtransport.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsqlite3.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfont.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvrrtmsg.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmixaudio.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libpcap.so.1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk_push.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libstdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcommon.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvideoprobe.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libconvertvideo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmmjournal.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdk_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcpci.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfreetype.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnewpb.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libstdc++.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libuserdata.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librec_vca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libTdAlgoRecVca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsys_raid.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmp4v2.so.2...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdmp4.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdjson.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libos.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librtkapi.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libapi8367c.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvdrtrecord.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//lib3g.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhash.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmcu_upgrade.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsplitav.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmsmtp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcrypto.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libssl.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libcurl.so.4...done.
+Reading symbols from /tdfs/dvr/lib//libmultimedia.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/ld-uClibc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libgcc_s.so.1...(no debugging symbols found)...done.
+Reading symbols from ./lib/libupgrade.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/libvca_pea.so...done.
+Reading symbols from ./lib/libvca_avd.so...done.
+Reading symbols from /tdfs/dvr/lib//libexamplechannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdipcichannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libipchannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libonvifminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvcchannel.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/liburl.so...done.
+0xb6175ed4 in nanosleep () from /lib/libc.so.0
+(gdb) x/4xw 0x450de4
+0x450de4 <gtLock>:      0x00000002      0x00000000      0x00000281      0x00000000
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) 
+Please answer y or n.
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 641
+52      641     936     (nil)      Wed Jul 10 21:35:07 2019     preview_AutoSwitchTask
+/tdfs/dvr # ./strace -tt -T -p 641
+./strace: Process 641 attached
+16:05:30.979459 futex(0x2b40cf0, FUTEX_WAIT_PRIVATE, 2, NULL^C./strace: Process 641 detached
+ <detached ...>
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ps | grep dvr
+  262 root       0:00 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+  406 root       0:00 /bin/sh -c /dvr/dvr1
+  407 root     131626 /dvr/dvr1
+  410 root     200:09 /dvr/dvr1
+  419 root      60:57 /dvr/dvr1
+29054 root       0:00 grep dvr
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "arm-hisiv500-linux".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+Attaching to process 407
+Reading symbols from /tdfs/dvr/dvr1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpi.so...done.
+Reading symbols from /lib/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 16389]
+[New LWP 16371]
+[New LWP 16252]
+[New LWP 16076]
+[New LWP 13548]
+[New LWP 13531]
+[New LWP 13514]
+[New LWP 13497]
+[New LWP 13456]
+[New LWP 13439]
+[New LWP 13421]
+[New LWP 13220]
+[New LWP 9797]
+[New LWP 1035]
+[New LWP 1034]
+[New LWP 1033]
+[New LWP 678]
+[New LWP 677]
+[New LWP 676]
+[New LWP 675]
+[New LWP 674]
+[New LWP 673]
+[New LWP 672]
+[New LWP 671]
+[New LWP 670]
+[New LWP 669]
+[New LWP 668]
+[New LWP 667]
+[New LWP 666]
+[New LWP 665]
+[New LWP 664]
+[New LWP 663]
+[New LWP 662]
+[New LWP 658]
+[New LWP 657]
+[New LWP 655]
+[New LWP 654]
+[New LWP 653]
+[New LWP 652]
+[New LWP 651]
+[New LWP 650]
+[New LWP 649]
+[New LWP 648]
+[New LWP 643]
+[New LWP 641]
+[New LWP 640]
+[New LWP 639]
+[New LWP 638]
+[New LWP 597]
+[New LWP 596]
+[New LWP 590]
+[New LWP 589]
+[New LWP 577]
+[New LWP 576]
+[New LWP 573]
+[New LWP 572]
+[New LWP 571]
+[New LWP 570]
+[New LWP 569]
+[New LWP 568]
+[New LWP 565]
+[New LWP 564]
+[New LWP 563]
+[New LWP 560]
+[New LWP 559]
+[New LWP 558]
+[New LWP 557]
+[New LWP 556]
+[New LWP 555]
+[New LWP 554]
+[New LWP 553]
+[New LWP 552]
+[New LWP 551]
+[New LWP 550]
+[New LWP 549]
+[New LWP 548]
+[New LWP 547]
+[New LWP 546]
+[New LWP 545]
+[New LWP 544]
+[New LWP 543]
+[New LWP 542]
+[New LWP 541]
+[New LWP 540]
+[New LWP 539]
+[New LWP 538]
+[New LWP 537]
+[New LWP 536]
+[New LWP 535]
+[New LWP 534]
+[New LWP 532]
+[New LWP 533]
+[New LWP 531]
+[New LWP 530]
+[New LWP 529]
+[New LWP 528]
+[New LWP 527]
+[New LWP 526]
+[New LWP 525]
+[New LWP 524]
+[New LWP 523]
+[New LWP 522]
+[New LWP 521]
+[New LWP 520]
+[New LWP 519]
+[New LWP 518]
+[New LWP 517]
+[New LWP 516]
+[New LWP 492]
+[New LWP 491]
+[New LWP 490]
+[New LWP 486]
+[New LWP 430]
+[New LWP 429]
+[New LWP 428]
+[New LWP 427]
+[New LWP 420]
+[New LWP 418]
+[New LWP 411]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/libthread_db.so.1".
+Reading symbols from /lib/libdl.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libm.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/librt.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnettcp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetudp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetactive.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcmedia.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libao.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdatacenter.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmempool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhardware.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdvo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libinit.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsmart.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libringbuf.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtiandy.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libother.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsysnotify.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtransport.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsqlite3.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfont.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvrrtmsg.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmixaudio.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libpcap.so.1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk_push.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libstdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcommon.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvideoprobe.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libconvertvideo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmmjournal.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdk_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcpci.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfreetype.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnewpb.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libstdc++.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libuserdata.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librec_vca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libTdAlgoRecVca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsys_raid.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmp4v2.so.2...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdmp4.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdjson.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libos.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librtkapi.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libapi8367c.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvdrtrecord.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//lib3g.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhash.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmcu_upgrade.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsplitav.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmsmtp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcrypto.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libssl.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libcurl.so.4...done.
+Reading symbols from /tdfs/dvr/lib//libmultimedia.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/ld-uClibc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libgcc_s.so.1...(no debugging symbols found)...done.
+Reading symbols from ./lib/libupgrade.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/libvca_pea.so...done.
+Reading symbols from ./lib/libvca_avd.so...done.
+Reading symbols from /tdfs/dvr/lib//libexamplechannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdipcichannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libipchannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libonvifminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvcchannel.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/liburl.so...done.
+0xb6175ed4 in nanosleep () from /lib/libc.so.0
+(gdb) x/4xw 0x2b40cf0
+0x2b40cf0:      0x00000002      0x00000000      0x00000227      0x00000000
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 551
+34      551     14348   (nil)      Wed Jul 10 21:34:35 2019     TskIpSerchTimer
+/tdfs/dvr # 
+/tdfs/dvr # ./strace -tt -T -p 551
+./strace: Process 551 attached
+16:07:36.283979 futex(0x2b430d0, FUTEX_WAIT_PRIVATE, 2, NULL^C./strace: Process 551 detached
+ <detached ...>
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # /nand/tools/gdb_v500 -p 407
+GNU gdb (GDB) 7.9.1
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "arm-hisiv500-linux".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+Attaching to process 407
+Reading symbols from /tdfs/dvr/dvr1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpi.so...done.
+Reading symbols from /lib/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 16389]
+[New LWP 16371]
+[New LWP 16252]
+[New LWP 16076]
+[New LWP 13548]
+[New LWP 13531]
+[New LWP 13514]
+[New LWP 13497]
+[New LWP 13456]
+[New LWP 13439]
+[New LWP 13421]
+[New LWP 13220]
+[New LWP 9797]
+[New LWP 1035]
+[New LWP 1034]
+[New LWP 1033]
+[New LWP 678]
+[New LWP 677]
+[New LWP 676]
+[New LWP 675]
+[New LWP 674]
+[New LWP 673]
+[New LWP 672]
+[New LWP 671]
+[New LWP 670]
+[New LWP 669]
+[New LWP 668]
+[New LWP 667]
+[New LWP 666]
+[New LWP 665]
+[New LWP 664]
+[New LWP 663]
+[New LWP 662]
+[New LWP 658]
+[New LWP 657]
+[New LWP 655]
+[New LWP 654]
+[New LWP 653]
+[New LWP 652]
+[New LWP 651]
+[New LWP 650]
+[New LWP 649]
+[New LWP 648]
+[New LWP 643]
+[New LWP 641]
+[New LWP 640]
+[New LWP 639]
+[New LWP 638]
+[New LWP 597]
+[New LWP 596]
+[New LWP 590]
+[New LWP 589]
+[New LWP 577]
+[New LWP 576]
+[New LWP 573]
+[New LWP 572]
+[New LWP 571]
+[New LWP 570]
+[New LWP 569]
+[New LWP 568]
+[New LWP 565]
+[New LWP 564]
+[New LWP 563]
+[New LWP 560]
+[New LWP 559]
+[New LWP 558]
+[New LWP 557]
+[New LWP 556]
+[New LWP 555]
+[New LWP 554]
+[New LWP 553]
+[New LWP 552]
+[New LWP 551]
+[New LWP 550]
+[New LWP 549]
+[New LWP 548]
+[New LWP 547]
+[New LWP 546]
+[New LWP 545]
+[New LWP 544]
+[New LWP 543]
+[New LWP 542]
+[New LWP 541]
+[New LWP 540]
+[New LWP 539]
+[New LWP 538]
+[New LWP 537]
+[New LWP 536]
+[New LWP 535]
+[New LWP 534]
+[New LWP 532]
+[New LWP 533]
+[New LWP 531]
+[New LWP 530]
+[New LWP 529]
+[New LWP 528]
+[New LWP 527]
+[New LWP 526]
+[New LWP 525]
+[New LWP 524]
+[New LWP 523]
+[New LWP 522]
+[New LWP 521]
+[New LWP 520]
+[New LWP 519]
+[New LWP 518]
+[New LWP 517]
+[New LWP 516]
+[New LWP 492]
+[New LWP 491]
+[New LWP 490]
+[New LWP 486]
+[New LWP 430]
+[New LWP 429]
+[New LWP 428]
+[New LWP 427]
+[New LWP 420]
+[New LWP 418]
+[New LWP 411]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/libthread_db.so.1".
+Reading symbols from /lib/libdl.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libm.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/librt.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnettcp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetudp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnetactive.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcmedia.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libao.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdatacenter.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmempool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhardware.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdvo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libinit.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsmart.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libringbuf.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtiandy.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libother.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsysnotify.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtransport.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsqlite3.so.0...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfont.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvrrtmsg.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmixaudio.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmpool.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libpcap.so.1...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk_push.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libstdfs.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcommon.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvideoprobe.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libconvertvideo.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmmjournal.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdk_core.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcpci.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libfreetype.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libnewpb.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libstdc++.so.6...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libuserdata.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librec_vca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libTdAlgoRecVca.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsys_raid.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmp4v2.so.2...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdmp4.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdjson.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libos.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//librtkapi.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libapi8367c.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libdvdrtrecord.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//lib3g.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libhash.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmcu_upgrade.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsplitav.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libmsmtp.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libcrypto.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libssl.so.1.0.0...done.
+Reading symbols from /tdfs/dvr/lib//libcurl.so.4...done.
+Reading symbols from /tdfs/dvr/lib//libmultimedia.so...(no debugging symbols found)...done.
+Reading symbols from /lib/libc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/ld-uClibc.so.0...(no debugging symbols found)...done.
+Reading symbols from /lib/libgcc_s.so.1...(no debugging symbols found)...done.
+Reading symbols from ./lib/libupgrade.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/libvca_pea.so...done.
+Reading symbols from ./lib/libvca_avd.so...done.
+Reading symbols from /tdfs/dvr/lib//libexamplechannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libsdipcichannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libipchannel.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libtdminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libonvifminsdk.so...(no debugging symbols found)...done.
+Reading symbols from /tdfs/dvr/lib//libvcchannel.so...(no debugging symbols found)...done.
+Reading symbols from ./lib/liburl.so...done.
+0xb6175ed4 in nanosleep () from /lib/libc.so.0
+(gdb) x/4xw 0x2b430d0
+0x2b430d0:      0x00000002      0x00000000      0x00000217      0x00000000
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 407] will be detached.
+
+Quit anyway? (y or n) y
+Detaching from program: /tdfs/dvr/dvr1, process 407
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 535
+21      535     7996    0x3        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ./strace -tt -T -p 535
+./strace: Process 535 attached
+^C./strace: Process 535 detached
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # netstat -anpt
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 0.0.0.0:81              0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 0.0.0.0:8082            0.0.0.0:*               LISTEN      407/dvr1
+tcp        0      0 0.0.0.0:21              0.0.0.0:*               LISTEN      1001/pure-ftpd (SER
+tcp        0      0 0.0.0.0:3001            0.0.0.0:*               LISTEN      407/dvr1
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      470/stunnel
+tcp        0      0 0.0.0.0:554             0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 0.0.0.0:9100            0.0.0.0:*               LISTEN      600/trade.bin
+tcp        0      0 :::21                   :::*                    LISTEN      1001/pure-ftpd (SER
+tcp        0      0 :::23                   :::*                    LISTEN      267/telnetd
+tcp        0      0 ::ffff:192.168.25.142:23 ::ffff:192.168.25.150:51450 ESTABLISHED 267/telnetd
+tcp        0      0 ::ffff:192.168.25.142:23 ::ffff:192.168.25.151:62207 ESTABLISHED 267/telnetd
+tcp        0    913 ::ffff:192.168.25.142:23 ::ffff:192.168.25.151:61881 ESTABLISHED 267/telnetd
+tcp        0      0 ::ffff:192.168.25.142:23 ::ffff:192.168.17.31:62585 ESTABLISHED 267/telnetd
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ifconfig 
+eth0      Link encap:Ethernet  HWaddr 00:50:C2:25:15:02  
+          inet addr:192.168.25.142  Bcast:192.168.25.255  Mask:255.255.255.0
+          inet6 addr: fe80::250:c2ff:fe25:1502/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3404476901 errors:0 dropped:146839567 overruns:0 frame:0
+          TX packets:1287208835 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2123408709 (1.9 GiB)  TX bytes:3145551761 (2.9 GiB)
+          Interrupt:48 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1065715 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1065715 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:139971607 (133.4 MiB)  TX bytes:139971607 (133.4 MiB)
+
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ping 192.168.25.1
+PING 192.168.25.1 (192.168.25.1): 56 data bytes
+64 bytes from 192.168.25.1: seq=0 ttl=255 time=21.557 ms
+64 bytes from 192.168.25.1: seq=1 ttl=255 time=23.872 ms
+^C
+--- 192.168.25.1 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 21.557/22.714/23.872 ms
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # ping 192.168.25.87
+PING 192.168.25.87 (192.168.25.87): 56 data bytes
+^C
+--- 192.168.25.87 ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+/tdfs/dvr # ping 192.168.25.72
+PING 192.168.25.72 (192.168.25.72): 56 data bytes
+64 bytes from 192.168.25.72: seq=0 ttl=63 time=23.481 ms
+64 bytes from 192.168.25.72: seq=1 ttl=63 time=18.786 ms
+^C
+--- 192.168.25.72 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 18.786/21.133/23.481 ms
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # top
+Mem: 246972K used, 39744K free, 0K shrd, 70392K buff, 27340K cached
+CPU: 75.0% usr 25.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 42.14 39.51 38.78 3/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   1 91.5 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  405   261 root     R    64444 22.4   0  0.0 gui
+  410   407 root     S    34152 11.9   1  0.0 /dvr/dvr1
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29143 29000 root     R     1824  0.6   0  0.0 top
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+  642     2 root     SW       0  0.0   1  0.0 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   1  0.0 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   20     2 root     SW<      0  0.0   0  0.0 [kblockd]
+Mem: 246996K used, 39720K free, 0K shrd, 70392K buff, 27340K cached
+CPU: 74.6% usr 25.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.2% sirq
+Load average: 41.81 39.49 38.78 19/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     R     613m218.8   1 97.2 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  1.5 ./trade.bin onvif,p2p,rtsp
+  405   261 root     R    64444 22.4   0  0.3 gui
+  410   407 root     S    34152 11.9   1  0.2 /dvr/dvr1
+29143 29000 root     R     1824  0.6   0  0.1 top
+  642     2 root     SW       0  0.0   1  0.1 [HI_VFMW_VideoDe]
+    7     2 root     SW       0  0.0   1  0.1 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.1 [ksoftirqd/1]
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   1  0.0 [HI_HDMI_kThread]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     RW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   20     2 root     SW<      0  0.0   0  0.0 [kblockd]
+Mem: 246996K used, 39720K free, 0K shrd, 70392K buff, 27340K cached
+CPU0:  100% usr  0.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+CPU1: 71.4% usr 28.5% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.34 39.43 38.76 3/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   1 98.5 /dvr/dvr1
+  405   261 root     S    64444 22.4   0  0.4 gui
+  410   407 root     S    34152 11.9   1  0.4 /dvr/dvr1
+29143 29000 root     R     1828  0.6   0  0.2 top
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  431     2 root     SW       0  0.0   1  0.2 [HI_HDMI_kThread]
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+Mem: 246996K used, 39720K free, 0K shrd, 70392K buff, 27340K cached
+CPU:  0.0% usr  0.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.34 39.43 38.76 3/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   1  0.7 /dvr/dvr1
+  405   261 root     S    64444 22.4   0  0.0 gui
+  410   407 root     S    34152 11.9   1  0.0 /dvr/dvr1
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+29143 29000 root     R     1828  0.6   0  0.0 top
+  642     2 root     SW       0  0.0   1  0.0 [HI_VFMW_VideoDe]
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   1  0.0 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   20     2 root     SW<      0  0.0   0  0.0 [kblockd]
+Mem: 246996K used, 39720K free, 0K shrd, 70392K buff, 27340K cached
+CPU: 75.6% usr 24.3% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.34 39.43 38.76 22/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+29143 29000 root     R     1828  0.6   0  0.0 top
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+  528   406 root     R     613m218.8   1  0.0 /dvr/dvr1
+  535   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  666   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  650   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  554   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  529   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  553   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1034   406 root     R     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   1  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   1  0.0 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  539   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  532   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  538   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  533   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  657   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  490   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  520   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  638   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+Mem: 246996K used, 39720K free, 0K shrd, 70392K buff, 27340K cached
+CPU: 73.3% usr 26.6% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.34 39.43 38.76 3/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  535   406 root     R     613m218.8   0 45.1 /dvr/dvr1
+  528   406 root     R     613m218.8   1 43.0 /dvr/dvr1
+  666   406 root     S     613m218.8   1  2.6 /dvr/dvr1
+29143 29000 root     R     1836  0.6   0  1.0 top
+  651   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  650   406 root     R     613m218.8   0  0.5 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  556   406 root     R     613m218.8   0  0.5 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  490   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  627   588 root     S    89024 31.0   1  0.5 ./trade.bin onvif,p2p,rtsp
+  635   588 root     S    89024 31.0   0  0.5 ./trade.bin onvif,p2p,rtsp
+  405   261 root     R    64444 22.4   0  0.5 gui
+  410   407 root     S    34152 11.9   1  0.5 /dvr/dvr1
+  642     2 root     SW       0  0.0   1  0.5 [HI_VFMW_VideoDe]
+   11     2 root     SW       0  0.0   1  0.5 [ksoftirqd/1]
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  529   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+ 1033   406 root     S     613m218.8   1  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   1  0.0 {hi_Adec_Dec} /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  539   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  407   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  532   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+Mem: 246996K used, 39720K free, 0K shrd, 70396K buff, 27340K cached
+CPU: 75.3% usr 23.9% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.6% sirq
+Load average: 41.88 39.57 38.81 10/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  535   406 root     R     613m218.8   0 46.0 /dvr/dvr1
+  528   406 root     R     613m218.8   1 43.1 /dvr/dvr1
+  666   406 root     S     613m218.8   1  2.6 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.6 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  490   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  652   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  650   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  529   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  571   406 root     R     613m218.8   1  0.2 /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  405   261 root     S    64444 22.4   0  0.2 gui
+  531   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  664   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  539   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  570   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  407   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  534   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.1 ./trade.bin onvif,p2p,rtsp
+  437   261 root     S    64444 22.4   0  0.1 gui
+  410   407 root     S    34152 11.9   1  0.1 /dvr/dvr1
+29143 29000 root     R     1836  0.6   0  0.1 top
+  642     2 root     SW       0  0.0   1  0.1 [HI_VFMW_VideoDe]
+  431     2 root     SW       0  0.0   1  0.1 [HI_HDMI_kThread]
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+ 1033   406 root     S     613m218.8   1  0.0 {hi_Adec_Send} /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   1  0.0 {hi_Adec_Dec} /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+Mem: 246996K used, 39720K free, 0K shrd, 70396K buff, 27340K cached
+CPU: 70.7% usr 29.2% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.88 39.57 38.81 3/220 29143
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  535   406 root     R     613m218.8   0 44.5 /dvr/dvr1
+  528   406 root     R     613m218.8   1 43.5 /dvr/dvr1
+  666   406 root     S     613m218.8   1  2.5 /dvr/dvr1
+29143 29000 root     R     1836  0.6   0  1.0 top
+  653   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  650   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  529   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  530   406 root     R     613m218.8   0  0.5 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.5 {hi_Adec_Send} /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  490   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.5 ./trade.bin onvif,p2p,rtsp
+  631   588 root     S    89024 31.0   1  0.5 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.5 gui
+  408   261 root     S    64444 22.4   0  0.5 gui
+  267     1 root     S     1840  0.6   0  0.5 telnetd
+29038     2 root     SW       0  0.0   0  0.5 [kworker/0:1]
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   1  0.0 {hi_Adec_Send} /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   1  0.0 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  407   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 535
+21      535     7996    0x3        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 528
+1       427     52879   0x7        Thu Jan  1 08:00:14 1970     PthreadUICMDRecv
+15      528     147     (nil)      Wed Jul 10 21:34:35 2019     TskEpollThread
+50      589     52879   0x6        Wed Jul 10 21:35:06 2019     PthreadUICMDRecv
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 528 -w
+15      528     147     (nil)      Wed Jul 10 21:34:35 2019     TskEpollThread
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 535
+21      535     7996    0x3        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 528 -w
+15      528     147     (nil)      Wed Jul 10 21:34:35 2019     TskEpollThread
+/tdfs/dvr # cat /mnt/rtmsg/threads_dvr | grep 535
+21      535     7996    0x3        Wed Jul 10 21:34:35 2019     TskNvsCmdDataProess
+/tdfs/dvr # top
+Mem: 247008K used, 39708K free, 0K shrd, 70420K buff, 27336K cached
+CPU: 59.0% usr 40.9% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 35.19 38.05 38.35 3/220 29223
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0 95.4 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.0 gui
+  410   407 root     S    34152 11.9   1  0.0 /dvr/dvr1
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29223 29000 root     R     1824  0.6   0  0.0 top
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+  642     2 root     RW       0  0.0   0  0.0 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.0 [HI_HDMI_kThread]
+    7     2 root     RW       0  0.0   0  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247032K used, 39684K free, 0K shrd, 70420K buff, 27340K cached
+CPU: 71.1% usr 28.8% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 35.19 38.05 38.35 3/220 29223
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+29223 29000 root     R     1832  0.6   0  0.0 top
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.0 [HI_HDMI_kThread]
+  528   406 root     R     613m218.8   1  0.0 /dvr/dvr1
+  535   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  666   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  554   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  530   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  533   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  657   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  490   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  520   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+Mem: 247032K used, 39684K free, 0K shrd, 70420K buff, 27340K cached
+CPU0: 88.8% usr 11.1% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+CPU1: 50.0% usr 50.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 35.19 38.05 38.35 3/220 29223
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  528   406 root     R     613m218.8   1 45.5 /dvr/dvr1
+  535   406 root     R     613m218.8   0 38.5 /dvr/dvr1
+  666   406 root     S     613m218.8   0  3.5 /dvr/dvr1
+29223 29000 root     R     1832  0.6   0  3.5 top
+  530   406 root     R     613m218.8   0  1.7 /dvr/dvr1
+  571   406 root     S     613m218.8   1  1.7 /dvr/dvr1
+  568   406 root     R     613m218.8   0  1.7 /dvr/dvr1
+  678   406 root     S     613m218.8   1  1.7 /dvr/dvr1
+  589   406 root     S     613m218.8   0  1.7 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  554   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  529   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1034   406 root     R     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+ 1033   406 root     R     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  407   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  533   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  657   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  490   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  520   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  638   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+Mem: 247032K used, 39684K free, 0K shrd, 70420K buff, 27340K cached
+CPU0: 92.2% usr  6.4% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  1.2% sirq
+CPU1: 48.0% usr 51.9% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 35.19 38.05 38.35 3/220 29223
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  528   406 root     R     613m218.8   1 45.4 /dvr/dvr1
+  535   406 root     R     613m218.8   0 41.6 /dvr/dvr1
+  666   406 root     S     613m218.8   0  3.2 /dvr/dvr1
+  556   406 root     S     613m218.8   0  1.2 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  554   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.6 /dvr/dvr1
+  553   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.6 /dvr/dvr1
+  678   406 root     R     613m218.8   1  0.6 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.6 ./trade.bin onvif,p2p,rtsp
+  628   588 root     S    89024 31.0   0  0.6 ./trade.bin onvif,p2p,rtsp
+  410   407 root     S    34152 11.9   1  0.6 /dvr/dvr1
+29223 29000 root     R     1836  0.6   0  0.6 top
+  642     2 root     SW       0  0.0   0  0.6 [HI_VFMW_VideoDe]
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     R     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  407   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  533   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  657   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+/tdfs/dvr # top
+Mem: 247316K used, 39400K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 58.3% usr 41.6% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.86 39.76 38.95 4/220 29299
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0 95.7 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.0 gui
+  410   407 root     R    34152 11.9   0  0.0 /dvr/dvr1
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29299 29000 root     R     1824  0.6   0  0.0 top
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+  642     2 root     RW       0  0.0   0  0.0 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     RW       0  0.0   0  0.0 [HI_HDMI_kThread]
+    7     2 root     RW       0  0.0   0  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247340K used, 39376K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 70.8% usr 29.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.2% sirq
+Load average: 41.86 39.76 38.95 3/220 29299
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+29299 29000 root     R     1832  0.6   0  0.0 top
+  642     2 root     SW       0  0.0   0  0.0 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.0 [HI_HDMI_kThread]
+  528   406 root     R     613m218.8   1  0.0 /dvr/dvr1
+  535   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  666   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  533   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  657   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  490   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  520   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+Mem: 247340K used, 39376K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 73.5% usr 26.4% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.79 39.78 38.96 3/220 29299
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.0 gui
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  410   407 root     S    34152 11.9   0  0.0 /dvr/dvr1
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29299 29000 root     R     1832  0.6   0  0.0 top
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+  642     2 root     SW       0  0.0   0  0.0 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.0 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   0  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247368K used, 39348K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 69.6% usr 30.3% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 41.79 39.78 38.96 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+29299 29000 root     R     1832  0.6   0  0.0 top
+  642     2 root     SW       0  0.0   0  0.0 [HI_VFMW_VideoDe]
+    7     2 root     SW       0  0.0   0  0.0 [rcu_sched]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+  528   406 root     R     613m218.8   1  0.0 /dvr/dvr1
+  535   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  666   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  527   406 root     R     613m218.8   1  0.0 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  532   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  534   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  533   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  657   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  490   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  520   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 71.0% usr 28.9% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 42.45 39.95 39.02 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  528   406 root     R     613m218.8   1 45.3 /dvr/dvr1
+  535   406 root     R     613m218.8   0 42.4 /dvr/dvr1
+  666   406 root     S     613m218.8   0  2.9 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.7 /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.5 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.3 {hi_Adec_Send} /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+29299 29000 root     R     1836  0.6   0  0.3 top
+  651   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  649   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  541   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  533   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  490   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  542   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.1 ./trade.bin onvif,p2p,rtsp
+  631   588 root     S    89024 31.0   1  0.1 ./trade.bin onvif,p2p,rtsp
+  628   588 root     S    89024 31.0   0  0.1 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.1 gui
+  437   261 root     S    64444 22.4   0  0.1 gui
+  419   407 root     S    31004 10.8   1  0.1 /dvr/dvr1
+  267     1 root     S     1840  0.6   0  0.1 telnetd
+  642     2 root     SW       0  0.0   0  0.1 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  554   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 70.7% usr 29.1% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 42.25 39.95 39.02 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  528   406 root     R     613m218.8   1 46.1 /dvr/dvr1
+  535   406 root     R     613m218.8   0 42.6 /dvr/dvr1
+  666   406 root     S     613m218.8   0  2.7 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.5 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.4 /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.4 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.4 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.4 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  529   406 root     R     613m218.8   0  0.3 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.3 {hi_Adec_Send} /dvr/dvr1
+  405   261 root     R    64444 22.4   0  0.3 gui
+  652   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  554   406 root     R     613m218.8   0  0.2 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  649   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  556   406 root     R     613m218.8   0  0.2 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.2 ./trade.bin onvif,p2p,rtsp
+  408   261 root     R    64444 22.4   0  0.2 gui
+29299 29000 root     R     1836  0.6   0  0.2 top
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  555   406 root     R     613m218.8   0  0.1 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  563   406 root     R     613m218.8   0  0.1 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  407   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  532   406 root     R     613m218.8   0  0.1 /dvr/dvr1
+  534   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  657   406 root     R     613m218.8   0  0.1 /dvr/dvr1
+  520   406 root     R     613m218.8   0  0.1 /dvr/dvr1
+  544   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  491   406 root     R     613m218.8   0  0.1 /dvr/dvr1
+  673   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  428   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  631   588 root     S    89024 31.0   1  0.1 ./trade.bin onvif,p2p,rtsp
+  636   588 root     S    89024 31.0   0  0.1 ./trade.bin onvif,p2p,rtsp
+  437   261 root     R    64444 22.4   0  0.1 gui
+  410   407 root     R    34152 11.9   0  0.1 /dvr/dvr1
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.1 [HI_HDMI_kThread]
+  531   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  553   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     R     613m218.8   0  0.0 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 71.8% usr 27.5% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.6% sirq
+Load average: 42.25 39.95 39.02 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  528   406 root     R     613m218.8   1 45.3 /dvr/dvr1
+  535   406 root     R     613m218.8   0 42.5 /dvr/dvr1
+  666   406 root     S     613m218.8   0  2.6 /dvr/dvr1
+  620   588 root     S    89024 31.0   0  1.2 ./trade.bin onvif,p2p,rtsp
+  568   406 root     S     613m218.8   0  0.6 /dvr/dvr1
+  405   261 root     S    64444 22.4   0  0.6 gui
+  418   406 root     S     613m218.8   1  0.4 /dvr/dvr1
+  653   406 root     S     613m218.8   1  0.4 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.4 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.4 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.4 /dvr/dvr1
+  631   588 root     S    89024 31.0   1  0.4 ./trade.bin onvif,p2p,rtsp
+29299 29000 root     R     1836  0.6   0  0.4 top
+  652   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.2 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.2 /dvr/dvr1
+  538   406 root     S     613m218.8   0  0.2 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.2 ./trade.bin onvif,p2p,rtsp
+  600   588 root     S    89024 31.0   0  0.2 ./trade.bin onvif,p2p,rtsp
+  408   261 root     S    64444 22.4   0  0.2 gui
+  437   261 root     S    64444 22.4   0  0.2 gui
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+    7     2 root     RW       0  0.0   1  0.2 [rcu_sched]
+  531   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.0 {hi_Adec_Send} /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  541   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.0 {hi_Adec_Dec} /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  407   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 70.0% usr 29.8% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.1% sirq
+Load average: 42.55 40.05 39.06 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  528   406 root     R     613m218.8   1 45.4 /dvr/dvr1
+  535   406 root     R     613m218.8   0 43.1 /dvr/dvr1
+  666   406 root     S     613m218.8   0  2.9 /dvr/dvr1
+  418   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  568   406 root     S     613m218.8   0  0.6 /dvr/dvr1
+  664   406 root     S     613m218.8   1  0.6 /dvr/dvr1
+  652   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  651   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  650   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+  529   406 root     S     613m218.8   0  0.3 /dvr/dvr1
+  530   406 root     S     613m218.8   0  0.3 /dvr/dvr1
+  571   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+ 1034   406 root     S     613m218.8   0  0.3 {hi_Adec_Send} /dvr/dvr1
+  559   406 root     S     613m218.8   1  0.3 /dvr/dvr1
+29299 29000 root     R     1836  0.6   0  0.3 top
+  653   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  531   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  554   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  552   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+ 1033   406 root     S     613m218.8   0  0.1 {hi_Adec_Send} /dvr/dvr1
+  649   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  537   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  541   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  677   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  563   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+ 1035   406 root     S     613m218.8   0  0.1 {hi_Adec_Dec} /dvr/dvr1
+  556   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  589   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  640   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  407   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  490   406 root     S     613m218.8   0  0.1 /dvr/dvr1
+  674   406 root     S     613m218.8   1  0.1 /dvr/dvr1
+  621   588 root     S    89024 31.0   1  0.1 ./trade.bin onvif,p2p,rtsp
+  631   588 root     S    89024 31.0   1  0.1 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.1 gui
+  410   407 root     S    34152 11.9   0  0.1 /dvr/dvr1
+  642     2 root     SW       0  0.0   1  0.1 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.1 [HI_HDMI_kThread]
+  527   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  553   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  555   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  678   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  536   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  539   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  420   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  543   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  570   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  492   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  569   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+  557   406 root     S     613m218.8   1  0.0 /dvr/dvr1
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 70.3% usr 29.2% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.3% sirq
+Load average: 42.55 40.05 39.06 12/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0  0.0 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.0 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.0 gui
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  410   407 root     S    34152 11.9   0  0.0 /dvr/dvr1
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+29299 29000 root     R     1836  0.6   0  0.0 top
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  109     1 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+  642     2 root     SW       0  0.0   1  0.0 [HI_VFMW_VideoDe]
+    3     2 root     SW       0  0.0   0  0.0 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.0 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 72.7% usr 26.9% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.2% sirq
+Load average: 42.99 40.18 39.11 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     R     613m218.8   0 97.9 /dvr/dvr1
+  405   261 root     R    64444 22.4   0  0.6 gui
+  600   588 root     S    89024 31.0   0  0.6 ./trade.bin onvif,p2p,rtsp
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  410   407 root     R    34152 11.9   0  0.1 /dvr/dvr1
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.1 [HI_HDMI_kThread]
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29299 29000 root     R     1836  0.6   0  0.0 top
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 71.7% usr 28.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.1% sirq
+Load average: 43.31 40.29 39.15 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0 97.9 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.5 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.4 gui
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  410   407 root     R    34152 11.9   0  0.1 /dvr/dvr1
+29299 29000 root     R     1836  0.6   0  0.1 top
+  266   262 root     S      920  0.3   1  0.1 /tdfs/usr/bin/upnp_tools
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  431     2 root     RW       0  0.0   0  0.1 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   1  0.1 [rcu_sched]
+29038     2 root     SW       0  0.0   0  0.1 [kworker/0:1]
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247400K used, 39316K free, 0K shrd, 70456K buff, 27500K cached
+CPU: 72.6% usr 27.2% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 43.60 40.41 39.19 3/220 29321
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0 98.3 /dvr/dvr1
+  405   261 root     S    64444 22.4   0  0.5 gui
+  600   588 root     S    89024 31.0   0  0.4 ./trade.bin onvif,p2p,rtsp
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  410   407 root     R    34152 11.9   0  0.1 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.1 ./cloudupgrade
+29299 29000 root     R     1836  0.6   0  0.1 top
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+  431     2 root     RW       0  0.0   0  0.0 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247400K used, 39316K free, 0K shrd, 70464K buff, 27500K cached
+CPU: 73.4% usr 26.0% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.4% sirq
+Load average: 43.16 40.37 39.19 14/220 29343
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     R     613m218.8   0 98.1 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  0.4 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.4 gui
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  410   407 root     R    34152 11.9   0  0.1 /dvr/dvr1
+29299 29000 root     R     1836  0.6   0  0.1 top
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  431     2 root     RW       0  0.0   0  0.1 [HI_HDMI_kThread]
+    7     2 root     SW       0  0.0   1  0.1 [rcu_sched]
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  267     1 root     S     1840  0.6   0  0.0 telnetd
+  109     1 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+Mem: 247400K used, 39316K free, 0K shrd, 70464K buff, 27500K cached
+CPU: 70.3% usr 29.1% sys  0.0% nic  0.0% idle  0.0% io  0.0% irq  0.4% sirq
+Load average: 42.50 40.28 39.16 3/220 29343
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  407   406 root     S     613m218.8   0 97.8 /dvr/dvr1
+  600   588 root     S    89024 31.0   0  1.0 ./trade.bin onvif,p2p,rtsp
+  405   261 root     S    64444 22.4   0  0.3 gui
+  642     2 root     SW       0  0.0   1  0.2 [HI_VFMW_VideoDe]
+  267     1 root     S     1840  0.6   0  0.1 telnetd
+29299 29000 root     R     1836  0.6   0  0.1 top
+    3     2 root     SW       0  0.0   0  0.1 [ksoftirqd/0]
+  431     2 root     SW       0  0.0   0  0.1 [HI_HDMI_kThread]
+  410   407 root     R    34152 11.9   0  0.0 /dvr/dvr1
+  419   407 root     S    31004 10.8   1  0.0 /dvr/dvr1
+  595     1 root     S    10024  3.5   0  0.0 ./cloudupgrade
+29042 29039 root     S     8360  2.9   0  0.0 /nand/tools/gdb_v500
+ 1001     1 root     S     6864  2.3   0  0.0 pure-ftpd (SERVER)
+  588     1 root     S     6596  2.3   0  0.0 ./trade.bin onvif,p2p,rtsp
+  470     1 root     S     3416  1.1   0  0.0 ./stunnel /root/https/stunnel.conf
+29000   267 root     S     1844  0.6   0  0.0 -sh
+11219   267 root     S     1844  0.6   0  0.0 -sh
+  109     1 root     S     1840  0.6   0  0.0 -sh
+28993   267 root     S     1840  0.6   0  0.0 -sh
+29039   267 root     S     1840  0.6   0  0.0 -sh
+    1     0 root     S     1820  0.6   0  0.0 init
+  406   261 root     S     1820  0.6   1  0.0 /bin/sh -c /dvr/dvr1
+  262     1 root     S     1820  0.6   0  0.0 {exe} ash /dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools
+   99    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+  100    72 root     S <   1200  0.4   0  0.0 udevd --daemon
+   72     1 root     S <   1196  0.4   0  0.0 udevd --daemon
+  489     1 root     S     1124  0.3   1  0.0 ./ddns-service
+  258     1 root     S     1112  0.3   0  0.0 ./upgrade
+  261     1 root     S      940  0.3   1  0.0 ./TODO
+  266   262 root     S      920  0.3   1  0.0 /tdfs/usr/bin/upnp_tools
+    7     2 root     SW       0  0.0   1  0.0 [rcu_sched]
+   11     2 root     SW       0  0.0   1  0.0 [ksoftirqd/1]
+  507     2 root     SW<      0  0.0   0  0.0 [kworker/0:1H]
+   30     2 root     SW       0  0.0   1  0.0 [kswapd0]
+  766     2 root     SW<      0  0.0   1  0.0 [kworker/1:1H]
+  839     2 root     SW       0  0.0   0  0.0 [jbd2/sda2-8]
+  120     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  107     2 root     SW       0  0.0   1  0.0 [yaffs-bg-1]
+  980     2 root     SW       0  0.0   0  0.0 [jbd2/sdb2-8]
+14453     2 root     SW       0  0.0   1  0.0 [kworker/1:2]
+   10     2 root     SW       0  0.0   1  0.0 [migration/1]
+31100     2 root     SW       0  0.0   0  0.0 [kworker/u4:2]
+    9     2 root     SW       0  0.0   0  0.0 [migration/0]
+    2     0 root     SW       0  0.0   0  0.0 [kthreadd]
+ 1275     2 root     SW       0  0.0   0  0.0 [kworker/u4:0]
+29038     2 root     SW       0  0.0   0  0.0 [kworker/0:1]
+   17     2 root     SW<      0  0.0   1  0.0 [writeback]
+   15     2 root     SW       0  0.0   0  0.0 [kdevtmpfs]
+   42     2 root     SW       0  0.0   0  0.0 [scsi_eh_0]
+   44     2 root     SW       0  0.0   0  0.0 [scsi_eh_1]
+   55     2 root     SW<      0  0.0   1  0.0 [deferwq]
+   20     2 root     SW<      0  0.0   0  0.0 [kblockd]
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 
+/tdfs/dvr # 

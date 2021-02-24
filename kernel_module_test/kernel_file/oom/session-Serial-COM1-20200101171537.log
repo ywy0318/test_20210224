@@ -1,0 +1,2357 @@
+﻿[2020-01-01 17:15:38]
+[2020-01-01 17:15:38]~ # 
+[2020-01-01 17:15:38]~ # 
+[2020-01-01 17:15:42]~ #                          
+[2020-01-01 17:15:42]
+[2020-01-01 17:15:43]System startup
+[2020-01-01 17:15:43]
+[2020-01-01 17:15:43]U-Boot 2010.06-svn3607 (Dec 28 2019 - 16:29:36)hi3521d
+[2020-01-01 17:15:43]
+[2020-01-01 17:15:43]Check Flash Memory Controller v100 ... Found
+[2020-01-01 17:15:43]SPI Nand(cs 0) ID: 0xef 0xaa 0x21 Name:"W25N01GV"
+[2020-01-01 17:15:43]Block:128KB Page:2KB Chip:128MB*1 OOB:64B ECC:4bit/512 
+[2020-01-01 17:15:43]ECC provided by Flash Memory Controller
+[2020-01-01 17:15:43]SPI Nand total size: 128MB
+[2020-01-01 17:15:43]magic: 0x48444946, product:0xF001, pcb:0xD1918810, custom:0x0, phy0: 0x0, phy1: 0x0
+[2020-01-01 17:15:43]In:    serial
+[2020-01-01 17:15:43]Out:   serial
+[2020-01-01 17:15:43]Err:   serial
+[2020-01-01 17:15:43]usb_auto_update flag does not set, auto update stop
+[2020-01-01 17:15:43]----updateimg_tftp: nand----
+[2020-01-01 17:15:44]Hit Ctrl+c to stop autoboot:  0 
+[2020-01-01 17:15:44]
+[2020-01-01 17:15:44]NAND read: device 0 offset 0x0, size 0x900000
+[2020-01-01 17:15:45] 9437184 bytes read: OK
+[2020-01-01 17:15:45][add_hardinfo_to_cmdline:151]: with hardinfo
+[2020-01-01 17:15:45]## Booting kernel from Legacy Image at 82100000 ...
+[2020-01-01 17:15:45]   Image Name:   Linux-3.18.20
+[2020-01-01 17:15:45]   Image Type:   ARM Linux Kernel Image (uncompressed)
+[2020-01-01 17:15:45]   Data Size:    6535414 Bytes = 6.2 MiB
+[2020-01-01 17:15:45]   Load Address: 80008000
+[2020-01-01 17:15:45]   Entry Point:  80008000
+[2020-01-01 17:15:46]   Loading Kernel Image ... OK
+[2020-01-01 17:15:46]OK
+[2020-01-01 17:15:46]
+[2020-01-01 17:15:46]Starting kernel ...
+[2020-01-01 17:15:46]
+[2020-01-01 17:15:47]Booting Linux on physical CPU 0x0
+[2020-01-01 17:15:47]Initializing cgroup subsys cpu
+[2020-01-01 17:15:47]Linux version 3.18.20 debug3602 (fanyuchao@tiandy) (gcc version 4.9.4 20150629 (prerelease) (Hisilicon_v500_20180120) ) #2 SMP Wed Dec 25 21:19:22 CST 2019
+[2020-01-01 17:15:47]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[2020-01-01 17:15:47]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-01-01 17:15:47]Machine model: Hisilicon HI3521D DEMO Board
+[2020-01-01 17:15:47]Memory policy: Data cache writealloc
+[2020-01-01 17:15:47]PERCPU: Embedded 9 pages/cpu @d13aa000 s5696 r8192 d22976 u36864
+[2020-01-01 17:15:47]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 70868
+[2020-01-01 17:15:47]Kernel command line: mem=279M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=yaffs2 mtdparts=hinand:1M(boot),8M(kernel),111M(rootfs),8M(config) hardinfo=100f00000188191d0000000000000000
+[2020-01-01 17:15:47]PID hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-01-01 17:15:47]Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[2020-01-01 17:15:47]Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-01-01 17:15:47]Memory: 273164K/285696K available (4592K kernel code, 197K rwdata, 1204K rodata, 3440K init, 287K bss, 12532K reserved, 1024K highmem)
+[2020-01-01 17:15:47]Virtual kernel memory layout:
+[2020-01-01 17:15:47]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-01-01 17:15:47]    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[2020-01-01 17:15:47]    vmalloc : 0xd1800000 - 0xff000000   ( 728 MB)
+[2020-01-01 17:15:47]    lowmem  : 0xc0000000 - 0xd1700000   ( 279 MB)
+[2020-01-01 17:15:47]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[2020-01-01 17:15:47]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[2020-01-01 17:15:47]      .text : 0xc0008000 - 0xc05b1460   (5798 kB)
+[2020-01-01 17:15:47]      .init : 0xc05b2000 - 0xc090e000   (3440 kB)
+[2020-01-01 17:15:47]      .data : 0xc090e000 - 0xc093f600   ( 198 kB)
+[2020-01-01 17:15:47]       .bss : 0xc093f600 - 0xc09874bc   ( 288 kB)
+[2020-01-01 17:15:47]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-01-01 17:15:47]Hierarchical RCU implementation.
+[2020-01-01 17:15:47]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-01-01 17:15:47]RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[2020-01-01 17:15:47]NR_IRQS:16 nr_irqs:16 16
+[2020-01-01 17:15:47]sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655765682ns
+[2020-01-01 17:15:47]Console: colour dummy device 80x30
+[2020-01-01 17:15:47]Calibrating delay loop... 2596.86 BogoMIPS (lpj=12984320)
+[2020-01-01 17:15:47]pid_max: default: 32768 minimum: 301
+[2020-01-01 17:15:47]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:15:47]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:15:47]CPU: Testing write buffer coherency: ok
+[2020-01-01 17:15:47]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-01-01 17:15:47]Setting up static identity map for 0x80462cf0 - 0x80462d48
+[2020-01-01 17:15:47]CPU1: Booted secondary processor
+[2020-01-01 17:15:47]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-01-01 17:15:47]Brought up 2 CPUs
+[2020-01-01 17:15:47]SMP: Total of 2 processors activated (5187.17 BogoMIPS).
+[2020-01-01 17:15:47]CPU: All CPU(s) started in SVC mode.
+[2020-01-01 17:15:47]devtmpfs: initialized
+[2020-01-01 17:15:47]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-01-01 17:15:47]pinctrl core: initialized pinctrl subsystem
+[2020-01-01 17:15:47]regulator-dummy: no parameters
+[2020-01-01 17:15:47]NET: Registered protocol family 16
+[2020-01-01 17:15:47]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-01-01 17:15:47]Serial: AMBA PL011 UART driver
+[2020-01-01 17:15:47]12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 38, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:15:47]console [ttyAMA0] enabled
+[2020-01-01 17:15:47]uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+[2020-01-01 17:15:47]12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 39, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:15:47]SCSI subsystem initialized
+[2020-01-01 17:15:47]ssp-pl022 120d0000.spi: ARM PL022 driver, device ID: 0x00800022
+[2020-01-01 17:15:47]ssp-pl022 120d0000.spi: mapped registers from 0x120d0000 to fe4d0000
+[2020-01-01 17:15:47]usbcore: registered new interface driver usbfs
+[2020-01-01 17:15:47]usbcore: registered new interface driver hub
+[2020-01-01 17:15:47]usbcore: registered new device driver usb
+[2020-01-01 17:15:47]Switched to clocksource timer00
+[2020-01-01 17:15:47]NET: Registered protocol family 2
+[2020-01-01 17:15:47]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[2020-01-01 17:15:47]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[2020-01-01 17:15:47]TCP: Hash tables configured (established 4096 bind 4096)
+[2020-01-01 17:15:47]TCP: reno registered
+[2020-01-01 17:15:47]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:15:47]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:15:47]NET: Registered protocol family 1
+[2020-01-01 17:15:47]RPC: Registered named UNIX socket transport module.
+[2020-01-01 17:15:47]RPC: Registered udp transport module.
+[2020-01-01 17:15:47]RPC: Registered tcp transport module.
+[2020-01-01 17:15:47]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-01-01 17:15:47]futex hash table entries: 512 (order: 3, 32768 bytes)
+[2020-01-01 17:15:47]jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[2020-01-01 17:15:47]fuse init (API version 7.23)
+[2020-01-01 17:15:47]msgmni has been set to 531
+[2020-01-01 17:15:47]bounce: pool size: 64 pages
+[2020-01-01 17:15:47]Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[2020-01-01 17:15:47]io scheduler noop registered
+[2020-01-01 17:15:47]io scheduler deadline registered (default)
+[2020-01-01 17:15:47]io scheduler cfq registered
+[2020-01-01 17:15:47]pinctrl-single 120f0000.pinmux: 234 pins at pa fe4f0000 size 936
+[2020-01-01 17:15:47]brd: module loaded
+[2020-01-01 17:15:48]ahci 11010000.sata: SSS flag set, parallel bus scan disabled
+[2020-01-01 17:15:48]ahci 11010000.sata: AHCI 0001.0300 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+[2020-01-01 17:15:48]ahci 11010000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh 
+[2020-01-01 17:15:48]scsi host0: ahci_platform
+[2020-01-01 17:15:48]scsi host1: ahci_platform
+[2020-01-01 17:15:48]ata1: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x100 irq 49
+[2020-01-01 17:15:48]ata2: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x180 irq 49
+[2020-01-01 17:15:48]hisi-sfc hisi_spi_nor.0: unrecognized JEDEC id bytes: ff, ef, aa
+[2020-01-01 17:15:48]hisi-sfc hisi_spi_nor.0: spi nor register fail!
+[2020-01-01 17:15:48]hisi-sfc: probe of hisi_spi_nor.0 failed with error -2
+[2020-01-01 17:15:48]SPI Nand ID Table Version 2.7
+[2020-01-01 17:15:48]SPI Nand(cs 0) ID: 0xef 0xaa 0x21
+[2020-01-01 17:15:48]nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[2020-01-01 17:15:48]nand: Winbond W25N01GV
+[2020-01-01 17:15:48]nand: 128MiB, SLC, page size: 2048
+[2020-01-01 17:15:48]Nand(Auto): OOB:64B ECC:4bit/512 
+[2020-01-01 17:15:48]nand:  ECC provided by Flash Memory Controller
+[2020-01-01 17:15:48]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:15:48]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:15:48]Creating 4 MTD partitions on "hinand":
+[2020-01-01 17:15:48]0x000000000000-0x000000100000 : "boot"
+[2020-01-01 17:15:48]0x000000100000-0x000000900000 : "kernel"
+[2020-01-01 17:15:48]0x000000900000-0x000007800000 : "rootfs"
+[2020-01-01 17:15:48]0x000007800000-0x000008000000 : "config"
+[2020-01-01 17:15:48]libphy: Fixed MDIO Bus: probed
+[2020-01-01 17:15:48]libphy: hisi_gemac_mii_bus: probed
+[2020-01-01 17:15:48]PPP generic driver version 2.4.2
+[2020-01-01 17:15:48]PPP BSD Compression module registered
+[2020-01-01 17:15:48]PPP Deflate Compression module registered
+[2020-01-01 17:15:48]PPP MPPE Compression module registered
+[2020-01-01 17:15:48]NET: Registered protocol family 24
+[2020-01-01 17:15:48]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-01-01 17:15:48]ehci-platform: EHCI generic platform driver
+[2020-01-01 17:15:48]ehci-platform 10040000.ehci: EHCI Host Controller
+[2020-01-01 17:15:48]ehci-platform 10040000.ehci: new USB bus registered, assigned bus number 1
+[2020-01-01 17:15:48]ehci-platform 10040000.ehci: irq 51, io mem 0x10040000
+[2020-01-01 17:15:48]ehci-platform 10040000.ehci: USB 2.0 started, EHCI 1.00
+[2020-01-01 17:15:48]hub 1-0:1.0: USB hub found
+[2020-01-01 17:15:48]hub 1-0:1.0: 2 ports detected
+[2020-01-01 17:15:48]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[2020-01-01 17:15:48]ohci-platform: OHCI generic platform driver
+[2020-01-01 17:15:48]ohci-platform 10030000.ohci: Generic Platform OHCI controller
+[2020-01-01 17:15:48]ohci-platform 10030000.ohci: new USB bus registered, assigned bus number 2
+[2020-01-01 17:15:48]ohci-platform 10030000.ohci: irq 50, io mem 0x10030000
+[2020-01-01 17:15:48]hub 2-0:1.0: USB hub found
+[2020-01-01 17:15:48]hub 2-0:1.0: 2 ports detected
+[2020-01-01 17:15:48]usbcore: registered new interface driver usb-storage
+[2020-01-01 17:15:48]mousedev: PS/2 mouse device common for all mice
+[2020-01-01 17:15:48]i2c /dev entries driver
+[2020-01-01 17:15:48]hisi_i2c hisi_i2c.0: Hisilicon [i2c-0] probed!
+[2020-01-01 17:15:48]usbcore: registered new interface driver usbhid
+[2020-01-01 17:15:48]usbhid: USB HID core driver
+[2020-01-01 17:15:48]TCP: cubic registered
+[2020-01-01 17:15:48]NET: Registered protocol family 10
+[2020-01-01 17:15:48]NET: Registered protocol family 17
+[2020-01-01 17:15:48]Registering SWP/SWPB emulation handler
+[2020-01-01 17:15:48]usb 1-2: new high-speed USB device number 3 using ehci-platform
+[2020-01-01 17:15:49]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:15:49]scsi host2: usb-storage 1-2:1.0
+[2020-01-01 17:15:49]usb 2-1: new low-speed USB device number 2 using ohci-platform
+[2020-01-01 17:15:49]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-1/2-1:1.0/0003:1A2C:0042.0001/input/input0
+[2020-01-01 17:15:49]hid-generic 0003:1A2C:0042.0001: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-1/input0
+[2020-01-01 17:15:50]scsi 2:0:0:0: Direct-Access     KINGSTON DataTraveler 3.0 1.01 PQ: 0 ANSI: 6
+[2020-01-01 17:15:50]sd 2:0:0:0: [sda] 15187968 512-byte logical blocks: (7.77 GB/7.24 GiB)
+[2020-01-01 17:15:50]sd 2:0:0:0: [sda] Write Protect is off
+[2020-01-01 17:15:50]sd 2:0:0:0: [sda] Write cache: disabled, read cache: enabled, supports DPO and FUA
+[2020-01-01 17:15:50] sda: sda1 sda3
+[2020-01-01 17:15:50]sd 2:0:0:0: [sda] Attached SCSI removable disk
+[2020-01-01 17:15:51]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-01-01 17:15:51]ata1.00: ATA-9: WDC WD60EJRX-89MP9Y1, 80.00A80, max UDMA/133
+[2020-01-01 17:15:51]ata1.00: 11721045168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-01-01 17:15:51]ata1.00: configured for UDMA/133
+[2020-01-01 17:15:51]scsi 0:0:0:0: Direct-Access     ATA      WDC WD60EJRX-89M 0A80 PQ: 0 ANSI: 5
+[2020-01-01 17:15:51]sd 0:0:0:0: [sdb] 11721045168 512-byte logical blocks: (6.00 TB/5.45 TiB)
+[2020-01-01 17:15:51]sd 0:0:0:0: [sdb] 4096-byte physical blocks
+[2020-01-01 17:15:51]sd 0:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:15:51]sd 0:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:15:51] sdb: sdb1 sdb2
+[2020-01-01 17:15:51]sd 0:0:0:0: [sdb] Attached SCSI disk
+[2020-01-01 17:15:51]ata2: SATA link down (SStatus 0 SControl 300)
+[2020-01-01 17:15:51]Freeing unused kernel memory: 3440K (c05b2000 - c090e000)
+[2020-01-01 17:15:51]
+[2020-01-01 17:15:51]            _ _ _ _ _ _ _ _ _ _ _ _
+[2020-01-01 17:15:51]            \  _  _   _  _ _ ___
+[2020-01-01 17:15:51]            / /__/ \ |_/
+[2020-01-01 17:15:51]           / __   /  -  _ ___
+[2020-01-01 17:15:51]          / /  / /  / /
+[2020-01-01 17:15:51]  _ _ _ _/ /  /  \_/  \_ ______
+[2020-01-01 17:15:51]___________\___\__________________
+[2020-01-01 17:15:51]
+[2020-01-01 17:15:51][RCS]: /etc/init.d/S00devs
+[2020-01-01 17:15:51][RCS]: /etc/init.d/S01udev
+[2020-01-01 17:15:51][RCS]: /etc/init.d/S80network
+[2020-01-01 17:15:51]mtdblock2 is missing, wait a second
+[2020-01-01 17:15:52]random: mkdir urandom read with 36 bits of entropy available
+[2020-01-01 17:15:52]yaffs: dev is 32505858 name is "mtdblock2" rw
+[2020-01-01 17:15:52]yaffs: passed flags ""
+[2020-01-01 17:15:52]Auto login as root ...
+[2020-01-01 17:15:52]mount config
+[2020-01-01 17:15:52]Jan  1 00:00:05 login[111]: root login on 'ttyS000'
+[2020-01-01 17:15:52]Welcome to HiLinux.
+[2020-01-01 17:15:52]None of nfsroot found in cmdline.
+[2020-01-01 17:15:52]find mtdblock3
+[2020-01-01 17:15:52]~ # yaffs: dev is 32505859 name is "mtdblock3" rw
+[2020-01-01 17:15:52]yaffs: passed flags ""
+[2020-01-01 17:15:52]======mkconfig start====
+[2020-01-01 17:15:52]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-01-01 17:15:52]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-01-01 17:15:52]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-01-01 17:15:52]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-01-01 17:15:52]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-01-01 17:15:52]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-01-01 17:15:52]======mkconfig end====
+[2020-01-01 17:15:52][RCS]: /tdfs/sh/L81toe
+[2020-01-01 17:15:53]hi_gmac_v200 100a0000.ethernet (unnamed net_device) (uninitialized): using random MAC address 1a:87:2a:54:45:81
+[2020-01-01 17:15:53]attached PHY 1 to driver Generic PHY, PHY_ID=0x1cc816
+[2020-01-01 17:15:53]Higmac dma_sg_phy: 0x8f900000
+[2020-01-01 17:15:53]ETH: rmii, phy_addr=1
+[2020-01-01 17:15:53]/tdfs/sh/L81toe: line 10: can't create /proc/sys/net/ipv4/tcp_syncookies: nonexistent directory
+[2020-01-01 17:15:54]check successfully!!!
+[2020-01-01 17:15:54]/tdfs
+[2020-01-01 17:15:54]check successfully!!!
+[2020-01-01 17:15:54]/tdfs
+[2020-01-01 17:15:54]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:15:54][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:15:54]0x12070c00: 0x00000001 --> 0x1ACCE551 
+[2020-01-01 17:15:54][END]
+[2020-01-01 17:15:54]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:15:54][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:15:54]0x12070008: 0x00000003 --> 0x00000000 
+[2020-01-01 17:15:54][END]
+[2020-01-01 17:15:54]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:15:54][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:15:54]0x1207000c: 0x00000000 --> 0x00000000 
+[2020-01-01 17:15:54][END]
+[2020-01-01 17:15:55]load sys_config.ko for ...OK!
+[2020-01-01 17:15:55]Module himedia: init ok
+[2020-01-01 17:15:55]Hisilicon Media Memory Zone Manager
+[2020-01-01 17:15:55]hi_osal 1.0 init success!
+[2020-01-01 17:15:55]hi_base: module license 'Proprietary' taints kernel.
+[2020-01-01 17:15:55]Disabling lock debugging due to kernel taint
+[2020-01-01 17:15:55]load base.ko ... OK!
+[2020-01-01 17:15:55]load sys.ko ...OK!
+[2020-01-01 17:15:55]load vdec.ko ....OK!
+[2020-01-01 17:15:55]load vdh firmware.ko OK
+[2020-01-01 17:15:55]load jpegd.ko ....OK!
+[2020-01-01 17:15:55]load tde.ko ...OK!
+[2020-01-01 17:15:55]load region.ko ....OK!
+[2020-01-01 17:15:55]load vgs.ko ...OK!
+[2020-01-01 17:15:55]load viu.ko for ...OK!
+[2020-01-01 17:15:55]load vpss.ko ...OK!
+[2020-01-01 17:15:55]load vou.ko OK!
+[2020-01-01 17:15:55]load hifb.ko OK!
+[2020-01-01 17:15:55]load hdmi.ko OK!
+[2020-01-01 17:15:55]load rc.ko ...OK!
+[2020-01-01 17:15:55]load venc.ko ...OK!
+[2020-01-01 17:15:55]load chnl.ko ...OK!
+[2020-01-01 17:15:55]load vedu.ko ...OK!
+[2020-01-01 17:15:55]load h264e.ko ...OK!
+[2020-01-01 17:15:55]load h265e.ko ...OK!
+[2020-01-01 17:15:55]load jpege.ko ...OK!
+[2020-01-01 17:15:55]load vda.ko ....OK!
+[2020-01-01 17:15:55]load ive.ko ... OK!
+[2020-01-01 17:15:55]load aio.ko OK!
+[2020-01-01 17:15:55]load ai.ko OK!
+[2020-01-01 17:15:55]load ao.ko OK!
+[2020-01-01 17:15:55]load aenc.ko OK!
+[2020-01-01 17:15:55]load adec.ko OK!
+[2020-01-01 17:15:55]Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+[2020-01-01 17:15:56]tlv320aic31 no.0 driver init successful!
+[2020-01-01 17:15:56]tdsecurity_init lock and dir list
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/app/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/backup/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/backup/back1/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/backup/back2/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/tdfs/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/gui_config/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/gui_config/OEM/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/gui_config/TD/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/gui_config/tp/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/gui_config_fm/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/dvr/log/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/etc/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/etc/udev/rules.d/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/opt/etc/disk/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/opt/etc/system/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/opt/log/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/root/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/root/https/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/config/tmp/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/dvr/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/nand/dvr/guibmp/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/nand/dvr/ie/oem/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/nand/dvr/ie/tiandy/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/conf/)
+[2020-01-01 17:15:56]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/res/common/)
+[2020-01-01 17:15:59]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:15:59]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:15:59]
+[2020-01-01 17:15:59]~ # hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:15:59]IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[2020-01-01 17:15:59]
+[2020-01-01 17:15:59]~ # 
+[2020-01-01 17:15:59]~ # 
+[2020-01-01 17:16:00]~ # 
+[2020-01-01 17:16:00]~ # 
+[2020-01-01 17:16:00]~ # 
+[2020-01-01 17:16:00]~ # program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:16:00]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:16:03]cd program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:16:04]
+[2020-01-01 17:16:05]~ # 
+[2020-01-01 17:16:05]~ # 
+[2020-01-01 17:16:05]~ # EXT4-fs (sdb2): recovery complete
+[2020-01-01 17:16:05]EXT4-fs (sdb2): mounted filesystem with ordered data mode. Opts: 
+[2020-01-01 17:16:05]
+[2020-01-01 17:16:05]~ # 
+[2020-01-01 17:16:05]~ # 
+[2020-01-01 17:16:06]~ # 
+[2020-01-01 17:16:08]~ # cd /dvFAT-fs (sda1): bogus number of reserved sectors
+[2020-01-01 17:16:08]FAT-fs (sda1): Can't find a valid FAT filesystem
+[2020-01-01 17:16:08]FAT-fs (sda3): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:16:08]
+[2020-01-01 17:16:08]-sh: cd: can't cd to /d
+[2020-01-01 17:16:09]~ # 
+[2020-01-01 17:16:09]~ # 
+[2020-01-01 17:16:09]~ # 
+[2020-01-01 17:16:09]~ # 
+[2020-01-01 17:16:12]~ # cd /mnt/usb/0/
+[2020-01-01 17:16:15]/mnt/usb/0 # cd 
+[2020-01-01 17:16:15]0/  1/
+[2020-01-01 17:16:15]/mnt/usb/0 # cd 
+[2020-01-01 17:16:15]0/  1/
+[2020-01-01 17:16:19]/mnt/usb/0 # cd 0
+[2020-01-01 17:16:21]/mnt/usb/0/0 # ls
+[2020-01-01 17:16:21]0000000000000000000000000000000000000000000000000000
+[2020-01-01 17:16:21]20191226_203116
+[2020-01-01 17:16:21]20191226_203116.xls
+[2020-01-01 17:16:21]20191231
+[2020-01-01 17:16:21]LOST.DIR
+[2020-01-01 17:16:21]System Volume Information
+[2020-01-01 17:16:21]TC-I82HN_59A_EMMC_TD_DVRS_V11.4.0.20191120.img
+[2020-01-01 17:16:21]jiatinghe
+[2020-01-01 17:16:21]kyy.box
+[2020-01-01 17:16:21]应届生148
+[2020-01-01 17:16:21]技术本部-166
+[2020-01-01 17:16:21]研发本部598
+[2020-01-01 17:16:21]网络基础知识IP,子网掩码，网关间的关系-周旭东.mp4
+[2020-01-01 17:16:21]韩博士[附件]
+[2020-01-01 17:16:26]/mnt/usb/0/0 # usb 1-2: USB disconnect, device number 3
+[2020-01-01 17:16:34]usb 1-2: new high-speed USB device number 4 using ehci-platform
+[2020-01-01 17:16:35]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:16:35]scsi host3: usb-storage 1-2:1.0
+[2020-01-01 17:16:36]scsi 3:0:0:0: Direct-Access     Kingston DataTraveler 3.0      PQ: 0 ANSI: 6
+[2020-01-01 17:16:36]sd 3:0:0:0: [sdc] 60437492 512-byte logical blocks: (30.9 GB/28.8 GiB)
+[2020-01-01 17:16:36]sd 3:0:0:0: [sdc] Write Protect is off
+[2020-01-01 17:16:36]sd 3:0:0:0: [sdc] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:16:36] sdc: sdc1
+[2020-01-01 17:16:36]sd 3:0:0:0: [sdc] Attached SCSI removable disk
+[2020-01-01 17:16:37]FAT-fs (sdc1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:16:38]
+[2020-01-01 17:16:39](unreachable)/ # 
+[2020-01-01 17:16:39](unreachable)/ # 
+[2020-01-01 17:16:39](unreachable)/ # 
+[2020-01-01 17:16:41](unreachable)/ # cd /mnt/usb/0/0/
+[2020-01-01 17:16:42]/mnt/usb/0/0 # ls
+[2020-01-01 17:16:42]System Volume Information  update.img
+[2020-01-01 17:16:47]/mnt/usb/0/0 #                          
+[2020-01-01 17:16:47]
+[2020-01-01 17:16:47]System startup
+[2020-01-01 17:16:47]
+[2020-01-01 17:16:47]U-Boot 2010.06-svn3607 (Dec 28 2019 - 16:29:36)hi3521d
+[2020-01-01 17:16:47]
+[2020-01-01 17:16:47]Check Flash Memory Controller v100 ... Found
+[2020-01-01 17:16:47]SPI Nand(cs 0) ID: 0xef 0xaa 0x21 Name:"W25N01GV"
+[2020-01-01 17:16:47]Block:128KB Page:2KB Chip:128MB*1 OOB:64B ECC:4bit/512 
+[2020-01-01 17:16:47]ECC provided by Flash Memory Controller
+[2020-01-01 17:16:47]SPI Nand total size: 128MB
+[2020-01-01 17:16:47]magic: 0x48444946, product:0xF001, pcb:0xD1918810, custom:0x0, phy0: 0x0, phy1: 0x0
+[2020-01-01 17:16:47]In:    serial
+[2020-01-01 17:16:47]Out:   serial
+[2020-01-01 17:16:47]Err:   serial
+[2020-01-01 17:16:47]usb_auto_update flag does not set, auto update stop
+[2020-01-01 17:16:47]----updateimg_tftp: nand----
+[2020-01-01 17:16:48]Hit Ctrl+c to stop autoboot:  0 
+[2020-01-01 17:16:48]
+[2020-01-01 17:16:48]NAND read: device 0 offset 0x0, size 0x900000
+[2020-01-01 17:16:49] 9437184 bytes read: OK
+[2020-01-01 17:16:49][add_hardinfo_to_cmdline:151]: with hardinfo
+[2020-01-01 17:16:49]## Booting kernel from Legacy Image at 82100000 ...
+[2020-01-01 17:16:49]   Image Name:   Linux-3.18.20
+[2020-01-01 17:16:49]   Image Type:   ARM Linux Kernel Image (uncompressed)
+[2020-01-01 17:16:49]   Data Size:    6535414 Bytes = 6.2 MiB
+[2020-01-01 17:16:49]   Load Address: 80008000
+[2020-01-01 17:16:49]   Entry Point:  80008000
+[2020-01-01 17:16:51]   Loading Kernel Image ... OK
+[2020-01-01 17:16:51]OK
+[2020-01-01 17:16:51]
+[2020-01-01 17:16:51]Starting kernel ...
+[2020-01-01 17:16:51]
+[2020-01-01 17:16:51]Booting Linux on physical CPU 0x0
+[2020-01-01 17:16:51]Initializing cgroup subsys cpu
+[2020-01-01 17:16:51]Linux version 3.18.20 debug3602 (fanyuchao@tiandy) (gcc version 4.9.4 20150629 (prerelease) (Hisilicon_v500_20180120) ) #2 SMP Wed Dec 25 21:19:22 CST 2019
+[2020-01-01 17:16:51]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[2020-01-01 17:16:51]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-01-01 17:16:51]Machine model: Hisilicon HI3521D DEMO Board
+[2020-01-01 17:16:51]Memory policy: Data cache writealloc
+[2020-01-01 17:16:51]PERCPU: Embedded 9 pages/cpu @d13aa000 s5696 r8192 d22976 u36864
+[2020-01-01 17:16:51]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 70868
+[2020-01-01 17:16:51]Kernel command line: mem=279M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=yaffs2 mtdparts=hinand:1M(boot),8M(kernel),111M(rootfs),8M(config) hardinfo=100f00000188191d0000000000000000
+[2020-01-01 17:16:51]PID hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-01-01 17:16:51]Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[2020-01-01 17:16:51]Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-01-01 17:16:51]Memory: 273164K/285696K available (4592K kernel code, 197K rwdata, 1204K rodata, 3440K init, 287K bss, 12532K reserved, 1024K highmem)
+[2020-01-01 17:16:51]Virtual kernel memory layout:
+[2020-01-01 17:16:51]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-01-01 17:16:51]    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[2020-01-01 17:16:51]    vmalloc : 0xd1800000 - 0xff000000   ( 728 MB)
+[2020-01-01 17:16:51]    lowmem  : 0xc0000000 - 0xd1700000   ( 279 MB)
+[2020-01-01 17:16:51]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[2020-01-01 17:16:51]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[2020-01-01 17:16:51]      .text : 0xc0008000 - 0xc05b1460   (5798 kB)
+[2020-01-01 17:16:51]      .init : 0xc05b2000 - 0xc090e000   (3440 kB)
+[2020-01-01 17:16:51]      .data : 0xc090e000 - 0xc093f600   ( 198 kB)
+[2020-01-01 17:16:51]       .bss : 0xc093f600 - 0xc09874bc   ( 288 kB)
+[2020-01-01 17:16:51]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-01-01 17:16:51]Hierarchical RCU implementation.
+[2020-01-01 17:16:51]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-01-01 17:16:51]RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[2020-01-01 17:16:51]NR_IRQS:16 nr_irqs:16 16
+[2020-01-01 17:16:51]sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655765682ns
+[2020-01-01 17:16:51]Console: colour dummy device 80x30
+[2020-01-01 17:16:51]Calibrating delay loop... 2596.86 BogoMIPS (lpj=12984320)
+[2020-01-01 17:16:51]pid_max: default: 32768 minimum: 301
+[2020-01-01 17:16:51]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:16:51]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:16:51]CPU: Testing write buffer coherency: ok
+[2020-01-01 17:16:51]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-01-01 17:16:51]Setting up static identity map for 0x80462cf0 - 0x80462d48
+[2020-01-01 17:16:51]CPU1: Booted secondary processor
+[2020-01-01 17:16:51]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-01-01 17:16:51]Brought up 2 CPUs
+[2020-01-01 17:16:51]SMP: Total of 2 processors activated (5187.17 BogoMIPS).
+[2020-01-01 17:16:51]CPU: All CPU(s) started in SVC mode.
+[2020-01-01 17:16:51]devtmpfs: initialized
+[2020-01-01 17:16:51]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-01-01 17:16:51]pinctrl core: initialized pinctrl subsystem
+[2020-01-01 17:16:51]regulator-dummy: no parameters
+[2020-01-01 17:16:51]NET: Registered protocol family 16
+[2020-01-01 17:16:51]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-01-01 17:16:51]Serial: AMBA PL011 UART driver
+[2020-01-01 17:16:51]12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 38, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:16:51]console [ttyAMA0] enabled
+[2020-01-01 17:16:51]uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+[2020-01-01 17:16:51]12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 39, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:16:51]SCSI subsystem initialized
+[2020-01-01 17:16:51]ssp-pl022 120d0000.spi: ARM PL022 driver, device ID: 0x00800022
+[2020-01-01 17:16:51]ssp-pl022 120d0000.spi: mapped registers from 0x120d0000 to fe4d0000
+[2020-01-01 17:16:51]usbcore: registered new interface driver usbfs
+[2020-01-01 17:16:51]usbcore: registered new interface driver hub
+[2020-01-01 17:16:51]usbcore: registered new device driver usb
+[2020-01-01 17:16:51]Switched to clocksource timer00
+[2020-01-01 17:16:51]NET: Registered protocol family 2
+[2020-01-01 17:16:51]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[2020-01-01 17:16:51]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[2020-01-01 17:16:51]TCP: Hash tables configured (established 4096 bind 4096)
+[2020-01-01 17:16:51]TCP: reno registered
+[2020-01-01 17:16:51]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:16:51]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:16:51]NET: Registered protocol family 1
+[2020-01-01 17:16:51]RPC: Registered named UNIX socket transport module.
+[2020-01-01 17:16:51]RPC: Registered udp transport module.
+[2020-01-01 17:16:51]RPC: Registered tcp transport module.
+[2020-01-01 17:16:51]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-01-01 17:16:51]futex hash table entries: 512 (order: 3, 32768 bytes)
+[2020-01-01 17:16:51]jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[2020-01-01 17:16:51]fuse init (API version 7.23)
+[2020-01-01 17:16:51]msgmni has been set to 531
+[2020-01-01 17:16:52]bounce: pool size: 64 pages
+[2020-01-01 17:16:52]Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[2020-01-01 17:16:52]io scheduler noop registered
+[2020-01-01 17:16:52]io scheduler deadline registered (default)
+[2020-01-01 17:16:52]io scheduler cfq registered
+[2020-01-01 17:16:52]pinctrl-single 120f0000.pinmux: 234 pins at pa fe4f0000 size 936
+[2020-01-01 17:16:52]brd: module loaded
+[2020-01-01 17:16:52]ahci 11010000.sata: SSS flag set, parallel bus scan disabled
+[2020-01-01 17:16:52]ahci 11010000.sata: AHCI 0001.0300 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+[2020-01-01 17:16:52]ahci 11010000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh 
+[2020-01-01 17:16:52]scsi host0: ahci_platform
+[2020-01-01 17:16:52]scsi host1: ahci_platform
+[2020-01-01 17:16:52]ata1: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x100 irq 49
+[2020-01-01 17:16:52]ata2: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x180 irq 49
+[2020-01-01 17:16:52]hisi-sfc hisi_spi_nor.0: unrecognized JEDEC id bytes: ff, ef, aa
+[2020-01-01 17:16:52]hisi-sfc hisi_spi_nor.0: spi nor register fail!
+[2020-01-01 17:16:52]hisi-sfc: probe of hisi_spi_nor.0 failed with error -2
+[2020-01-01 17:16:52]SPI Nand ID Table Version 2.7
+[2020-01-01 17:16:52]SPI Nand(cs 0) ID: 0xef 0xaa 0x21
+[2020-01-01 17:16:52]nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[2020-01-01 17:16:52]nand: Winbond W25N01GV
+[2020-01-01 17:16:52]nand: 128MiB, SLC, page size: 2048
+[2020-01-01 17:16:52]Nand(Auto): OOB:64B ECC:4bit/512 
+[2020-01-01 17:16:52]nand:  ECC provided by Flash Memory Controller
+[2020-01-01 17:16:52]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:16:52]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:16:52]Creating 4 MTD partitions on "hinand":
+[2020-01-01 17:16:52]0x000000000000-0x000000100000 : "boot"
+[2020-01-01 17:16:52]0x000000100000-0x000000900000 : "kernel"
+[2020-01-01 17:16:52]0x000000900000-0x000007800000 : "rootfs"
+[2020-01-01 17:16:52]0x000007800000-0x000008000000 : "config"
+[2020-01-01 17:16:52]libphy: Fixed MDIO Bus: probed
+[2020-01-01 17:16:52]libphy: hisi_gemac_mii_bus: probed
+[2020-01-01 17:16:52]PPP generic driver version 2.4.2
+[2020-01-01 17:16:52]PPP BSD Compression module registered
+[2020-01-01 17:16:52]PPP Deflate Compression module registered
+[2020-01-01 17:16:52]PPP MPPE Compression module registered
+[2020-01-01 17:16:52]NET: Registered protocol family 24
+[2020-01-01 17:16:52]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-01-01 17:16:52]ehci-platform: EHCI generic platform driver
+[2020-01-01 17:16:52]ehci-platform 10040000.ehci: EHCI Host Controller
+[2020-01-01 17:16:52]ehci-platform 10040000.ehci: new USB bus registered, assigned bus number 1
+[2020-01-01 17:16:52]ehci-platform 10040000.ehci: irq 51, io mem 0x10040000
+[2020-01-01 17:16:52]ehci-platform 10040000.ehci: USB 2.0 started, EHCI 1.00
+[2020-01-01 17:16:52]hub 1-0:1.0: USB hub found
+[2020-01-01 17:16:52]hub 1-0:1.0: 2 ports detected
+[2020-01-01 17:16:52]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[2020-01-01 17:16:52]ohci-platform: OHCI generic platform driver
+[2020-01-01 17:16:52]ohci-platform 10030000.ohci: Generic Platform OHCI controller
+[2020-01-01 17:16:52]ohci-platform 10030000.ohci: new USB bus registered, assigned bus number 2
+[2020-01-01 17:16:52]ohci-platform 10030000.ohci: irq 50, io mem 0x10030000
+[2020-01-01 17:16:52]hub 2-0:1.0: USB hub found
+[2020-01-01 17:16:52]hub 2-0:1.0: 2 ports detected
+[2020-01-01 17:16:52]usbcore: registered new interface driver usb-storage
+[2020-01-01 17:16:52]mousedev: PS/2 mouse device common for all mice
+[2020-01-01 17:16:52]i2c /dev entries driver
+[2020-01-01 17:16:52]hisi_i2c hisi_i2c.0: Hisilicon [i2c-0] probed!
+[2020-01-01 17:16:52]usbcore: registered new interface driver usbhid
+[2020-01-01 17:16:52]usbhid: USB HID core driver
+[2020-01-01 17:16:52]TCP: cubic registered
+[2020-01-01 17:16:52]NET: Registered protocol family 10
+[2020-01-01 17:16:52]NET: Registered protocol family 17
+[2020-01-01 17:16:52]Registering SWP/SWPB emulation handler
+[2020-01-01 17:16:53]usb 2-1: new low-speed USB device number 2 using ohci-platform
+[2020-01-01 17:16:53]usb 1-2: new high-speed USB device number 3 using ehci-platform
+[2020-01-01 17:16:53]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-1/2-1:1.0/0003:1A2C:0042.0001/input/input0
+[2020-01-01 17:16:53]hid-generic 0003:1A2C:0042.0001: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-1/input0
+[2020-01-01 17:16:53]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:16:53]scsi host2: usb-storage 1-2:1.0
+[2020-01-01 17:16:54]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-01-01 17:16:54]ata1.00: ATA-9: WDC WD60EJRX-89MP9Y1, 80.00A80, max UDMA/133
+[2020-01-01 17:16:54]ata1.00: 11721045168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-01-01 17:16:54]ata1.00: configured for UDMA/133
+[2020-01-01 17:16:54]scsi 0:0:0:0: Direct-Access     ATA      WDC WD60EJRX-89M 0A80 PQ: 0 ANSI: 5
+[2020-01-01 17:16:54]sd 0:0:0:0: [sda] 11721045168 512-byte logical blocks: (6.00 TB/5.45 TiB)
+[2020-01-01 17:16:54]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-01-01 17:16:54]sd 0:0:0:0: [sda] Write Protect is off
+[2020-01-01 17:16:54]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:16:54] sda: sda1 sda2
+[2020-01-01 17:16:54]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-01-01 17:16:54]scsi 2:0:0:0: Direct-Access     Kingston DataTraveler 3.0      PQ: 0 ANSI: 6
+[2020-01-01 17:16:54]sd 2:0:0:0: [sdb] 60437492 512-byte logical blocks: (30.9 GB/28.8 GiB)
+[2020-01-01 17:16:54]sd 2:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:16:54]sd 2:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:16:54] sdb: sdb1
+[2020-01-01 17:16:54]sd 2:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 17:16:54]ata2: SATA link down (SStatus 0 SControl 300)
+[2020-01-01 17:16:54]Freeing unused kernel memory: 3440K (c05b2000 - c090e000)
+[2020-01-01 17:16:54]
+[2020-01-01 17:16:54]            _ _ _ _ _ _ _ _ _ _ _ _
+[2020-01-01 17:16:54]            \  _  _   _  _ _ ___
+[2020-01-01 17:16:54]            / /__/ \ |_/
+[2020-01-01 17:16:54]           / __   /  -  _ ___
+[2020-01-01 17:16:54]          / /  / /  / /
+[2020-01-01 17:16:54]  _ _ _ _/ /  /  \_/  \_ ______
+[2020-01-01 17:16:54]___________\___\__________________
+[2020-01-01 17:16:54]
+[2020-01-01 17:16:54][RCS]: /etc/init.d/S00devs
+[2020-01-01 17:16:54][RCS]: /etc/init.d/S01udev
+[2020-01-01 17:16:54][RCS]: /etc/init.d/S80network
+[2020-01-01 17:16:54]mtdblock2 is missing, wait a second
+[2020-01-01 17:16:55]random: mkdir urandom read with 34 bits of entropy available
+[2020-01-01 17:16:55]yaffs: dev is 32505858 name is "mtdblock2" rw
+[2020-01-01 17:16:55]yaffs: passed flags ""
+[2020-01-01 17:16:56]usb 2-1: USB disconnect, device number 2
+[2020-01-01 17:16:57]usb 2-1: new low-speed USB device number 3 using ohci-platform
+[2020-01-01 17:16:57]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-1/2-1:1.0/0003:1A2C:0042.0002/input/input1
+[2020-01-01 17:16:57]hid-generic 0003:1A2C:0042.0002: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-1/input0
+[2020-01-01 17:16:58]Auto login as root ...
+[2020-01-01 17:16:58]Jan  1 00:00:07 login[111]: root login on 'ttyS000'
+[2020-01-01 17:16:58]Welcome to HiLinux.
+[2020-01-01 17:16:58]mount config
+[2020-01-01 17:16:58]None of nfsroot found in cmdline.
+[2020-01-01 17:16:58]~ # find mtdblock3
+[2020-01-01 17:16:58]yaffs: dev is 32505859 name is "mtdblock3" rw
+[2020-01-01 17:16:58]yaffs: passed flags ""
+[2020-01-01 17:16:58]======mkconfig start====
+[2020-01-01 17:16:58]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-01-01 17:16:58]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-01-01 17:16:58]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-01-01 17:16:58]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-01-01 17:16:58]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-01-01 17:16:58]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-01-01 17:16:58]======mkconfig end====
+[2020-01-01 17:16:58][RCS]: /tdfs/sh/L81toe
+[2020-01-01 17:16:59]hi_gmac_v200 100a0000.ethernet (unnamed net_device) (uninitialized): using random MAC address 22:95:71:77:6d:a6
+[2020-01-01 17:16:59]attached PHY 1 to driver Generic PHY, PHY_ID=0x1cc816
+[2020-01-01 17:16:59]Higmac dma_sg_phy: 0x8f900000
+[2020-01-01 17:16:59]ETH: rmii, phy_addr=1
+[2020-01-01 17:16:59]/tdfs/sh/L81toe: line 10: can't create /proc/sys/net/ipv4/tcp_syncookies: nonexistent directory
+[2020-01-01 17:17:00]check successfully!!!
+[2020-01-01 17:17:00]/tdfs
+[2020-01-01 17:17:00]check successfully!!!
+[2020-01-01 17:17:00]/tdfs
+[2020-01-01 17:17:00]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:17:00][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:17:00]0x12070c00: 0x00000001 --> 0x1ACCE551 
+[2020-01-01 17:17:00][END]
+[2020-01-01 17:17:00]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:17:00][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:17:00]0x12070008: 0x00000003 --> 0x00000000 
+[2020-01-01 17:17:00][END]
+[2020-01-01 17:17:00]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:17:00][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:17:00]0x1207000c: 0x00000000 --> 0x00000000 
+[2020-01-01 17:17:00][END]
+[2020-01-01 17:17:01]load sys_config.ko for ...OK!
+[2020-01-01 17:17:01]Module himedia: init ok
+[2020-01-01 17:17:01]Hisilicon Media Memory Zone Manager
+[2020-01-01 17:17:01]hi_osal 1.0 init success!
+[2020-01-01 17:17:01]hi_base: module license 'Proprietary' taints kernel.
+[2020-01-01 17:17:01]Disabling lock debugging due to kernel taint
+[2020-01-01 17:17:01]load base.ko ... OK!
+[2020-01-01 17:17:01]load sys.ko ...OK!
+[2020-01-01 17:17:01]load vdec.ko ....OK!
+[2020-01-01 17:17:01]load vdh firmware.ko OK
+[2020-01-01 17:17:01]load jpegd.ko ....OK!
+[2020-01-01 17:17:01]load tde.ko ...OK!
+[2020-01-01 17:17:01]load region.ko ....OK!
+[2020-01-01 17:17:01]load vgs.ko ...OK!
+[2020-01-01 17:17:01]load viu.ko for ...OK!
+[2020-01-01 17:17:01]load vpss.ko ...OK!
+[2020-01-01 17:17:01]load vou.ko OK!
+[2020-01-01 17:17:01]load hifb.ko OK!
+[2020-01-01 17:17:01]load hdmi.ko OK!
+[2020-01-01 17:17:01]load rc.ko ...OK!
+[2020-01-01 17:17:01]load venc.ko ...OK!
+[2020-01-01 17:17:01]load chnl.ko ...OK!
+[2020-01-01 17:17:01]load vedu.ko ...OK!
+[2020-01-01 17:17:01]load h264e.ko ...OK!
+[2020-01-01 17:17:01]load h265e.ko ...OK!
+[2020-01-01 17:17:01]load jpege.ko ...OK!
+[2020-01-01 17:17:01]load vda.ko ....OK!
+[2020-01-01 17:17:01]load ive.ko ... OK!
+[2020-01-01 17:17:01]load aio.ko OK!
+[2020-01-01 17:17:01]load ai.ko OK!
+[2020-01-01 17:17:01]load ao.ko OK!
+[2020-01-01 17:17:01]load aenc.ko OK!
+[2020-01-01 17:17:01]load adec.ko OK!
+[2020-01-01 17:17:01]Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+[2020-01-01 17:17:02]tlv320aic31 no.0 driver init successful!
+[2020-01-01 17:17:02]tdsecurity_init lock and dir list
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/app/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/backup/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/backup/back1/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/backup/back2/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/tdfs/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/gui_config/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/gui_config/OEM/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/gui_config/TD/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/gui_config/tp/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/gui_config_fm/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/dvr/log/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/etc/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/etc/udev/rules.d/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/opt/etc/disk/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/opt/etc/system/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/opt/log/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/root/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/root/https/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/config/tmp/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/dvr/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/nand/dvr/guibmp/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/nand/dvr/ie/oem/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/nand/dvr/ie/tiandy/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/conf/)
+[2020-01-01 17:17:02]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/res/common/)
+[2020-01-01 17:17:05]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:17:05]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:17:05]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:17:05]IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[2020-01-01 17:17:08]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:17:08]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:17:12]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:17:13]EXT4-fs (sda2): recovery complete
+[2020-01-01 17:17:13]EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: 
+[2020-01-01 17:17:15]FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:17:48]
+[2020-01-01 17:17:48]~ # 
+[2020-01-01 17:17:48]~ # 
+[2020-01-01 17:17:54]~ # cd /mnt/usb/0/0/
+[2020-01-01 17:17:55]/mnt/usb/0/0 # ks
+[2020-01-01 17:17:55]-sh: ks: not found
+[2020-01-01 17:17:56]/mnt/usb/0/0 # ls
+[2020-01-01 17:17:56]System Volume Information  update.img
+[2020-01-01 17:18:01]/mnt/usb/0/0 # reboot 
+[2020-01-01 17:18:02]/mnt/usb/0/0 # umount: /dev/usb/sdb1 busy - remounted read-only
+[2020-01-01 17:18:02]umount: can't remount NULL read-only
+[2020-01-01 17:18:02]umount: can't remount /dev/scsi/host00/part2 read-only
+[2020-01-01 17:18:02]umount: can't remount size=8M read-only
+[2020-01-01 17:18:02]umount: can't remount /dev/mtdblock3 read-only
+[2020-01-01 17:18:02]umount: /dev/mtdblock2 busy - remounted read-only
+[2020-01-01 17:18:02]umount: can't remount tmpfs read-only
+[2020-01-01 17:18:02]umount: can't remount rootfs read-only
+[2020-01-01 17:18:02]The system is going down NOW!
+[2020-01-01 17:18:02]Sent SIGTERM to all processes
+[2020-01-01 17:18:02]MMB LEAK(pid=434): 0x985D7000, 32768 bytes, 'AENC(0)StrmBuf'
+[2020-01-01 17:18:02]mmz_userdev_release: mmb<0x985D7000> mapped to userspace 0xa5042000 will be force unmaped!
+[2020-01-01 17:18:02]MMB LEAK(pid=434): 0x985DF000, 32768 bytes, 'AENC(0) CirBuf'
+[2020-01-01 17:18:02]mmz_userdev_release: mmb<0x985DF000> mapped to userspace 0xa503a000 will be force unmaped!
+[2020-01-01 17:18:03]Sent SIGKILL to all processes
+[2020-01-01 17:18:03]Requesting system reboot
+[2020-01-01 17:18:05]sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[2020-01-01 17:18:05]reboot: Restarting system
+[2020-01-01 17:18:05]                         
+[2020-01-01 17:18:05]
+[2020-01-01 17:18:05]System startup
+[2020-01-01 17:18:05]
+[2020-01-01 17:18:05]U-Boot 2010.06-svn3607 (Dec 28 2019 - 16:29:36)hi3521d
+[2020-01-01 17:18:05]
+[2020-01-01 17:18:05]Check Flash Memory Controller v100 ... Found
+[2020-01-01 17:18:05]SPI Nand(cs 0) ID: 0xef 0xaa 0x21 Name:"W25N01GV"
+[2020-01-01 17:18:05]Block:128KB Page:2KB Chip:128MB*1 OOB:64B ECC:4bit/512 
+[2020-01-01 17:18:05]ECC provided by Flash Memory Controller
+[2020-01-01 17:18:05]SPI Nand total size: 128MB
+[2020-01-01 17:18:05]magic: 0x48444946, product:0xF001, pcb:0xD1918810, custom:0x0, phy0: 0x0, phy1: 0x0
+[2020-01-01 17:18:05]In:    serial
+[2020-01-01 17:18:05]Out:   serial
+[2020-01-01 17:18:05]Err:   serial
+[2020-01-01 17:18:05]usb_auto_update flag does not set, auto update stop
+[2020-01-01 17:18:05]----updateimg_tftp: nand----
+[2020-01-01 17:18:06]Hit Ctrl+c to stop autoboot:  0 
+[2020-01-01 17:18:06]
+[2020-01-01 17:18:06]NAND read: device 0 offset 0x0, size 0x900000
+[2020-01-01 17:18:07] 9437184 bytes read: OK
+[2020-01-01 17:18:07][add_hardinfo_to_cmdline:151]: with hardinfo
+[2020-01-01 17:18:07]## Booting kernel from Legacy Image at 82100000 ...
+[2020-01-01 17:18:07]   Image Name:   Linux-3.18.20
+[2020-01-01 17:18:07]   Image Type:   ARM Linux Kernel Image (uncompressed)
+[2020-01-01 17:18:07]   Data Size:    6535414 Bytes = 6.2 MiB
+[2020-01-01 17:18:07]   Load Address: 80008000
+[2020-01-01 17:18:07]   Entry Point:  80008000
+[2020-01-01 17:18:09]   Loading Kernel Image ... OK
+[2020-01-01 17:18:09]OK
+[2020-01-01 17:18:09]
+[2020-01-01 17:18:09]Starting kernel ...
+[2020-01-01 17:18:09]
+[2020-01-01 17:18:09]Booting Linux on physical CPU 0x0
+[2020-01-01 17:18:09]Initializing cgroup subsys cpu
+[2020-01-01 17:18:09]Linux version 3.18.20 debug3602 (fanyuchao@tiandy) (gcc version 4.9.4 20150629 (prerelease) (Hisilicon_v500_20180120) ) #2 SMP Wed Dec 25 21:19:22 CST 2019
+[2020-01-01 17:18:09]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[2020-01-01 17:18:09]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-01-01 17:18:09]Machine model: Hisilicon HI3521D DEMO Board
+[2020-01-01 17:18:09]Memory policy: Data cache writealloc
+[2020-01-01 17:18:09]PERCPU: Embedded 9 pages/cpu @d13aa000 s5696 r8192 d22976 u36864
+[2020-01-01 17:18:09]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 70868
+[2020-01-01 17:18:09]Kernel command line: mem=279M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=yaffs2 mtdparts=hinand:1M(boot),8M(kernel),111M(rootfs),8M(config) hardinfo=100f00000188191d0000000000000000
+[2020-01-01 17:18:09]PID hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-01-01 17:18:09]Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[2020-01-01 17:18:09]Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-01-01 17:18:09]Memory: 273164K/285696K available (4592K kernel code, 197K rwdata, 1204K rodata, 3440K init, 287K bss, 12532K reserved, 1024K highmem)
+[2020-01-01 17:18:09]Virtual kernel memory layout:
+[2020-01-01 17:18:09]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-01-01 17:18:09]    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[2020-01-01 17:18:09]    vmalloc : 0xd1800000 - 0xff000000   ( 728 MB)
+[2020-01-01 17:18:09]    lowmem  : 0xc0000000 - 0xd1700000   ( 279 MB)
+[2020-01-01 17:18:09]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[2020-01-01 17:18:09]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[2020-01-01 17:18:09]      .text : 0xc0008000 - 0xc05b1460   (5798 kB)
+[2020-01-01 17:18:09]      .init : 0xc05b2000 - 0xc090e000   (3440 kB)
+[2020-01-01 17:18:09]      .data : 0xc090e000 - 0xc093f600   ( 198 kB)
+[2020-01-01 17:18:09]       .bss : 0xc093f600 - 0xc09874bc   ( 288 kB)
+[2020-01-01 17:18:09]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-01-01 17:18:09]Hierarchical RCU implementation.
+[2020-01-01 17:18:09]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-01-01 17:18:09]RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[2020-01-01 17:18:09]NR_IRQS:16 nr_irqs:16 16
+[2020-01-01 17:18:09]sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655765682ns
+[2020-01-01 17:18:09]Console: colour dummy device 80x30
+[2020-01-01 17:18:09]Calibrating delay loop... 2596.86 BogoMIPS (lpj=12984320)
+[2020-01-01 17:18:09]pid_max: default: 32768 minimum: 301
+[2020-01-01 17:18:09]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:18:09]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:18:09]CPU: Testing write buffer coherency: ok
+[2020-01-01 17:18:09]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-01-01 17:18:09]Setting up static identity map for 0x80462cf0 - 0x80462d48
+[2020-01-01 17:18:09]CPU1: Booted secondary processor
+[2020-01-01 17:18:09]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-01-01 17:18:09]Brought up 2 CPUs
+[2020-01-01 17:18:09]SMP: Total of 2 processors activated (5187.17 BogoMIPS).
+[2020-01-01 17:18:09]CPU: All CPU(s) started in SVC mode.
+[2020-01-01 17:18:09]devtmpfs: initialized
+[2020-01-01 17:18:09]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-01-01 17:18:09]pinctrl core: initialized pinctrl subsystem
+[2020-01-01 17:18:09]regulator-dummy: no parameters
+[2020-01-01 17:18:09]NET: Registered protocol family 16
+[2020-01-01 17:18:09]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-01-01 17:18:09]Serial: AMBA PL011 UART driver
+[2020-01-01 17:18:09]12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 38, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:18:09]console [ttyAMA0] enabled
+[2020-01-01 17:18:09]uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+[2020-01-01 17:18:09]12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 39, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:18:09]SCSI subsystem initialized
+[2020-01-01 17:18:09]ssp-pl022 120d0000.spi: ARM PL022 driver, device ID: 0x00800022
+[2020-01-01 17:18:09]ssp-pl022 120d0000.spi: mapped registers from 0x120d0000 to fe4d0000
+[2020-01-01 17:18:09]usbcore: registered new interface driver usbfs
+[2020-01-01 17:18:09]usbcore: registered new interface driver hub
+[2020-01-01 17:18:09]usbcore: registered new device driver usb
+[2020-01-01 17:18:09]Switched to clocksource timer00
+[2020-01-01 17:18:09]NET: Registered protocol family 2
+[2020-01-01 17:18:09]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[2020-01-01 17:18:09]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[2020-01-01 17:18:09]TCP: Hash tables configured (established 4096 bind 4096)
+[2020-01-01 17:18:09]TCP: reno registered
+[2020-01-01 17:18:09]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:18:09]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:18:09]NET: Registered protocol family 1
+[2020-01-01 17:18:09]RPC: Registered named UNIX socket transport module.
+[2020-01-01 17:18:09]RPC: Registered udp transport module.
+[2020-01-01 17:18:09]RPC: Registered tcp transport module.
+[2020-01-01 17:18:09]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-01-01 17:18:10]futex hash table entries: 512 (order: 3, 32768 bytes)
+[2020-01-01 17:18:10]jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[2020-01-01 17:18:10]fuse init (API version 7.23)
+[2020-01-01 17:18:10]msgmni has been set to 531
+[2020-01-01 17:18:10]bounce: pool size: 64 pages
+[2020-01-01 17:18:10]Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[2020-01-01 17:18:10]io scheduler noop registered
+[2020-01-01 17:18:10]io scheduler deadline registered (default)
+[2020-01-01 17:18:10]io scheduler cfq registered
+[2020-01-01 17:18:10]pinctrl-single 120f0000.pinmux: 234 pins at pa fe4f0000 size 936
+[2020-01-01 17:18:10]brd: module loaded
+[2020-01-01 17:18:10]ahci 11010000.sata: SSS flag set, parallel bus scan disabled
+[2020-01-01 17:18:10]ahci 11010000.sata: AHCI 0001.0300 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+[2020-01-01 17:18:10]ahci 11010000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh 
+[2020-01-01 17:18:10]scsi host0: ahci_platform
+[2020-01-01 17:18:10]scsi host1: ahci_platform
+[2020-01-01 17:18:10]ata1: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x100 irq 49
+[2020-01-01 17:18:10]ata2: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x180 irq 49
+[2020-01-01 17:18:10]hisi-sfc hisi_spi_nor.0: unrecognized JEDEC id bytes: ff, ef, aa
+[2020-01-01 17:18:10]hisi-sfc hisi_spi_nor.0: spi nor register fail!
+[2020-01-01 17:18:10]hisi-sfc: probe of hisi_spi_nor.0 failed with error -2
+[2020-01-01 17:18:10]SPI Nand ID Table Version 2.7
+[2020-01-01 17:18:10]SPI Nand(cs 0) ID: 0xef 0xaa 0x21
+[2020-01-01 17:18:10]nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[2020-01-01 17:18:10]nand: Winbond W25N01GV
+[2020-01-01 17:18:10]nand: 128MiB, SLC, page size: 2048
+[2020-01-01 17:18:10]Nand(Auto): OOB:64B ECC:4bit/512 
+[2020-01-01 17:18:10]nand:  ECC provided by Flash Memory Controller
+[2020-01-01 17:18:10]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:18:10]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:18:10]Creating 4 MTD partitions on "hinand":
+[2020-01-01 17:18:10]0x000000000000-0x000000100000 : "boot"
+[2020-01-01 17:18:10]0x000000100000-0x000000900000 : "kernel"
+[2020-01-01 17:18:10]0x000000900000-0x000007800000 : "rootfs"
+[2020-01-01 17:18:10]0x000007800000-0x000008000000 : "config"
+[2020-01-01 17:18:10]libphy: Fixed MDIO Bus: probed
+[2020-01-01 17:18:10]libphy: hisi_gemac_mii_bus: probed
+[2020-01-01 17:18:10]PPP generic driver version 2.4.2
+[2020-01-01 17:18:10]PPP BSD Compression module registered
+[2020-01-01 17:18:10]PPP Deflate Compression module registered
+[2020-01-01 17:18:10]PPP MPPE Compression module registered
+[2020-01-01 17:18:10]NET: Registered protocol family 24
+[2020-01-01 17:18:10]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-01-01 17:18:10]ehci-platform: EHCI generic platform driver
+[2020-01-01 17:18:10]ehci-platform 10040000.ehci: EHCI Host Controller
+[2020-01-01 17:18:10]ehci-platform 10040000.ehci: new USB bus registered, assigned bus number 1
+[2020-01-01 17:18:10]ehci-platform 10040000.ehci: irq 51, io mem 0x10040000
+[2020-01-01 17:18:10]ehci-platform 10040000.ehci: USB 2.0 started, EHCI 1.00
+[2020-01-01 17:18:10]hub 1-0:1.0: USB hub found
+[2020-01-01 17:18:10]hub 1-0:1.0: 2 ports detected
+[2020-01-01 17:18:10]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-01-01 17:18:10]ata1.00: ATA-9: WDC WD60EJRX-89MP9Y1, 80.00A80, max UDMA/133
+[2020-01-01 17:18:10]ata1.00: 11721045168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-01-01 17:18:10]ata1.00: configured for UDMA/133
+[2020-01-01 17:18:10]scsi 0:0:0:0: Direct-Access     ATA      WDC WD60EJRX-89M 0A80 PQ: 0 ANSI: 5
+[2020-01-01 17:18:10]sd 0:0:0:0: [sda] 11721045168 512-byte logical blocks: (6.00 TB/5.45 TiB)
+[2020-01-01 17:18:10]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-01-01 17:18:10]sd 0:0:0:0: [sda] Write Protect is off
+[2020-01-01 17:18:10]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:18:10]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[2020-01-01 17:18:10]ohci-platform: OHCI generic platform driver
+[2020-01-01 17:18:10] sda: sda1 sda2
+[2020-01-01 17:18:10]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-01-01 17:18:10]ohci-platform 10030000.ohci: Generic Platform OHCI controller
+[2020-01-01 17:18:10]ohci-platform 10030000.ohci: new USB bus registered, assigned bus number 2
+[2020-01-01 17:18:10]ohci-platform 10030000.ohci: irq 50, io mem 0x10030000
+[2020-01-01 17:18:11]hub 2-0:1.0: USB hub found
+[2020-01-01 17:18:11]hub 2-0:1.0: 2 ports detected
+[2020-01-01 17:18:11]usbcore: registered new interface driver usb-storage
+[2020-01-01 17:18:11]mousedev: PS/2 mouse device common for all mice
+[2020-01-01 17:18:11]i2c /dev entries driver
+[2020-01-01 17:18:11]hisi_i2c hisi_i2c.0: Hisilicon [i2c-0] probed!
+[2020-01-01 17:18:11]usbcore: registered new interface driver usbhid
+[2020-01-01 17:18:11]usbhid: USB HID core driver
+[2020-01-01 17:18:11]TCP: cubic registered
+[2020-01-01 17:18:11]NET: Registered protocol family 10
+[2020-01-01 17:18:11]NET: Registered protocol family 17
+[2020-01-01 17:18:11]Registering SWP/SWPB emulation handler
+[2020-01-01 17:18:11]ata2: SATA link down (SStatus 0 SControl 300)
+[2020-01-01 17:18:11]Freeing unused kernel memory: 3440K (c05b2000 - c090e000)
+[2020-01-01 17:18:11]
+[2020-01-01 17:18:11]            _ _ _ _ _ _ _ _ _ _ _ _
+[2020-01-01 17:18:11]            \  _  _   _  _ _ ___
+[2020-01-01 17:18:11]            / /__/ \ |_/
+[2020-01-01 17:18:11]           / __   /  -  _ ___
+[2020-01-01 17:18:11]          / /  / /  / /
+[2020-01-01 17:18:11]  _ _ _ _/ /  /  \_/  \_ ______
+[2020-01-01 17:18:11]___________\___\__________________
+[2020-01-01 17:18:11]
+[2020-01-01 17:18:11][RCS]: /etc/init.d/S00devs
+[2020-01-01 17:18:11][RCS]: /etc/init.d/S01udev
+[2020-01-01 17:18:11]usb 1-2: new high-speed USB device number 3 using ehci-platform
+[2020-01-01 17:18:11][RCS]: /etc/init.d/S80network
+[2020-01-01 17:18:11]random: cat urandom read with 13 bits of entropy available
+[2020-01-01 17:18:11]usb 2-1: new low-speed USB device number 2 using ohci-platform
+[2020-01-01 17:18:11]yaffs: dev is 32505858 name is "mtdblock2" rw
+[2020-01-01 17:18:11]yaffs: passed flags ""
+[2020-01-01 17:18:11]Auto login as root ...
+[2020-01-01 17:18:11]Jan  1 00:00:01 login[105]: root login on 'ttyS000'
+[2020-01-01 17:18:11]mount config
+[2020-01-01 17:18:11]Welcome to HiLinux.
+[2020-01-01 17:18:11]None of nfsroot found in cmdline.
+[2020-01-01 17:18:11]~ # find mtdblock3
+[2020-01-01 17:18:11]yaffs: dev is 32505859 name is "mtdblock3" rw
+[2020-01-01 17:18:11]yaffs: passed flags ""
+[2020-01-01 17:18:11]======mkconfig start====
+[2020-01-01 17:18:11]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:18:11]rm: can't remove '/tdfs/root/https/stunnel.conf'scsi host2: usb-storage 1-2:1.0
+[2020-01-01 17:18:11]: No such file or directory
+[2020-01-01 17:18:11]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-01-01 17:18:11]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-01-01 17:18:11]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-01-01 17:18:11]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-01-01 17:18:11]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-01-01 17:18:11]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-1/2-1:1.0/0003:1A2C:0042.0001/input/input0
+[2020-01-01 17:18:11]======mkconfig end====
+[2020-01-01 17:18:11][RCS]: /tdfs/sh/L81toe
+[2020-01-01 17:18:11]hid-generic 0003:1A2C:0042.0001: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-1/input0
+[2020-01-01 17:18:12]hi_gmac_v200 100a0000.ethernet (unnamed net_device) (uninitialized): using random MAC address c6:d9:53:0d:67:48
+[2020-01-01 17:18:12]attached PHY 1 to driver Generic PHY, PHY_ID=0x1cc816
+[2020-01-01 17:18:12]Higmac dma_sg_phy: 0x8f900000
+[2020-01-01 17:18:12]ETH: rmii, phy_addr=1
+[2020-01-01 17:18:12]/tdfs/sh/L81toe: line 10: can't create /proc/sys/net/ipv4/tcp_syncookies: nonexistent directory
+[2020-01-01 17:18:12]scsi 2:0:0:0: Direct-Access     Kingston DataTraveler 3.0      PQ: 0 ANSI: 6
+[2020-01-01 17:18:12]sd 2:0:0:0: [sdb] 60437492 512-byte logical blocks: (30.9 GB/28.8 GiB)
+[2020-01-01 17:18:12]sd 2:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:18:12]sd 2:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:18:12] sdb: sdb1
+[2020-01-01 17:18:12]sd 2:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 17:18:12]check successfully!!!
+[2020-01-01 17:18:12]/tdfs
+[2020-01-01 17:18:12]check successfully!!!
+[2020-01-01 17:18:12]/tdfs
+[2020-01-01 17:18:13]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:18:13][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:18:13]0x12070c00: 0x00000001 --> 0x1ACCE551 
+[2020-01-01 17:18:13][END]
+[2020-01-01 17:18:13]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:18:13][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:18:13]0x12070008: 0x00000003 --> 0x00000000 
+[2020-01-01 17:18:13][END]
+[2020-01-01 17:18:13]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:18:13][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:18:13]0x1207000c: 0x00000000 --> 0x00000000 
+[2020-01-01 17:18:13][END]
+[2020-01-01 17:18:14]load sys_config.ko for ...OK!
+[2020-01-01 17:18:14]Module himedia: init ok
+[2020-01-01 17:18:14]Hisilicon Media Memory Zone Manager
+[2020-01-01 17:18:14]hi_osal 1.0 init success!
+[2020-01-01 17:18:14]hi_base: module license 'Proprietary' taints kernel.
+[2020-01-01 17:18:14]Disabling lock debugging due to kernel taint
+[2020-01-01 17:18:14]load base.ko ... OK!
+[2020-01-01 17:18:14]load sys.ko ...OK!
+[2020-01-01 17:18:14]load vdec.ko ....OK!
+[2020-01-01 17:18:14]load vdh firmware.ko OK
+[2020-01-01 17:18:14]load jpegd.ko ....OK!
+[2020-01-01 17:18:14]load tde.ko ...OK!
+[2020-01-01 17:18:14]load region.ko ....OK!
+[2020-01-01 17:18:14]load vgs.ko ...OK!
+[2020-01-01 17:18:14]load viu.ko for ...OK!
+[2020-01-01 17:18:14]load vpss.ko ...OK!
+[2020-01-01 17:18:14]load vou.ko OK!
+[2020-01-01 17:18:14]load hifb.ko OK!
+[2020-01-01 17:18:14]load hdmi.ko OK!
+[2020-01-01 17:18:14]load rc.ko ...OK!
+[2020-01-01 17:18:14]load venc.ko ...OK!
+[2020-01-01 17:18:14]load chnl.ko ...OK!
+[2020-01-01 17:18:14]load vedu.ko ...OK!
+[2020-01-01 17:18:14]load h264e.ko ...OK!
+[2020-01-01 17:18:14]load h265e.ko ...OK!
+[2020-01-01 17:18:14]load jpege.ko ...OK!
+[2020-01-01 17:18:14]load vda.ko ....OK!
+[2020-01-01 17:18:14]load ive.ko ... OK!
+[2020-01-01 17:18:14]load aio.ko OK!
+[2020-01-01 17:18:14]load ai.ko OK!
+[2020-01-01 17:18:14]load ao.ko OK!
+[2020-01-01 17:18:14]load aenc.ko OK!
+[2020-01-01 17:18:14]load adec.ko OK!
+[2020-01-01 17:18:14]Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+[2020-01-01 17:18:14]tlv320aic31 no.0 driver init successful!
+[2020-01-01 17:18:14]tdsecurity_init lock and dir list
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/app/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/backup/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/backup/back1/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/backup/back2/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/tdfs/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/gui_config/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/gui_config/OEM/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/gui_config/TD/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/gui_config/tp/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/gui_config_fm/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/dvr/log/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/etc/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/etc/udev/rules.d/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/opt/etc/disk/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/opt/etc/system/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/opt/log/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/root/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/root/https/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/config/tmp/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/dvr/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/nand/dvr/guibmp/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/nand/dvr/ie/oem/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/nand/dvr/ie/tiandy/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/conf/)
+[2020-01-01 17:18:15]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/res/common/)
+[2020-01-01 17:18:17]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:18:17]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:18:18]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:18:18]IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[2020-01-01 17:18:20]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:18:20]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:18:23]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:18:24]EXT4-fs (sda2): recovery complete
+[2020-01-01 17:18:24]EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: 
+[2020-01-01 17:18:28]FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:18:32]
+[2020-01-01 17:18:32]~ # 
+[2020-01-01 17:18:33]~ # 
+[2020-01-01 17:18:33]~ # 
+[2020-01-01 17:18:33]~ # 
+[2020-01-01 17:18:40]~ # 
+[2020-01-01 17:18:40]~ # 
+[2020-01-01 17:18:40]~ # 
+[2020-01-01 17:18:41]~ # 
+[2020-01-01 17:18:41]~ # 
+[2020-01-01 17:33:01]~ # usb 1-2: USB disconnect, device number 3
+[2020-01-01 17:33:10]usb 1-2: new high-speed USB device number 4 using ehci-platform
+[2020-01-01 17:33:11]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:33:11]scsi host3: usb-storage 1-2:1.0
+[2020-01-01 17:33:12]scsi 3:0:0:0: Direct-Access     USB      Flash Disk       1100 PQ: 0 ANSI: 4
+[2020-01-01 17:33:12]sd 3:0:0:0: [sdb] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+[2020-01-01 17:33:12]sd 3:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:33:12]sd 3:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:33:12] sdb: sdb1
+[2020-01-01 17:33:12]sd 3:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 17:33:13]FAT-fs (sdb1): bogus number of reserved sectors
+[2020-01-01 17:33:13]FAT-fs (sdb1): Can't find a valid FAT filesystem
+[2020-01-01 17:33:14]
+[2020-01-01 17:33:15]~ # 
+[2020-01-01 17:33:15]~ # 
+[2020-01-01 17:33:15]~ # 
+[2020-01-01 17:33:15]~ # 
+[2020-01-01 17:33:19]~ # cd /mnt/usb/0/0/
+[2020-01-01 17:33:20]/mnt/usb/0/0 # ls
+[2020-01-01 17:33:20]20191231
+[2020-01-01 17:33:20]System Volume Information
+[2020-01-01 17:33:20]baokun
+[2020-01-01 17:33:20]baokun_AVI
+[2020-01-01 17:33:20]media_nvr
+[2020-01-01 17:33:20]media_nvr_AVI
+[2020-01-01 17:33:20]网络基础知识IP,子网掩码，网关间的关系-周旭东.mp4
+[2020-01-01 17:33:21]/mnt/usb/0/0 # ls
+[2020-01-01 17:33:21]20191231
+[2020-01-01 17:33:21]System Volume Information
+[2020-01-01 17:33:21]baokun
+[2020-01-01 17:33:21]baokun_AVI
+[2020-01-01 17:33:21]media_nvr
+[2020-01-01 17:33:21]media_nvr_AVI
+[2020-01-01 17:33:21]网络基础知识IP,子网掩码，网关间的关系-周旭东.mp4
+[2020-01-01 17:33:59]/mnt/usb/0/0 # usb 1-2: USB disconnect, device number 4
+[2020-01-01 17:33:59]sd 3:0:0:0: [sdb] Synchronizing SCSI cache
+[2020-01-01 17:33:59]sd 3:0:0:0: [sdb]  
+[2020-01-01 17:33:59]Result: hostbyte=0x01 driverbyte=0x00
+[2020-01-01 17:36:54]usb 1-2: new high-speed USB device number 5 using ehci-platform
+[2020-01-01 17:36:55]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:36:55]scsi host4: usb-storage 1-2:1.0
+[2020-01-01 17:36:57]scsi 4:0:0:0: Direct-Access     USB      Flash Disk       1100 PQ: 0 ANSI: 4
+[2020-01-01 17:36:57]sd 4:0:0:0: [sdc] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+[2020-01-01 17:36:57]sd 4:0:0:0: [sdc] Write Protect is off
+[2020-01-01 17:36:57]sd 4:0:0:0: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:36:57] sdc: sdc1
+[2020-01-01 17:36:57]sd 4:0:0:0: [sdc] Attached SCSI removable disk
+[2020-01-01 17:36:58]
+[2020-01-01 17:36:58](unreachable)/ # 
+[2020-01-01 17:36:59](unreachable)/ # 
+[2020-01-01 17:37:14](unreachable)/ # cd /mnt/usb/0/0/
+[2020-01-01 17:37:14]/mnt/usb/0/0 # ls
+[2020-01-01 17:37:14]System Volume Information  update.img
+[2020-01-01 17:37:21]/mnt/usb/0/0 # ata1: exception Emask 0x10 SAct 0x0 SErr 0x90100 act                          
+[2020-01-01 17:37:21]
+[2020-01-01 17:37:21]System startup
+[2020-01-01 17:37:21]
+[2020-01-01 17:37:21]U-Boot 2010.06-svn3607 (Dec 28 2019 - 16:29:36)hi3521d
+[2020-01-01 17:37:21]
+[2020-01-01 17:37:21]Check Flash Memory Controller v100 ... Found
+[2020-01-01 17:37:21]SPI Nand(cs 0) ID: 0xef 0xaa 0x21 Name:"W25N01GV"
+[2020-01-01 17:37:21]Block:128KB Page:2KB Chip:128MB*1 OOB:64B ECC:4bit/512 
+[2020-01-01 17:37:21]ECC provided by Flash Memory Controller
+[2020-01-01 17:37:21]SPI Nand total size: 128MB
+[2020-01-01 17:37:21]magic: 0x48444946, product:0xF001, pcb:0xD1918810, custom:0x0, phy0: 0x0, phy1: 0x0
+[2020-01-01 17:37:21]In:    serial
+[2020-01-01 17:37:21]Out:   serial
+[2020-01-01 17:37:21]Err:   serial
+[2020-01-01 17:37:21]usb_auto_update flag does not set, auto update stop
+[2020-01-01 17:37:21]----updateimg_tftp: nand----
+[2020-01-01 17:37:22]Hit Ctrl+c to stop autoboot:  0 
+[2020-01-01 17:37:22]
+[2020-01-01 17:37:22]NAND read: device 0 offset 0x0, size 0x900000
+[2020-01-01 17:37:23] 9437184 bytes read: OK
+[2020-01-01 17:37:23][add_hardinfo_to_cmdline:151]: with hardinfo
+[2020-01-01 17:37:23]## Booting kernel from Legacy Image at 82100000 ...
+[2020-01-01 17:37:23]   Image Name:   Linux-3.18.20
+[2020-01-01 17:37:23]   Image Type:   ARM Linux Kernel Image (uncompressed)
+[2020-01-01 17:37:23]   Data Size:    6535414 Bytes = 6.2 MiB
+[2020-01-01 17:37:23]   Load Address: 80008000
+[2020-01-01 17:37:23]   Entry Point:  80008000
+[2020-01-01 17:37:25]   Loading Kernel Image ... OK
+[2020-01-01 17:37:25]OK
+[2020-01-01 17:37:25]
+[2020-01-01 17:37:25]Starting kernel ...
+[2020-01-01 17:37:25]
+[2020-01-01 17:37:25]Booting Linux on physical CPU 0x0
+[2020-01-01 17:37:25]Initializing cgroup subsys cpu
+[2020-01-01 17:37:25]Linux version 3.18.20 debug3602 (fanyuchao@tiandy) (gcc version 4.9.4 20150629 (prerelease) (Hisilicon_v500_20180120) ) #2 SMP Wed Dec 25 21:19:22 CST 2019
+[2020-01-01 17:37:25]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[2020-01-01 17:37:25]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-01-01 17:37:25]Machine model: Hisilicon HI3521D DEMO Board
+[2020-01-01 17:37:25]Memory policy: Data cache writealloc
+[2020-01-01 17:37:25]PERCPU: Embedded 9 pages/cpu @d13aa000 s5696 r8192 d22976 u36864
+[2020-01-01 17:37:25]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 70868
+[2020-01-01 17:37:25]Kernel command line: mem=279M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=yaffs2 mtdparts=hinand:1M(boot),8M(kernel),111M(rootfs),8M(config) hardinfo=100f00000188191d0000000000000000
+[2020-01-01 17:37:25]PID hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-01-01 17:37:25]Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[2020-01-01 17:37:25]Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-01-01 17:37:25]Memory: 273164K/285696K available (4592K kernel code, 197K rwdata, 1204K rodata, 3440K init, 287K bss, 12532K reserved, 1024K highmem)
+[2020-01-01 17:37:25]Virtual kernel memory layout:
+[2020-01-01 17:37:25]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-01-01 17:37:25]    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[2020-01-01 17:37:25]    vmalloc : 0xd1800000 - 0xff000000   ( 728 MB)
+[2020-01-01 17:37:25]    lowmem  : 0xc0000000 - 0xd1700000   ( 279 MB)
+[2020-01-01 17:37:25]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[2020-01-01 17:37:25]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[2020-01-01 17:37:25]      .text : 0xc0008000 - 0xc05b1460   (5798 kB)
+[2020-01-01 17:37:25]      .init : 0xc05b2000 - 0xc090e000   (3440 kB)
+[2020-01-01 17:37:25]      .data : 0xc090e000 - 0xc093f600   ( 198 kB)
+[2020-01-01 17:37:25]       .bss : 0xc093f600 - 0xc09874bc   ( 288 kB)
+[2020-01-01 17:37:25]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-01-01 17:37:25]Hierarchical RCU implementation.
+[2020-01-01 17:37:25]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-01-01 17:37:25]RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[2020-01-01 17:37:25]NR_IRQS:16 nr_irqs:16 16
+[2020-01-01 17:37:25]sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655765682ns
+[2020-01-01 17:37:25]Console: colour dummy device 80x30
+[2020-01-01 17:37:25]Calibrating delay loop... 2596.86 BogoMIPS (lpj=12984320)
+[2020-01-01 17:37:25]pid_max: default: 32768 minimum: 301
+[2020-01-01 17:37:25]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:37:25]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:37:25]CPU: Testing write buffer coherency: ok
+[2020-01-01 17:37:25]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-01-01 17:37:25]Setting up static identity map for 0x80462cf0 - 0x80462d48
+[2020-01-01 17:37:25]CPU1: Booted secondary processor
+[2020-01-01 17:37:25]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-01-01 17:37:25]Brought up 2 CPUs
+[2020-01-01 17:37:25]SMP: Total of 2 processors activated (5187.17 BogoMIPS).
+[2020-01-01 17:37:25]CPU: All CPU(s) started in SVC mode.
+[2020-01-01 17:37:25]devtmpfs: initialized
+[2020-01-01 17:37:25]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-01-01 17:37:25]pinctrl core: initialized pinctrl subsystem
+[2020-01-01 17:37:25]regulator-dummy: no parameters
+[2020-01-01 17:37:25]NET: Registered protocol family 16
+[2020-01-01 17:37:25]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-01-01 17:37:25]Serial: AMBA PL011 UART driver
+[2020-01-01 17:37:25]12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 38, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:37:25]console [ttyAMA0] enabled
+[2020-01-01 17:37:25]uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+[2020-01-01 17:37:25]12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 39, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:37:25]SCSI subsystem initialized
+[2020-01-01 17:37:25]ssp-pl022 120d0000.spi: ARM PL022 driver, device ID: 0x00800022
+[2020-01-01 17:37:25]ssp-pl022 120d0000.spi: mapped registers from 0x120d0000 to fe4d0000
+[2020-01-01 17:37:25]usbcore: registered new interface driver usbfs
+[2020-01-01 17:37:25]usbcore: registered new interface driver hub
+[2020-01-01 17:37:25]usbcore: registered new device driver usb
+[2020-01-01 17:37:25]Switched to clocksource timer00
+[2020-01-01 17:37:25]NET: Registered protocol family 2
+[2020-01-01 17:37:25]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[2020-01-01 17:37:25]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[2020-01-01 17:37:25]TCP: Hash tables configured (established 4096 bind 4096)
+[2020-01-01 17:37:25]TCP: reno registered
+[2020-01-01 17:37:25]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:37:25]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:37:25]NET: Registered protocol family 1
+[2020-01-01 17:37:25]RPC: Registered named UNIX socket transport module.
+[2020-01-01 17:37:25]RPC: Registered udp transport module.
+[2020-01-01 17:37:25]RPC: Registered tcp transport module.
+[2020-01-01 17:37:25]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-01-01 17:37:26]futex hash table entries: 512 (order: 3, 32768 bytes)
+[2020-01-01 17:37:26]jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[2020-01-01 17:37:26]fuse init (API version 7.23)
+[2020-01-01 17:37:26]msgmni has been set to 531
+[2020-01-01 17:37:26]bounce: pool size: 64 pages
+[2020-01-01 17:37:26]Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[2020-01-01 17:37:26]io scheduler noop registered
+[2020-01-01 17:37:26]io scheduler deadline registered (default)
+[2020-01-01 17:37:26]io scheduler cfq registered
+[2020-01-01 17:37:26]pinctrl-single 120f0000.pinmux: 234 pins at pa fe4f0000 size 936
+[2020-01-01 17:37:26]brd: module loaded
+[2020-01-01 17:37:26]ahci 11010000.sata: SSS flag set, parallel bus scan disabled
+[2020-01-01 17:37:26]ahci 11010000.sata: AHCI 0001.0300 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+[2020-01-01 17:37:26]ahci 11010000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh 
+[2020-01-01 17:37:26]scsi host0: ahci_platform
+[2020-01-01 17:37:26]scsi host1: ahci_platform
+[2020-01-01 17:37:26]ata1: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x100 irq 49
+[2020-01-01 17:37:26]ata2: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x180 irq 49
+[2020-01-01 17:37:26]hisi-sfc hisi_spi_nor.0: unrecognized JEDEC id bytes: ff, ef, aa
+[2020-01-01 17:37:26]hisi-sfc hisi_spi_nor.0: spi nor register fail!
+[2020-01-01 17:37:26]hisi-sfc: probe of hisi_spi_nor.0 failed with error -2
+[2020-01-01 17:37:26]SPI Nand ID Table Version 2.7
+[2020-01-01 17:37:26]SPI Nand(cs 0) ID: 0xef 0xaa 0x21
+[2020-01-01 17:37:26]nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[2020-01-01 17:37:26]nand: Winbond W25N01GV
+[2020-01-01 17:37:26]nand: 128MiB, SLC, page size: 2048
+[2020-01-01 17:37:26]Nand(Auto): OOB:64B ECC:4bit/512 
+[2020-01-01 17:37:26]nand:  ECC provided by Flash Memory Controller
+[2020-01-01 17:37:26]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:37:26]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:37:26]Creating 4 MTD partitions on "hinand":
+[2020-01-01 17:37:26]0x000000000000-0x000000100000 : "boot"
+[2020-01-01 17:37:26]0x000000100000-0x000000900000 : "kernel"
+[2020-01-01 17:37:26]0x000000900000-0x000007800000 : "rootfs"
+[2020-01-01 17:37:26]0x000007800000-0x000008000000 : "config"
+[2020-01-01 17:37:26]libphy: Fixed MDIO Bus: probed
+[2020-01-01 17:37:26]libphy: hisi_gemac_mii_bus: probed
+[2020-01-01 17:37:26]PPP generic driver version 2.4.2
+[2020-01-01 17:37:26]PPP BSD Compression module registered
+[2020-01-01 17:37:26]PPP Deflate Compression module registered
+[2020-01-01 17:37:26]PPP MPPE Compression module registered
+[2020-01-01 17:37:26]NET: Registered protocol family 24
+[2020-01-01 17:37:26]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-01-01 17:37:26]ehci-platform: EHCI generic platform driver
+[2020-01-01 17:37:26]ehci-platform 10040000.ehci: EHCI Host Controller
+[2020-01-01 17:37:26]ehci-platform 10040000.ehci: new USB bus registered, assigned bus number 1
+[2020-01-01 17:37:26]ehci-platform 10040000.ehci: irq 51, io mem 0x10040000
+[2020-01-01 17:37:26]ehci-platform 10040000.ehci: USB 2.0 started, EHCI 1.00
+[2020-01-01 17:37:26]hub 1-0:1.0: USB hub found
+[2020-01-01 17:37:26]hub 1-0:1.0: 2 ports detected
+[2020-01-01 17:37:26]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[2020-01-01 17:37:26]ohci-platform: OHCI generic platform driver
+[2020-01-01 17:37:26]ohci-platform 10030000.ohci: Generic Platform OHCI controller
+[2020-01-01 17:37:26]ohci-platform 10030000.ohci: new USB bus registered, assigned bus number 2
+[2020-01-01 17:37:26]ohci-platform 10030000.ohci: irq 50, io mem 0x10030000
+[2020-01-01 17:37:26]hub 2-0:1.0: USB hub found
+[2020-01-01 17:37:26]hub 2-0:1.0: 2 ports detected
+[2020-01-01 17:37:26]usbcore: registered new interface driver usb-storage
+[2020-01-01 17:37:26]mousedev: PS/2 mouse device common for all mice
+[2020-01-01 17:37:26]i2c /dev entries driver
+[2020-01-01 17:37:26]hisi_i2c hisi_i2c.0: Hisilicon [i2c-0] probed!
+[2020-01-01 17:37:26]usbcore: registered new interface driver usbhid
+[2020-01-01 17:37:26]usbhid: USB HID core driver
+[2020-01-01 17:37:26]TCP: cubic registered
+[2020-01-01 17:37:26]NET: Registered protocol family 10
+[2020-01-01 17:37:26]NET: Registered protocol family 17
+[2020-01-01 17:37:26]Registering SWP/SWPB emulation handler
+[2020-01-01 17:37:27]usb 1-2: new high-speed USB device number 3 using ehci-platform
+[2020-01-01 17:37:27]usb-storage 1-2:1.0: USB Mass Storage device detected
+[2020-01-01 17:37:27]scsi host2: usb-storage 1-2:1.0
+[2020-01-01 17:37:27]usb 2-1: new low-speed USB device number 2 using ohci-platform
+[2020-01-01 17:37:27]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-1/2-1:1.0/0003:1A2C:0042.0001/input/input0
+[2020-01-01 17:37:27]hid-generic 0003:1A2C:0042.0001: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-1/input0
+[2020-01-01 17:37:28]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-01-01 17:37:28]ata1.00: ATA-9: WDC WD60EJRX-89MP9Y1, 80.00A80, max UDMA/133
+[2020-01-01 17:37:28]ata1.00: 11721045168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-01-01 17:37:28]ata1.00: configured for UDMA/133
+[2020-01-01 17:37:28]scsi 0:0:0:0: Direct-Access     ATA      WDC WD60EJRX-89M 0A80 PQ: 0 ANSI: 5
+[2020-01-01 17:37:28]sd 0:0:0:0: [sda] 11721045168 512-byte logical blocks: (6.00 TB/5.45 TiB)
+[2020-01-01 17:37:28]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-01-01 17:37:28]sd 0:0:0:0: [sda] Write Protect is off
+[2020-01-01 17:37:28]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:37:28] sda: sda1 sda2
+[2020-01-01 17:37:28]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-01-01 17:37:28]ata2: SATA link down (SStatus 0 SControl 300)
+[2020-01-01 17:37:28]Freeing unused kernel memory: 3440K (c05b2000 - c090e000)
+[2020-01-01 17:37:28]
+[2020-01-01 17:37:28]            _ _ _ _ _ _ _ _ _ _ _ _
+[2020-01-01 17:37:28]            \  _  _   _  _ _ ___
+[2020-01-01 17:37:28]            / /__/ \ |_/
+[2020-01-01 17:37:28]           / __   /  -  _ ___
+[2020-01-01 17:37:28]          / /  / /  / /
+[2020-01-01 17:37:28]  _ _ _ _/ /  /  \_/  \_ ______
+[2020-01-01 17:37:28]___________\___\__________________
+[2020-01-01 17:37:28]
+[2020-01-01 17:37:28][RCS]: /etc/init.d/S00devs
+[2020-01-01 17:37:28][RCS]: /etc/init.d/S01udev
+[2020-01-01 17:37:28][RCS]: /etc/init.d/S80network
+[2020-01-01 17:37:28]mtdblock2 is missing, wait a second
+[2020-01-01 17:37:29]scsi 2:0:0:0: Direct-Access     USB      Flash Disk       1100 PQ: 0 ANSI: 4
+[2020-01-01 17:37:29]sd 2:0:0:0: [sdb] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+[2020-01-01 17:37:29]sd 2:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:37:29]sd 2:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:37:29] sdb: sdb1
+[2020-01-01 17:37:29]sd 2:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 17:37:29]random: mkdir urandom read with 32 bits of entropy available
+[2020-01-01 17:37:29]yaffs: dev is 32505858 name is "mtdblock2" rw
+[2020-01-01 17:37:29]yaffs: passed flags ""
+[2020-01-01 17:37:29]Auto login as root ...
+[2020-01-01 17:37:29]mount config
+[2020-01-01 17:37:29]Jan  1 00:00:04 login[113]: root login on 'ttyS000'
+[2020-01-01 17:37:29]Welcome to HiLinux.
+[2020-01-01 17:37:29]None of nfsroot found in cmdline.
+[2020-01-01 17:37:29]find mtdblock3
+[2020-01-01 17:37:29]~ # yaffs: dev is 32505859 name is "mtdblock3" rw
+[2020-01-01 17:37:29]yaffs: passed flags ""
+[2020-01-01 17:37:29]======mkconfig start====
+[2020-01-01 17:37:29]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-01-01 17:37:29]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-01-01 17:37:29]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-01-01 17:37:29]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-01-01 17:37:29]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-01-01 17:37:29]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-01-01 17:37:30]======mkconfig end====
+[2020-01-01 17:37:30][RCS]: /tdfs/sh/L81toe
+[2020-01-01 17:37:30]hi_gmac_v200 100a0000.ethernet (unnamed net_device) (uninitialized): using random MAC address 86:00:e2:d3:04:af
+[2020-01-01 17:37:30]attached PHY 1 to driver Generic PHY, PHY_ID=0x1cc816
+[2020-01-01 17:37:30]Higmac dma_sg_phy: 0x8f900000
+[2020-01-01 17:37:30]ETH: rmii, phy_addr=1
+[2020-01-01 17:37:30]/tdfs/sh/L81toe: line 10: can't create /proc/sys/net/ipv4/tcp_syncookies: nonexistent directory
+[2020-01-01 17:37:31]check successfully!!!
+[2020-01-01 17:37:31]/tdfs
+[2020-01-01 17:37:31]check successfully!!!
+[2020-01-01 17:37:31]/tdfs
+[2020-01-01 17:37:31]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:37:31][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:37:31]0x12070c00: 0x00000001 --> 0x1ACCE551 
+[2020-01-01 17:37:31][END]
+[2020-01-01 17:37:31]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:37:31][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:37:31]0x12070008: 0x00000003 --> 0x00000000 
+[2020-01-01 17:37:31][END]
+[2020-01-01 17:37:31]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:37:31][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:37:31]0x1207000c: 0x00000000 --> 0x00000000 
+[2020-01-01 17:37:31][END]
+[2020-01-01 17:37:32]load sys_config.ko for ...OK!
+[2020-01-01 17:37:32]Module himedia: init ok
+[2020-01-01 17:37:32]Hisilicon Media Memory Zone Manager
+[2020-01-01 17:37:32]hi_osal 1.0 init success!
+[2020-01-01 17:37:32]hi_base: module license 'Proprietary' taints kernel.
+[2020-01-01 17:37:32]Disabling lock debugging due to kernel taint
+[2020-01-01 17:37:32]load base.ko ... OK!
+[2020-01-01 17:37:32]load sys.ko ...OK!
+[2020-01-01 17:37:32]load vdec.ko ....OK!
+[2020-01-01 17:37:32]load vdh firmware.ko OK
+[2020-01-01 17:37:32]load jpegd.ko ....OK!
+[2020-01-01 17:37:32]load tde.ko ...OK!
+[2020-01-01 17:37:32]load region.ko ....OK!
+[2020-01-01 17:37:32]load vgs.ko ...OK!
+[2020-01-01 17:37:32]load viu.ko for ...OK!
+[2020-01-01 17:37:32]load vpss.ko ...OK!
+[2020-01-01 17:37:32]load vou.ko OK!
+[2020-01-01 17:37:32]load hifb.ko OK!
+[2020-01-01 17:37:32]load hdmi.ko OK!
+[2020-01-01 17:37:32]load rc.ko ...OK!
+[2020-01-01 17:37:32]load venc.ko ...OK!
+[2020-01-01 17:37:32]load chnl.ko ...OK!
+[2020-01-01 17:37:32]load vedu.ko ...OK!
+[2020-01-01 17:37:32]load h264e.ko ...OK!
+[2020-01-01 17:37:32]load h265e.ko ...OK!
+[2020-01-01 17:37:32]load jpege.ko ...OK!
+[2020-01-01 17:37:32]load vda.ko ....OK!
+[2020-01-01 17:37:32]load ive.ko ... OK!
+[2020-01-01 17:37:32]load aio.ko OK!
+[2020-01-01 17:37:32]load ai.ko OK!
+[2020-01-01 17:37:32]load ao.ko OK!
+[2020-01-01 17:37:32]load aenc.ko OK!
+[2020-01-01 17:37:32]load adec.ko OK!
+[2020-01-01 17:37:33]Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+[2020-01-01 17:37:33]tlv320aic31 no.0 driver init successful!
+[2020-01-01 17:37:33]tdsecurity_init lock and dir list
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/app/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/backup/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/backup/back1/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/backup/back2/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/tdfs/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/gui_config/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/gui_config/OEM/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/gui_config/TD/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/gui_config/tp/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/gui_config_fm/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/dvr/log/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/etc/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/etc/udev/rules.d/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/opt/etc/disk/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/opt/etc/system/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/opt/log/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/root/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/root/https/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/config/tmp/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/dvr/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/nand/dvr/guibmp/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/nand/dvr/ie/oem/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/nand/dvr/ie/tiandy/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/conf/)
+[2020-01-01 17:37:33]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/res/common/)
+[2020-01-01 17:37:36]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:37:36]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:37:36]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:37:36]IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[2020-01-01 17:37:37]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:37:37]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:37:42]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:37:43]EXT4-fs (sda2): recovery complete
+[2020-01-01 17:37:43]EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: 
+[2020-01-01 17:37:45]FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:39:32]usb 2-1: USB disconnect, device number 2
+[2020-01-01 17:39:33]usb 1-2: USB disconnect, device number 3
+[2020-01-01 17:39:33]sd 2:0:0:0: [sdb] Synchronizing SCSI cache
+[2020-01-01 17:39:33]sd 2:0:0:0: [sdb]  
+[2020-01-01 17:39:33]Result: hostbyte=0x01 driverbyte=0x00
+[2020-01-01 17:39:39]usb 1-1: new high-speed USB device number 4 using ehci-platform
+[2020-01-01 17:39:39]usb-storage 1-1:1.0: USB Mass Storage device detected
+[2020-01-01 17:39:39]scsi host3: usb-storage 1-1:1.0
+[2020-01-01 17:39:41]scsi 3:0:0:0: Direct-Access     USB      Flash Disk       1100 PQ: 0 ANSI: 4
+[2020-01-01 17:39:41]sd 3:0:0:0: [sdb] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+[2020-01-01 17:39:41]sd 3:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:39:41]sd 3:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:39:41] sdb: sdb1
+[2020-01-01 17:39:41]sd 3:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 17:39:43]FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:39:43]usb 2-2: new low-speed USB device number 3 using ohci-platform
+[2020-01-01 17:39:45]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-2/2-2:1.0/0003:1A2C:0042.                          
+[2020-01-01 17:39:45]
+[2020-01-01 17:39:46]System startup
+[2020-01-01 17:39:46]
+[2020-01-01 17:39:46]U-Boot 2010.06-svn3607 (Dec 28 2019 - 16:29:36)hi3521d
+[2020-01-01 17:39:46]
+[2020-01-01 17:39:46]Check Flash Memory Controller v100 ... Found
+[2020-01-01 17:39:46]SPI Nand(cs 0) ID: 0xef 0xaa 0x21 Name:"W25N01GV"
+[2020-01-01 17:39:46]Block:128KB Page:2KB Chip:128MB*1 OOB:64B ECC:4bit/512 
+[2020-01-01 17:39:46]ECC provided by Flash Memory Controller
+[2020-01-01 17:39:46]SPI Nand total size: 128MB
+[2020-01-01 17:39:46]magic: 0x48444946, product:0xF001, pcb:0xD1918810, custom:0x0, phy0: 0x0, phy1: 0x0
+[2020-01-01 17:39:46]In:    serial
+[2020-01-01 17:39:46]Out:   serial
+[2020-01-01 17:39:46]Err:   serial
+[2020-01-01 17:39:46]usb_auto_update flag does not set, auto update stop
+[2020-01-01 17:39:46]----updateimg_tftp: nand----
+[2020-01-01 17:39:47]Hit Ctrl+c to stop autoboot:  0 
+[2020-01-01 17:39:47]
+[2020-01-01 17:39:47]NAND read: device 0 offset 0x0, size 0x900000
+[2020-01-01 17:39:48] 9437184 bytes read: OK
+[2020-01-01 17:39:48][add_hardinfo_to_cmdline:151]: with hardinfo
+[2020-01-01 17:39:48]## Booting kernel from Legacy Image at 82100000 ...
+[2020-01-01 17:39:48]   Image Name:   Linux-3.18.20
+[2020-01-01 17:39:48]   Image Type:   ARM Linux Kernel Image (uncompressed)
+[2020-01-01 17:39:48]   Data Size:    6535414 Bytes = 6.2 MiB
+[2020-01-01 17:39:48]   Load Address: 80008000
+[2020-01-01 17:39:48]   Entry Point:  80008000
+[2020-01-01 17:39:49]   Loading Kernel Image ... OK
+[2020-01-01 17:39:49]OK
+[2020-01-01 17:39:49]
+[2020-01-01 17:39:49]Starting kernel ...
+[2020-01-01 17:39:49]
+[2020-01-01 17:39:50]Booting Linux on physical CPU 0x0
+[2020-01-01 17:39:50]Initializing cgroup subsys cpu
+[2020-01-01 17:39:50]Linux version 3.18.20 debug3602 (fanyuchao@tiandy) (gcc version 4.9.4 20150629 (prerelease) (Hisilicon_v500_20180120) ) #2 SMP Wed Dec 25 21:19:22 CST 2019
+[2020-01-01 17:39:50]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[2020-01-01 17:39:50]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-01-01 17:39:50]Machine model: Hisilicon HI3521D DEMO Board
+[2020-01-01 17:39:50]Memory policy: Data cache writealloc
+[2020-01-01 17:39:50]PERCPU: Embedded 9 pages/cpu @d13aa000 s5696 r8192 d22976 u36864
+[2020-01-01 17:39:50]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 70868
+[2020-01-01 17:39:50]Kernel command line: mem=279M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=yaffs2 mtdparts=hinand:1M(boot),8M(kernel),111M(rootfs),8M(config) hardinfo=100f00000188191d0000000000000000
+[2020-01-01 17:39:50]PID hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-01-01 17:39:50]Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[2020-01-01 17:39:50]Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-01-01 17:39:50]Memory: 273164K/285696K available (4592K kernel code, 197K rwdata, 1204K rodata, 3440K init, 287K bss, 12532K reserved, 1024K highmem)
+[2020-01-01 17:39:50]Virtual kernel memory layout:
+[2020-01-01 17:39:50]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-01-01 17:39:50]    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[2020-01-01 17:39:50]    vmalloc : 0xd1800000 - 0xff000000   ( 728 MB)
+[2020-01-01 17:39:50]    lowmem  : 0xc0000000 - 0xd1700000   ( 279 MB)
+[2020-01-01 17:39:50]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[2020-01-01 17:39:50]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[2020-01-01 17:39:50]      .text : 0xc0008000 - 0xc05b1460   (5798 kB)
+[2020-01-01 17:39:50]      .init : 0xc05b2000 - 0xc090e000   (3440 kB)
+[2020-01-01 17:39:50]      .data : 0xc090e000 - 0xc093f600   ( 198 kB)
+[2020-01-01 17:39:50]       .bss : 0xc093f600 - 0xc09874bc   ( 288 kB)
+[2020-01-01 17:39:50]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-01-01 17:39:50]Hierarchical RCU implementation.
+[2020-01-01 17:39:50]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-01-01 17:39:50]RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[2020-01-01 17:39:50]NR_IRQS:16 nr_irqs:16 16
+[2020-01-01 17:39:50]sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655765682ns
+[2020-01-01 17:39:50]Console: colour dummy device 80x30
+[2020-01-01 17:39:50]Calibrating delay loop... 2596.86 BogoMIPS (lpj=12984320)
+[2020-01-01 17:39:50]pid_max: default: 32768 minimum: 301
+[2020-01-01 17:39:50]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:39:50]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 17:39:50]CPU: Testing write buffer coherency: ok
+[2020-01-01 17:39:50]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-01-01 17:39:50]Setting up static identity map for 0x80462cf0 - 0x80462d48
+[2020-01-01 17:39:50]CPU1: Booted secondary processor
+[2020-01-01 17:39:50]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-01-01 17:39:50]Brought up 2 CPUs
+[2020-01-01 17:39:50]SMP: Total of 2 processors activated (5187.17 BogoMIPS).
+[2020-01-01 17:39:50]CPU: All CPU(s) started in SVC mode.
+[2020-01-01 17:39:50]devtmpfs: initialized
+[2020-01-01 17:39:50]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-01-01 17:39:50]pinctrl core: initialized pinctrl subsystem
+[2020-01-01 17:39:50]regulator-dummy: no parameters
+[2020-01-01 17:39:50]NET: Registered protocol family 16
+[2020-01-01 17:39:50]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-01-01 17:39:50]Serial: AMBA PL011 UART driver
+[2020-01-01 17:39:50]12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 38, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:39:50]console [ttyAMA0] enabled
+[2020-01-01 17:39:50]uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+[2020-01-01 17:39:50]12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 39, base_baud = 0) is a PL011 rev2
+[2020-01-01 17:39:50]SCSI subsystem initialized
+[2020-01-01 17:39:50]ssp-pl022 120d0000.spi: ARM PL022 driver, device ID: 0x00800022
+[2020-01-01 17:39:50]ssp-pl022 120d0000.spi: mapped registers from 0x120d0000 to fe4d0000
+[2020-01-01 17:39:50]usbcore: registered new interface driver usbfs
+[2020-01-01 17:39:50]usbcore: registered new interface driver hub
+[2020-01-01 17:39:50]usbcore: registered new device driver usb
+[2020-01-01 17:39:50]Switched to clocksource timer00
+[2020-01-01 17:39:50]NET: Registered protocol family 2
+[2020-01-01 17:39:50]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[2020-01-01 17:39:50]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[2020-01-01 17:39:50]TCP: Hash tables configured (established 4096 bind 4096)
+[2020-01-01 17:39:50]TCP: reno registered
+[2020-01-01 17:39:50]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:39:50]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 17:39:50]NET: Registered protocol family 1
+[2020-01-01 17:39:50]RPC: Registered named UNIX socket transport module.
+[2020-01-01 17:39:50]RPC: Registered udp transport module.
+[2020-01-01 17:39:50]RPC: Registered tcp transport module.
+[2020-01-01 17:39:50]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-01-01 17:39:50]futex hash table entries: 512 (order: 3, 32768 bytes)
+[2020-01-01 17:39:50]jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[2020-01-01 17:39:50]fuse init (API version 7.23)
+[2020-01-01 17:39:50]msgmni has been set to 531
+[2020-01-01 17:39:50]bounce: pool size: 64 pages
+[2020-01-01 17:39:50]Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[2020-01-01 17:39:50]io scheduler noop registered
+[2020-01-01 17:39:50]io scheduler deadline registered (default)
+[2020-01-01 17:39:50]io scheduler cfq registered
+[2020-01-01 17:39:50]pinctrl-single 120f0000.pinmux: 234 pins at pa fe4f0000 size 936
+[2020-01-01 17:39:50]brd: module loaded
+[2020-01-01 17:39:50]ahci 11010000.sata: SSS flag set, parallel bus scan disabled
+[2020-01-01 17:39:50]ahci 11010000.sata: AHCI 0001.0300 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+[2020-01-01 17:39:50]ahci 11010000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh 
+[2020-01-01 17:39:50]scsi host0: ahci_platform
+[2020-01-01 17:39:50]scsi host1: ahci_platform
+[2020-01-01 17:39:50]ata1: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x100 irq 49
+[2020-01-01 17:39:50]ata2: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x180 irq 49
+[2020-01-01 17:39:50]hisi-sfc hisi_spi_nor.0: unrecognized JEDEC id bytes: ff, ef, aa
+[2020-01-01 17:39:50]hisi-sfc hisi_spi_nor.0: spi nor register fail!
+[2020-01-01 17:39:50]hisi-sfc: probe of hisi_spi_nor.0 failed with error -2
+[2020-01-01 17:39:50]SPI Nand ID Table Version 2.7
+[2020-01-01 17:39:50]SPI Nand(cs 0) ID: 0xef 0xaa 0x21
+[2020-01-01 17:39:50]nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[2020-01-01 17:39:50]nand: Winbond W25N01GV
+[2020-01-01 17:39:50]nand: 128MiB, SLC, page size: 2048
+[2020-01-01 17:39:50]Nand(Auto): OOB:64B ECC:4bit/512 
+[2020-01-01 17:39:50]nand:  ECC provided by Flash Memory Controller
+[2020-01-01 17:39:50]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:39:50]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 17:39:50]Creating 4 MTD partitions on "hinand":
+[2020-01-01 17:39:50]0x000000000000-0x000000100000 : "boot"
+[2020-01-01 17:39:50]0x000000100000-0x000000900000 : "kernel"
+[2020-01-01 17:39:50]0x000000900000-0x000007800000 : "rootfs"
+[2020-01-01 17:39:50]0x000007800000-0x000008000000 : "config"
+[2020-01-01 17:39:50]libphy: Fixed MDIO Bus: probed
+[2020-01-01 17:39:51]libphy: hisi_gemac_mii_bus: probed
+[2020-01-01 17:39:51]PPP generic driver version 2.4.2
+[2020-01-01 17:39:51]PPP BSD Compression module registered
+[2020-01-01 17:39:51]PPP Deflate Compression module registered
+[2020-01-01 17:39:51]PPP MPPE Compression module registered
+[2020-01-01 17:39:51]NET: Registered protocol family 24
+[2020-01-01 17:39:51]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-01-01 17:39:51]ehci-platform: EHCI generic platform driver
+[2020-01-01 17:39:51]ehci-platform 10040000.ehci: EHCI Host Controller
+[2020-01-01 17:39:51]ehci-platform 10040000.ehci: new USB bus registered, assigned bus number 1
+[2020-01-01 17:39:51]ehci-platform 10040000.ehci: irq 51, io mem 0x10040000
+[2020-01-01 17:39:51]ehci-platform 10040000.ehci: USB 2.0 started, EHCI 1.00
+[2020-01-01 17:39:51]hub 1-0:1.0: USB hub found
+[2020-01-01 17:39:51]hub 1-0:1.0: 2 ports detected
+[2020-01-01 17:39:51]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[2020-01-01 17:39:51]ohci-platform: OHCI generic platform driver
+[2020-01-01 17:39:51]ohci-platform 10030000.ohci: Generic Platform OHCI controller
+[2020-01-01 17:39:51]ohci-platform 10030000.ohci: new USB bus registered, assigned bus number 2
+[2020-01-01 17:39:51]ohci-platform 10030000.ohci: irq 50, io mem 0x10030000
+[2020-01-01 17:39:51]hub 2-0:1.0: USB hub found
+[2020-01-01 17:39:51]hub 2-0:1.0: 2 ports detected
+[2020-01-01 17:39:51]usbcore: registered new interface driver usb-storage
+[2020-01-01 17:39:51]mousedev: PS/2 mouse device common for all mice
+[2020-01-01 17:39:51]i2c /dev entries driver
+[2020-01-01 17:39:51]hisi_i2c hisi_i2c.0: Hisilicon [i2c-0] probed!
+[2020-01-01 17:39:51]usbcore: registered new interface driver usbhid
+[2020-01-01 17:39:51]usbhid: USB HID core driver
+[2020-01-01 17:39:51]TCP: cubic registered
+[2020-01-01 17:39:51]NET: Registered protocol family 10
+[2020-01-01 17:39:51]NET: Registered protocol family 17
+[2020-01-01 17:39:51]Registering SWP/SWPB emulation handler
+[2020-01-01 17:39:51]usb 1-1: new high-speed USB device number 2 using ehci-platform
+[2020-01-01 17:39:51]usb-storage 1-1:1.0: USB Mass Storage device detected
+[2020-01-01 17:39:51]scsi host2: usb-storage 1-1:1.0
+[2020-01-01 17:39:52]usb 2-2: new low-speed USB device number 2 using ohci-platform
+[2020-01-01 17:39:52]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-2/2-2:1.0/0003:1A2C:0042.0001/input/input0
+[2020-01-01 17:39:52]hid-generic 0003:1A2C:0042.0001: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-2/input0
+[2020-01-01 17:39:52]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-01-01 17:39:52]ata1.00: ATA-9: WDC WD60EJRX-89MP9Y1, 80.00A80, max UDMA/133
+[2020-01-01 17:39:52]ata1.00: 11721045168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-01-01 17:39:52]ata1.00: configured for UDMA/133
+[2020-01-01 17:39:52]scsi 0:0:0:0: Direct-Access     ATA      WDC WD60EJRX-89M 0A80 PQ: 0 ANSI: 5
+[2020-01-01 17:39:52]sd 0:0:0:0: [sda] 11721045168 512-byte logical blocks: (6.00 TB/5.45 TiB)
+[2020-01-01 17:39:52]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-01-01 17:39:52]sd 0:0:0:0: [sda] Write Protect is off
+[2020-01-01 17:39:52]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:39:53] sda: sda1 sda2
+[2020-01-01 17:39:53]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-01-01 17:39:53]ata2: SATA link down (SStatus 0 SControl 300)
+[2020-01-01 17:39:53]Freeing unused kernel memory: 3440K (c05b2000 - c090e000)
+[2020-01-01 17:39:53]
+[2020-01-01 17:39:53]            _ _ _ _ _ _ _ _ _ _ _ _
+[2020-01-01 17:39:53]            \  _  _   _  _ _ ___
+[2020-01-01 17:39:53]            / /__/ \ |_/
+[2020-01-01 17:39:53]           / __   /  -  _ ___
+[2020-01-01 17:39:53]          / /  / /  / /
+[2020-01-01 17:39:53]  _ _ _ _/ /  /  \_/  \_ ______
+[2020-01-01 17:39:53]___________\___\__________________
+[2020-01-01 17:39:53]
+[2020-01-01 17:39:53][RCS]: /etc/init.d/S00devs
+[2020-01-01 17:39:53][RCS]: /etc/init.d/S01udev
+[2020-01-01 17:39:53][RCS]: /etc/init.d/S80network
+[2020-01-01 17:39:53]mtdblock2 is missing, wait a second
+[2020-01-01 17:39:53]scsi 2:0:0:0: Direct-Access     USB      Flash Disk       1100 PQ: 0 ANSI: 4
+[2020-01-01 17:39:53]sd 2:0:0:0: [sdb] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+[2020-01-01 17:39:53]sd 2:0:0:0: [sdb] Write Protect is off
+[2020-01-01 17:39:53]sd 2:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 17:39:53] sdb: sdb1
+[2020-01-01 17:39:53]sd 2:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 17:39:54]random: mkdir urandom read with 32 bits of entropy available
+[2020-01-01 17:39:54]yaffs: dev is 32505858 name is "mtdblock2" rw
+[2020-01-01 17:39:54]yaffs: passed flags ""
+[2020-01-01 17:39:57]Auto login as root ...
+[2020-01-01 17:39:57]mount config
+[2020-01-01 17:39:57]Jan  1 00:00:07 login[109]: root login on 'ttyS000'
+[2020-01-01 17:39:57]Welcome to HiLinux.
+[2020-01-01 17:39:57]find mtdblock3
+[2020-01-01 17:39:57]None of nfsroot found in cmdline.
+[2020-01-01 17:39:57]~ # yaffs: dev is 32505859 name is "mtdblock3" rw
+[2020-01-01 17:39:57]yaffs: passed flags ""
+[2020-01-01 17:39:57]======mkconfig start====
+[2020-01-01 17:39:57]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-01-01 17:39:57]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-01-01 17:39:57]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-01-01 17:39:57]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-01-01 17:39:57]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-01-01 17:39:57]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-01-01 17:39:57]======mkconfig end====
+[2020-01-01 17:39:57][RCS]: /tdfs/sh/L81toe
+[2020-01-01 17:39:57]hi_gmac_v200 100a0000.ethernet (unnamed net_device) (uninitialized): using random MAC address da:52:41:39:26:75
+[2020-01-01 17:39:57]attached PHY 1 to driver Generic PHY, PHY_ID=0x1cc816
+[2020-01-01 17:39:57]Higmac dma_sg_phy: 0x8f840000
+[2020-01-01 17:39:57]ETH: rmii, phy_addr=1
+[2020-01-01 17:39:57]/tdfs/sh/L81toe: line 10: can't create /proc/sys/net/ipv4/tcp_syncookies: nonexistent directory
+[2020-01-01 17:39:58]check successfully!!!
+[2020-01-01 17:39:58]/tdfs
+[2020-01-01 17:39:58]check successfully!!!
+[2020-01-01 17:39:58]/tdfs
+[2020-01-01 17:39:58]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:39:58][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:39:58]0x12070c00: 0x00000001 --> 0x1ACCE551 
+[2020-01-01 17:39:58][END]
+[2020-01-01 17:39:58]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:39:58][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:39:58]0x12070008: 0x00000003 --> 0x00000000 
+[2020-01-01 17:39:58][END]
+[2020-01-01 17:39:58]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 17:39:58][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 17:39:58]0x1207000c: 0x00000000 --> 0x00000000 
+[2020-01-01 17:39:58][END]
+[2020-01-01 17:40:00]load sys_config.ko for ...OK!
+[2020-01-01 17:40:00]Module himedia: init ok
+[2020-01-01 17:40:00]Hisilicon Media Memory Zone Manager
+[2020-01-01 17:40:00]hi_osal 1.0 init success!
+[2020-01-01 17:40:00]hi_base: module license 'Proprietary' taints kernel.
+[2020-01-01 17:40:00]Disabling lock debugging due to kernel taint
+[2020-01-01 17:40:00]load base.ko ... OK!
+[2020-01-01 17:40:00]load sys.ko ...OK!
+[2020-01-01 17:40:00]load vdec.ko ....OK!
+[2020-01-01 17:40:00]load vdh firmware.ko OK
+[2020-01-01 17:40:00]load jpegd.ko ....OK!
+[2020-01-01 17:40:00]load tde.ko ...OK!
+[2020-01-01 17:40:00]load region.ko ....OK!
+[2020-01-01 17:40:00]load vgs.ko ...OK!
+[2020-01-01 17:40:00]load viu.ko for ...OK!
+[2020-01-01 17:40:00]load vpss.ko ...OK!
+[2020-01-01 17:40:00]load vou.ko OK!
+[2020-01-01 17:40:00]load hifb.ko OK!
+[2020-01-01 17:40:00]load hdmi.ko OK!
+[2020-01-01 17:40:00]load rc.ko ...OK!
+[2020-01-01 17:40:00]load venc.ko ...OK!
+[2020-01-01 17:40:00]load chnl.ko ...OK!
+[2020-01-01 17:40:00]load vedu.ko ...OK!
+[2020-01-01 17:40:00]load h264e.ko ...OK!
+[2020-01-01 17:40:00]load h265e.ko ...OK!
+[2020-01-01 17:40:00]load jpege.ko ...OK!
+[2020-01-01 17:40:00]load vda.ko ....OK!
+[2020-01-01 17:40:00]load ive.ko ... OK!
+[2020-01-01 17:40:00]load aio.ko OK!
+[2020-01-01 17:40:00]load ai.ko OK!
+[2020-01-01 17:40:00]load ao.ko OK!
+[2020-01-01 17:40:00]load aenc.ko OK!
+[2020-01-01 17:40:00]load adec.ko OK!
+[2020-01-01 17:40:00]Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+[2020-01-01 17:40:00]tlv320aic31 no.0 driver init successful!
+[2020-01-01 17:40:00]tdsecurity_init lock and dir list
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/app/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/backup/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/backup/back1/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/backup/back2/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/tdfs/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/gui_config/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/gui_config/OEM/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/gui_config/TD/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/gui_config/tp/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/gui_config_fm/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/dvr/log/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/etc/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/etc/udev/rules.d/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/opt/etc/disk/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/opt/etc/system/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/opt/log/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/root/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/root/https/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/config/tmp/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/dvr/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/nand/dvr/guibmp/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/nand/dvr/ie/oem/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/nand/dvr/ie/tiandy/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/conf/)
+[2020-01-01 17:40:00]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/res/common/)
+[2020-01-01 17:40:03]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:40:03]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 17:40:03]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:40:03]IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[2020-01-01 17:40:05]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:40:05]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:40:09]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 17:40:10]EXT4-fs (sda2): recovery complete
+[2020-01-01 17:40:10]EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: 
+[2020-01-01 17:40:13]FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-01 17:44:43]usb 2-2: USB disconnect, device number 2
+[2020-01-01 17:44:44]usb 2-2: new low-speed USB device number 3 using ohci-platform
+[2020-01-01 17:44:44]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-2/2-2:1.0/0003:1A2C:0042.0002/input/input1
+[2020-01-01 17:44:44]hid-generic 0003:1A2C:0042.0002: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-2/input0
+[2020-01-01 17:44:46]hi_gmac_v200 100a0000.ethernet eth0: Link is Down
+[2020-01-01 17:44:54]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:45:08]hi_gmac_v200 100a0000.ethernet eth0: Link is Down
+[2020-01-01 17:45:14]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:49:27]hi_gmac_v200 100a0000.ethernet eth0: Link is Down
+[2020-01-01 17:49:34]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 17:49:42]usb 2-2: USB disconnect, device number 3
+[2020-01-01 17:49:43]usb 2-2: new low-speed USB device number 4 using ohci-platform
+[2020-01-01 17:49:43]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-2/2-2:1.0/0003:1A2C:0042.0003/input/input2
+[2020-01-01 17:49:43]hid-generic 0003:1A2C:0042.0003: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-2/input0
+[2020-01-01 17:56:45]
+[2020-01-01 17:56:45]~ # 
+[2020-01-01 17:56:45]~ # 
+[2020-01-01 17:56:45]~ # 
+[2020-01-01 17:56:46]~ # uptime 
+[2020-01-01 17:56:46] 17:56:10 up 16 min,  1 users,  load average: 40.89, 38.88, 26.34
+[2020-01-01 17:56:49]~ # cd /dvr/log/
+[2020-01-01 17:56:50]/config/dvr/log # ls
+[2020-01-01 17:56:50]log.dat       logalarm.dat  sysshut.log
+[2020-01-01 17:57:06]/config/dvr/log # Jan  1 17:56:29 login[1722]: root login on 'pts/0'
+[2020-01-01 18:12:14]kworker/u4:1 invoked oom-killer: gfp_mask=0x4d0, order=2, oom_score_adj=0
+[2020-01-01 18:12:14]CPU: 0 PID: 5701 Comm: kworker/u4:1 Tainted: P           O   3.18.20 #2
+[2020-01-01 18:12:14][<c0015b64>] (unwind_backtrace) from [<c0012144>] (show_stack+0x10/0x14)
+[2020-01-01 18:12:14][<c0012144>] (show_stack) from [<c045e854>] (dump_stack+0x88/0x98)
+[2020-01-01 18:12:14][<c045e854>] (dump_stack) from [<c045cb08>] (dump_header+0x7c/0x194)
+[2020-01-01 18:12:14][<c045cb08>] (dump_header) from [<c0086bb8>] (oom_kill_process+0x400/0x408)
+[2020-01-01 18:12:14][<c0086bb8>] (oom_kill_process) from [<c0087084>] (out_of_memory+0x2e0/0x310)
+[2020-01-01 18:12:14][<c0087084>] (out_of_memory) from [<c008aef0>] (__alloc_pages_nodemask+0x8b4/0x8cc)
+[2020-01-01 18:12:14][<c008aef0>] (__alloc_pages_nodemask) from [<c008af18>] (__get_free_pages+0x10/0x24)
+[2020-01-01 18:12:14][<c008af18>] (__get_free_pages) from [<c0018930>] (pgd_alloc+0x14/0xfc)
+[2020-01-01 18:12:14][<c0018930>] (pgd_alloc) from [<c001c068>] (mm_init+0xb8/0x128)
+[2020-01-01 18:12:14][<c001c068>] (mm_init) from [<c00c2d38>] (do_execve+0x1a4/0x4b8)
+[2020-01-01 18:12:14][<c00c2d38>] (do_execve) from [<c002eee0>] (____call_usermodehelper+0x13c/0x188)
+[2020-01-01 18:12:14][<c002eee0>] (____call_usermodehelper) from [<c000e540>] (ret_from_fork+0x14/0x34)
+[2020-01-01 18:12:14]Mem-info:
+[2020-01-01 18:12:14]Normal per-cpu:
+[2020-01-01 18:12:14]CPU    0: hi:   90, btch:  15 usd:   0
+[2020-01-01 18:12:14]CPU    1: hi:   90, btch:  15 usd:  14
+[2020-01-01 18:12:14]HighMem per-cpu:
+[2020-01-01 18:12:14]CPU    0: hi:    0, btch:   1 usd:   0
+[2020-01-01 18:12:14]CPU    1: hi:    0, btch:   1 usd:   0
+[2020-01-01 18:12:14]active_anon:39276 inactive_anon:397 isolated_anon:10
+[2020-01-01 18:12:14] active_file:75 inactive_file:520 isolated_file:0
+[2020-01-01 18:12:14] unevictable:2956 dirty:0 writeback:0 unstable:0
+[2020-01-01 18:12:14] free:15604 slab_reclaimable:570 slab_unreclaimable:2237
+[2020-01-01 18:12:14] mapped:1088 shmem:411 pagetables:441 bounce:0
+[2020-01-01 18:12:14] free_cma:0
+[2020-01-01 18:12:14]Normal free:61916kB min:16384kB low:20480kB high:24576kB active_anon:157104kB inactive_anon:1588kB active_file:352kB inactive_file:2496kB unevictable:10820kB isolated(anon):40kB isolated(file):0kB present:284672kB managed:275580kB mlocked:0kB dirty:0kB writeback:0kB mapped:4460kB shmem:1644kB slab_reclaimable:2280kB slab_unreclaimable:8948kB kernel_stack:2232kB pagetables:1764kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:2820 all_unreclaimable? no cma_watermark:0kB
+[2020-01-01 18:12:14]lowmem_reserve[]: 0 8 8
+[2020-01-01 18:12:14]HighMem free:20kB min:128kB low:140kB high:156kB active_anon:0kB inactive_anon:0kB active_file:0kB inactive_file:0kB unevictable:1004kB isolated(anon):0kB isolated(file):0kB present:1024kB managed:1024kB mlocked:0kB dirty:0kB writeback:0kB mapped:120kB shmem:0kB slab_reclaimable:0kB slab_unreclaimable:0kB kernel_stack:0kB pagetables:0kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:116 all_unreclaimable? yes cma_watermark:0kB
+[2020-01-01 18:12:14]lowmem_reserve[]: 0 0 0
+[2020-01-01 18:12:14]Normal: 11487*4kB (UE) 1549*8kB (U) 1*16kB (R) 13*32kB (R) 10*64kB (R) 0*128kB 0*256kB 1*512kB (R) 1*1024kB (R) 0*2048kB 0*4096kB = 60948kB
+[2020-01-01 18:12:14]HighMem: 5*4kB (U) 0*8kB 0*16kB 0*32kB 0*64kB 0*128kB 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 20kB
+[2020-01-01 18:12:14]4320 total pagecache pages
+[2020-01-01 18:12:14]71424 pages of RAM
+[2020-01-01 18:12:14]15591 free pages
+[2020-01-01 18:12:14]2273 reserved pages
+[2020-01-01 18:12:14]1807 slab pages
+[2020-01-01 18:12:14]278116 pages shared
+[2020-01-01 18:12:14]0 pages swap cached
+[2020-01-01 18:12:14][ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+[2020-01-01 18:12:14][   71]     0    71      286      194       4        0         -1000 udevd
+[2020-01-01 18:12:14][  109]     0   109      460      285       4        0             0 sh
+[2020-01-01 18:12:14][  175]     0   175      286      194       4        0         -1000 udevd
+[2020-01-01 18:12:14][  176]     0   176      286       45       4        0         -1000 udevd
+[2020-01-01 18:12:14][  267]     0   267      278       56       3        0             0 upgrade
+[2020-01-01 18:12:14][  270]     0   270      235      141       3        0             0 TODO
+[2020-01-01 18:12:14][  277]     0   277      455       58       3        0             0 exe
+[2020-01-01 18:12:14][  281]     0   281      457       33       3        0             0 telnetd
+[2020-01-01 18:12:14][  284]     0   284      230       91       3        0             0 upnp_tools
+[2020-01-01 18:12:14][  434]     0   434    18517     3009      32        0             0 gui
+[2020-01-01 18:12:14][  435]     0   435      455       58       3        0             0 sh
+[2020-01-01 18:12:14][  436]     0   436   221289    33605     275        0             0 dvr1
+[2020-01-01 18:12:14][  439]     0   439     7610      389      13        0             0 dvr1
+[2020-01-01 18:12:14][  449]     0   449     8856      388      16        0             0 dvr1
+[2020-01-01 18:12:14][  499]     0   499      698       45       4        0             0 stunnel
+[2020-01-01 18:12:14][  506]     0   506     1652       34       4        0             0 pure-ftpd
+[2020-01-01 18:12:14][  518]     0   518      281      125       3        0             0 ddns-service
+[2020-01-01 18:12:14][ 1250]     0  1250     1691       25       4        0             0 trade.bin
+[2020-01-01 18:12:14][ 1261]     0  1261     2506       89       5        0             0 cloudupgrade
+[2020-01-01 18:12:14][ 1262]     0  1262    41184     1956      41        0             0 trade.bin
+[2020-01-01 18:12:14][ 1722]     0  1722      460       57       3        0             0 sh
+[2020-01-01 18:12:14][ 3617]     0  3617      456       58       3        0             0 top
+[2020-01-01 18:12:14]Out of memory: Kill process 436 (dvr1) score 475 or sacrifice child
+[2020-01-01 18:12:14]Killed process 449 (dvr1) total-vm:35424kB, anon-rss:1088kB, file-rss:464kB
+[2020-01-01 18:12:15]kworker/u4:1 invoked oom-killer: gfp_mask=0x4d0, order=2, oom_score_adj=0
+[2020-01-01 18:12:15]CPU: 1 PID: 5701 Comm: kworker/u4:1 Tainted: P           O   3.18.20 #2
+[2020-01-01 18:12:15][<c0015b64>] (unwind_backtrace) from [<c0012144>] (show_stack+0x10/0x14)
+[2020-01-01 18:12:15][<c0012144>] (show_stack) from [<c045e854>] (dump_stack+0x88/0x98)
+[2020-01-01 18:12:15][<c045e854>] (dump_stack) from [<c045cb08>] (dump_header+0x7c/0x194)
+[2020-01-01 18:12:15][<c045cb08>] (dump_header) from [<c0086bb8>] (oom_kill_process+0x400/0x408)
+[2020-01-01 18:12:15][<c0086bb8>] (oom_kill_process) from [<c0087084>] (out_of_memory+0x2e0/0x310)
+[2020-01-01 18:12:15][<c0087084>] (out_of_memory) from [<c008aef0>] (__alloc_pages_nodemask+0x8b4/0x8cc)
+[2020-01-01 18:12:15][<c008aef0>] (__alloc_pages_nodemask) from [<c008af18>] (__get_free_pages+0x10/0x24)
+[2020-01-01 18:12:15][<c008af18>] (__get_free_pages) from [<c0018930>] (pgd_alloc+0x14/0xfc)
+[2020-01-01 18:12:15][<c0018930>] (pgd_alloc) from [<c001c068>] (mm_init+0xb8/0x128)
+[2020-01-01 18:12:15][<c001c068>] (mm_init) from [<c00c2d38>] (do_execve+0x1a4/0x4b8)
+[2020-01-01 18:12:15][<c00c2d38>] (do_execve) from [<c002eee0>] (____call_usermodehelper+0x13c/0x188)
+[2020-01-01 18:12:15][<c002eee0>] (____call_usermodehelper) from [<c000e540>] (ret_from_fork+0x14/0x34)
+[2020-01-01 18:12:15]Mem-info:
+[2020-01-01 18:12:15]Normal per-cpu:
+[2020-01-01 18:12:15]CPU    0: hi:   90, btch:  15 usd:  43
+[2020-01-01 18:12:15]CPU    1: hi:   90, btch:  15 usd:   0
+[2020-01-01 18:12:15]HighMem per-cpu:
+[2020-01-01 18:12:15]CPU    0: hi:    0, btch:   1 usd:   0
+[2020-01-01 18:12:15]CPU    1: hi:    0, btch:   1 usd:   0
+[2020-01-01 18:12:15]active_anon:39245 inactive_anon:397 isolated_anon:12
+[2020-01-01 18:12:15] active_file:36 inactive_file:433 isolated_file:0
+[2020-01-01 18:12:15] unevictable:2956 dirty:0 writeback:0 unstable:0
+[2020-01-01 18:12:15] free:15767 slab_reclaimable:569 slab_unreclaimable:2227
+[2020-01-01 18:12:15] mapped:1010 shmem:411 pagetables:422 bounce:0
+[2020-01-01 18:12:15] free_cma:0
+[2020-01-01 18:12:15]Normal free:62600kB min:16384kB low:20480kB high:24576kB active_anon:156980kB inactive_anon:1588kB active_file:196kB inactive_file:2096kB unevictable:10820kB isolated(anon):48kB isolated(file):0kB present:284672kB managed:275580kB mlocked:0kB dirty:0kB writeback:0kB mapped:3996kB shmem:1644kB slab_reclaimable:2276kB slab_unreclaimable:8908kB kernel_stack:2232kB pagetables:1688kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:0 all_unreclaimable? no cma_watermark:0kB
+[2020-01-01 18:12:15]lowmem_reserve[]: 0 8 8
+[2020-01-01 18:12:15]HighMem free:20kB min:128kB low:140kB high:156kB active_anon:0kB inactive_anon:0kB active_file:0kB inactive_file:0kB unevictable:1004kB isolated(anon):0kB isolated(file):0kB present:1024kB managed:1024kB mlocked:0kB dirty:0kB writeback:0kB mapped:120kB shmem:0kB slab_reclaimable:0kB slab_unreclaimable:0kB kernel_stack:0kB pagetables:0kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:116 all_unreclaimable? yes cma_watermark:0kB
+[2020-01-01 18:12:15]lowmem_reserve[]: 0 0 0
+[2020-01-01 18:12:15]Normal: 11257*4kB (UE) 1771*8kB (U) 1*16kB (R) 3*32kB (R) 1*64kB (R) 1*128kB (R) 1*256kB (R) 1*512kB (R) 1*1024kB (R) 0*2048kB 0*4096kB = 61292kB
+[2020-01-01 18:12:15]HighMem: 5*4kB (U) 0*8kB 0*16kB 0*32kB 0*64kB 0*128kB 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 20kB
+[2020-01-01 18:12:15]4317 total pagecache pages
+[2020-01-01 18:12:15]71424 pages of RAM
+[2020-01-01 18:12:15]15675 free pages
+[2020-01-01 18:12:15]2273 reserved pages
+[2020-01-01 18:12:15]1813 slab pages
+[2020-01-01 18:12:15]80640 pages shared
+[2020-01-01 18:12:15]0 pages swap cached
+[2020-01-01 18:12:15][ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+[2020-01-01 18:12:15][   71]     0    71      286      194       4        0         -1000 udevd
+[2020-01-01 18:12:15][  109]     0   109      460      285       4        0             0 sh
+[2020-01-01 18:12:15][  175]     0   175      286      194       4        0         -1000 udevd
+[2020-01-01 18:12:15][  176]     0   176      286       45       4        0         -1000 udevd
+[2020-01-01 18:12:15][  267]     0   267      278       56       3        0             0 upgrade
+[2020-01-01 18:12:15][  270]     0   270      235      141       3        0             0 TODO
+[2020-01-01 18:12:15][  277]     0   277      455       58       3        0             0 exe
+[2020-01-01 18:12:16][  281]     0   281      457       33       3        0             0 telnetd
+[2020-01-01 18:12:16][  284]     0   284      230       79       3        0             0 upnp_tools
+[2020-01-01 18:12:16][  434]     0   434    18517     3004      32        0             0 gui
+[2020-01-01 18:12:16][  435]     0   435      455       58       3        0             0 sh
+[2020-01-01 18:12:16][  436]     0   436   221289    33615     275        0             0 dvr1
+[2020-01-01 18:12:16][  439]     0   439     7610      349      13        0             0 dvr1
+[2020-01-01 18:12:16][  499]     0   499      698       45       4        0             0 stunnel
+[2020-01-01 18:12:16][  506]     0   506     1652       34       4        0             0 pure-ftpd
+[2020-01-01 18:12:16][  518]     0   518      281      125       3        0             0 ddns-service
+[2020-01-01 18:12:16][ 1250]     0  1250     1691       25       4        0             0 trade.bin
+[2020-01-01 18:12:16][ 1261]     0  1261     2506       72       5        0             0 cloudupgrade
+[2020-01-01 18:12:16][ 1262]     0  1262    41184     1956      41        0             0 trade.bin
+[2020-01-01 18:12:16][ 1722]     0  1722      460       57       3        0             0 sh
+[2020-01-01 18:12:16][ 3617]     0  3617      456       58       3        0             0 top
+[2020-01-01 18:12:16]Out of memory: Kill process 436 (dvr1) score 475 or sacrifice child
+[2020-01-01 18:12:16]Killed process 439 (dvr1) total-vm:30440kB, anon-rss:744kB, file-rss:652kB
+[2020-01-01 18:12:16]kworker/u4:1 invoked oom-killer: gfp_mask=0x4d0, order=2, oom_score_adj=0
+[2020-01-01 18:12:16]CPU: 1 PID: 5701 Comm: kworker/u4:1 Tainted: P           O   3.18.20 #2
+[2020-01-01 18:12:16][<c0015b64>] (unwind_backtrace) from [<c0012144>] (show_stack+0x10/0x14)
+[2020-01-01 18:12:16][<c0012144>] (show_stack) from [<c045e854>] (dump_stack+0x88/0x98)
+[2020-01-01 18:12:16][<c045e854>] (dump_stack) from [<c045cb08>] (dump_header+0x7c/0x194)
+[2020-01-01 18:12:16][<c045cb08>] (dump_header) from [<c0086bb8>] (oom_kill_process+0x400/0x408)
+[2020-01-01 18:12:16][<c0086bb8>] (oom_kill_process) from [<c0087084>] (out_of_memory+0x2e0/0x310)
+[2020-01-01 18:12:16][<c0087084>] (out_of_memory) from [<c008aef0>] (__alloc_pages_nodemask+0x8b4/0x8cc)
+[2020-01-01 18:12:16][<c008aef0>] (__alloc_pages_nodemask) from [<c008af18>] (__get_free_pages+0x10/0x24)
+[2020-01-01 18:12:16][<c008af18>] (__get_free_pages) from [<c0018930>] (pgd_alloc+0x14/0xfc)
+[2020-01-01 18:12:16][<c0018930>] (pgd_alloc) from [<c001c068>] (mm_init+0xb8/0x128)
+[2020-01-01 18:12:16][<c001c068>] (mm_init) from [<c00c2d38>] (do_execve+0x1a4/0x4b8)
+[2020-01-01 18:12:16][<c00c2d38>] (do_execve) from [<c002eee0>] (____call_usermodehelper+0x13c/0x188)
+[2020-01-01 18:12:16][<c002eee0>] (____call_usermodehelper) from [<c000e540>] (ret_from_fork+0x14/0x34)
+[2020-01-01 18:12:16]Mem-info:
+[2020-01-01 18:12:16]Normal per-cpu:
+[2020-01-01 18:12:16]CPU    0: hi:   90, btch:  15 usd:   9
+[2020-01-01 18:12:16]CPU    1: hi:   90, btch:  15 usd:   0
+[2020-01-01 18:12:16]HighMem per-cpu:
+[2020-01-01 18:12:16]CPU    0: hi:    0, btch:   1 usd:   0
+[2020-01-01 18:12:16]CPU    1: hi:    0, btch:   1 usd:   0
+[2020-01-01 18:12:16]active_anon:39173 inactive_anon:397 isolated_anon:0
+[2020-01-01 18:12:16] active_file:23 inactive_file:539 isolated_file:0
+[2020-01-01 18:12:16] unevictable:2956 dirty:0 writeback:0 unstable:0
+[2020-01-01 18:12:16] free:15678 slab_reclaimable:577 slab_unreclaimable:2219
+[2020-01-01 18:12:16] mapped:1029 shmem:411 pagetables:412 bounce:0
+[2020-01-01 18:12:16] free_cma:0
+[2020-01-01 18:12:16]Normal free:62120kB min:16384kB low:20480kB high:24576kB active_anon:156692kB inactive_anon:1588kB active_file:92kB inactive_file:2468kB unevictable:10820kB isolated(anon):0kB isolated(file):0kB present:284672kB managed:275580kB mlocked:0kB dirty:0kB writeback:0kB mapped:4376kB shmem:1644kB slab_reclaimable:2308kB slab_unreclaimable:8876kB kernel_stack:2232kB pagetables:1648kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:1668 all_unreclaimable? no cma_watermark:0kB
+[2020-01-01 18:12:16]lowmem_reserve[]: 0 8 8
+[2020-01-01 18:12:16]HighMem free:20kB min:128kB low:140kB high:156kB active_anon:0kB inactive_anon:0kB active_file:0kB inactive_file:0kB unevictable:1004kB isolated(anon):0kB isolated(file):0kB present:1024kB managed:1024kB mlocked:0kB dirty:0kB writeback:0kB mapped:120kB shmem:0kB slab_reclaimable:0kB slab_unreclaimable:0kB kernel_stack:0kB pagetables:0kB unstable:0kB bounce:0kB free_cma:0kB writeback_tmp:0kB pages_scanned:116 all_unreclaimable? yes cma_watermark:0kB
+[2020-01-01 18:12:16]lowmem_reserve[]: 0 0 0
+[2020-01-01 18:12:16]Normal: 11249*4kB (UE) 1694*8kB (U) 1*16kB (R) 1*32kB (R) 1*64kB (R) 1*128kB (R) 1*256kB (R) 1*512kB (R) 1*1024kB (R) 0*2048kB 0*4096kB = 60580kB
+[2020-01-01 18:12:16]HighMem: 5*4kB (U) 0*8kB 0*16kB 0*32kB 0*64kB 0*128kB 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 20kB
+[2020-01-01 18:12:16]4324 total pagecache pages
+[2020-01-01 18:12:16]71424 pages of RAM
+[2020-01-01 18:12:16]15549 free pages
+[2020-01-01 18:12:16]2273 reserved pages
+[2020-01-01 18:12:16]1810 slab pages
+[2020-01-01 18:12:16]142848 pages shared
+[2020-01-01 18:12:16]0 pages swap cached
+[2020-01-01 18:12:16][ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+[2020-01-01 18:12:16][   71]     0    71      286      194       4        0         -1000 udevd
+[2020-01-01 18:12:16][  109]     0   109      460      285       4        0             0 sh
+[2020-01-01 18:12:16][  175]     0   175      286      194       4        0         -1000 udevd
+[2020-01-01 18:12:16][  176]     0   176      286       45       4        0         -1000 udevd
+[2020-01-01 18:12:16][  267]     0   267      278       56       3        0             0 upgrade
+[2020-01-01 18:12:16][  270]     0   270      235      141       3        0             0 TODO
+[2020-01-01 18:12:16][  277]     0   277      455       58       3        0             0 exe
+[2020-01-01 18:12:16][  281]     0   281      457       33       3        0             0 telnetd
+[2020-01-01 18:12:16][  284]     0   284      230       67       3        0             0 upnp_tools
+[2020-01-01 18:12:16][  434]     0   434    18517     3002      32        0             0 gui
+[2020-01-01 18:12:16][  435]     0   435      455       58       3        0             0 sh
+[2020-01-01 18:12:16][  436]     0   436   221289    33615     275        0             0 dvr1
+[2020-01-01 18:12:16][  499]     0   499      698       45       4        0             0 stunnel
+[2020-01-01 18:12:16][  506]     0   506     1652       34       4        0             0 pure-ftpd
+[2020-01-01 18:12:16][  518]     0   518      281      125       3        0             0 ddns-service
+[2020-01-01 18:12:16][ 1250]     0  1250     1691       25       4        0             0 trade.bin
+[2020-01-01 18:12:16][ 1261]     0  1261     2506       34       5        0             0 cloudupgrade
+[2020-01-01 18:12:16][ 1262]     0  1262    41184     1957      41        0             0 trade.bin
+[2020-01-01 18:12:16][ 1722]     0  1722      460       57       3        0             0 sh
+[2020-01-01 18:12:16][ 3617]     0  3617      456       58       3        0             0 top
+[2020-01-01 18:12:16]Out of memory: Kill process 436 (dvr1) score 475 or sacrifice child
+[2020-01-01 18:12:16]Killed process 436 (dvr1) total-vm:885156kB, anon-rss:134460kB, file-rss:0kB
+[2020-01-01 18:12:16]MMB LEAK(pid=436): 0x985D7000, 32768 bytes, 'AENC(0)StrmBuf'
+[2020-01-01 18:12:16]mmz_userdev_release: mmb<0x985D7000> mapped to userspace 0xa50a5000 will be force unmaped!
+[2020-01-01 18:12:16]MMB LEAK(pid=436): 0x985DF000, 32768 bytes, 'AENC(0) CirBuf'
+[2020-01-01 18:12:16]mmz_userdev_release: mmb<0x985DF000> mapped to userspace 0xa509d000 will be force unmaped!
+[2020-01-01 18:12:19]                         
+[2020-01-01 18:12:19]
+[2020-01-01 18:12:19]System startup
+[2020-01-01 18:12:19]
+[2020-01-01 18:12:19]U-Boot 2010.06-svn3607 (Dec 28 2019 - 16:29:36)hi3521d
+[2020-01-01 18:12:19]
+[2020-01-01 18:12:19]Check Flash Memory Controller v100 ... Found
+[2020-01-01 18:12:19]SPI Nand(cs 0) ID: 0xef 0xaa 0x21 Name:"W25N01GV"
+[2020-01-01 18:12:19]Block:128KB Page:2KB Chip:128MB*1 OOB:64B ECC:4bit/512 
+[2020-01-01 18:12:19]ECC provided by Flash Memory Controller
+[2020-01-01 18:12:19]SPI Nand total size: 128MB
+[2020-01-01 18:12:19]magic: 0x48444946, product:0xF001, pcb:0xD1918810, custom:0x0, phy0: 0x0, phy1: 0x0
+[2020-01-01 18:12:19]In:    serial
+[2020-01-01 18:12:19]Out:   serial
+[2020-01-01 18:12:19]Err:   serial
+[2020-01-01 18:12:19]usb_auto_update flag does not set, auto update stop
+[2020-01-01 18:12:19]----updateimg_tftp: nand----
+[2020-01-01 18:12:20]Hit Ctrl+c to stop autoboot:  0 
+[2020-01-01 18:12:20]
+[2020-01-01 18:12:20]NAND read: device 0 offset 0x0, size 0x900000
+[2020-01-01 18:12:21] 9437184 bytes read: OK
+[2020-01-01 18:12:21][add_hardinfo_to_cmdline:151]: with hardinfo
+[2020-01-01 18:12:21]## Booting kernel from Legacy Image at 82100000 ...
+[2020-01-01 18:12:21]   Image Name:   Linux-3.18.20
+[2020-01-01 18:12:21]   Image Type:   ARM Linux Kernel Image (uncompressed)
+[2020-01-01 18:12:21]   Data Size:    6535414 Bytes = 6.2 MiB
+[2020-01-01 18:12:21]   Load Address: 80008000
+[2020-01-01 18:12:21]   Entry Point:  80008000
+[2020-01-01 18:12:23]   Loading Kernel Image ... OK
+[2020-01-01 18:12:23]OK
+[2020-01-01 18:12:23]
+[2020-01-01 18:12:23]Starting kernel ...
+[2020-01-01 18:12:23]
+[2020-01-01 18:12:23]Booting Linux on physical CPU 0x0
+[2020-01-01 18:12:23]Initializing cgroup subsys cpu
+[2020-01-01 18:12:23]Linux version 3.18.20 debug3602 (fanyuchao@tiandy) (gcc version 4.9.4 20150629 (prerelease) (Hisilicon_v500_20180120) ) #2 SMP Wed Dec 25 21:19:22 CST 2019
+[2020-01-01 18:12:23]CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[2020-01-01 18:12:23]CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[2020-01-01 18:12:23]Machine model: Hisilicon HI3521D DEMO Board
+[2020-01-01 18:12:23]Memory policy: Data cache writealloc
+[2020-01-01 18:12:23]PERCPU: Embedded 9 pages/cpu @d13aa000 s5696 r8192 d22976 u36864
+[2020-01-01 18:12:23]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 70868
+[2020-01-01 18:12:23]Kernel command line: mem=279M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=yaffs2 mtdparts=hinand:1M(boot),8M(kernel),111M(rootfs),8M(config) hardinfo=100f00000188191d0000000000000000
+[2020-01-01 18:12:23]PID hash table entries: 2048 (order: 1, 8192 bytes)
+[2020-01-01 18:12:23]Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[2020-01-01 18:12:23]Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[2020-01-01 18:12:23]Memory: 273164K/285696K available (4592K kernel code, 197K rwdata, 1204K rodata, 3440K init, 287K bss, 12532K reserved, 1024K highmem)
+[2020-01-01 18:12:23]Virtual kernel memory layout:
+[2020-01-01 18:12:23]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[2020-01-01 18:12:23]    fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[2020-01-01 18:12:23]    vmalloc : 0xd1800000 - 0xff000000   ( 728 MB)
+[2020-01-01 18:12:23]    lowmem  : 0xc0000000 - 0xd1700000   ( 279 MB)
+[2020-01-01 18:12:23]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[2020-01-01 18:12:23]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[2020-01-01 18:12:23]      .text : 0xc0008000 - 0xc05b1460   (5798 kB)
+[2020-01-01 18:12:23]      .init : 0xc05b2000 - 0xc090e000   (3440 kB)
+[2020-01-01 18:12:23]      .data : 0xc090e000 - 0xc093f600   ( 198 kB)
+[2020-01-01 18:12:23]       .bss : 0xc093f600 - 0xc09874bc   ( 288 kB)
+[2020-01-01 18:12:23]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[2020-01-01 18:12:23]Hierarchical RCU implementation.
+[2020-01-01 18:12:23]        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[2020-01-01 18:12:23]RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[2020-01-01 18:12:23]NR_IRQS:16 nr_irqs:16 16
+[2020-01-01 18:12:23]sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655765682ns
+[2020-01-01 18:12:23]Console: colour dummy device 80x30
+[2020-01-01 18:12:23]Calibrating delay loop... 2596.86 BogoMIPS (lpj=12984320)
+[2020-01-01 18:12:23]pid_max: default: 32768 minimum: 301
+[2020-01-01 18:12:23]Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 18:12:23]Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[2020-01-01 18:12:23]CPU: Testing write buffer coherency: ok
+[2020-01-01 18:12:23]CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[2020-01-01 18:12:23]Setting up static identity map for 0x80462cf0 - 0x80462d48
+[2020-01-01 18:12:23]CPU1: Booted secondary processor
+[2020-01-01 18:12:23]CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[2020-01-01 18:12:23]Brought up 2 CPUs
+[2020-01-01 18:12:23]SMP: Total of 2 processors activated (5187.17 BogoMIPS).
+[2020-01-01 18:12:23]CPU: All CPU(s) started in SVC mode.
+[2020-01-01 18:12:23]devtmpfs: initialized
+[2020-01-01 18:12:23]VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[2020-01-01 18:12:23]pinctrl core: initialized pinctrl subsystem
+[2020-01-01 18:12:23]regulator-dummy: no parameters
+[2020-01-01 18:12:23]NET: Registered protocol family 16
+[2020-01-01 18:12:23]DMA: preallocated 256 KiB pool for atomic coherent allocations
+[2020-01-01 18:12:23]Serial: AMBA PL011 UART driver
+[2020-01-01 18:12:23]12080000.uart: ttyAMA0 at MMIO 0x12080000 (irq = 38, base_baud = 0) is a PL011 rev2
+[2020-01-01 18:12:23]console [ttyAMA0] enabled
+[2020-01-01 18:12:23]uart-pl011 12090000.uart: aliased and non-aliased serial devices found in device tree. Serial port enumeration may be unpredictable.
+[2020-01-01 18:12:23]12090000.uart: ttyAMA1 at MMIO 0x12090000 (irq = 39, base_baud = 0) is a PL011 rev2
+[2020-01-01 18:12:23]SCSI subsystem initialized
+[2020-01-01 18:12:23]ssp-pl022 120d0000.spi: ARM PL022 driver, device ID: 0x00800022
+[2020-01-01 18:12:23]ssp-pl022 120d0000.spi: mapped registers from 0x120d0000 to fe4d0000
+[2020-01-01 18:12:23]usbcore: registered new interface driver usbfs
+[2020-01-01 18:12:23]usbcore: registered new interface driver hub
+[2020-01-01 18:12:23]usbcore: registered new device driver usb
+[2020-01-01 18:12:23]Switched to clocksource timer00
+[2020-01-01 18:12:23]NET: Registered protocol family 2
+[2020-01-01 18:12:23]TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[2020-01-01 18:12:23]TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[2020-01-01 18:12:23]TCP: Hash tables configured (established 4096 bind 4096)
+[2020-01-01 18:12:23]TCP: reno registered
+[2020-01-01 18:12:23]UDP hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 18:12:23]UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[2020-01-01 18:12:23]NET: Registered protocol family 1
+[2020-01-01 18:12:24]RPC: Registered named UNIX socket transport module.
+[2020-01-01 18:12:24]RPC: Registered udp transport module.
+[2020-01-01 18:12:24]RPC: Registered tcp transport module.
+[2020-01-01 18:12:24]RPC: Registered tcp NFSv4.1 backchannel transport module.
+[2020-01-01 18:12:24]futex hash table entries: 512 (order: 3, 32768 bytes)
+[2020-01-01 18:12:24]jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[2020-01-01 18:12:24]fuse init (API version 7.23)
+[2020-01-01 18:12:24]msgmni has been set to 531
+[2020-01-01 18:12:24]bounce: pool size: 64 pages
+[2020-01-01 18:12:24]Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[2020-01-01 18:12:24]io scheduler noop registered
+[2020-01-01 18:12:24]io scheduler deadline registered (default)
+[2020-01-01 18:12:24]io scheduler cfq registered
+[2020-01-01 18:12:24]pinctrl-single 120f0000.pinmux: 234 pins at pa fe4f0000 size 936
+[2020-01-01 18:12:24]brd: module loaded
+[2020-01-01 18:12:24]ahci 11010000.sata: SSS flag set, parallel bus scan disabled
+[2020-01-01 18:12:24]ahci 11010000.sata: AHCI 0001.0300 32 slots 2 ports 6 Gbps 0x3 impl platform mode
+[2020-01-01 18:12:24]ahci 11010000.sata: flags: ncq sntf stag pm led clo only pmp fbs slum part ccc sxs boh 
+[2020-01-01 18:12:24]scsi host0: ahci_platform
+[2020-01-01 18:12:24]scsi host1: ahci_platform
+[2020-01-01 18:12:24]ata1: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x100 irq 49
+[2020-01-01 18:12:24]ata2: SATA max UDMA/133 mmio [mem 0x11010000-0x11010fff] port 0x180 irq 49
+[2020-01-01 18:12:24]hisi-sfc hisi_spi_nor.0: unrecognized JEDEC id bytes: ff, ef, aa
+[2020-01-01 18:12:24]hisi-sfc hisi_spi_nor.0: spi nor register fail!
+[2020-01-01 18:12:24]hisi-sfc: probe of hisi_spi_nor.0 failed with error -2
+[2020-01-01 18:12:24]SPI Nand ID Table Version 2.7
+[2020-01-01 18:12:24]SPI Nand(cs 0) ID: 0xef 0xaa 0x21
+[2020-01-01 18:12:24]nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[2020-01-01 18:12:24]nand: Winbond W25N01GV
+[2020-01-01 18:12:24]nand: 128MiB, SLC, page size: 2048
+[2020-01-01 18:12:24]Nand(Auto): OOB:64B ECC:4bit/512 
+[2020-01-01 18:12:24]nand:  ECC provided by Flash Memory Controller
+[2020-01-01 18:12:24]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 18:12:24]4 cmdlinepart partitions found on MTD device hinand
+[2020-01-01 18:12:24]Creating 4 MTD partitions on "hinand":
+[2020-01-01 18:12:24]0x000000000000-0x000000100000 : "boot"
+[2020-01-01 18:12:24]0x000000100000-0x000000900000 : "kernel"
+[2020-01-01 18:12:24]0x000000900000-0x000007800000 : "rootfs"
+[2020-01-01 18:12:24]0x000007800000-0x000008000000 : "config"
+[2020-01-01 18:12:24]libphy: Fixed MDIO Bus: probed
+[2020-01-01 18:12:24]libphy: hisi_gemac_mii_bus: probed
+[2020-01-01 18:12:24]PPP generic driver version 2.4.2
+[2020-01-01 18:12:24]PPP BSD Compression module registered
+[2020-01-01 18:12:24]PPP Deflate Compression module registered
+[2020-01-01 18:12:24]PPP MPPE Compression module registered
+[2020-01-01 18:12:24]NET: Registered protocol family 24
+[2020-01-01 18:12:24]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[2020-01-01 18:12:24]ehci-platform: EHCI generic platform driver
+[2020-01-01 18:12:24]ehci-platform 10040000.ehci: EHCI Host Controller
+[2020-01-01 18:12:24]ehci-platform 10040000.ehci: new USB bus registered, assigned bus number 1
+[2020-01-01 18:12:24]ehci-platform 10040000.ehci: irq 51, io mem 0x10040000
+[2020-01-01 18:12:24]ehci-platform 10040000.ehci: USB 2.0 started, EHCI 1.00
+[2020-01-01 18:12:24]hub 1-0:1.0: USB hub found
+[2020-01-01 18:12:24]hub 1-0:1.0: 2 ports detected
+[2020-01-01 18:12:24]ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[2020-01-01 18:12:24]ata1.00: ATA-9: WDC WD60EJRX-89MP9Y1, 80.00A80, max UDMA/133
+[2020-01-01 18:12:24]ata1.00: 11721045168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[2020-01-01 18:12:25]ata1.00: configured for UDMA/133
+[2020-01-01 18:12:25]scsi 0:0:0:0: Direct-Access     ATA      WDC WD60EJRX-89M 0A80 PQ: 0 ANSI: 5
+[2020-01-01 18:12:25]sd 0:0:0:0: [sda] 11721045168 512-byte logical blocks: (6.00 TB/5.45 TiB)
+[2020-01-01 18:12:25]sd 0:0:0:0: [sda] 4096-byte physical blocks
+[2020-01-01 18:12:25]sd 0:0:0:0: [sda] Write Protect is off
+[2020-01-01 18:12:25]sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 18:12:25]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[2020-01-01 18:12:25]ohci-platform: OHCI generic platform driver
+[2020-01-01 18:12:25]ohci-platform 10030000.ohci: Generic Platform OHCI controller
+[2020-01-01 18:12:25] sda: sda1 sda2
+[2020-01-01 18:12:25]sd 0:0:0:0: [sda] Attached SCSI disk
+[2020-01-01 18:12:25]ohci-platform 10030000.ohci: new USB bus registered, assigned bus number 2
+[2020-01-01 18:12:25]ohci-platform 10030000.ohci: irq 50, io mem 0x10030000
+[2020-01-01 18:12:25]hub 2-0:1.0: USB hub found
+[2020-01-01 18:12:25]hub 2-0:1.0: 2 ports detected
+[2020-01-01 18:12:25]usbcore: registered new interface driver usb-storage
+[2020-01-01 18:12:25]mousedev: PS/2 mouse device common for all mice
+[2020-01-01 18:12:25]i2c /dev entries driver
+[2020-01-01 18:12:25]hisi_i2c hisi_i2c.0: Hisilicon [i2c-0] probed!
+[2020-01-01 18:12:25]usbcore: registered new interface driver usbhid
+[2020-01-01 18:12:25]usbhid: USB HID core driver
+[2020-01-01 18:12:25]TCP: cubic registered
+[2020-01-01 18:12:25]NET: Registered protocol family 10
+[2020-01-01 18:12:25]NET: Registered protocol family 17
+[2020-01-01 18:12:25]Registering SWP/SWPB emulation handler
+[2020-01-01 18:12:25]ata2: SATA link down (SStatus 0 SControl 300)
+[2020-01-01 18:12:25]usb 1-1: new high-speed USB device number 2 using ehci-platform
+[2020-01-01 18:12:25]Freeing unused kernel memory: 3440K (c05b2000 - c090e000)
+[2020-01-01 18:12:25]
+[2020-01-01 18:12:25]            _ _ _ _ _ _ _ _ _ _ _ _
+[2020-01-01 18:12:25]            \  _  _   _  _ _ ___
+[2020-01-01 18:12:25]            / /__/ \ |_/
+[2020-01-01 18:12:25]           / __   /  -  _ ___
+[2020-01-01 18:12:25]          / /  / /  / /
+[2020-01-01 18:12:25]  _ _ _ _/ /  /  \_/  \_ ______
+[2020-01-01 18:12:25]___________\___\__________________
+[2020-01-01 18:12:25]
+[2020-01-01 18:12:25][RCS]: /etc/init.d/S00devs
+[2020-01-01 18:12:25][RCS]: /etc/init.d/S01udev
+[2020-01-01 18:12:25][RCS]: /etc/init.d/S80network
+[2020-01-01 18:12:25]mtdblock2 is missing, wait a second
+[2020-01-01 18:12:25]usb-storage 1-1:1.0: USB Mass Storage device detected
+[2020-01-01 18:12:25]scsi host2: usb-storage 1-1:1.0
+[2020-01-01 18:12:25]usb 2-2: new low-speed USB device number 2 using ohci-platform
+[2020-01-01 18:12:26]input: SEMICCHIP Usb Mouse as /devices/soc/10030000.ohci/usb2/2-2/2-2:1.0/0003:1A2C:0042.0001/input/input0
+[2020-01-01 18:12:26]hid-generic 0003:1A2C:0042.0001: input: USB HID v1.10 Mouse [SEMICCHIP Usb Mouse] on usb-10030000.ohci-2/input0
+[2020-01-01 18:12:26]random: mkdir urandom read with 18 bits of entropy available
+[2020-01-01 18:12:26]yaffs: dev is 32505858 name is "mtdblock2" rw
+[2020-01-01 18:12:26]yaffs: passed flags ""
+[2020-01-01 18:12:27]scsi 2:0:0:0: Direct-Access     USB      Flash Disk       1100 PQ: 0 ANSI: 4
+[2020-01-01 18:12:27]sd 2:0:0:0: [sdb] 62914560 512-byte logical blocks: (32.2 GB/30.0 GiB)
+[2020-01-01 18:12:27]sd 2:0:0:0: [sdb] Write Protect is off
+[2020-01-01 18:12:27]sd 2:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2020-01-01 18:12:27] sdb: sdb1
+[2020-01-01 18:12:27]sd 2:0:0:0: [sdb] Attached SCSI removable disk
+[2020-01-01 18:12:29]Auto login as root ...
+[2020-01-01 18:12:29]Jan  1 00:00:05 login[119]: root login on 'ttyS000'
+[2020-01-01 18:12:29]mount config
+[2020-01-01 18:12:29]Welcome to HiLinux.
+[2020-01-01 18:12:29]find mtdblock3
+[2020-01-01 18:12:29]None of nfsroot found in cmdline.
+[2020-01-01 18:12:29]~ # yaffs: dev is 32505859 name is "mtdblock3" rw
+[2020-01-01 18:12:29]yaffs: passed flags ""
+[2020-01-01 18:12:29]======mkconfig start====
+[2020-01-01 18:12:29]rm: can't remove '/tdfs/root/https/stunnel.conf': No such file or directory
+[2020-01-01 18:12:29]rm: can't remove '/tdfs/root/https/https.pem': No such file or directory
+[2020-01-01 18:12:29]rm: can't remove '/tdfs/etc/TZ': No such file or directory
+[2020-01-01 18:12:29]rm: can't remove '/tdfs/etc/mime.types': No such file or directory
+[2020-01-01 18:12:29]rm: can't remove '/tdfs/etc/passwd': No such file or directory
+[2020-01-01 18:12:29]rm: can't remove '/tdfs/nand/recovery/back': No such file or directory
+[2020-01-01 18:12:29]======mkconfig end====
+[2020-01-01 18:12:29][RCS]: /tdfs/sh/L81toe
+[2020-01-01 18:12:29]hi_gmac_v200 100a0000.ethernet (unnamed net_device) (uninitialized): using random MAC address b2:6f:16:29:25:ed
+[2020-01-01 18:12:29]attached PHY 1 to driver Generic PHY, PHY_ID=0x1cc816
+[2020-01-01 18:12:29]Higmac dma_sg_phy: 0x8f980000
+[2020-01-01 18:12:29]ETH: rmii, phy_addr=1
+[2020-01-01 18:12:29]/tdfs/sh/L81toe: line 10: can't create /proc/sys/net/ipv4/tcp_syncookies: nonexistent directory
+[2020-01-01 18:12:30]check successfully!!!
+[2020-01-01 18:12:30]/tdfs
+[2020-01-01 18:12:30]check successfully!!!
+[2020-01-01 18:12:30]/tdfs
+[2020-01-01 18:12:30]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 18:12:30][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 18:12:30]0x12070c00: 0x00000001 --> 0x1ACCE551 
+[2020-01-01 18:12:30][END]
+[2020-01-01 18:12:30]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 18:12:30][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 18:12:30]0x12070008: 0x00000003 --> 0x00000000 
+[2020-01-01 18:12:30][END]
+[2020-01-01 18:12:30]*** Board tools : ver0.0.1_20121120 *** 
+[2020-01-01 18:12:30][debug]: {source/utils/cmdshell.c:167}cmdstr:himm
+[2020-01-01 18:12:30]0x1207000c: 0x00000000 --> 0x00000000 
+[2020-01-01 18:12:30][END]
+[2020-01-01 18:12:32]load sys_config.ko for ...OK!
+[2020-01-01 18:12:32]Module himedia: init ok
+[2020-01-01 18:12:32]Hisilicon Media Memory Zone Manager
+[2020-01-01 18:12:32]hi_osal 1.0 init success!
+[2020-01-01 18:12:32]hi_base: module license 'Proprietary' taints kernel.
+[2020-01-01 18:12:32]Disabling lock debugging due to kernel taint
+[2020-01-01 18:12:32]load base.ko ... OK!
+[2020-01-01 18:12:32]load sys.ko ...OK!
+[2020-01-01 18:12:32]load vdec.ko ....OK!
+[2020-01-01 18:12:32]load vdh firmware.ko OK
+[2020-01-01 18:12:32]load jpegd.ko ....OK!
+[2020-01-01 18:12:32]load tde.ko ...OK!
+[2020-01-01 18:12:32]load region.ko ....OK!
+[2020-01-01 18:12:32]load vgs.ko ...OK!
+[2020-01-01 18:12:32]load viu.ko for ...OK!
+[2020-01-01 18:12:32]load vpss.ko ...OK!
+[2020-01-01 18:12:32]load vou.ko OK!
+[2020-01-01 18:12:32]load hifb.ko OK!
+[2020-01-01 18:12:32]load hdmi.ko OK!
+[2020-01-01 18:12:32]load rc.ko ...OK!
+[2020-01-01 18:12:32]load venc.ko ...OK!
+[2020-01-01 18:12:32]load chnl.ko ...OK!
+[2020-01-01 18:12:32]load vedu.ko ...OK!
+[2020-01-01 18:12:32]load h264e.ko ...OK!
+[2020-01-01 18:12:32]load h265e.ko ...OK!
+[2020-01-01 18:12:32]load jpege.ko ...OK!
+[2020-01-01 18:12:32]load vda.ko ....OK!
+[2020-01-01 18:12:32]load ive.ko ... OK!
+[2020-01-01 18:12:32]load aio.ko OK!
+[2020-01-01 18:12:32]load ai.ko OK!
+[2020-01-01 18:12:32]load ao.ko OK!
+[2020-01-01 18:12:32]load aenc.ko OK!
+[2020-01-01 18:12:32]load adec.ko OK!
+[2020-01-01 18:12:32]Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 1)
+[2020-01-01 18:12:32]tlv320aic31 no.0 driver init successful!
+[2020-01-01 18:12:32]tdsecurity_init lock and dir list
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/app/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/backup/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/backup/back1/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/backup/back2/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/tdfs/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/gui_config/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/gui_config/OEM/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/gui_config/TD/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/gui_config/tp/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/gui_config_fm/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/dvr/log/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/etc/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/etc/udev/rules.d/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/opt/etc/disk/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/opt/etc/system/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/opt/log/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/root/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/root/https/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/config/tmp/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/dvr/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/nand/dvr/guibmp/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/nand/dvr/ie/oem/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/nand/dvr/ie/tiandy/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/conf/)
+[2020-01-01 18:12:32]Create Whitelist dirpath (/tdfs/nand/dvr/ie/www/res/common/)
+[2020-01-01 18:12:35]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 18:12:35]IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[2020-01-01 18:12:36]hi_gmac_v200 100a0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[2020-01-01 18:12:36]IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[2020-01-01 18:12:37]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 18:12:37]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 18:12:41]program TDparted is using a deprecated SCSI ioctl, please convert it to SG_IO
+[2020-01-01 18:12:43]EXT4-fs (sda2): recovery complete
+[2020-01-01 18:12:43]EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: 
+[2020-01-01 18:12:47]FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[2020-01-02 08:04:27]
+[2020-01-02 08:04:27]~ # 
+[2020-01-02 08:04:27]~ # 
+[2020-01-02 08:04:28]~ # uptime 
+[2020-01-02 08:04:28] 08:03:50 up 13:52,  1 users,  load average: 32.44, 36.22, 37.39
+[2020-01-02 08:04:31]~ # cd /dvr/log/
+[2020-01-02 08:04:31]/config/dvr/log # ls
+[2020-01-02 08:04:31]log.dat       logalarm.dat  sysshut.log
