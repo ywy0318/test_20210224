@@ -1,0 +1,12 @@
+#! /bin/sh
+
+until [ $# -eq 0 ]
+do
+	echo "sss\n"
+        echo $@ 
+
+	echo $#
+	echo "end\n"
+        shift
+done
+

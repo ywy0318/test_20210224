@@ -1,0 +1,4 @@
+#!/bin/sh
+
+gcc -o test_mutex_detach test_mutex_detach.c -lpthread
+#arm-hisiv500-linux-gcc -o test_mutex_detach_arm-hisiv500 test_mutex_detach.c -lpthread

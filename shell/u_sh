@@ -1,0 +1,40 @@
+#!/bin/sh
+var_1="/index.db"
+var_2=3
+#echo "hello world!">>test.txt
+#sqlite3 index.db ".sch face">>zzz.txt
+#if [ ! -d ywy1 ]; then
+#        echo "创建文件夹"
+#        mkdir ywy1
+#else
+#        echo "文件夹已存在"
+#fi
+#for line in `cat test.txt`
+#do
+#  echo $line
+#done
+#text="123 456"
+# 关键！只有这样写，才能保存下来，并在之后的操作中使用。
+#pos=`expr index "$text" " "`
+#echo ---$pos
+ 
+# 截取：
+#head=`expr substr "$text"ar 1 $pos`
+#echo $head
+ 
+# cut也可以
+#echo $text | cut -c 1-$pos
+
+mount | grep sata | cut -d ' ' -f 3,3 > /mnt/usb/0/0/sata_info.txt
+for sata_path in `cat ./sata_info.txt`
+do
+var_3=$sata_path""$var_1
+echo $var_3
+#//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+#//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+#mv $line ./ALM_FACE_STRANGER
+sqlite3 $var_3 "select count (*) from face where AlarmType = $var_2 and ChannelNo =$var_2" 
+#echo $line
+
+done
+

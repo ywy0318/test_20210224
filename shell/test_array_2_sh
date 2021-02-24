@@ -1,0 +1,10 @@
+#!/bin/bash
+
+array[0] = A
+array[1] = B
+array[2] = C
+array[3] = D
+echo "num :${#array[@]}"
+echo "num : ${array[*]}"
+echo " ${array[@]} \n"
+

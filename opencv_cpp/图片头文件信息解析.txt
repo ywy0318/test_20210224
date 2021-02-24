@@ -1,0 +1,23 @@
+1.BMP 
+-文件头标识 (2 bytes) 42 4D 
+2.PNG 
+- 文件头标识 (8 bytes) 89 50 4E 47 0D 0A 1A 0A 
+3.GIF 
+- 文件头标识 (6 bytes) 47 49 46 38 39(37) 61 
+4.JPEG/JPG 
+- 文件头标识 (2 bytes): FF, D8 (SOI) (JPEG 文件标识) 
+- 文件结束标识 (2 bytes): FF, D9 (EOI) 
+--------------------- 
+作者：Hoyn 
+来源：CSDN 
+原文：https://blog.csdn.net/adzcsx2/article/details/50503506 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+cap.open("E:\\Visual Studio 2010\\Projects\\opencv\\opencv\\1.mp4");//成功了
+	
+	E:\\Visual Studio 2010\\Projects\\opencv\\opencv\\1.jpg
+	
+	对比度亮度,通道分离与合并
+	二值化threshold(srcImg, srcImg, 100, 255, CV_THRESH_BINARY);
+	
+	Administrator

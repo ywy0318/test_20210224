@@ -1,0 +1,1 @@
+gcc -o test_timer test_timer.c -lrt

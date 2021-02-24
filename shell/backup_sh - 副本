@@ -1,0 +1,65 @@
+#!/bin/sh
+#echo "hello world!"
+
+
+
+#var_date="\`date"
+var_date="date"
+#var_11="+%s\`"
+var_11="+%s"
+var_d="-d"
+var_10=$var_date" "$var_d
+
+#echo $var_date
+#echo $var_d
+#echo $var_10
+#echo $var_11
+#echo "para=$#" 
+#echo "\n"
+
+if [ $# -eq 0 ] ; then
+	echo "no para"
+elif [ $# -eq 1 ] ; then
+	if [ $1 -eq 0 ] ; then
+		ehco "para_1=0"
+	elif [ $1 -eq 1 ] ; then
+		echo "para_1=1"
+	fi
+elif [ $# -eq 5 ] ; then
+	echo "sad"
+	echo "para_1=$1"
+	echo "para_2=$2"
+	echo "para_3=$3"
+	echo "para_4=$4"
+	echo "para_5=$5"	
+	var1=\"$2" "$3\"
+	
+	
+	
+	var2=\"$4" "$5\"
+	#date -d $2 $3 +%s > var1
+	#date -d $2 $3 > var1
+	#date -d $4 $5 +%s	> var2
+	#echo $var1
+	#echo $var2
+	
+	#echo "\n"
+	#time_stdrt=`date -d "2015-08-04 00:00:00" +%s`
+	#echo $time_stdrt		
+												
+	time_start=$var_10" "$var1" "$var_11
+	time_enddd=$var_10" "$var2" "$var_11	
+	time_start_1=`echo $time_start | sh`
+	time_enddd_1=`echo $time_start | sh`
+	echo $time_start_1
+	echo $time_enddd_1
+		
+	#echo date -d var2 +%s
+	#echo $var3
+	#echo $var4
+	#echo "sss"		
+	#echo `date -d "2015-08-04 00:00:00" +%s`
+else
+	#echo $#
+	echo "input error"
+fi

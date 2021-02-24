@@ -1,0 +1,21 @@
+#!/bin/bash
+i=0
+list_array=()
+#list_array=(value0 value1 value2 value3)
+#list_array=(a b c d e f)
+#list_array=(`df|grep sata|awk FS'{print $NF}'`)
+#list_array=($(`df|grep sata|awk '{print $NF}'`))
+#list_array=($(`ls -l |awk '{print $NF}'`)) 
+#list_array=($(`df|grep sata|awk '{print $NF}'`))
+#list_array=($(awk ‘{print $2}’ ip.txt))
+for j in `ls *.c` #这里替换成你的ls....
+#for j in `df|grep sata|awk '{print $NF}'`
+do
+list_array[$i]=\"$j\"
+i=`expr $i + 1`
+done
+#'''
+#echo $list_array
+#echo ${list_array[@]}
+echo ${list_array[@]}
+echo ${#list_array[@]}

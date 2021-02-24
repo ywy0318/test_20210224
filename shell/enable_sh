@@ -1,0 +1,3 @@
+#!/bin/sh
+echo 0 >/proc/sys/kernel/tdlsm/lsm_enable
+chmod 0777 /mnt/sata/0/

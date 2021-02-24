@@ -1,0 +1,60 @@
+#!/bin/sh
+a="0000.db"
+b="0000.db.bakOnline"
+i=0
+j=0
+var_date="/mnt/sata/"
+var_db="/0/DB/"
+var_path=$var_date"$i"$var_db
+
+var_pre="000"
+var_pre_20="00"
+var_houzhui=".db"
+var_database=$var_pre"$j"$var_houzhui
+var_path_db=$var_path""$var_database
+
+
+#echo $var_path
+echo $var_path_db
+while [ $i -lt 20 ]
+do
+	var_path=$var_date"$i"$var_db
+	#echo $i"--"$var_path
+	i=$(($i+1))
+	#if [ ! -f "$var_path" ]; then
+	if [ -d "$var_path" ];then
+		#echo "exist"
+		while [ $j -lt 10 ]
+		do			
+			var_database=$var_pre"$j"$var_houzhui
+			var_path_db=$var_path""$var_database
+			#echo $j"--"$var_path_db
+			j=$(($j+1))
+			if [ -f "$var_path_db" ];then
+			#if [ -d "$var_path_db" ];then			
+				#echo $j"##"$var_path_db
+				aa=`sqlite3 /mnt/sata/0/0/DB/0000.db "select count(*) from face"`				
+				echo $var_path_db" count: "$aa
+			else
+				continue
+			fi			
+		done
+		while [ $j -lt 20 ]
+		do			
+			var_database=$var_pre_20"$j"$var_houzhui
+			var_path_db=$var_path""$var_database
+			#echo $j"--"$var_path_db
+			j=$(($j+1))
+			if [ -f "$var_path_db" ];then
+				a=100
+				echo $var_path_db" count: "$a					
+			else
+				continue
+			fi			
+		done
+		j=0
+	else
+		#echo "continue"
+		continue	
+	fi	
+done

@@ -1,0 +1,40 @@
+使用命令						
+#cmd:./d_copy_sh [AlarmType] [ChannelNo]
+示例:#./d_copy_sh 5 3						
+#cmd:./d_copy_sh [AlarmType] [FileTime_start] [FileTime_end] [ChannelNo]
+示例:./d_copy_sh 3 2019-08-12 19:27:24 2019-08-12 19:48:50 3
+
+AlarmType : 文件名
+1			ALM_FACE_CHECK
+2 			ALM_FACE_COMPARE
+3			ALM_FACE_STRANGER
+4			ALM_FACE_FREQUENCY			
+5			ALM_FACE_HOLD
+6			ALM_FACE_MAX
+
+运行正常的情况下的打印信息,"backup finished"表示备份完成;
+BigName
+LitName
+BaseName
+file size=224666
+file size=222784
+file size=224208
+file size=221870
+file size=219054
+file size=237411
+file size=224277
+file size=221918
+file size=222515
+file size=225070
+file size=14062
+file size=13687
+file size=10548
+file size=24432
+file size=18865
+file size=40134
+file size=25928
+file size=10851
+file size=9553
+file size=20813
+backup finished
+

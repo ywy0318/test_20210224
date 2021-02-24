@@ -1,0 +1,1 @@
+gcc -g -rdynamic test_backstrace.c -o test_backstrace

@@ -1,0 +1,70 @@
+#! /bin/sh
+
+if [ "$1" = "-d" ]
+then
+ ip=$(grep "ipaddress" /config/dvr/config_net.ini | head -n 1 | awk -F '=' '{print $2}')
+ mac=$(grep "mac1" /config/dvr/config_mac.ini | awk -F '=' '{print $2}' | awk -F ";" '{print $1}' | awk -F ':' '{printf "%02x:%02x:%02x:%02x:%02x:%02x", $1,$2,$3,$4,$5,$6}')
+ gateway=$(grep "gateway" /config/dvr/config_net.ini | head -n 1 | awk -F '=' '{print $2}')
+ 
+ if [ -z $ip ] || [ "$ip" == "0.0.0.0" ] || [ -z $gateway ] || [ -z $mac ]
+ then
+  ip="192.168.1.3"
+  gateway="192.168.1.1"
+  mac="00:50:C2:28:10:00"
+ fi
+ 
+ ifconfig eth0 down
+ ifconfig eth0 hw ether $mac
+ ifconfig eth0 $ip netmask 255.255.255.0
+ route add default gw $gateway eth0
+ ifconfig eth0 up
+ 
+ sleep 2
+ telnetd &
+ mkdir /dbg
+ mount -t nfs -o intr,nolock,rsize=1024,wsize=1024 10.30.30.183:/home/jiatinghe/dbg/dbg_cf /dbg
+ 
+ #mount -t yaffs2 /dev/mtdblock3 /nand
+fi
+
+sleep 1
+
+if [ -f "/dvrfile/drv/load" ]; then
+sh /dvr/checkmd5.sh /dvr/drv/
+sh /dvr/checkmd5.sh /dvr/drv/extdrv/
+cd /dvrfile/drv
+./load
+cd /dvrfile/drv/extdrv
+rm `ls | grep -v bonding.ko`
+rm /dvrfile/drv -rf
+fi
+
+if [ "$1" = "-d" ]
+then
+	cd /tdfs/dvr/
+	./closedog
+fi
+
+#insmod /dvr/drv/stmmac.ko rgmii_mod_enable=0
+
+echo "cfq" > /sys/block/sda/queue/scheduler
+echo "cfq" > /sys/block/sdb/queue/scheduler
+echo "cfq" > /sys/block/sdc/queue/scheduler
+echo "cfq" > /sys/block/sdd/queue/scheduler
+echo "cfq" > /sys/block/sde/queue/scheduler
+echo "cfq" > /sys/block/sdf/queue/scheduler
+echo "cfq" > /sys/block/sdg/queue/scheduler
+echo "cfq" > /sys/block/sdh/queue/scheduler
+echo "cfq" > /sys/block/sdi/queue/scheduler
+echo "cfq" > /sys/block/sdj/queue/scheduler
+echo "cfq" > /sys/block/sdk/queue/scheduler
+echo "cfq" > /sys/block/sdl/queue/scheduler
+echo "cfq" > /sys/block/sdm/queue/scheduler
+echo "cfq" > /sys/block/sdn/queue/scheduler
+echo "cfq" > /sys/block/sdo/queue/scheduler
+echo "cfq" > /sys/block/sdp/queue/scheduler
+
+ln /dev/ttyAMA3 /dev/fpcom
+#ln /dev/mytty0 /dev/fpcom
+
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/dvr/lib/

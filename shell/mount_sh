@@ -1,0 +1,5 @@
+#!/bin/sh
+echo 0>/proc/sys/tdlsm/lsm_enable
+#mkdir /dvr/z_test/gdb/
+mount -t nfs -o intr,nolock,rsize=1024,wsize=1024 10.30.30.183:/home/newer/yangweiyu/gdb/dvr2/ /tdfs/dbg/
+ 

@@ -1,0 +1,2 @@
+gcc -o shmread shmread.c -lm
+gcc -o shmwrite shmwrite.c -lm

@@ -1,0 +1,11 @@
+protoc ./BadBlock.proto --cpp_out=./
+protoc ./Basic.proto --cpp_out=./
+protoc ./DiskGrp.proto --cpp_out=./
+
+g++ one.cpp two.cpp three.cpp -fPIC -shared -o libMono.so -std=c++11
+
+g++ BadBlock.pb.cc -fPIC -shared -o BadBlock.so -std=c++11
+g++ Basic.pb.cc -fPIC -shared -o Basic.so -std=c++11
+g++ DiskGrp.pb.cc -fPIC -shared -o DiskGrp.so -std=c++11
+
+g++ BadBlock.pb.cc Basic.pb.cc DiskGrp.pb.cc -fPIC -shared -o libMono.so -std=c++11

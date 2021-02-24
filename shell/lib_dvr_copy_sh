@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp ../lib/*.so /home/yangweiyu/dbg/media_dvr_2/dvr/lib/
+
+cp ../lib/dvr /home/yangweiyu/dbg/media_dvr_2/dvr/
+
+cp ../libcmdeia.so  /home/yangweiyu/dbg/media_dvr_2/dvr/lib/
+
+md5sum ../lib/dvr
+md5sum /home/yangweiyu/dbg/media_dvr_2/dvr/dvr
+md5sum /home/yangweiyu/dbg/media_dvr_2/dvr/lib/libcmdeia.so

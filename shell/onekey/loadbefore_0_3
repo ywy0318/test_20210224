@@ -1,0 +1,124 @@
+#! /bin/sh
+/sbin/getty -L ttyS000 115200 vt100 -n root -I "Auto login as root ..." &
+#/sbin/getty -L ttyS1 9600 vt100
+
+
+mkdir /dev/vc
+mknod /dev/vc/0 c 4 0
+
+#echo 4096 > /proc/sys/vm/mmap_min_addr
+echo "5" > /proc/sys/vm/dirty_background_ratio
+echo "10" > /proc/sys/vm/dirty_ratio
+echo "200" > /proc/sys/vm/dirty_writeback_centisecs
+echo "2200">/proc/sys/vm/dirty_expire_centisecs
+#echo 8192 > /proc/sys/vm/min_free_kbytes
+#echo 200 > /proc/sys/vm/vfs_cache_pressure
+
+ulimit -HSn 4096
+ulimit -HSs 3072
+
+echo "mount config"
+mkdir /config
+mkdir /dvrfile
+mkdir /tmpfile
+
+for k in $( seq 1 6)
+do
+        if [ ! -e /dev/mtdblock3 ]; then
+                if [ $k == 6 ]; then
+                        reboot
+                fi
+                echo "mtdblock3 is missing, wait a second"
+                sleep 1
+        else
+                echo "find mtdblock3"
+                break
+        fi
+done
+
+for k in $( seq 1 3)
+do
+        mount -t yaffs2 /dev/mtdblock3  /config
+        if [ $? -ne 0 ]; then
+                 if [ $k == 3 ]; then
+                        reboot
+                 fi
+                 sleep 3
+         else
+                break
+         fi      
+done
+
+ln -sf /tdfs/dvr /dvr
+ln -sf /tdfs/nand /nand
+/tdfs/mkconfig
+for initscript in /tdfs/sh/L[0-9][0-9]*
+do
+        if [ -x $initscript ] ;
+        then
+                echo "[RCS]: $initscript"
+                $initscript
+        fi
+done
+
+cd /tdfs/
+./checkrecovery 128
+
+tar -xf /tdfs/dvr/drv.tar.xz -C /dvrfile/
+tar -xf /tdfs/nand/dvr/font.tar.xz -C /dvrfile/
+tar -xf /tdfs/nand/dvr/guibmp.tar.xz -C /dvrfile/
+
+chmod +x /dvrfile/*
+sh /tdfs/dvr/checkmd5.sh /dvrfile/drv/
+sh /tdfs/dvr/checkmd5.sh /dvrfile/drv/extdrv/
+
+cd /dvrfile/drv/extdrv
+insmod gpioi2c.ko
+#insmod dev_reg.ko
+insmod hi_rtc.ko
+ln -s /dev/hi_rtc /dev/rx8025
+
+
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/sbin2/:/bin:/sbin:/tdfs/usr/bin/:/tdfs/usr/sbin/:/tdfs/bin/:/tdfs/sbin/
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/dvrfile/lib/:/dvrfile/applib/:/tdfs/dvr/lib/:/tdfs/dvr/applib/:/tdfs/usr/lib/:/tdfs/lib/:/tdfs/usr/local/lib:/dvr/itsso
+export PYTHONHOME=/usr/local/lib/python2.6
+export PYTHONPATH=.:/usr/local/lib/python2.6:/usr/local/lib/python2.6/site-packages       
+                               
+echo '250     32000   32      32000' > /proc/sys/kernel/sem
+
+cd /tdfs/dvr 
+
+cp /tdfs/dvr/upgrade /dvrfile/
+cp /tdfs/dvr/GuiPro /dvrfile/
+cp /tdfs/dvr/ASC16 /dvrfile/
+cd /dvrfile/
+./upgrade &
+
+cd /usr/local/bin
+./jw-arm-hisi-start.sh
+
+cd /config/dvr/
+./root_pwdupdate 01 /dvrfile/password 1>/dev/null 2>/dev/null &
+cd /tdfs/dvr/
+./closedog &
+echo 123456 > /dvrfile/core_flg.ini
+echo 0 > /proc/sys/kernel/tdlsm/lsm_enable
+echo "/mnt/sata/0/0/core.%e.%p.%h.%t" > /proc/sys/kernel/core_pattern
+echo 123456 > /dvr/core_flg.ini
+
+#./journald &
+#touch /dvrfile/logman
+
+cp /config/etc/udev/mddevmap /etc/udev/
+cp /config/etc/udev/rules.d/* /etc/udev/rules.d/
+udevadm trigger --action=add --subsystem-match=block
+
+#./TODO &
+sh load -d
+./gui &
+./dvr1 &
+
+/dvr/upnpstart.sh /tdfs/usr/bin/upnp_tools &
+/dvr/upnpstart.sh /tdfs/usr/bin/eth_detect &
+#sh load -d
+telnetd &

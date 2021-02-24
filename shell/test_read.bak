@@ -1,0 +1,8 @@
+#!/bin/sh
+# |tee log.txt
+#echo "hello world" >>log.txt
+date -d "2015-08-04 00:00:00" +%s | tee -a zzz.log
+#time_start=date -d "2015-08-04 00:00:00" +%s
+#time=`echo $time_start | sh`
+#time >>log.txt
+#eval ${a}${b}

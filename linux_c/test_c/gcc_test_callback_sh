@@ -1,0 +1,5 @@
+rm test_callback
+gcc -o test_callback test_callback.c -lpthread -g
+
+
+

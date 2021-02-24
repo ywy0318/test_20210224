@@ -1,0 +1,146 @@
+#!/bin/sh
+#cmd:./copy_sh [AlarmType] [ChannelNo]
+#cmd:./copy_sh [AlarmType] [FileTime_start] [FileTime_end] [ChannelNo]
+mount | grep sata | cut -d ' ' -f 3,3 > /mnt/usb/0/0/sata_info.txt
+var_date="date"
+var_11="+%s"
+var_d="-d"
+var_10=$var_date" "$var_d
+var_sqlite="/index.db"
+
+
+#echo $var_AlarmType_file_name"_ChannelNo_"$2
+
+#if [ $# -eq 0 ] ; then
+#	echo "./copy_sh [AlarmType] [ChannelNo]"
+#	echo "./copy_sh [AlarmType] [FileTime_start] [FileTime_end] [ChannelNo]" 
+#two para
+#./d_copy_sh 5 3	
+if [ $# -eq 2 ] ; then
+
+	if [ $1 -eq 1 ] ; then
+	var_AlarmType_file_name="ALM_FACE_CHECK"
+	elif [ $1 -eq 2 ] ; then
+	var_AlarmType_file_name="ALM_FACE_COMPARE"
+	elif [ $1 -eq 3 ] ; then
+	var_AlarmType_file_name="ALM_FACE_STRANGER"
+	elif [ $1 -eq 4 ] ; then
+	var_AlarmType_file_name="ALM_FACE_FREQUENCY"
+	elif [ $1 -eq 5 ] ; then
+	var_AlarmType_file_name="ALM_FACE_HOLD"
+	elif [ $1 -eq 6 ] ; then
+	var_AlarmType_file_name="ALM_FACE_MAX"
+	fi
+	var_path=$var_AlarmType_file_name"_ChN_"$2
+	var_txt=$var_AlarmType_file_name"_ChN_"$2".txt"
+	mkdir ./$var_path
+	touch ./$var_path/$var_txt	
+
+	echo "">./$var_path/$var_txt 
+
+	echo "BigName"
+	for sata_path in `cat ./sata_info.txt`
+	do
+	var_3=$sata_path""$var_sqlite		
+	sqlite3 $var_3 "select BigName from face where AlarmType = $1 and ChannelNo =$2">>./$var_path/$var_txt  
+	done
+
+	echo "LitName"
+	echo " ">>./$var_path/$var_txt
+	for sata_path in `cat ./sata_info.txt`
+	do
+	var_3=$sata_path""$var_sqlite
+	sqlite3 $var_3 "select LitName from face where AlarmType = $1 and ChannelNo =$2">>./$var_path/$var_txt  
+	done
+
+	echo "BaseName"
+	echo " ">>./$var_path/$var_txt
+	for sata_path in `cat ./sata_info.txt`
+	do
+	var_3=$sata_path""$var_sqlite	
+	sqlite3 $var_3 "select BaseName from face where AlarmType = $1 and ChannelNo =$2">>./$var_path/$var_txt  
+	done
+	
+	
+#./d_copy_sh 5 3	
+elif [ $# -eq 6 ] ; then	
+	#echo "para_1=$1"
+	#echo "para_2=$2"
+	#echo "para_3=$3"
+	#echo "para_4=$4"
+	#echo "para_5=$5"
+	#echo "para_5(channelNo)=$6"	
+	var1=\"$2" "$3\"
+	var2=\"$4" "$5\"			
+												
+	time_start=$var_10" "$var1" "$var_11
+	time_enddd=$var_10" "$var2" "$var_11	
+	time_start_1=`echo $time_start | sh`
+	time_enddd_1=`echo $time_enddd | sh`
+	#echo $time_start_1
+	#echo $time_enddd_1s
+
+
+	if [ $1 -eq 1 ] ; then
+	var_AlarmType_file_name="ALM_FACE_CHECK"
+	elif [ $1 -eq 2 ] ; then
+	var_AlarmType_file_name="ALM_FACE_COMPARE"
+	elif [ $1 -eq 3 ] ; then
+	var_AlarmType_file_name="ALM_FACE_STRANGER"
+	elif [ $1 -eq 4 ] ; then
+	var_AlarmType_file_name="ALM_FACE_FREQUENCY"
+	elif [ $1 -eq 5 ] ; then
+	var_AlarmType_file_name="ALM_FACE_HOLD"
+	elif [ $1 -eq 6 ] ; then
+	var_AlarmType_file_name="ALM_FACE_MAX"
+	fi
+	var_path=$var_AlarmType_file_name"_ChN_"$6
+	var_txt=$var_AlarmType_file_name"_ChN_"$6".txt"
+	mkdir ./$var_path
+	touch ./$var_path/$var_txt
+
+	echo "">./$var_path/$var_txt 
+
+	echo "BigName"
+	for sata_path in `cat ./sata_info.txt`
+	do
+	var_3=$sata_path""$var_sqlite		
+	sqlite3 $var_3 "select BigName from face where AlarmType = $1 and ChannelNo =$6 and FileTime > $time_start_1 and FileTime < $time_enddd_1">>./$var_path/$var_txt  
+	done
+
+	echo "LitName"
+	echo " ">>./$var_path/$var_txt
+	for sata_path in `cat ./sata_info.txt`
+	do
+	var_3=$sata_path""$var_sqlite
+	sqlite3 $var_3 "select LitName from face where AlarmType = $1 and ChannelNo =$6 and FileTime > $time_start_1 and FileTime < $time_enddd_1 ">>./$var_path/$var_txt  
+	done
+
+	echo "BaseName"
+	echo " ">>./$var_path/$var_txt
+	for sata_path in `cat ./sata_info.txt`
+	do
+	var_3=$sata_path""$var_sqlite	
+	sqlite3 $var_3 "select BaseName from face where AlarmType = $1 and ChannelNo =$6 and FileTime > $time_start_1 and FileTime < $time_enddd_1 ">>./$var_path/$var_txt  
+	done
+
+
+else
+	echo "./copy_sh [AlarmType] [ChannelNo]"
+	echo "./copy_sh [AlarmType] [FileTime_start] [FileTime_end] [ChannelNo]"
+fi
+
+if [ -f ./$var_path/$var_txt ];then
+		
+	for line in `cat ./$var_path/$var_txt`
+	do  
+	  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+	  mv $line ./$var_path
+	done
+	echo "backup finished"
+else
+	echo "backup failed"
+fi
+
+
+

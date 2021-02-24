@@ -1,0 +1,906 @@
+#!/bin/sh
+#echo "hello world!"
+#timer_start_pro=`date "+%Y-%m-%d %H:%M:%S"`
+mount | grep sata | cut -d ' ' -f 3,3 > /mnt/usb/0/0/sata_info.txt
+#var_date="\`date"
+var_date="date"
+#var_11="+%s\`"
+var_11="+%s"
+var_d="-d"
+var_10=$var_date" "$var_d
+
+#echo $var_date
+#echo $var_d
+#echo $var_10
+#echo $var_11
+#echo "para=$#" 
+#echo "\n"
+
+if [ $# -eq 0 ] ; then
+	echo "no alarm no start_time and end_time"
+	
+elif [ $# -eq 1 ] ; then
+	if [ $1 -eq 1 ] ; then
+		echo "para_1=1"
+		echo "ALM_FACE_CHECK"
+		if [ ! -d ALM_FACE_CHECK ]; then
+       			echo "ALM_FACE_CHECK 文件夹创建"
+        		mkdir ALM_FACE_CHECK
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BigName"
+			#echo "BigName">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from where AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			
+		else
+        		echo "ALM_FACE_CHECK 文件夹已存在"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BigName"
+			#echo "BigName">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+		fi
+		for line in `cat ./ALM_FACE_CHECK/ALM_FACE_CHECK.txt`
+		do  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_CHECK
+		done	
+	elif [ $1 -eq 2 ] ; then
+		echo "para_1=2"
+		echo "ALM_FACE_COMPARE"
+		if [ ! -d ALM_FACE_COMPARE ]; then
+       			echo "ALM_FACE_COMPARE 文件夹创建"
+        		mkdir ALM_FACE_COMPARE
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		else
+        		echo "ALM_FACE_COMPARE 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		fi
+		for line in `cat ./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt`
+		do
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_COMPARE
+		done
+	elif [ $1 -eq 3 ] ; then
+		echo "para_1=3"
+		echo "ALM_FACE_STRANGER"
+		if [ ! -d ALM_FACE_STRANGER ]; then
+       			echo "ALM_FACE_STRANGER 文件夹创建"
+        		mkdir ALM_FACE_STRANGER
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		else
+        		echo "ALM_FACE_STRANGER 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		fi
+		for line in `cat ./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_STRANGER
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer1.0.1_hi3536CF -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	elif [ $1 -eq 4 ] ; then
+		echo "para_1=4"
+		echo "ALM_FACE_FREQUENCY"
+		if [ ! -d ALM_FACE_FREQUENCY ]; then
+       			echo "ALM_FACE_FREQUENCY 文件夹创建"
+        		mkdir ALM_FACE_FREQUENCY
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		else
+        		echo "ALM_FACE_FREQUENCY 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		fi
+		for line in `cat ./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_FREQUENCY/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_FREQUENCY 		  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	elif [ $1 -eq 5 ] ; then
+		echo "para_1=5"
+		echo "ALM_FACE_HOLD"
+		if [ ! -d ALM_FACE_HOLD ]; then
+       			echo "ALM_FACE_HOLD 文件夹创建"
+        		mkdir ALM_FACE_HOLD
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		else
+        		echo "ALM_FACE_HOLD 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		fi
+		for line in `cat ./ALM_FACE_HOLD/ALM_FACE_HOLD.txt`
+		do 
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_COMPARE/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_HOLD  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	elif [ $1 -eq 6 ] ; then
+		echo "para_1=6"
+		echo "ALM_FACE_MAX"
+		if [ ! -d ALM_FACE_MAX ]; then
+       			echo "ALM_FACE_MAX 文件夹创建"
+        		mkdir ALM_FACE_MAX
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db  "select BigName from face where AlarmType=6">./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db  "select LitName from face where AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db  "select BaseName from face where AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+		else
+        		echo "ALM_FACE_MAX 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db  "select BigName from face where AlarmType=6">./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			#sqlite3 //mnt/sata/0/0/index.db  "select BigName from face where AlarmType=1"
+			echo "LitName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db  "select LitName from face where AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db  "select BaseName from face where AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+		fi
+		for line in `cat ./ALM_FACE_MAX/ALM_FACE_MAX.txt`
+		do 
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_MAX/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_MAX 	 		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_MAX/$line
+		done
+	elif [ $1 -eq 0 ] ; then
+		echo "para_1=0"
+		echo "ALL"
+		
+		if [ ! -d ALM_FACE_HOLD ]; then
+       			echo "ALM_FACE_HOLD 文件夹创建"
+        		mkdir ALM_FACE_HOLD
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		else
+        		echo "ALM_FACE_HOLD 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		fi
+		for line in `cat ./ALM_FACE_HOLD/ALM_FACE_HOLD.txt`
+		do 
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_COMPARE/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_HOLD  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+		
+		if [ ! -d ALM_FACE_FREQUENCY ]; then
+       			echo "ALM_FACE_FREQUENCY 文件夹创建"
+        		mkdir ALM_FACE_FREQUENCY
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		else
+        		echo "ALM_FACE_FREQUENCY 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		fi
+		for line in `cat ./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_FREQUENCY/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_FREQUENCY 		  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+
+		if [ ! -d ALM_FACE_STRANGER ]; then
+       			echo "ALM_FACE_STRANGER 文件夹创建"
+        		mkdir ALM_FACE_STRANGER
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		else
+        		echo "ALM_FACE_STRANGER 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		fi
+		for line in `cat ./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_STRANGER
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer1.0.1_hi3536CF -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+		
+		if [ ! -d ALM_FACE_COMPARE ]; then
+       			echo "ALM_FACE_COMPARE 文件夹创建"
+        		mkdir ALM_FACE_COMPARE
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		else
+        		echo "ALM_FACE_COMPARE 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		fi
+		for line in `cat ./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt`
+		do
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_COMPARE
+		done
+		
+		if [ ! -d ALM_FACE_CHECK ]; then
+       			echo "ALM_FACE_CHECK 文件夹创建"
+        		mkdir ALM_FACE_CHECK
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BigName"
+			#echo "BigName">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from where AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			
+		else
+        		echo "ALM_FACE_CHECK 文件夹已存在"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BigName"
+			#echo "BigName">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+		fi
+		for line in `cat ./ALM_FACE_CHECK/ALM_FACE_CHECK.txt`
+		do  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_CHECK
+		done
+	fi
+elif [ $# -eq 5 ] ; then
+	echo "sad"
+	echo "para_1=$1"
+	echo "para_2=$2"
+	echo "para_3=$3"
+	echo "para_4=$4"
+	echo "para_5=$5"	
+	var1=\"$2" "$3\"	
+	
+	
+	var2=\"$4" "$5\"
+	#date -d $2 $3 +%s > var1
+	#date -d $2 $3 > var1
+	#date -d $4 $5 +%s	> var2
+	#echo $var1
+	#echo $var2
+	
+	#echo "\n"
+	#time_stdrt=`date -d "2015-08-04 00:00:00" +%s`
+	#echo $time_stdrt		
+												
+	time_start=$var_10" "$var1" "$var_11
+	time_enddd=$var_10" "$var2" "$var_11	
+	time_start_1=`echo $time_start | sh`
+	time_enddd_1=`echo $time_enddd | sh`
+	echo $time_start_1
+	echo $time_enddd_1
+	
+	#var_22="\"select BigName from face where filetime > $time_start_1 and filetime < $time_enddd_1 and AlarmType=1\""
+	#var_22="select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1"
+	#var_23="select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1"
+	     #  "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+	
+	#var_33="select LitName from face where FileTime >"
+	#var_34="and FileTime <"
+	#var_351="and AlarmType=1"
+
+	#echo $var_22
+	#echo $var_23
+	#var_sql_b=$var_33" "$time_start_1" "$var_34" "$time_enddd_1" "$var_351
+	#echo $var_sql_b
+	#var_33="sqlite3 //mnt/sata/0/0/index.db"
+	#var_44=$var_33" "$var_22
+	#echo $var_44
+	#`$var_44 | sh`
+	#sqlite3 //mnt/sata/0/0/index.db $var_22 | sh >./z.txt
+	#`sqlite3 //mnt/sata/0/0/index.db $var_22 | sh`>./wwvar_22="\"select BigName from face where filetime > $time_start_1 and filetime < $time_enddd_1 and AlarmType=1\""w.txt	 
+	#var_22="\"select BigName from face where filetime > $time_start_1 and filetime < $time_enddd_1 ande AlarmType=1\""
+	#`sqlite3 //mnt/sata/0/0/index.db $var_23 | sh`>./www.txt
+	#sqlite3 //mnt/sata/0/0/index.db $var_sql_b >./www.txt
+	#sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">./www.txt
+	if [ $1 -eq 1 ] ; then 
+		echo "para_1=1"
+		echo "ALM_FACE_CHECK"
+		if [ ! -d ALM_FACE_CHECK ]; then
+       			echo "ALM_FACE_CHECK 文件夹创建"
+        		mkdir ALM_FACE_CHECK			
+			echo "BigName"			
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt			
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt			
+		else
+        		echo "ALM_FACE_CHECK 文件夹已存在"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BigName"
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "BigName">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db "select BigName from where filetime > $time_start_1 and filetime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db  $var_22 >./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db  "select LitName from face where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+		fi
+		for line in `cat ./ALM_FACE_CHECK/ALM_FACE_CHECK.txt`
+		do  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_CHECK		  
+		done	
+	elif [ $1 -eq 2 ] ; then
+		echo "para_1=2"
+		echo "ALM_FACE_COMPARE"
+		if [ ! -d ALM_FACE_COMPARE ]; then
+       			echo "ALM_FACE_COMPARE 文件夹创建"
+        		mkdir ALM_FACE_COMPARE
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		else
+        		echo "ALM_FACE_COMPARE 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		fi
+		for line in `cat ./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt`
+		do
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_COMPARE
+		done
+	elif [ $1 -eq 3 ] ; then
+		echo "para_1=3"
+		echo "ALM_FACE_STRANGER"
+		if [ ! -d ALM_FACE_STRANGER ]; then
+       			echo "ALM_FACE_STRANGER 文件夹创建"
+        		mkdir ALM_FACE_STRANGER
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		else
+        		echo "ALM_FACE_STRANGER 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		fi
+		for line in `cat ./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_STRANGER
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer1.0.1_hi3536CF -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	elif [ $1 -eq 4 ] ; then
+		echo "para_1=4"
+		echo "ALM_FACE_FREQUENCY"
+		if [ ! -d ALM_FACE_FREQUENCY ]; then
+       			echo "ALM_FACE_FREQUENCY 文件夹创建"
+        		mkdir ALM_FACE_FREQUENCY
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		else
+        		echo "ALM_FACE_FREQUENCY 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		fi
+		for line in `cat ./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_FREQUENCY/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_FREQUENCY 		  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	elif [ $1 -eq 5 ] ; then
+		echo "para_1=5"
+		echo "ALM_FACE_HOLD"
+		if [ ! -d ALM_FACE_HOLD ]; then
+       			echo "ALM_FACE_HOLD 文件夹创建"
+        		mkdir ALM_FACE_HOLD
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		else
+        		echo "ALM_FACE_HOLD 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		fi
+		for line in `cat ./ALM_FACE_HOLD/ALM_FACE_HOLD.txt`
+		do 
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_COMPARE/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_HOLD  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	elif [ $1 -eq 6 ] ; then
+		echo "para_1=6"
+		echo "ALM_FACE_MAX"
+		if [ ! -d ALM_FACE_MAX ]; then
+       			echo "ALM_FACE_MAX 文件夹创建"
+        		mkdir ALM_FACE_MAX
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=6">./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+		else
+        		echo "ALM_FACE_MAX 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=6">./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			#sqlite3 //mnt/sata/0/0/index.db  "select BigName from face where AlarmType=1"
+			echo "LitName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=6">>./ALM_FACE_MAX/ALM_FACE_MAX.txt
+		fi
+		for line in `cat ./ALM_FACE_MAX/ALM_FACE_MAX.txt`
+		do 
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_MAX/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_MAX 	 		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_MAX/$line
+		done
+	elif [ $1 -eq 0 ] ; then
+		echo "para_1=0"
+		echo "ALL"
+		if [ ! -d ALM_FACE_HOLD ]; then
+       			echo "ALM_FACE_HOLD 文件夹创建"
+        		mkdir ALM_FACE_HOLD
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		else
+        		echo "ALM_FACE_HOLD 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=5">>./ALM_FACE_HOLD/ALM_FACE_HOLD.txt
+		fi
+		for line in `cat ./ALM_FACE_HOLD/ALM_FACE_HOLD.txt`
+		do 
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_COMPARE/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_HOLD  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+	
+		if [ ! -d ALM_FACE_FREQUENCY ]; then
+       			echo "ALM_FACE_FREQUENCY 文件夹创建"
+        		mkdir ALM_FACE_FREQUENCY
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		else
+        		echo "ALM_FACE_FREQUENCY 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=4">>./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt
+		fi
+		for line in `cat ./ALM_FACE_FREQUENCY/ALM_FACE_FREQUENCY.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_FREQUENCY/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_FREQUENCY 		  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+
+		if [ ! -d ALM_FACE_STRANGER ]; then
+       			echo "ALM_FACE_STRANGER 文件夹创建"
+        		mkdir ALM_FACE_STRANGER
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		else
+        		echo "ALM_FACE_STRANGER 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=3">>./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt
+		fi
+		for line in `cat ./ALM_FACE_STRANGER/ALM_FACE_STRANGER.txt`
+		do
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_STRANGER
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer1.0.1_hi3536CF -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		done
+
+		if [ ! -d ALM_FACE_COMPARE ]; then
+       			echo "ALM_FACE_COMPARE 文件夹创建"
+        		mkdir ALM_FACE_COMPARE
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		else
+        		echo "ALM_FACE_COMPARE 文件夹已存在"
+			echo "BigName"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=2">>./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt
+		fi
+		for line in `cat ./ALM_FACE_COMPARE/ALM_FACE_COMPARE.txt`
+		do
+  		  #echo $line
+		  #./sdviewer -f H0000005000205C30000C00.jpg -o/mnt/sata/0/0/H0000005000205C30000C00.jpg
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_COMPARE
+		done
+
+		if [ ! -d ALM_FACE_CHECK ]; then
+       			echo "ALM_FACE_CHECK 文件夹创建"
+        		mkdir ALM_FACE_CHECK			
+			echo "BigName"			
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt			
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt			
+		else
+        		echo "ALM_FACE_CHECK 文件夹已存在"
+			#sqlite3 index.db "select BigName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 index.db "select LitName from face group by AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BigName"
+			sqlite3 //mnt/sata/0/0/index.db "select BigName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "BigName">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db "select BigName from face where AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db "select BigName from where filetime > $time_start_1 and filetime < $time_enddd_1 and AlarmType=1">./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db  $var_22 >./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "LitName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#echo "LitName">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			#sqlite3 //mnt/sata/0/0/index.db  "select LitName from face where AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select LitName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			echo "BaseName"
+			echo " ">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+			sqlite3 //mnt/sata/0/0/index.db "select BaseName from face where FileTime > $time_start_1 and FileTime < $time_enddd_1 and AlarmType=1">>./ALM_FACE_CHECK/ALM_FACE_CHECK.txt
+		fi
+		for line in `cat ./ALM_FACE_CHECK/ALM_FACE_CHECK.txt`
+		do  		  
+		  #./sdviewer -f $line -o/mnt/sata/0/0/ALM_FACE_COMPARE/$line
+		  #//tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o/mnt/usb/0/0/ALM_FACE_STRANGER/$line
+		  //tdfs/nand/tools/sdviewer1.0.1_hi3536CF -f $line -o /mnt/usb/0/0/
+		  mv $line ./ALM_FACE_CHECK		  
+		done
+	fi
+	
+
+	
+	#echo date -d var2 +%s
+	#echo $var3
+	#echo $var4
+	#echo "sss"		
+	#echo `date -d "2015-08-04 00:00:00" +%s`
+else
+	#echo $#
+	echo "input error"
+fi
+
+#echo "耗时： $duration"

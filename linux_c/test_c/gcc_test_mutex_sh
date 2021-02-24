@@ -1,0 +1,2 @@
+rm test_mutex_detach
+gcc -o test_mutex_detach test_mutex_detach.c -lpthread

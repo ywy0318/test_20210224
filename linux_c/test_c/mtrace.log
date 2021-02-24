@@ -1,0 +1,5 @@
+= Start
+@ ./test_mtrace:[0x400624] + 0x1c32450 0x64
+@ ./test_mtrace:[0x400634] - 0x1c32450
+@ ./test_mtrace:[0x40063e] + 0x1c324c0 0x3e8
+= End
